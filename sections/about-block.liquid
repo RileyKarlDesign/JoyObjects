@@ -1,0 +1,57 @@
+
+  
+
+  
+
+      <div class="flex justify-center pb-20 ">
+
+        <div class=' w-base  '>
+
+          <div class='w-full flex justify-center pb-8 '>
+            <div class=' h-full rounded-sm bg-stone-50 overflow-hidden aspect-main '>
+              {{ section.settings.image_1 | img_url: '2048x' | img_tag }}
+            </div>
+          </div> 
+
+         <h2 class='text-center pb-8'> {{ section.settings.title }} </h2>
+        <p class=''> {{ section.settings.body }} </p>
+        
+      </div>
+ 
+      </div>
+
+   
+
+
+
+
+{% schema %}
+
+  {
+    "name": "About Block",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image_1",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },
+      {
+        "type": "textarea",
+        "id": "body",
+        "label": "Text"
+      }
+    ],
+
+    "presets": [
+      {
+        "name": " aboutBlock",
+        "category": "Content"
+      }
+    ]
+  }
+{% endschema %}

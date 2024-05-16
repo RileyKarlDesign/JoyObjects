@@ -1,0 +1,73 @@
+<div class="flex flex-col  relative  text-c1 ">
+       {% comment %}  Image {% endcomment %}
+       <a href="{{ product.url }}">
+        <div class='featuredProductImage h-full rounded-sm bg-black bg-opacity-10  overflow-hidden aspect-main '>
+            {{ product.image | image_url: width: 700 | image_tag }}
+        </div>
+      </a> 
+        {% comment %}  info start  {% endcomment %}   
+        <div class='pb-6  relative ' >
+
+
+           {% render 'info-line' with { title: 'Title', value:  product.title | escape  }  %}
+
+           {% assign price = product.final_price | money %}
+           {% render 'info-line' with { title: 'Price', value:  price  }  %}
+
+            
+            <div class='grid grid-cols-2 gap-2  border-t-2 border-c2' >
+              <p>
+
+              Quantity 
+
+              </p>
+
+              <ajax-cart-quantity>
+                <div class='flex'>
+                <!-- "Minus one" button -->
+                <a data-ajax-cart-quantity-minus class='text-bold'
+                  href="{{ routes.cart_change_url }}?line={{ index }}&quantity={{ product.quantity | minus: 1 }}" > 
+                 -
+                </a>
+          
+                <!-- Item quantity input -->
+                <input data-ajax-cart-quantity-input="{{ index }}"
+                  name="updates[]" 
+                  value="{{ product.quantity }}" 
+                  type="number" 
+                  form="my-ajax-cart-form" 
+                   class=' bg-transparent w-20 text-center  '
+                />
+        
+                <!-- "Plus one" button -->
+                <a data-ajax-cart-quantity-plus class=' text-lg text-bold'
+                  href="{{ routes.cart_change_url }}?line={{ index }}&quantity={{ product.quantity | plus: 1 }}"> 
+                  +
+                </a>
+              </div>
+
+              </ajax-cart-quantity>
+            </div>
+           
+      
+            <!-- Item error messages -->
+            <div data-ajax-cart-errors="{{ product.key }}"></div>
+            {% assign total = product.final_line_price | money %}
+
+            {% render 'info-line' with { title: 'Total', value:  total }  %} 
+           
+            <!-- "Remove item" button -->
+            <div class='flex  justify-center items-center'>
+            <p class='text-[28px]'>
+            <a data-ajax-cart-request-button href="{{ product.url_to_remove }}">
+              ˟
+            </a>
+          </p>
+          </div>
+            <hr/>
+
+        </div>
+
+</div>
+
+    

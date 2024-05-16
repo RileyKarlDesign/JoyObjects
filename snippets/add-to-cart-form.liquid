@@ -1,0 +1,161 @@
+<!-- 
+current_variant
+-->
+
+{% assign has_multiple_variants = false %}
+{% if product.variants.size > 1 %}
+  {% assign has_multiple_variants = true %}
+{% endif %}
+
+{% assign has_multiple_options = false %}
+{% if product.options.size > 1 %}
+  {% assign has_multiple_options = true %}
+{% endif %}
+
+{% assign can_add_to_cart = false %}
+
+{% if has_multiple_variants == false and product.available %}{% endif %}
+
+
+
+<!-- //---------------------- json get -------------------------------->
+{% if has_multiple_variants %}
+
+ {% render 'get-variants-with-quantity-json' with product: product %} 
+
+  {% assign variants_with_quantity_json = product.variants | json %}
+  {% unless variants_with_quantity_json contains 'inventory_quantity' %}
+    {% for variant in product.variants %}
+      {% assign replace_hook_variant_id = '"id":' | append: variant.id %}
+      {% assign replace_id_plus_inventory = replace_hook_variant_id | append: ',' | append: '"inventory_quantity":' | append:
+       variant.inventory_quantity %}
+
+      {% assign variants_with_quantity_json = variants_with_quantity_json | replace: replace_hook_variant_id
+       , replace_id_plus_inventory %}
+
+    {% endfor %}
+
+  {% endunless %}
+
+
+
+{% endif %}
+
+<!-- //---------------------- json get -------------------------------->
+
+
+ 
+
+<form
+  class=''
+  id="add-to-cart-form"
+  action="/cart/add"
+  method="post"
+  enctype="multipart/form-data"
+  data-variants="{{ variants_with_quantity_json | url_param_escape }}">
+
+  {% if has_multiple_options or has_multiple_variants %}
+
+    {% for option in product.options_with_values %}
+
+      {% assign option_name = 'option' | append: option.position %}
+
+      {% if option.name != 'Color' %}
+        {% render 'product-option-row' option: option, option_name: option_name type: 'radio' %}
+      {% else %}
+        {% render 'product-option-row' option: option, option_name: option_name type: 'radio' %}
+      {% endif %}
+
+
+    {% endfor %}
+
+  {% endif %}
+
+  <input
+    type=""
+    name="id"
+    class='js-variant-id hidden'
+    value={{product.variants.first.id}}>
+  <div class="product-price grid  pt-1 pb-1 grid-cols-2 border-t-2 border-c2 ">
+    <p class="grey">
+      Price
+    </p>
+
+    <ul>
+      {% if product.compare_at_price > 0 %}
+
+        <p class="unavailble">
+          {{ product.compare_at_price | money_with_currency }}</p>
+        <p class="js-price" data-default-price="{{ product.price | money }}">
+          {{ product.price | money_with_currency }}
+        </p>
+      {% else %}
+
+        <p class="js-price" data-default-price="{{ product.price | money }}">{{ product.price | money }}</p>
+      {% endif %}
+    </ul>
+  </div>
+
+  <div class="grid  pt-1 pb-1 grid-cols-2 border-t-2 border-c2 ">
+
+    <label for="quanity" class="product-option-row-title">
+      Quanity:
+    </label>
+
+    <div class="js-quantity flex gap-2 pb-4">
+
+      <p class="js-quantity-minus  quantity-btn">
+        -
+      </p>
+
+      <p
+        type="number"
+        class="js-quantity-total"
+        data-current="1"
+        data-max="{{ current_variant.inventory_quantity }} ">
+        1
+      </p>
+
+      <p class="js-quantity-add quantity-btn ">
+        +
+      </p>
+
+
+
+    </div>
+
+  </div>
+
+
+
+
+    <p data-ajax-cart-errors="form" class=' text-orange-500 font-bold text-center  2' >
+
+      </p>
+
+
+  <!-- hidden -------------- -->
+
+  <input
+  type="hidden"
+    class="js-hidden-quantity"
+    name="quantity"
+    value="1">  
+
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+

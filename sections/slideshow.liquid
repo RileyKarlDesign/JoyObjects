@@ -1,0 +1,66 @@
+<div class=' click-gallery bg-red-200'>
+
+
+
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'slide' %}
+          <div class="ticket" {{ block.shopify_attributes }}>
+            {{ block.settings.image | image_url: width: 2048 | image_tag }}
+          </div>
+        
+      {% endcase %}
+    {% endfor %}
+
+    
+
+  
+</div>
+
+
+{% schema %}
+{
+  "name": "Slideshow",
+  "tag": "section",
+  "class": "slideshow",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Slideshow"
+    }
+  ],
+  "max_blocks": 5,
+  "blocks": [
+     {
+       "name": "Slide",
+       "type": "slide",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image"
+         }
+       ]
+     }
+  ],
+  "presets": [
+    {
+      "name": "Slideshow",
+      "settings": {
+        "title": "Slideshow"
+      },
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

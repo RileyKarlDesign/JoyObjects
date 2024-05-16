@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+*{ 
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+/*  custom scroll bar   */
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0;
+  position: fixed;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
+
+
+@font-face {
+    font-family: rounded;
+    src: url(./HelveticaRoundedLTStd-Bd.woff)
+  }
+  
+  div {
+    font-family: r;
+  }
+
+
+
+
+ h2,button {
+  font-size: 14px  ;
+  letter-spacing: -.2px;
+  font-family: 'rounded', Courier, monospace;
+  text-transform: uppercase;
+}
+
+p,label,ul,input{
+  font-size: 13px ;
+  line-height: 20px;
+  font-weight: medium;
+  letter-spacing:.4px;
+  font-family: 'rounded', sans-serif, Courier, monospace;
+}
+.caption {
+  font-size: 10px;
+  opacity: .5;
+  letter-spacing:1px;
+  font-family: Helvetica, sans-serif;
+}
+
+.light-t {
+  font-size: 10px;
+  opacity: .5;
+  letter-spacing:1px;
+  font-family: Helvetica, sans-serif;
+}
+
+
+/*  swiper  */
+.swiper-container {
+  width: 100%;
+}
+
+
+.ticket{
+  width: 200px;
+  opacity: 0;
+}
+
+.active-ticket{
+  opacity: 100!important;
+}
+
+.swiper-slide  {
+  /*  working if needed  */
+  /* border: red 2px solid !important; */
+}
+
+.swiper-slide img  {
+ 
+  /* width: 423.875px !important; */
+  width:900px !important;
+ 
+
+}
+
+
+
+
+
+
+
+
+.hero-image-section img{
+   width: 100%;
+   height: 100vh;
+   object-fit: cover;
+}
+
+img{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    max-height: calc(120vh);
+    
+   
+     
+  
+}
+
+
+@keyframes mymove {
+  from {webkit-filter: grayscale(100%) brightness(0);
+    filter: grayscale(100%) brightness(0);}
+  to {webkit-filter: grayscale(0%) brightness(100%);
+    filter: grayscale(0%) brightness(100%);}
+}
+
+
+.featuredProductImage > img{
+  animation-name: mymove;
+  animation-duration: 1s;
+}
+
+.icon{
+
+     webkit-filter: grayscale(100%) brightness(0);
+     filter: grayscale(100%) brightness(0);
+     opacity: .2;
+
+}
+
+/*  Cart  */
+
+
+.body-wrap{
+
+  background-color: white;
+  overflow: scroll;
+   
+}
+
+.body-inactive{
+  opacity: .4;
+}
+
+.my-cart{
+  
+  width: calc( 100vw  );
+  cursor: pointer;
+  height: 0px;
+  transition: ease all 0.3s ;
+  overflow: hidden;
+
+
+}
+ 
+.cart-open{
+  height:600px;
+  overflow: scroll;
+  transition: ease all 0.3s ;
+ 
+}
+
+ajax-cart-product-form[processing]:before {
+  content: 'Loading';
+  display: block;
+}
+
+/* Make the "Add to cart" button look visually disabled while loading */
+ajax-cart-product-form[processing] [type="submit"] {
+  opacity: .7;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.my-cart__items {
+  opacity: 1;
+  transition: opacity .2s;
+}
+
+/* Make the cart content look visually disabled while updating */
+html.js-ajax-cart-processing .my-cart__items {
+  opacity: .7;
+}
+
+/* Show a loading indicator */
+html.js-ajax-cart-processing .my-cart__items:before {
+  content: 'Loading';
+  display: block;
+}
+
+
+/*  swiper slide  */
+
+.swiper-slide{
+  width: 407px !important;
+}

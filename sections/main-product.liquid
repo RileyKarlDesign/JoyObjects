@@ -1,0 +1,67 @@
+
+
+<div class=" relative"> 
+        <div class="pb-4  pt-4 overflow-hidden"> 
+
+                        <!-- Slider main container -->
+                        <div class="product-swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper ">
+                            <!-- Slides -->
+                     
+                            {% for image in product.images %}
+
+                                <div class='swiper-slide flex justify-center '>
+                                    <div class="object-contain"> 
+                                    <div class='bg-stone-50  aspect-main  '>
+                                        {{ image | image_url: width: 700 | image_tag }}      
+                                    </div>      
+                                        <p class='caption pl-2 pt-1 text-center absolute top-0 '> {{ forloop.index }} / {{ forloop.length }}  </p>            
+                                    </div>
+                                </div>
+                    
+                
+                            {% endfor %}
+
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+                        
+                            <!-- If we need navigation buttons -->
+                            {% comment %} <div class='bg-red-500'>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div> {% endcomment %}
+                            <!-- If we need scrollbar -->
+                          
+                        </div>
+
+
+
+           
+        </div>
+        <div class=" flex flex-co gap-4 align-middle justify-center  " > 
+            <div class='  w-base col-start-2 col-span-1 bp-40  '>
+                  
+                <div class='  pb-6'> 
+                            <div class='pb-2 text-center'>   
+                            <h2>{{product.title}}</h2>
+                        </div>
+                        <p> {{ product.description }}</p>
+                </div>
+
+
+                <div class='  pb-0'>
+                    {% render 'info-line' with { title: 'Width', value: product.metafields.custom.width  }  %}
+                    {% render 'info-line' with { title: 'Height', value: product.metafields.custom.height  }  %}
+                    {% render 'info-line' with { title: 'Burn Time', value: product.metafields.custom.burn_time }  %}
+                
+                
+                    <ajax-cart-product-form> 
+                    {% render 'add-to-cart-form' with current_variant: current_variant  %}
+                    </ajax-cart-product-form>
+                    </div>
+                </div>
+        </div>
+        {% render 'atc-stick' %} 
+</div>

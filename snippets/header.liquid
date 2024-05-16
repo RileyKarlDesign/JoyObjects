@@ -1,0 +1,23 @@
+<div class=' w-20 p-2 z-50 absolute left-1 top-1  ' >
+  <a href="/"> {{  shop.brand.logo | image_url: width: 700 | image_tag }} </a>
+</div>
+  
+  <div class=' HEADER HERE flex align-middle bg-opacity-40 justify-center  z-50 w-full sticky top-2  '> 
+
+      <div class='flex w-base justify-center items-center h-el p-2 bg-c1 bg-opacity-50 rounded-base  backdrop-blur-lg'>
+          {% for link in linklists.main-menu.links %} 
+            <h2 class='  w-fit  h-fit  pt-[2px] pl-2 pr-2'><a href="{{ link.url }}">{{ link.title }}</a></h2>
+          {% endfor %}
+          <div class='flex justify-end w-fit h-fit cursor-pointer cart-btn'>
+            <h2 class='w-fit  h-fit  pt-[2px] pl-2 pr-2'>Cart(
+              <span data-ajax-cart-bind="item_count" class="header__cart-quantity pointer-events-none">
+                {{ cart.item_count }} 
+              </span> )
+            </h2>
+          </div> 
+      </div>
+  </div> 
+
+  
+
+

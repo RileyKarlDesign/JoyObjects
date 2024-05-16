@@ -1,0 +1,88 @@
+console.log( ' shoooooper')
+
+function runWhenInit() {
+  console.log("The current cart state is: ", window.liquidAjaxCart.cart);
+}
+
+if (window.liquidAjaxCart?.init) {
+  // if Liquid Ajax Cart is already initialized
+  runWhenInit();
+} else {
+  // wait for Liquid Ajax Cart to be initialized
+  document.addEventListener("liquid-ajax-cart:init", runWhenInit);
+}
+
+// const swiper = new Swiper('.swiper', {
+//   // Optional parameters
+ 
+//   loop: true,
+
+//   // If we need pagination
+//   pagination: {
+//     el: '.swiper-pagination',
+//   },
+
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+
+//   // And if we need scrollbar
+//   scrollbar: {
+//     el: '.swiper-scrollbar',
+//   },
+// });
+
+
+//  carrosell 
+
+
+let allTickets = document.querySelectorAll('.ticket');
+let gallery = document.querySelector('.click-gallery');
+let visableTickets = []
+let x = 0
+console.log(allTickets)
+
+
+
+
+let setActiveTickets = () =>{
+
+  console.log(`x id ${x}`) 
+  if( x < allTickets.length-1 ){
+    
+    visableTickets.push(allTickets[x]);
+    x += 1
+    console.log(visableTickets);
+
+  }else{
+    visableTickets.push(allTickets[x])
+    console.log(visableTickets);
+    x = 0
+  }
+
+
+
+  if (visableTickets.length ==allTickets.length  ){
+    console.log('remoeing one');
+    let last = visableTickets.length-1 ;
+    visableTickets[last].classList.remove('active-ticket')
+    visableTickets.splice(last, 1);
+    console.log(visableTickets.classList);
+  }
+
+  for( let i = 0; i < visableTickets.length; i++ ){
+    visableTickets[i].classList.add('active-ticket')
+  }
+
+  // for( let i = 0; i < allTickets.length; i++){
+  // x += 1
+  // allTickets[i].classList.add('active-ticket')
+  // console.log(x)
+  }
+
+
+  gallery.addEventListener('click', setActiveTickets)
+
+

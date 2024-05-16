@@ -1,0 +1,35 @@
+
+
+
+
+<div class="my-cart bg-c3   relative" >
+  <div class="" data-ajax-cart-section >
+    <div class="my-cart__items grid p-2 grid-cols-4 gap-2" data-ajax-cart-section-scroll >
+      <!-- Loop through cart items -->
+      {% for line_item in cart.items %}
+
+        {% render 'cart-card' with { product: line_item , index: forloop.index } %}
+      {% endfor %}
+    </div> 
+
+  </div>
+
+  <div class=' cart-footer flex gap-2 justify-center align-middle absolute bottom-2  w-full '> 
+
+  <div class='flex w-fit h-el pl-4 pr-4 justify-center items-center bg-c1  rounded-lg  backdrop-blur-lg'>
+      <h2 class='cart-btn'>Close</h2>
+  </div>
+
+{% form 'cart', cart, id: 'my-ajax-cart-form' %}
+  <button class='flex w-fit h-el  pl-4 pr-4 justify-center items-center bg-c1 bg-opacity-50 rounded-lg  backdrop-blur-lg '  type="submit" name="checkout">
+    Checkout — {{ cart.total_price | money_with_currency }}
+  </button> 
+{% endform %}
+
+</div>
+
+</div>
+
+
+
+{% schema %} { "name": "My Ajax cart" } {% endschema %}
