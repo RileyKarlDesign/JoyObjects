@@ -1,0 +1,50 @@
+
+  
+
+  
+
+      <div class="grid  sm:grid-cols-2 grid-cols-1 p-2 gap-2 pt-0 ">
+        <div class='w-full flex justify-center items-center'>
+          <div class='object fit aspect-main'>
+            {{ section.settings.image| img_url: '2048x' | img_tag }}
+            </div>
+        </div>
+
+      <div class='w-full'>
+        <h1 class='font-sans text-xl uppercase text-center'>
+          {{ section.settings.body}}
+        </h1>
+      </div>
+    
+      </div>
+
+   
+
+ 
+
+
+{% schema %}
+
+  {
+    "name": "Centerd Image & Text",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image One"
+      },
+      {
+        "type": "text",
+        "id": "body",
+        "label": "Body Text"
+      }
+    ],
+
+    "presets": [
+      {
+        "name": "Image & Text ",
+        "category": "Content"
+      }
+    ]
+  }
+{% endschema %}
