@@ -458,6 +458,16 @@ video {
   src: url(./AlteHaasGroteskRegular.woff)
 }
 
+.strech{
+  display:inline-block;
+  /* Safari and Chrome */
+  /* Firefox */
+  /* IE 9 */
+  /* Opera */
+  transform:scale(2,1);
+  /* W3C */
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -913,8 +923,16 @@ video {
   width: 2rem;
 }
 
+.w-\[40\%\] {
+  width: 40%;
+}
+
 .w-\[70\%\] {
   width: 70%;
+}
+
+.w-\[80\%\] {
+  width: 80%;
 }
 
 .w-base {
@@ -1549,6 +1567,11 @@ video {
   font-family: Times;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .text-9xl {
   font-size: 8rem;
   line-height: 1;
@@ -1579,6 +1602,10 @@ video {
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-thin {
+  font-weight: 100;
 }
 
 .uppercase {
@@ -1759,6 +1786,12 @@ video {
   transition-duration: 150ms;
 }
 
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 *{
 }
 
@@ -1910,6 +1943,10 @@ html.js-ajax-cart-processing .my-cart__items:before {
 
 .swiper-slide{
   width: 407px !important;
+}
+
+.hover\:opacity-100:hover {
+  opacity: 1;
 }
 
 @media (min-width: 640px) {
