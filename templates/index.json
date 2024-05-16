@@ -13,10 +13,19 @@
         "title": "The New Objects",
         "body": "This is filler text for now"
       }
+    },
+    "two_images_Vam9V6": {
+      "type": "two-images",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/3.jpg",
+        "title": "The Main Title",
+        "body": "This is longer place holder text that should be enough to fill a decent section on the page"
+      }
     }
   },
   "order": [
     "hero_home_hPrMPx",
-    "two_images_irwN39"
+    "two_images_irwN39",
+    "two_images_Vam9V6"
   ]
 }
