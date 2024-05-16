@@ -1352,6 +1352,11 @@ video {
      object-fit: contain;
 }
 
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .p-1 {
   padding: 0.25rem;
 }
@@ -1534,6 +1539,11 @@ video {
 
 .font-serif {
   font-family: Times;
+}
+
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
 }
 
 .text-\[20px\] {
@@ -1780,6 +1790,11 @@ input[type=number] {
   border-radius: 10px;
 }
 
+h1{
+  font-family: 'Courier New', Courier, monospace;
+  font-stretch: 200% !important;
+}
+
 /*  swiper  */
 
 .swiper-container {
@@ -1895,21 +1910,17 @@ html.js-ajax-cart-processing .my-cart__items:before {
     width: 10rem;
   }
 
-  .sm\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
 @media (min-width: 768px) {
   .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-8 {
-    grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 }

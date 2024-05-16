@@ -4,23 +4,20 @@
   
 
       <div class="grid  sm:grid-cols-2 grid-cols-1 p-2 gap-2">
-
+      <div class='w-full'>
+        <h1 class='font-serif text-9xl uppercase'>
+          {{ section.settings.title}}
+        </h1>
+        <h2 class='font-sans text-lg uppercase' >
+          {{ section.settings.body}}
+          </h2>
+        
+      </div>
       <div class='w-full'>
         <div class='object fit'>
           {{ section.settings.image| img_url: '2048x' | img_tag }}
           </div>
       </div>
-
-      <div class='w-full'>
-        <h1 class='font-serif'>
-          {{ section.settings.title}}
-          </h1>
-        <h2 class='font-sans ' >
-          {{ section.settings.body}}
-          </h2>
-        
-      </div>
-
       </div>
 
    
