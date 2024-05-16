@@ -21,11 +21,19 @@
         "title": "The Main Title",
         "body": "This is longer place holder text that should be enough to fill a decent section on the page"
       }
+    },
+    "centerd_image_and_text_NMAVaf": {
+      "type": "centerd-image-and-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/joy_posts2.jpg",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse iaculis eget lacus volutpat sagittis. Phasellus tempor viverra lacus in consectetur. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas eget nibh cursus, venenatis libero non, mattis massa. Pellentesque in quam risus."
+      }
     }
   },
   "order": [
     "hero_home_hPrMPx",
     "two_images_irwN39",
-    "two_images_Vam9V6"
+    "two_images_Vam9V6",
+    "centerd_image_and_text_NMAVaf"
   ]
 }
