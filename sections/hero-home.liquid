@@ -3,14 +3,14 @@
 
   
 
-      <div class=" flex justify-center align-center top-1 h-screen left-1 right-1 overflow-hidden">
+      <div class=" w-screen h-screen">
 
-      <div class='p-48 object-fit'>
-        {{ section.settings.image_1 | img_url: '2048x' | img_tag }}
-        <p>
-          1 / 12
-          </p>
-      </div>
+        <div class='w-full h-full '>
+          
+          {{ section.settings.video1  | video_tag: autoplay: true, loop: true, muted: true, controls: false }}
+      
+        </div>
+
       </div>
 
    
@@ -21,23 +21,18 @@
 {% schema %}
 
   {
-    "name": "Main Image",
+    "name": "Hero Video",
     "settings": [
       {
-        "type": "image_picker",
-        "id": "image_1",
+        "type": "video",
+        "id": "video1",
         "label": "Image One"
-      },
-      {
-        "type": "text",
-        "id": "img_text_1",
-        "label": "Image One Text"
       }
     ],
 
     "presets": [
       {
-        "name": " MainImage",
+        "name": " heroVideo",
         "category": "Content"
       }
     ]

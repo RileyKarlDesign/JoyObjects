@@ -3,6 +3,19 @@
 @tailwind utilities;
 
 
+@layer base {
+
+@font-face {
+  font-family: altB;
+  src: url(./AlteHaasGroteskBold.woff)
+}
+@font-face {
+  font-family: altR;
+  src: url(./AlteHaasGroteskRegular.woff)
+}
+
+}
+
 
 *{ 
 }
@@ -39,45 +52,9 @@ input[type=number] {
 }
 
 
-@font-face {
-    font-family: rounded;
-    src: url(./HelveticaRoundedLTStd-Bd.woff)
-  }
-  
-  div {
-    font-family: r;
-  }
 
 
 
-
- h2,button {
-  font-size: 14px  ;
-  letter-spacing: -.2px;
-  font-family: 'rounded', Courier, monospace;
-  text-transform: uppercase;
-}
-
-p,label,ul,input{
-  font-size: 13px ;
-  line-height: 20px;
-  font-weight: medium;
-  letter-spacing:.4px;
-  font-family: 'rounded', sans-serif, Courier, monospace;
-}
-.caption {
-  font-size: 10px;
-  opacity: .5;
-  letter-spacing:1px;
-  font-family: Helvetica, sans-serif;
-}
-
-.light-t {
-  font-size: 10px;
-  opacity: .5;
-  letter-spacing:1px;
-  font-family: Helvetica, sans-serif;
-}
 
 
 /*  swiper  */
@@ -108,29 +85,6 @@ p,label,ul,input{
 
 }
 
-
-
-
-
-
-
-
-.hero-image-section img{
-   width: 100%;
-   height: 100vh;
-   object-fit: cover;
-}
-
-img{
-    width: 100%; 
-    height: 100%;
-    object-fit: cover;
-    max-height: calc(120vh);
-    
-   
-     
-  
-}
 
 
 @keyframes mymove {

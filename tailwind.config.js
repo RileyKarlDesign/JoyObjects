@@ -25,6 +25,14 @@ module.exports = {
         'base': '423.875px',
       },
 
+      fontFamily: {
+        'sans': ['altB'],
+        'serif': ['Times', ],
+        'mono': ['ui-monospace'],
+
+      },
+
+
       borderRadius:{
         'base': '3px'
       },

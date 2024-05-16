@@ -46,7 +46,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: altB;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -135,7 +135,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: ui-monospace;
   /* 1 */
   font-feature-settings: normal;
   /* 2 */
@@ -444,6 +444,18 @@ video {
 
 [hidden] {
   display: none;
+}
+
+@font-face {
+  font-family: altB;
+
+  src: url(./AlteHaasGroteskBold.woff)
+}
+
+@font-face {
+  font-family: altR;
+
+  src: url(./AlteHaasGroteskRegular.woff)
 }
 
 *, ::before, ::after {
@@ -1500,10 +1512,6 @@ video {
   padding-top: 2rem;
 }
 
-.pt-\[2px\] {
-  padding-top: 2px;
-}
-
 .text-center {
   text-align: center;
 }
@@ -1518,6 +1526,14 @@ video {
 
 .align-bottom {
   vertical-align: bottom;
+}
+
+.font-sans {
+  font-family: altB;
+}
+
+.font-serif {
+  font-family: Times;
 }
 
 .text-\[20px\] {
@@ -1764,45 +1780,6 @@ input[type=number] {
   border-radius: 10px;
 }
 
-@font-face {
-  font-family: rounded;
-
-  src: url(./HelveticaRoundedLTStd-Bd.woff)
-}
-
-div {
-  font-family: r;
-}
-
-h2,button {
-  font-size: 14px  ;
-  letter-spacing: -.2px;
-  font-family: 'rounded', Courier, monospace;
-  text-transform: uppercase;
-}
-
-p,label,ul,input{
-  font-size: 13px ;
-  line-height: 20px;
-  font-weight: medium;
-  letter-spacing:.4px;
-  font-family: 'rounded', sans-serif, Courier, monospace;
-}
-
-.caption {
-  font-size: 10px;
-  opacity: .5;
-  letter-spacing:1px;
-  font-family: Helvetica, sans-serif;
-}
-
-.light-t {
-  font-size: 10px;
-  opacity: .5;
-  letter-spacing:1px;
-  font-family: Helvetica, sans-serif;
-}
-
 /*  swiper  */
 
 .swiper-container {
@@ -1826,21 +1803,6 @@ p,label,ul,input{
 .swiper-slide img  {
   /* width: 423.875px !important; */
   width:900px !important;
-}
-
-.hero-image-section img{
-  width: 100%;
-  height: 100vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-img{
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  max-height: calc(120vh);
 }
 
 @keyframes mymove {
@@ -1929,8 +1891,16 @@ html.js-ajax-cart-processing .my-cart__items:before {
 }
 
 @media (min-width: 640px) {
+  .sm\:w-40 {
+    width: 10rem;
+  }
+
   .sm\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
