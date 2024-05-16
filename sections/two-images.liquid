@@ -3,24 +3,22 @@
 
   
 
-      <div class="grid2 sm:grid-cols-2 grid-cols-1">
+      <div class="grid  sm:grid-cols-2 grid-cols-1 p-2 gap-2">
 
       <div class='w-full'>
-        <div class=''>
-          {{ section.settings.image_1 | img_url: '2048x' | img_tag }}
+        <div class='object fit'>
+          {{ section.settings.image| img_url: '2048x' | img_tag }}
           </div>
-        <p>
-          {{ section.settings.img_text_1 }}
-          </p>
       </div>
 
-      <div class=''>
-        <div class=' '>
-        {{ section.settings.image_2 | img_url: '2048x' | img_tag }}
-        </div>
-        <p>
-          {{ section.settings.img_text_2}}
-          </p>
+      <div class='w-full'>
+        <h1>
+          {{ section.settings.title}}
+          </h1>
+        <h2>
+          {{ section.settings.body}}
+          </h2>
+        
       </div>
 
       </div>
@@ -37,29 +35,24 @@
     "settings": [
       {
         "type": "image_picker",
-        "id": "image_1",
+        "id": "image",
         "label": "Image One"
       },
       {
         "type": "text",
-        "id": "img_text_1",
-        "label": "Image One Text"
-      },
-      {
-        "type": "image_picker",
-        "id": "image_2",
-        "label": "Image Two"
+        "id": "title",
+        "label": "Title"
       },
       {
         "type": "text",
-        "id": "img_text_2",
-        "label": "Image Two Text"
+        "id": "body",
+        "label": "Body Text"
       }
     ],
 
     "presets": [
       {
-        "name": "TwoImages ",
+        "name": "Image & Text ",
         "category": "Content"
       }
     ]
