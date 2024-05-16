@@ -6,16 +6,17 @@
         "video1": "shopify:\/\/files\/videos\/SNSxJOY PROJECTION CLEAN.mp4"
       }
     },
-    "two_images_btajzm": {
+    "two_images_irwN39": {
       "type": "two-images",
       "settings": {
-        "img_text_1": "Name Here",
-        "img_text_2": "Name Here"
+        "image": "shopify:\/\/shop_images\/extra3.jpg",
+        "title": "The New Objects",
+        "body": "This is filler text for now"
       }
     }
   },
   "order": [
     "hero_home_hPrMPx",
-    "two_images_btajzm"
+    "two_images_irwN39"
   ]
 }
