@@ -3,22 +3,26 @@
 
   
 
-      <div class="grid  sm:grid-cols-2 grid-cols-1 p-2 gap-2 pt-0">
-      <div class='w-full'>
-        <h1 class='font-serif strech text-9xl uppercase font-thin'>
-          {{ section.settings.title}}
-        </h1>
-        <h2 class='font-sans text-lg uppercase leading-none  text-justify w-[70%] ' >
-          {{ section.settings.body}}
-          </h2>
-        
+    <div class="grid sm:h-screen h-fit bg-opacity-50 sm:grid-cols-2 grid-cols-1 p-4 gap-2 ">
+      <div class='w-full '>
+        <div class='h-full   '>
+          <div class='h-fit pb-4'>
+            <h1 class='font-serif strech sm: w-[80%]  uppercase    '>
+              {{ section.settings.title}}
+            </h1>
+          </div>
+            <h2 class='font-sans text-xl uppercase leading-none  w-[80%] ' >
+              {{ section.settings.body}}
+            </h2>
+            {% render 'shopping-link' with { text: 'View Product', link:'this'} %}
+          </div>
       </div>
-      <div class='w-full'>
+      <div class='w-full h-full bg-red-400 overflow-hidden'>
         <div class='object fit'>
           {{ section.settings.image| img_url: '2048x' | img_tag }}
           </div>
       </div>
-      </div>
+    </div>
 
    
 
@@ -44,6 +48,11 @@
         "type": "text",
         "id": "body",
         "label": "Body Text"
+      },
+      {
+        "type": "color",
+        "id": "color",
+        "label": "Colour"
       }
     ],
 

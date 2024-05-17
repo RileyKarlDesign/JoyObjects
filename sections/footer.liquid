@@ -1,10 +1,16 @@
-<div class=" opacity-50  hover:opacity-100 transition-all">
+<div class=" opacity-50  hover:opacity-100 transition-all p-2">
 
         <div class=''>
-                <h2 class='text-center'> name here </h2>
+                                        
+                        <div class='w-full text-md menu-link font-sans flex  items-end gap-2' >
+                                {% for link in linklists.footer.links %} 
+                                <h2 class=''><a href="{{ link.url }}">{{ link.title }}</a></h2>
+                                {% endfor %}
+                            
+                        </div>
 
                 <div class=' ' >
-                        <a href="/"> {{  shop.brand.logo | image_url: width: 700 | image_tag }} </a>
+                 {{  shop.brand.logo | image_url: width: 700 | image_tag }} 
                 </div>
 
         </div>
