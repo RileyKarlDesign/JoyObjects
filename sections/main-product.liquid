@@ -1,7 +1,37 @@
 
 
-<div class=" relative"> 
-        <div class="pb-4  pt-4 overflow-hidden"> 
+<div class=" relative min-h-screen" style='  background:{{ product.metafields.custom.page_colour }}'> 
+    <div class=' aspect-main h-[40vh] p-2 flex gap-2 '>
+        {% for image in product.images %}
+
+                    {{ image | image_url: width: 700 | image_tag }}      
+         
+            {% endfor %}
+    </div>      
+
+<div class=' grid grid-cols-8  pb-6 p-2'> 
+    <div class='col-span-3'>
+        <h3 class=' pb-4 '>{{product.title}}</h3>
+        <h3 class='' > {{ product.description }}
+        {% render 'info-line' with { title: 'Width', value: product.metafields.custom.width  }  %}
+            {% render 'info-line' with { title: 'Height', value: product.metafields.custom.height  }  %}
+        {% render 'info-line' with { title: 'Legnth', value: product.metafields.custom.length }  %}
+        </h3>
+
+        <ajax-cart-product-form> 
+        {% render 'add-to-cart-form' with current_variant: current_variant  %}
+        </ajax-cart-product-form>
+
+        {% render 'atc-stick' %} 
+
+    </div>
+
+    
+</div>
+
+
+
+        <div class="pb-4  pt-4 overflow-hidden hidden"> 
 
                         <!-- Slider main container -->
                         <div class="product-swiper">
@@ -41,27 +71,8 @@
            
         </div>
         <div class=" flex flex-co gap-4 align-middle justify-center  " > 
-            <div class='  w-base col-start-2 col-span-1 bp-40  '>
-                  
-                <div class='  pb-6'> 
-                            <div class='pb-2 text-center'>   
-                            <h2>{{product.title}}</h2>
-                        </div>
-                        <p> {{ product.description }}</p>
-                </div>
-
-
-                <div class='  pb-0'>
-                    {% render 'info-line' with { title: 'Width', value: product.metafields.custom.width  }  %}
-                    {% render 'info-line' with { title: 'Height', value: product.metafields.custom.height  }  %}
-                    {% render 'info-line' with { title: 'Burn Time', value: product.metafields.custom.burn_time }  %}
-                
-                
-                    <ajax-cart-product-form> 
-                    {% render 'add-to-cart-form' with current_variant: current_variant  %}
-                    </ajax-cart-product-form>
-                    </div>
-                </div>
+           
+             
         </div>
-        {% render 'atc-stick' %} 
+        
 </div>

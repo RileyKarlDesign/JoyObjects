@@ -744,12 +744,20 @@ video {
   grid-column: span 4 / span 4;
 }
 
+.col-span-5 {
+  grid-column: span 5 / span 5;
+}
+
 .col-start-2 {
   grid-column-start: 2;
 }
 
 .col-start-3 {
   grid-column-start: 3;
+}
+
+.col-start-5 {
+  grid-column-start: 5;
 }
 
 .row-span-2 {
@@ -852,12 +860,20 @@ video {
   height: 14rem;
 }
 
+.h-60 {
+  height: 15rem;
+}
+
 .h-7 {
   height: 1.75rem;
 }
 
 .h-8 {
   height: 2rem;
+}
+
+.h-\[40vh\] {
+  height: 40vh;
 }
 
 .h-el {
@@ -875,6 +891,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-10 {
@@ -925,8 +945,8 @@ video {
   width: 2rem;
 }
 
-.w-\[40\%\] {
-  width: 40%;
+.w-\[30\%\] {
+  width: 30%;
 }
 
 .w-\[80\%\] {
@@ -1233,6 +1253,11 @@ video {
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
+.bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
 .bg-green-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
@@ -1380,6 +1405,10 @@ video {
 
 .bg-opacity-80 {
   --tw-bg-opacity: 0.8;
+}
+
+.bg-opacity-90 {
+  --tw-bg-opacity: 0.9;
 }
 
 .bg-gradient-to-tr {
@@ -1719,6 +1748,11 @@ video {
   color: rgb(28 25 23 / var(--tw-text-opacity));
 }
 
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .text-opacity-45 {
   --tw-text-opacity: 0.45;
 }
@@ -1731,12 +1765,24 @@ video {
   --tw-text-opacity: 0.85;
 }
 
+.text-opacity-90 {
+  --tw-text-opacity: 0.9;
+}
+
 .underline {
   text-decoration-line: underline;
 }
 
 .opacity-20 {
   opacity: 0.2;
+}
+
+.opacity-30 {
+  opacity: 0.3;
+}
+
+.opacity-40 {
+  opacity: 0.4;
 }
 
 .opacity-45 {
@@ -1839,12 +1885,28 @@ video {
   transition-duration: 150ms;
 }
 
-.strech{
+h1{
   /* display: inline-block;
   transform: scaleY(4);
   transform-origin: 0 0; */
   line-height: 3vw !important;
   font-size: 3.4vw !important;
+  font-family: 'Times New Roman', Times, serif !important;
+  text-transform: uppercase;
+}
+
+h2{
+  line-height: 1.8rem !important;
+  font-size: 2rem !important;
+  font-family: 'altB', Times, serif !important;
+  text-transform: uppercase;
+}
+
+h3{
+  line-height: 1rem !important;
+  font-size: 1rem !important;
+  font-family: 'altB', Times, serif !important;
+  text-transform: uppercase;
 }
 
 *{
@@ -1884,10 +1946,6 @@ input[type=number] {
 ::-webkit-scrollbar-thumb {
   background: red;
   border-radius: 10px;
-}
-
-h1{
-  font-stretch: 200% !important;
 }
 
 /*  swiper  */

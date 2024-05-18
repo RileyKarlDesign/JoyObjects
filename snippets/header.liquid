@@ -1,23 +1,23 @@
 
   
-  <div class=' HEADER HERE fixed left-0 right-0 top-0  w-full flex p-1' > 
+  <div class=' HEADER HERE fixed left-0 right-0 top-0  z-50  w-full flex p-1' > 
 
-      <div class=' absolute left-0 right-0 top-0   flex items-center justify-center  ' >
+      <div class=' absolute left-0 right-0 top-0  pointer-events-none  flex items-center justify-center  ' >
         <div class='sm:w-40 w-20' >
         <a href="/"> {{  shop.brand.logo | image_url: width: 700 | image_tag }} </a>
         </div>
       </div>
 
-      <div class='w-full text-md menu-link font-sans flex justify-end items-end gap-2 ' >
+      <div class='w-full text-md menu-link font-sans flex justify-end items-end gap-2  ' >
           {% for link in linklists.main-menu.links %} 
-            <h2 class=''><a href="{{ link.url }}">{{ link.title }}</a></h2>
+            <h3 class=''><a href="{{ link.url }}">{{ link.title }}</a></h3>
           {% endfor %}
           <div class='cart-btn cursor-pointer'>
-            <h2 class=' font-sans'>Cart (
+            <h3 class=''>Cart (
               <span data-ajax-cart-bind="item_count" class=" header__cart-quantity">
                 {{ cart.item_count }} 
               </span> )
-            </h2>
+            </h3>
           </div> 
       </div>
   </div> 
