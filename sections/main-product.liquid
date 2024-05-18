@@ -1,17 +1,19 @@
 
 
-<div class=" relative min-h-screen" style='  background:{{ product.metafields.custom.page_colour }}'> 
-    <div class='post-wrapper h-[40vh] p-2 flex gap-2 overflow-x-scroll  '>
-        {% for image in product.images %}
-
-                    {{ image | image_url: width: 700 | image_tag }}      
-         
-            {% endfor %}
+<div class=" relative " style='  background:{{ product.metafields.custom.page_colour }}'> 
+    <div class='post-wrapper transition-all h-[40vh] p-2 flex gap-2 overflow-x-scroll  '>
+        
+            {% for image in product.images %}
+                <div class="h-full aspect-main">
+                        {{ image | image_url: width: 700 | image_tag }}
+                    </div>
+                {% endfor %}
+       
     </div>      
 
 <div class=' grid grid-cols-8  pb-6 p-2'> 
     <div class='col-span-3'>
-        <h3 class=' pb-4 '>{{product.title}}</h3>
+        <h3 class='  '>{{product.title}}</h3>
         <h3 class='' > {{ product.description }}
         {% render 'info-line' with { title: 'Width', value: product.metafields.custom.width  }  %}
             {% render 'info-line' with { title: 'Height', value: product.metafields.custom.height  }  %}

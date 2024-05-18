@@ -1,7 +1,4 @@
-<div class=' click-gallery bg-red-200'>
-
-
-
+<div class=' click-gallery'>
     {% for block in section.blocks %}
       {% case block.type %}
         {% when 'slide' %}
@@ -11,10 +8,6 @@
         
       {% endcase %}
     {% endfor %}
-
-    
-
-  
 </div>
 
 
@@ -31,7 +24,7 @@
       "label": "Slideshow"
     }
   ],
-  "max_blocks": 5,
+  "max_blocks": 3,
   "blocks": [
      {
        "name": "Slide",

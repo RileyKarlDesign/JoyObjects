@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded',function () {
   
       if(postScroll){
         postScroll.addEventListener("wheel", (event) => {
+          console.log('scroll')
           if (scrollingHorizontally) {
             postScroll.scrollBy({
               left: event.deltaY < 0 ? -70 : 70,
@@ -28,10 +29,19 @@ document.addEventListener('DOMContentLoaded',function () {
         });
   
         postScroll.addEventListener('click', ()=>{
-          if( expanded ){
-            postScroll.style.height='1000px'
+
+          console.log('click')
+          if(!expanded ){
+
+            postScroll.style.height='70vh'
+            
+           
+            expanded=true
           }else{
             postScroll.style.height='40vh'
+          
+          
+            expanded=false
           }
           
         })
