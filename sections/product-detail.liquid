@@ -1,8 +1,9 @@
 <div class=' click-gallery'>
+  <h2> {{ section.settings.text }}</h2>
   {% for block in section.blocks %}
     {% case block.type %}
       {% when 'slide' %}
-        <div class="ticket" {{ block.shopify_attributes }}>
+        <div class="" {{ block.shopify_attributes }}>
           {{ block.settings.image | image_url: width: 2048 | image_tag }}
         </div>
       
@@ -12,7 +13,7 @@
 
 
 {% schema %}
-{ss
+{
 "name": "Slideshow",
 "tag": "section",
 "class": "slideshow",
