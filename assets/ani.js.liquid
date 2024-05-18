@@ -1,0 +1,19 @@
+console.log('ani 1.O')
+ 
+// _______________
+
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  
+    // Fade in 
+
+    gsap.from(".js-main", { opacity: 0, duration: 1 });
+
+    //  Section stagger fade in 
+
+    gsap.from(".js-section", {stagger: 1, opacity: 0, duration: 1 });
+
+
+  });
+
+

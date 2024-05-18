@@ -76,30 +76,29 @@ current_variant
     name="id"
     class='js-variant-id hidden'
     value={{product.variants.first.id}}>
-  <div class="product-price grid  pt-1 pb-1 grid-cols-2 border-t-2 border-c2 ">
-    <p class="grey">
+  <div class=" PRICE flex gap-2  ">
+    <h3 class=" ">
       Price
-    </p>
+    </h3>
 
-    <ul>
+    
       {% if product.compare_at_price > 0 %}
 
-        <p class="unavailble">
-          {{ product.compare_at_price | money_with_currency }}</p>
-        <p class="js-price" data-default-price="{{ product.price | money }}">
+        <h3 class="unavailble"> {{ product.compare_at_price | money_with_currency }}</h3>
+        <h3 class="js-price opacity-40 " data-default-price="{{ product.price | money }}">
           {{ product.price | money_with_currency }}
-        </p>
+        </h3>
       {% else %}
 
-        <p class="js-price" data-default-price="{{ product.price | money }}">{{ product.price | money }}</p>
+        <h3 class="js-price opacity-40 " data-default-price="{{ product.price | money }}">{{ product.price | money }}</h3>
       {% endif %}
-    </ul>
+  
   </div>
 
-  <div class="grid  pt-1 pb-1 grid-cols-2 border-t-2 border-c2 ">
+  <div class="QUANITY flex gap-4 ">
 
     <label for="quanity" class="product-option-row-title">
-      Quanity:
+      <h3> Quanity: </h3>    
     </label>
 
     <div class="js-quantity flex gap-2 pb-4">

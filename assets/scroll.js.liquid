@@ -1,0 +1,42 @@
+console.log(' scroll 1.0');
+
+// -------------------
+
+
+document.addEventListener('DOMContentLoaded',function () {
+    console.log('boo yaa')
+    const postScroll = document.querySelector(".post-wrapper");
+    let scrollingHorizontally = true;
+    let expanded = false 
+  
+      if(postScroll){
+        postScroll.addEventListener("wheel", (event) => {
+          if (scrollingHorizontally) {
+            postScroll.scrollBy({
+              left: event.deltaY < 0 ? -70 : 70,
+            });
+            event.preventDefault();
+        
+            // check if the user has reached the end of the slider
+            if (postScroll.scrollLeft >= postScroll.scrollWidth - postScroll.clientWidth) {
+              scrollingHorizontally = true;
+            }
+          } else {
+            // (scroll the page up/down)
+            return true;
+          }
+        });
+  
+        postScroll.addEventListener('click', ()=>{
+          if( expanded ){
+            postScroll.style.height='1000px'
+          }else{
+            postScroll.style.height='40vh'
+          }
+          
+        })
+        
+  
+      }
+  })
+  

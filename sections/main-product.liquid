@@ -1,7 +1,7 @@
 
 
 <div class=" relative min-h-screen" style='  background:{{ product.metafields.custom.page_colour }}'> 
-    <div class=' aspect-main h-[40vh] p-2 flex gap-2 '>
+    <div class='post-wrapper h-[40vh] p-2 flex gap-2 overflow-x-scroll  '>
         {% for image in product.images %}
 
                     {{ image | image_url: width: 700 | image_tag }}      
@@ -75,4 +75,6 @@
              
         </div>
         
+
+
 </div>

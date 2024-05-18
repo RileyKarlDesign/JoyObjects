@@ -28,6 +28,9 @@
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     
+
+
+    
 </head>
 <body id="{{ page_title | handle }}" class=" template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
  
@@ -58,10 +61,19 @@
       </script>
 
 
-    <script src="{{ 'shop.js' | asset_url }}" type="module" defer></script>
+    <script src="{{ 'shop.js' | asset_url }}" defer></script>
+    <script src="{{ 'scroll.js' | asset_url }}" defer></script>
+    <script src="{{ 'ani.js' | asset_url }}" defer></script>
     <script src="{{ 'cart.js' | asset_url }}" defer></script>
     <script src="{{ 'gallery.js' | asset_url }}" defer></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  
+ 
+    <script>
+
+  
+     
+     </script>
 
 
 </body>
