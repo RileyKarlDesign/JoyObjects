@@ -1,0 +1,31 @@
+
+    <a href="{{ product.url }}" >
+        <div class="grid grid-cols-5 group">
+        {% if product.featured_image %}
+            <div  class=' group-hover:opacity-100  opacity-0 h-40 absolute top-0 left-0 aspect-main'>
+            
+                {{ product.featured_image | image_url: width: 700 | image_tag }}
+            
+            </div>
+
+        {% endif %}
+
+        
+
+        <div class=" col-start-2">
+            <p> {{ product.title }} </p>
+        </div>
+
+        <div class="">
+            {% render 'info-line' with{ title:'W', value: product.metafields.custom.width %}
+            {% render 'info-line' with{ title:'H', value: product.metafields.custom.width %}
+            {% render 'info-line' with{ title:'L', value: product.metafields.custom.width %}
+        </div>
+
+        <div class="flex">
+            <p class='' > {{ product.price | money }} </p>
+            <p> {{ product.compare_at_price | money_with_currency }} </p>
+        </div>
+    </div>
+</a>
+

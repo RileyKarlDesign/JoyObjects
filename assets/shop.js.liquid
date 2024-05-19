@@ -15,6 +15,33 @@ if (window.liquidAjaxCart?.init) {
   document.addEventListener("liquid-ajax-cart:init", runWhenInit);
 }
 
+// menu
+
+let menuOpen = false
+
+
+let menuBtn = document.querySelector('.menu-btn')
+let menu = document.querySelector('.js-menu')
+
+let handelMenu = () => {
+  if(menuOpen){
+    menuBtn.innerHTML='Menu';
+    menuOpen = false;
+    menu.classList.remove('menu-open')
+
+  }else{
+
+    menuBtn.innerHTML='Close';
+    menuOpen = true ;
+    menu.classList.add('menu-open')
+
+  }
+}
+
+menuBtn.addEventListener('click',  handelMenu )
+
+
+
 // const swiper = new Swiper('.swiper', {
 //   // Optional parameters
  

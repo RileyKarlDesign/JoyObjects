@@ -1,4 +1,4 @@
-<div class="flex flex-col  relative   pt-2 ">
+<div class="flex flex-col  relative ">
 <a href="{{ product.url }}" >
 <div class=" "> 
 
@@ -7,17 +7,24 @@
           
             {{ product.featured_image | image_url: width: 700 | image_tag }}
            
-           
         </div>
        
       
 
     {% endif %}
 </div>
-<div class=' pt-1 pb-2'>
+<div class=' pt-1 '>
     <p> {{ product.title }} </p>
-    <p class='opacity-50' > {{ product.price | money }} </p>
-    <p> {{ product.compare_at_price | money_with_currency }} </p>
+
+    
+    {% render 'info-line' with{ title:'Width', value: product.metafields.custom.width %}
+    {% render 'info-line' with{ title:'Height', value: product.metafields.custom.width %}
+    {% render 'info-line' with{ title:'Length', value: product.metafields.custom.width %}
+
+    <div class="flex">
+        <p class='opacity-50' > {{ product.price | money }} </p>
+        <p> {{ product.compare_at_price | money_with_currency }} </p>
+    </div>
 </div>
 
 

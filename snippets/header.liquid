@@ -9,18 +9,33 @@
       </div>
 
       <div class='w-full text-md menu-link font-sans flex justify-end items-end gap-2  ' >
-          {% for link in linklists.main-menu.links %} 
-            <h3 class=''><a href="{{ link.url }}">{{ link.title }}</a></h3>
-          {% endfor %}
-          <div class='cart-btn cursor-pointer'>
-            <h3 class=''>Cart (
-              <span data-ajax-cart-bind="item_count" class=" header__cart-quantity">
-                {{ cart.item_count }} 
-              </span> )
-            </h3>
-          </div> 
+       <h3 class='menu-btn cursor-pointer' > Menu</h3>
+        <div class='cart-btn cursor-pointer'>
+          <h3 class=''>Cart (
+            <span data-ajax-cart-bind="item_count" class=" header__cart-quantity">
+              {{ cart.item_count }} 
+            </span> )
+          </h3>
+        </div> 
+    </div>
+</div> 
+
+      <div class='js-menu fixed top-0 right-0 left-0 bottom-0  flex flex-col items-end justify-end  z-40 bg-stone-50 pointer-events-none  bg-opacity-80 p-2 backdrop-blur-lg ' >
+          <div class="  h-full w-[20%]">
+              <div class="menu-top ">
+                  {% for link in linklists.main-menu.links %}
+                    <h2 class=''><a href="{{ link.url }}">{{ link.title }}</a></h2>
+                  {% endfor %}
+                </div>
+                <div class='menu-foot w-full '>
+                  {% for link in linklists.footer.links %}
+                    <h3 class=''><a href="{{ link.url }}">{{ link.title }}</a></h3>
+                  {% endfor %}
+                </div>
+            </div>
       </div>
-  </div> 
+
+
 
   
 
