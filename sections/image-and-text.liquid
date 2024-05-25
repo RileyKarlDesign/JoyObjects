@@ -14,7 +14,7 @@
             <h3 class='font-sans text-xl uppercase leading-none  w-[80%] ' >
               {{ section.settings.body}}
             </h3>
-            {% render 'shopping-link' with { text: 'View Product', link:'this'} %}
+            {% render 'shopping-link' with { text: 'View Product', link: section.settings.product.link} %}
           </div>
       </div>
       <div class='w-full h-full overflow-hidden'>
@@ -48,6 +48,11 @@
         "type": "text",
         "id": "body",
         "label": "Body Text"
+      },
+      {
+       "type": "product",
+       "id" : "product-link",
+       "label": "Product"
       },
       {
         "type": "color",

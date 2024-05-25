@@ -28,19 +28,28 @@
 </div>      
 {% render 'atc-stick' %} 
 
-<div class='post-wrapper transition-all h-fit flex gap-1 border-2 border-red-500  overflow-x-scroll pl-1 pr-1 '>
+<div class='post-wrapper transition-all  flex gap-1 border-2 border-red-500  overflow-x-scroll pl-1 pr-1 '>
         
     {% for image in product.images %}
-        <div class="h-full aspect-main ">
-                {{ image | image_url: width: 700 | image_tag }}
+        0
+        <div class=" h- w-60 relative ">
 
-                <div class="counter absolute top-2 left-2 bg-white h-4 w-4 bg-opacity-80 backdrop-blur-lg ">
-                    <p class="caption">
-                        {% forloop.index %}
-                    </p>
+
+                <div class=" image h-[50vh] ">
+                    
+                    {{ image | image_url: width: 700 | image_tag }}
+            
                 </div>
 
-            </div>
+                <div class="counter absolute top-2 left-2 bg-white flex items-center justify-center  z-40 h-6 w-6 shadow-sm rounded-full bg-opacity-40 backdrop-blur-lg ">
+                    <p class="caption">
+                        {{ forloop.index }} / {{ forloop.length  }}
+                    </p> 
+                </div>
+
+
+         </div>
+
         {% endfor %}
 
 </div>      
