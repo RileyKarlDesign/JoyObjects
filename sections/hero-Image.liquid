@@ -7,7 +7,7 @@
 
         <div class='w-full h-full  object-cover '>
           
-          {{ section.settings.video1  | video_tag: autoplay: true, loop: true, muted: true, controls: false }}
+          {{ section.settings.image1  | video_tag: autoplay: true, loop: true, muted: true, controls: false }}
       
         </div>
 
@@ -21,18 +21,18 @@
 {% schema %}
 
   {
-    "name": "Hero Video",
+    "name": "Hero Image",
     "settings": [
       {
-        "type": "video",
-        "id": "video1",
-        "label": "Image One"
+        "type": "image_picker",
+        "id": "image1",
+        "label": "Image"
       }
     ],
 
     "presets": [
       {
-        "name": " heroVideo",
+        "name": " Hero Image",
         "category": "Content"
       }
     ]
