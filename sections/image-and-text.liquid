@@ -14,15 +14,25 @@
             <h3 class='font-sans text-xl uppercase leading-none  w-[80%] ' >
               {{ section.settings.body}}
             </h3>
-            {% render 'shopping-link' with { text: 'View Product', link: section.settings.product.link} %}
+            here - {{ section.settings.product.url }}
+            {% render 'shopping-link' with { text: 'View Product herer', link: section.settings.product.url } %}
           </div>
       </div>
       <div class='w-full h-full overflow-hidden'>
-        <div class='object fit'>
+        <div class='object fit'> 
           {{ section.settings.image| img_url: '2048x' | img_tag }}
           </div>
       </div>
     </div>
+
+    <div class='w-full h-full overflow-hidden'>
+      here
+     {{ section.settings.featured-product.title }} 
+      <div class='object fit'> 
+          {{ section.settings.featured-product.featured_image| img_url: '2048x' | img_tag }}
+        </div>
+    </div>
+
 
    
  
@@ -51,7 +61,7 @@
       },
       {
        "type": "product",
-       "id" : "product-link",
+       "id" : "featured-product",
        "label": "Product"
       },
       {
