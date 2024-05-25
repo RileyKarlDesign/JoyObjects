@@ -2,7 +2,7 @@
   
   <div class=' HEADER HERE fixed left-0 right-0 top-0  z-50  w-full flex p-1' > 
 
-      <div class=' absolute left-0 right-0  pointer-events-none grid grid-cols-4   ' >
+      <div class=' absolute left-0 right-0  pointer-events-none  flex justify-center items-center ' >
         <div class='sm:w-40 w-20  col-start-2 ' >
         <a href="/"> {{  shop.brand.logo | image_url: width: 700 | image_tag }} </a>
         </div>
@@ -20,20 +20,7 @@
     </div>
 </div> 
 
-      <div class='js-menu fixed top-0 right-0 left-0 bottom-0  flex flex-col items-end justify-end  z-40 bg-stone-50 pointer-events-none  bg-opacity-80 p-2 backdrop-blur-lg ' >
-          <div class="  h-full w-[20%]">
-              <div class="menu-top ">
-                  {% for link in linklists.main-menu.links %}
-                    <h2 class=''><a href="{{ link.url }}">{{ link.title }}</a></h2>
-                  {% endfor %}
-                </div>
-                <div class='menu-foot w-full '>
-                  {% for link in linklists.footer.links %}
-                    <h3 class=''><a href="{{ link.url }}">{{ link.title }}</a></h3>
-                  {% endfor %}
-                </div>
-            </div>
-      </div>
+{% render 'menu' %}
 
 
 

@@ -11,11 +11,13 @@
               {{ section.settings.title}}
             </h1>
           </div>
-            <h3 class='font-sans text-xl uppercase leading-none  w-[80%] ' >
+            <h3 class='w-[80%]' >
               {{ section.settings.body}}
             </h3>
-            here - {{ section.settings.product.url }}
-            {% render 'shopping-link' with { text: section.settings.featured-product.title , link: section.settings.product.url } %}
+
+            {% if  section.settings.featured-product %}
+            {% render 'shopping-link' with { text: 'View Product' , link: section.settings.featured-product.url } %}
+            {% endif %}
           </div>
       </div>
       <div class='w-full h-full overflow-hidden'>
@@ -25,13 +27,7 @@
       </div>
     </div>
 
-    <div class='w-full h-full overflow-hidden'>
-    
-     {{ section.settings.featured-product.title }} 
-      <div class='object fit'> 
-          {{ section.settings.featured-product.featured_image| img_url: '2048x' | img_tag }}
-        </div>
-    </div>
+
 
 
    
