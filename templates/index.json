@@ -1,9 +1,9 @@
 {
   "sections": {
-    "hero_home_hPrMPx": {
-      "type": "hero-home",
+    "hero_image_nkgzDg": {
+      "type": "hero-Image",
       "settings": {
-        "video1": "shopify:\/\/files\/videos\/SNSxJOY PROJECTION CLEAN.mp4"
+        "image1": "shopify:\/\/shop_images\/joy_posts4.jpg"
       }
     },
     "image_and_text_8zGy87": {
@@ -35,7 +35,7 @@
     }
   },
   "order": [
-    "hero_home_hPrMPx",
+    "hero_image_nkgzDg",
     "image_and_text_8zGy87",
     "centerd_image_and_text_NMAVaf",
     "image_and_text_yiMTt9"
