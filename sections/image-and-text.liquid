@@ -15,7 +15,7 @@
               {{ section.settings.body}}
             </h3>
             here - {{ section.settings.product.url }}
-            {% render 'shopping-link' with { text: 'View Product herer', link: section.settings.product.url } %}
+            {% render 'shopping-link' with { text: section.settings.featured-product.title , link: section.settings.product.url } %}
           </div>
       </div>
       <div class='w-full h-full overflow-hidden'>
@@ -26,7 +26,7 @@
     </div>
 
     <div class='w-full h-full overflow-hidden'>
-      here
+    
      {{ section.settings.featured-product.title }} 
       <div class='object fit'> 
           {{ section.settings.featured-product.featured_image| img_url: '2048x' | img_tag }}
