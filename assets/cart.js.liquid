@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded',function () {
+_Fdocument.addEventListener('DOMContentLoaded',function () {
 
   let addToCartFormSelector = "#add-to-cart-form",
      productOptionsSelector = addToCartFormSelector + " [name*=option]";
@@ -214,10 +214,8 @@ document.addEventListener('DOMContentLoaded',function () {
 
 
     cartBtns.forEach( (i) => {
-      i.addEventListener('click', ()=> {  
+      i.addEventListener('mousedown', ()=> {  
 
-        console.log('clikc')
-        
         if(cartState){
           console.log('colse')
 

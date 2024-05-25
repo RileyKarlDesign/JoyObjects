@@ -7,7 +7,8 @@
 
         <div class='w-full h-full  object-cover '>
           
-          {{ section.settings.image1  | video_tag: autoplay: true, loop: true, muted: true, controls: false }}
+       
+          {{  section.settings.image1 | image_url: width: 1200 | image_tag }}
       
         </div>
 
