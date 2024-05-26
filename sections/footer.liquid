@@ -2,11 +2,11 @@
 
         <div class=''>
                                         
-                        <div class='w-full text-md menu-link font-sans flex  items-end gap-2' >
+                        {% comment %} <div class='w-full text-md menu-link font-sans flex  items-end gap-2' >
                                 {% for link in linklists.footer.links %} 
                                 <h3 class=''><a href="{{ link.url }}">{{ link.title }}</a></h3>
                                 {% endfor %}
-                        </div>
+                        </div> {% endcomment %}
 
                 <div class=' ' >
                  {{  shop.brand.logo | image_url: width: 700 | image_tag }} 
