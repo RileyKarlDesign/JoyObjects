@@ -3,24 +3,27 @@
 
 
 
-<div class="  flex  gap-2   h-[50vh] p-2  ">
+<div class="  flex  gap-2   h-fit p-2  overflow-hidden ">
 
 
+{% if collection.title != 'Products' %}
 
-    <div class=" h-full w-full bg-slate-100">
-    
-        {{ collection.settings.featured_image image_url: width: 700 | image_tag}}
-    
+    <div class=" h-full w-full   ">
+        {{ collection.featured_image  |  image_url: width: 700 | image_tag :  alt: collection.title, class: '  md:w-auto w-[100%] object-cover object-center max-h-[100vh]  aspect-square ' }}
     </div>
-    
+
+{% else %}
    
+{% render 'safe-space' %}
+
+{% endif %}
 
 </div>
 
 
 
-<div class="w-30 p-2">
-    <h2>{{ collection.title }}</h2>
-    <p>  {{ collection.description  }}</p>
-    
+<div class="w-30 p-2 pb-0 h-fit grid grid-cols-2 gap-2">
+    <h2>{{ collection.title }}  <span class=' opacity-50 '> // {{ collection.all_products_count }} Objects </span> </h2>
+
+   {{ collection.description}}
 </div>

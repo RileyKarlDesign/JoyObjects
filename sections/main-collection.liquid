@@ -5,23 +5,35 @@
 
     
     <div class=' p-2'>  
-
-
         {% if collection.all_products_count > 0 %}
-        
-        <div class='grid grid-flow-dense md:grid-cols-4 sm:grid-cols-3  grid-cols-2  gap-2  pb-2  '>     
+
+            {% if collection.title == 'Products' %}
                 
-        {% for product in collection.products %}
-            {% render 'product-card'  with {product: product} %}
-        {% endfor %}
+                <div class='grid grid-flow-dense md:grid-cols-4 sm:grid-cols-3  grid-cols-2  gap-2  pb-2  '>     
+                        
+                {% for product in collection.products %}
+                    {% render 'product-card'  with {product: product} %}
+                {% endfor %}
 
-         </div>
+                </div>
 
-        {% else %}
-            {% render 'shop-filters' %}
-            <div class='flex align-center bg-stone-50 h-8 justify-center pt-20 pb-20  '>  
+            {% else %}
+
+                <div class='grid grid-flow-dense md:grid-cols-2 sm:grid-cols-2  grid-cols-2  gap-2  pb-2  '>     
+                            
+                {% for product in collection.products %}
+                    {% render 'product-card'  with {product: product} %}
+                {% endfor %}
+
+                </div>
+
+            {% endif %}
+
+            {% else %}
+                
+                <div class='flex align-center bg-stone-50 h-8 justify-center pt-20 pb-20  '>  
                 <p> Nothing to see here yet </p>
-            </div>
-        {% endif %}
-
+                </div>
+ 
+            {% endif %}
     </div>

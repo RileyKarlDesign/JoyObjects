@@ -12,11 +12,13 @@
         <div class="flex justify-between col-start-4  lg:w-[350px] md:w-[300px] sm:w-full w-full  ">
           <div class=" flex gap-2">
           
-                <h3 class='menu-btn cursor-pointer hightlight select-none' > Menu </h3>
-                <h3 class=' cursor-pointer hightlight select-none' > <a href="/collections">Collections</a> </h3>
+                <h3 class=' hover:opacity-50 menu-btn cursor-pointer hightlight select-none' > Menu </h3>
+                <h3 class=' hover:opacity-50 cursor-pointer hightlight select-none' > <a href="/collections">Collections</a> </h3>
           </div>
-                <div class='cart-btn cursor-pointer bg-red-500 h-6 w-6 rounded-full '>
-        </div>
+                <div class='cart-btn cursor-pointer  h-6 w-fit rounded-full '>
+                  <h2 class='hover:opacity-50'>Cart ({{ cart.item_count }})</h2>
+
+              </div>
                 
               </div> 
       </div>

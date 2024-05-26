@@ -1,10 +1,15 @@
+ 
 
 
 
-
-<div class="my-cart bg-white rounded-lg   z-[2000]  relative" >
+<div class="my-cart  bg-c1 rounded-md  z-[2000]  backdrop-blur-lg relative   lg:w-[350px] md:w-[300px] sm:w-full w-full " >
   <div class="" data-ajax-cart-section >
-    <div class="my-cart__items grid p-2 grid-cols-4 gap-2" data-ajax-cart-section-scroll >
+    <div class="my-cart__items " data-ajax-cart-section-scroll >
+      <div class=' absolute top-0 right-0 left-0 flex p-2  w-full  justify-between items-end '>
+        <h2>Cart ({{ cart.item_count }})</h2>
+        <h2 class='cart-btn'>Close</h2>
+    </div>
+
       <!-- Loop through cart items -->
       {% for line_item in cart.items %}
 
@@ -16,9 +21,6 @@
 
   <div class=' cart-footer flex gap-2 justify-center align-middle absolute bottom-2  w-full '> 
 
-  <div class='flex w-fit h-el pl-4 pr-4 justify-center items-center bg-c1  rounded-lg  backdrop-blur-lg'>
-      <h2 class='cart-btn'>Close</h2>
-  </div>
 
 {% form 'cart', cart, id: 'my-ajax-cart-form' %}
   <button class='flex w-fit h-el  pl-4 pr-4 justify-center items-center bg-c1 bg-opacity-50 rounded-lg  backdrop-blur-lg '  type="submit" name="checkout">
