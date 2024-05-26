@@ -26,6 +26,7 @@
              </div>
     
             {% endfor %}
+            
     
     </div>     
 
@@ -39,11 +40,11 @@
         {% render 'indent-paragraph' with { title:'Infomation', description: product.description } %} {% endcomment %}
         <h1> {{ product.title }} </h1>
         <p> {{ product.description }} </p>
-        <h3 >
+        <p >
             {% render 'info-line' with { title: 'Width', value: product.metafields.custom.width  }%}
             {% render 'info-line' with { title: 'Height', value: product.metafields.custom.height  }%}
             {% render 'info-line' with { title: 'Legnth', value: product.metafields.custom.length }%}
-        </h3>
+        </p>
         
         <ajax-cart-product-form> 
             {% render 'add-to-cart-form' with current_variant: current_variant  %}

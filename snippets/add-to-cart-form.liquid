@@ -77,20 +77,20 @@ current_variant
     class='js-variant-id hidden'
     value={{product.variants.first.id}}>
   <div class=" PRICE flex gap-2  ">
-    <h3 class=" ">
+    <p class=" ">
       Price
-    </h3>
+    </p>
 
     
       {% if product.compare_at_price > 0 %}
 
-        <h3 class="unavailble"> {{ product.compare_at_price | money_with_currency }}</h3>
-        <h3 class="js-price opacity-40 " data-default-price="{{ product.price | money }}">
+        <p class="unavailble"> {{ product.compare_at_price | money_with_currency }}</p>
+        <p class="js-price opacity-40 " data-default-price="{{ product.price | money }}">
           {{ product.price | money_with_currency }}
-        </h3>
+        </p>
       {% else %}
 
-        <h3 class="js-price opacity-40 " data-default-price="{{ product.price | money }}">{{ product.price | money }}</h3>
+        <p class="js-price opacity-40 " data-default-price="{{ product.price | money }}">{{ product.price | money }}</p>
       {% endif %}
   
   </div>
@@ -98,25 +98,25 @@ current_variant
   <div class="QUANITY flex gap-4 ">
 
     <label for="quanity" class="product-option-row-title">
-      <h3> Quanity: </h3>    
+      <p> Quanity: </p>    
     </label>
 
     <div class="js-quantity flex gap-2 ">
-      <h3 class="js-quantity-minus  quantity-btn">
+      <p class="js-quantity-minus  quantity-btn">
         -
-      </h3>
+      </p>
 
-      <h3
+      <p
         type="number"
         class="js-quantity-total"
         data-current="1"
         data-max="{{ current_variant.inventory_quantity }} ">
         1
-      </h3>
+      </p>
 
-      <h3 class="js-quantity-add quantity-btn ">
+      <p class="js-quantity-add quantity-btn ">
         +
-      </h3>
+      </p>
 
 
 

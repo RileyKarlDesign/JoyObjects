@@ -1,4 +1,4 @@
-<div class="flex flex-col  relative  text-c1 ">
+<div class="flex flex-col  relative  ">
        {% comment %}  Image {% endcomment %}
        <a href="{{ product.url }}">
         <div class='featuredProductImage h-full rounded-sm bg-black bg-opacity-10  overflow-hidden aspect-main '>
@@ -6,16 +6,20 @@
         </div>
       </a> 
         {% comment %}  info start  {% endcomment %}   
-        <div class='pb-6  relative ' >
+        <div class='pb-6 p-2  relative ' >
 
 
-           {% render 'info-line' with { title: 'Title', value:  product.title | escape  }  %}
+           <div class="title">
+            {% render 'info-line' with { title: 'Title', value:  product.title | escape  }  %}
+          </div>
 
-           {% assign price = product.final_price | money %}
-           {% render 'info-line' with { title: 'Price', value:  price  }  %}
+           <div class="price">
+             {% assign price = product.final_price | money %}
+             {% render 'info-line' with { title: 'Price', value:  price  }  %}
+           </div>
 
             
-            <div class='grid grid-cols-2 gap-2  border-t-2 border-c2' >
+            <div class='grid grid-cols-2 gap-2 '' >
               <p>
 
               Quantity 
