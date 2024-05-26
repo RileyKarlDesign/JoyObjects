@@ -1,0 +1,26 @@
+{% comment %}  takes collection   {% endcomment %}
+
+
+
+
+<div class="  flex  gap-2   h-[50vh] p-2  ">
+
+
+
+    <div class=" h-full w-full bg-slate-100">
+    
+        {{ collection.settings.featured_image image_url: width: 700 | image_tag}}
+    
+    </div>
+    
+   
+
+</div>
+
+
+
+<div class="w-30 p-2">
+    <h2>{{ collection.title }}</h2>
+    <p>  {{ collection.description  }}</p>
+    
+</div>
