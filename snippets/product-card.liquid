@@ -2,11 +2,11 @@
 <a href="{{ product.url }}" >
 <div class=" relative overflow-hidden"> 
     {% if product.featured_image %}
-        <div  class=' group-hover:opacity-0  h-fit rounded-sm bg-c1  bg-opacity-50 overflow-hidden '>
-            {{ product.featured_image | image_url: width: 700 | image_tag }}
+        <div  class=' group-hover:opacity-0  h-fit rounded-sm  bg-opacity-50 overflow-hidden '>
+            {{ product.featured_image | image_url: width: 700 | image_tag: class:'w-full' }}
         </div>
  
-            <div class=" absolute inset-0 opacity-0 group-hover:opacity-100 ">{{ product.images[1] | image_url: width: 400 | image_tag }}</div>
+            <div class=" bg-c1 absolute inset-0 opacity-0 group-hover:opacity-100 ">{{ product.images[1] | image_url: width: 400 | image_tag }}</div>
        
     {% endif %}
 </div>
