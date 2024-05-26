@@ -1,22 +1,14 @@
-<div class=' p-2'>
-
-    <div class="flex  items-center justify-center gap-2 fixed bottom-1 left-0 right-0 ">
-        <div class="flex items-center justify-center  gap-2 bg-gray-200 ">
-            <h3 class="btn-view"> Grid </h3>
-            <h3 class="btn-view opacity-40"> Line </h3>
-        </div>
-    </div>
     
-    {% if collection.all_products_count > 0 %}
-     {% render 'shop-filters' %}
-     <h1>{{ collection.title }}</h1>
-        <div class='  '>     
-                
-            {% for product in collection.products %}
-                {% render 'product-line'  with {product: product} %}
-            {% endfor %}
+    {% render 'collection-header' with { collection: collection } %}
 
-        </div>
+
+    
+    
+    <div class=' p-2'>  
+
+
+        {% if collection.all_products_count > 0 %}
+        
         <div class='grid grid-flow-dense md:grid-cols-4 sm:grid-cols-3  grid-cols-2  gap-2  pb-2  '>     
                 
         {% for product in collection.products %}
@@ -25,10 +17,11 @@
 
          </div>
 
-{% else %}
-    {% render 'shop-filters' %}
-    <div class='flex align-center bg-stone-50 h-8 justify-center pt-20 pb-20  '>  
-        <p> Nothing to see here yet </p>
+        {% else %}
+            {% render 'shop-filters' %}
+            <div class='flex align-center bg-stone-50 h-8 justify-center pt-20 pb-20  '>  
+                <p> Nothing to see here yet </p>
+            </div>
+        {% endif %}
+
     </div>
-{% endif %}
-</div>

@@ -35,19 +35,17 @@
 <body style='background:{{ product.metafields.custom.page_colour }} ' id="{{ page_title | handle }}" class=" text-grey-900 template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
  
   <div class ='js-main ' >
-    {% section 'live-cart' %}
+  
     {% comment %}  styles for body wrap are in css due tw error {% endcomment %}
-      <div class=''>
-          <div class=''>
-
+   
+    {% section 'live-cart' %}
 
 
               {% render 'header' %}
                     {{ content_for_layout }}
-               
-              </div> 
+          
               {% section 'footer' %}
-         </div>
+        
   </div> 
 
     {% comment %} Somewhere in layout/theme.liquid {% endcomment %}

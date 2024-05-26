@@ -16,30 +16,33 @@
 }
 
 h1{ 
-
   font-family: times;
 	text-transform: uppercase;
 	line-height: 3rem;
 	font-size: 2.8rem; 
-
 } 
 
 
 h2{ 
- line-height: 2rem !important;
- font-size: 2rem !important;
+ line-height: 1.2rem !important;
+ font-size: 1.2rem !important;
  font-family: 'altB', Times, serif !important; 
  text-transform: uppercase;
 }
 
 h3{ 
-  line-height: 2rem !important;
-  font-size: 2rem !important;
+  line-height: 1.2rem !important;
+  font-size: 1.2rem !important;
   font-family: 'altB', Times, serif !important; 
   text-transform: uppercase;
  }
 
  p{
+
+  line-height: 1rem !important;
+  font-size:0.8rem !important;
+  font-family: 'altB', Times, serif !important; 
+  text-transform: uppercase;
 
  }
 
@@ -67,7 +70,7 @@ input[type=number] {
 
 /*  custom scroll bar   */
 /* width */
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 0px;
   height: 0;
   position: fixed;
@@ -81,7 +84,7 @@ input[type=number] {
 ::-webkit-scrollbar-thumb {
   background: red;
   border-radius: 10px;
-} */
+}
 
 
 
@@ -143,20 +146,21 @@ input[type=number] {
 
 .js-menu{
   opacity:0;
+  pointer-events: none;
+  transition: ease all 0.3s;
 }
 
 .menu-open{
   opacity:100%;
+  pointer-events: auto ;
 }
 
 /*  Cart  */
 
 
 .body-wrap{
-
   background-color: white;
   overflow: scroll;
-   
 }
 
 .body-inactive{
@@ -164,20 +168,24 @@ input[type=number] {
 }
 
 .my-cart{
-  
-  width: calc( 100vw  );
+  position: fixed;
+  right: -1000px;
+  top: 7px;
   cursor: pointer;
-  height: 0px;
+  width: calc( 400px  );
+  height: calc(100vh - 14px);
   transition: ease all 0.3s ;
   overflow: hidden;
-
 
 }
  
 .cart-open{
-  height:600px;
+
+ width: calc( 400px  );
+  height: calc(100vh - 14px);
   overflow: scroll;
   transition: ease all 0.3s ;
+  right: 7px;
  
 }
 

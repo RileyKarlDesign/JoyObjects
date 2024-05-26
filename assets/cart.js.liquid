@@ -1,4 +1,4 @@
-_Fdocument.addEventListener('DOMContentLoaded',function () {
+document.addEventListener('DOMContentLoaded',function () {
 
   let addToCartFormSelector = "#add-to-cart-form",
      productOptionsSelector = addToCartFormSelector + " [name*=option]";
@@ -199,6 +199,8 @@ document.addEventListener('DOMContentLoaded',function () {
   let cartBtns = document.querySelectorAll('.cart-btn');
   let cartState = false ;
 
+   console.log(cartBtns)
+
      let closeCart= ()=> {
       
       cart.classList.remove('cart-open')
@@ -214,8 +216,10 @@ document.addEventListener('DOMContentLoaded',function () {
 
 
     cartBtns.forEach( (i) => {
-      i.addEventListener('mousedown', ()=> {  
+      i.addEventListener('click', ()=> {  
 
+        console.log('clikc')
+        
         if(cartState){
           console.log('colse')
 

@@ -1,24 +1,25 @@
 
   
-  <div class=' HEADER HERE fixed left-0 right-0 top-0  z-50  w-full flex p-1' > 
-
-      <div class=' absolute left-0 right-0  pointer-events-none  flex justify-center items-center ' >
-       
-      <div class='sm:w-40 w-20  col-start-2 ' >
-        <a href="/"> {{  shop.brand.logo | image_url: width: 700 | image_tag }} </a>
+  <div class='  fixed left-0 right-0 top-0  z-50  w-full' > 
+      <div class=' absolute left-0 right-0 pointer-events-none flex justify-center items-center ' >
+            
+        <div class='sm:w-40 w-20  col-start-2  ' >
+              <a  class=" pointer-events-auto" href="/"> {{  shop.brand.logo | image_url: width: 700 | image_tag }} </a>
         </div>
-      </div>
-
-      <div class='w-full text-md menu-link font-sans flex justify-end items-end gap-2  ' >
-       <h3 class='menu-btn cursor-pointer' > Menu</h3>
-        <div class='cart-btn cursor-pointer'>
-          <h3 class=''>Cart (
-            <span data-ajax-cart-bind="item_count" class=" header__cart-quantity">
-              {{ cart.item_count }} 
-            </span> )
-          </h3>
-        </div> 
     </div>
+
+      <div class='w-full  menu-link flex justify-end  p-2 ' >
+        <div class="flex justify-between col-start-4  lg:w-[350px] md:w-[300px] sm:w-full w-full  ">
+          <div class=" flex gap-2">
+          
+                <h3 class='menu-btn cursor-pointer hightlight select-none' > Menu </h3>
+                <h3 class=' cursor-pointer hightlight select-none' > <a href="/collections">Collections</a> </h3>
+          </div>
+                <div class='cart-btn cursor-pointer bg-red-500 h-6 w-6 rounded-full '>
+        </div>
+                
+              </div> 
+      </div>
 </div> 
 
 {% render 'menu' %}
@@ -26,5 +27,4 @@
 
 
   
-
 

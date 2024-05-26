@@ -2,16 +2,43 @@
 
 
 
-<div class='grid grid-cols-8  gap-2 p-1 '>
-    {% comment %} image  {% endcomment %}
-    <div class=" col-span-2 aspect-main indent-8">
-        {{ product.featured_image | image_url: width: 700 | image_tag }}
-    </div>
+<div class='grid grid-cols-2  gap-2 p-2 '>
+
+    <div class=' transition-all flex flex-col gap-2   '>
+        
+        {% for image in product.images %}
+            
+            <div class="  w-full relative  ">
+    
+                    <div class=" image  ">
+                        
+                        {{ image | image_url: width: 700 | image_tag }}
+                
+                    </div>
+    
+                    <div class="counter absolute z-10 top-2 left-2 bg-white flex items-center justify-center  z-40 h-6 w-6 shadow-sm rounded-full bg-opacity-10 backdrop-blur-lg ">
+                        <p class="caption">
+                            {{ forloop.index }}  
+                        </p> 
+                    </div>
+    
+    
+             </div>
+    
+            {% endfor %}
+    
+    </div>     
+
+
     {% comment %} imfo  {% endcomment %}
 
-     <div class='col-span-5 row-start-2 relative h-fit p-1'>
-        {% render 'indent-paragraph' with { title:'Title', description: product.title } %}
-        {% render 'indent-paragraph' with { title:'Infomation', description: product.description } %}
+     <div class='  h-fit sticky top-1 p-4'>
+
+        {% render 'safe-space' %}
+        {% comment %} {% render 'indent-paragraph' with { title:'Title', description: product.title } %}
+        {% render 'indent-paragraph' with { title:'Infomation', description: product.description } %} {% endcomment %}
+        <h1> {{ product.title }} </h1>
+        <p> {{ product.description }} </p>
         <h3 >
             {% render 'info-line' with { title: 'Width', value: product.metafields.custom.width  }%}
             {% render 'info-line' with { title: 'Height', value: product.metafields.custom.height  }%}
@@ -21,36 +48,14 @@
         <ajax-cart-product-form> 
             {% render 'add-to-cart-form' with current_variant: current_variant  %}
         </ajax-cart-product-form>
+
+        {% render 'atc-stick' %} 
      </div>
         
     
 
 </div>      
-{% render 'atc-stick' %} 
-
-<div class='post-wrapper transition-all  flex gap-1 border-2 border-red-500  overflow-x-scroll pl-1 pr-1 '>
-        
-    {% for image in product.images %}
-        0
-        <div class=" h- w-60 relative ">
 
 
-                <div class=" image h-[50vh] ">
-                    
-                    {{ image | image_url: width: 700 | image_tag }}
-            
-                </div>
-
-                <div class="counter absolute top-2 left-2 bg-white flex items-center justify-center  z-40 h-6 w-6 shadow-sm rounded-full bg-opacity-40 backdrop-blur-lg ">
-                    <p class="caption">
-                        {{ forloop.index }} / {{ forloop.length  }}
-                    </p> 
-                </div>
-
-
-         </div>
-
-        {% endfor %}
-
-</div>      
+ 
 
