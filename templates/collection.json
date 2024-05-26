@@ -1,5 +1,12 @@
 {
   "sections": {
+    "collection_header_DzpENn": {
+      "type": "collection-header",
+      "settings": {
+        "image1": "shopify:\/\/shop_images\/Screenshot2024-05-19at3.56.35PM.png",
+        "image2": "shopify:\/\/shop_images\/HI-FI-POSTER-FINALS-4.jpg"
+      }
+    },
     "main": {
       "type": "main-collection",
       "settings": {
@@ -7,6 +14,7 @@
     }
   },
   "order": [
+    "collection_header_DzpENn",
     "main"
   ]
 }
