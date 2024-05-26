@@ -1,0 +1,47 @@
+{% comment %}  takes collection   {% endcomment %}
+
+
+<div class="  flex  gap-2   h-[50vh] p-2  ">
+   
+    <div class=" h-full w-full bg-slate-100">
+        {% if product.featured_image  %}
+            {{ section.settings.image1 | image_url: width: 700 | image_tag}}
+        {% endif %}
+    </div>
+
+    <div class=" h-full w-full bg-slate-100">
+
+        {% if product.featured_image  %}
+            {{ section.settings.image2 | image_url: width: 700 | image_tag}}
+        {% endif %}
+    </div>
+
+</div>
+
+
+{% schema %}
+
+  {
+    "name": "Hero Image",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image1",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image2",
+        "label": "Image"
+      }
+    ],
+
+    "presets": [
+      {
+        "name": " Hero Image",
+        "category": "Content"
+      }
+    ]
+  }
+{% endschema %}
+
