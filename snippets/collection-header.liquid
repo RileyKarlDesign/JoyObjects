@@ -9,7 +9,7 @@
     {% if collection.title != 'Products' %}
 
         <div class="w-full   ">
-            {{ collection.featured_image  |  image_url: width: 700 | image_tag :  alt: collection.title, class: ' w-[100%]  object-cover object-center  aspect-square ' }}
+            {{ collection.featured_image  |  image_url: width: 700 | image_tag :  alt: collection.title, class: ' h-full  object-cover object-center  aspect-square ' }}
         </div>
 
     {% else %}
