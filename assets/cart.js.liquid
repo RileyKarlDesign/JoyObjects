@@ -198,18 +198,21 @@ document.addEventListener('DOMContentLoaded',function () {
   let bodyWrap = document.querySelectorAll('.body-wrap')
   let cartBtns = document.querySelectorAll('.cart-btn');
   let cartState = false ;
+  
 
    console.log(cartBtns)
 
      let closeCart= ()=> {
       
       cart.classList.remove('cart-open')
+      document.body.classList.remove('dim')
       
     };
 
     let openCart= ()=> {
   
       cart.classList.add('cart-open')
+      document.body.classList.add('dim')
 
     };
 

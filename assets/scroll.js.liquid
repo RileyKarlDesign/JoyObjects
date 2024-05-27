@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded',function () {
     console.log('boo yaa')
 
     let windowWidth = window.innerWidth;
-    alert(windowWidth)
-    const postScroll = document.querySelector(".post-wrapper");
+    const postScroll = document.querySelectorall(".post-wrapper");
     let scrollingHorizontally = true;
     let expanded = false 
-  if( windowWidth < 768 ){
+
       if(postScroll){
+        if( windowWidth < 768 ){
         postScroll.addEventListener("wheel", (event) => {
           console.log('scroll')
           if (scrollingHorizontally) {
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded',function () {
             return true;
           }
         });
-  
+        }
         // postScroll.addEventListener('click', ()=>{
 
         //   console.log('click')
@@ -51,6 +51,6 @@ document.addEventListener('DOMContentLoaded',function () {
         
   
       }
-  }
+  
         })
   

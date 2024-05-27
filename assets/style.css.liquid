@@ -33,7 +33,7 @@ h2{
 h3{ 
   line-height: 1.2rem !important;
   font-size: 1.2rem !important;
-  font-family: 'altB', Times, serif !important; 
+  font-family: 'altB', Times, serFif !important; 
   text-transform: uppercase;
  }
 
@@ -48,7 +48,7 @@ h3{
 
 .caption{
   line-height: 1rem !important;
-  font-size: 10px !important;
+  font-size: 12px !important;
   font-family: 'helvetica', Times, serif !important; 
   text-transform:none;
 }
@@ -163,8 +163,11 @@ input[type=number] {
   overflow: scroll;
 }
 
-.body-inactive{
-  opacity: .4;
+
+
+.dim .js-main {
+  opacity: .4 !important;
+
 }
 
 .my-cart{
@@ -178,6 +181,8 @@ input[type=number] {
   overflow: hidden;
 
 }
+
+
  
 .cart-open{
 
@@ -188,6 +193,36 @@ input[type=number] {
   right: 7px;
  
 }
+
+@media only screen and (max-width: 768px) {
+
+  .my-cart{
+    position: fixed;
+    right: 0px;
+    top: 100%;
+    left: 0px;
+    cursor: pointer;
+    width: calc( 100vw  );
+    height: calc(100vh );
+    overflow: hidden;
+    transition: ease all 0.3s ;
+  
+  }
+
+    
+  .cart-open{
+
+    width: calc( 100vw  );
+    height: calc(100vh - 40px );
+    overflow: scroll;
+    transition: ease all 0.3s ;
+    right: 0px;
+    top: 40px;
+ 
+
+  }
+}
+
 
 ajax-cart-product-form[processing]:before {
   content: 'Loading';
