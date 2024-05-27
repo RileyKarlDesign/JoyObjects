@@ -3,13 +3,13 @@
 
 
 
-<div class="  h-[40vh] flex  gap-2  p-2  overflow-hidden md:pt-2 pt-[40px]  ">
+<div class="  h-fit flex  gap-2  p-2  overflow-hidden md:pt-2 pt-[40px]  ">
 
 
     {% if collection.title != 'Products' %}
 
-        <div class="w-full   ">
-            {{ collection.featured_image  |  image_url: width: 700 | image_tag :  alt: collection.title, class: ' h-full  object-cover object-center  aspect-square ' }}
+        <div class=" md:w-1/2 w-full   ">
+            {{ collection.featured_image  |  image_url: width: 700 | image_tag :  alt: collection.title, class: ' object-cover object-center  aspect-square md:w-auto w-full ' }}
         </div>
 
     {% else %}
@@ -22,7 +22,7 @@
 
 
 
-<div class="w-full p-2 sticky md:top-0 top-6 z-40 pb-2 h-fit grid  sm:grid-cols-2  grid-cols-1 gap-2  ">
+<div class="w-full p-2 z-40 pb-2 h-fit grid  sm:grid-cols-2  grid-cols-1 gap-2  ">
     <h2>{{ collection.title }}    <span class=' opacity-50 '> // {{ collection.all_products_count }} Objects </span> </h2>
 
    {{ collection.description}}

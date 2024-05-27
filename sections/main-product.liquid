@@ -2,21 +2,21 @@
 
 
 
-<div class='grid grid-cols-2  gap-2 p-2 '>
+<div class='grid md:grid-cols-2 grid-cols-1   gap-2 p-2  '>
 
-    <div class=' transition-all flex flex-col gap-2   '>
+    <div class=' transition-all flex md:flex-col md:h-auto h-[80vh] flex-row gap-2 bg-red-500   '>
         
         {% for image in product.images %}
             
-            <div class="  w-full relative  ">
+            <div class=" relative   ">
     
-                    <div class=" image  ">
+                    <div class=" image  h-full w-fit ">
                         
-                        {{ image | image_url: width: 700 | image_tag }}
+                        {{ image | image_url: width: 700 | image_tag: class:'h-full w-auto' }}
                 
                     </div>
     
-                    <div class="counter absolute z-10 top-2 left-2 bg-white flex items-center justify-center  z-40 h-6 w-6 shadow-sm rounded-full bg-opacity-10 backdrop-blur-lg ">
+                    <div class="counter absolute z-10 top-2 left-2 bg-white flex items-center justify-center   h-6 w-6 shadow-sm rounded-full bg-opacity-10 backdrop-blur-lg ">
                         <p class="caption">
                             {{ forloop.index }}  
                         </p> 
