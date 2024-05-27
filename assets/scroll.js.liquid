@@ -5,10 +5,13 @@ console.log(' scroll 1.0');
 
 document.addEventListener('DOMContentLoaded',function () {
     console.log('boo yaa')
+
+    let windowWidth = window.innerWidth;
+    alert(windowWidth)
     const postScroll = document.querySelector(".post-wrapper");
     let scrollingHorizontally = true;
     let expanded = false 
-  
+  if( windowWidth < 768 ){
       if(postScroll){
         postScroll.addEventListener("wheel", (event) => {
           console.log('scroll')
@@ -48,5 +51,6 @@ document.addEventListener('DOMContentLoaded',function () {
         
   
       }
-  })
+  }
+        })
   
