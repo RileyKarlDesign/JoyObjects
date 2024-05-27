@@ -221,19 +221,22 @@ document.addEventListener('DOMContentLoaded',function () {
     cartBtns.forEach( (i) => {
       i.addEventListener('mousedown', ()=> {  
 
-        console.log('clikc')
+        
         
         if(cartState){
-          console.log('colse')
+   
 
           cartState = false;
           closeCart();
           console.log(cart)
+          document.body.style.background = '';
+          
         } else { 
-            console.log('open')
+        
           cartState = true;
           openCart();
           console.log(cart)
+          document.body.style.background = '#f4f4f4';
         }
   
       });
