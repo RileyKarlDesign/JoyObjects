@@ -8,9 +8,17 @@
 
     {% if collection.title != 'Products' %}
 
-        <div class=" md:w-1/2 w-full   ">
-            {{ collection.featured_image  |  image_url: width: 700 | image_tag :  alt: collection.title, class: ' object-cover object-center  aspect-square md:w-auto w-full ' }}
-        </div>
+            {% if collection.image  %}
+
+                <div class=" md:w-1/2 w-full   ">
+                    {{ collection.image  |  image_url: width: 700 | image_tag :  alt: collection.title, class: ' object-cover object-center  aspect-square md:w-auto w-full ' }}
+                </div>
+
+            {% else %}
+
+                {% render 'safe-space' %}
+
+            {% endif %}
 
     {% else %}
     
@@ -23,7 +31,6 @@
 
 
 <div class="w-full p-2 z-40 pb-2 h-fit grid  sm:grid-cols-2  grid-cols-1 gap-2  ">
-    <h2>{{ collection.title }}    <span class=' opacity-50 '> // {{ collection.all_products_count }} Objects </span> </h2>
-
-   {{ collection.description}}
+    <h2> {{ collection.title }} </h2>
+    {{ collection.description}}
 </div>

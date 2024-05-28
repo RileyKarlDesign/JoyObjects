@@ -198,6 +198,18 @@ document.addEventListener('DOMContentLoaded',function () {
   let bodyWrap = document.querySelectorAll('.body-wrap')
   let cartBtns = document.querySelectorAll('.cart-btn');
   let cartState = false ;
+
+  let winHeight = window.innerHeight;
+  document.documentElement.style.setProperty('--winHeight', winHeight + 'px');
+
+document.addEventListener('resize', ()=> {
+  winHeight = window.innerHeight;
+  document.documentElement.style.setProperty('--winHeight', winHeight + 'px');
+})
+
+
+
+
   
 
    console.log(cartBtns)

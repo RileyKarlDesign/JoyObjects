@@ -612,6 +612,10 @@ video {
   visibility: visible;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .collapse {
   visibility: collapse;
 }
@@ -2073,6 +2077,11 @@ video {
   color: rgb(249 115 22 / var(--tw-text-opacity));
 }
 
+.text-red-300 {
+  --tw-text-opacity: 1;
+  color: rgb(252 165 165 / var(--tw-text-opacity));
+}
+
 .text-red-400 {
   --tw-text-opacity: 1;
   color: rgb(248 113 113 / var(--tw-text-opacity));
@@ -2290,6 +2299,10 @@ video {
   transition-duration: 150ms;
 }
 
+:root {
+  --winHeight: 100vh;
+}
+
 h1{
   font-family: times;
   text-transform: uppercase;
@@ -2438,14 +2451,14 @@ input[type=number] {
   top: 7px;
   cursor: pointer;
   width: calc( 400px  );
-  height: calc(100vh - 14px);
+  height: calc( var(--winHeight) - 14px);
   transition: ease all 0.3s ;
   overflow: hidden;
 }
 
 .cart-open{
   width: calc( 400px  );
-  height: calc(100vh - 14px);
+  height: calc( var(--winHeight) - 14px);
   overflow: scroll;
   transition: right 0.3s;
   right: 7px;
@@ -2459,14 +2472,14 @@ input[type=number] {
     left: 0px;
     cursor: pointer;
     width: calc( 100vw  );
-    height: calc(100vh );
+    height: calc(var(--winHeight) );
     overflow: hidden;
     transition: top 0.3s;
   }
 
   .cart-open{
     width: calc( 100vw  );
-    height: calc(100vh - 40px );
+    height: calc(var(--winHeight) - 40px );
     overflow: scroll;
     right: 0px;
     top: 40px;
@@ -2573,8 +2586,24 @@ html.js-ajax-cart-processing .my-cart__items:before {
     z-index: 50;
   }
 
+  .md\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .md\:col-span-4 {
+    grid-column: span 4 / span 4;
+  }
+
   .md\:mt-0 {
     margin-top: 0px;
+  }
+
+  .md\:grid {
+    display: grid;
+  }
+
+  .md\:hidden {
+    display: none;
   }
 
   .md\:aspect-auto {

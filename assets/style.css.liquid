@@ -15,6 +15,11 @@
 }
 }
 
+:root {
+  --winHeight: 100vh;
+}
+
+
 h1{ 
   font-family: times;
 	text-transform: uppercase;
@@ -176,7 +181,7 @@ input[type=number] {
   top: 7px;
   cursor: pointer;
   width: calc( 400px  );
-  height: calc(100vh - 14px);
+  height: calc( var(--winHeight) - 14px);
   transition: ease all 0.3s ;
   overflow: hidden;
 
@@ -187,7 +192,7 @@ input[type=number] {
 .cart-open{
 
  width: calc( 400px  );
-  height: calc(100vh - 14px);
+  height: calc( var(--winHeight) - 14px);
   overflow: scroll;
   transition: right 0.3s;
   right: 7px;
@@ -203,17 +208,17 @@ input[type=number] {
     left: 0px;
     cursor: pointer;
     width: calc( 100vw  );
-    height: calc(100vh );
+    height: calc(var(--winHeight) );
     overflow: hidden;
     transition: top 0.3s;
-  
+   
   }
 
     
   .cart-open{
 
     width: calc( 100vw  );
-    height: calc(100vh - 40px );
+    height: calc(var(--winHeight) - 40px );
     overflow: scroll;
  
     right: 0px;
