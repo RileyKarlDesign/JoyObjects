@@ -1,5 +1,12 @@
 {
   "sections": {
+    "background_image_g3TBqk": {
+      "type": "background-image",
+      "settings": {
+        "image1": "shopify:\/\/shop_images\/png-transparent-metal-mesh-fence.png",
+        "color": "#dd3232"
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -10,18 +17,11 @@
       "disabled": true,
       "settings": {
       }
-    },
-    "background_image_g3TBqk": {
-      "type": "background-image",
-      "settings": {
-        "image1": "shopify:\/\/shop_images\/png-transparent-metal-mesh-fence.png",
-        "color": "#dd3232"
-      }
     }
   },
   "order": [
+    "background_image_g3TBqk",
     "main",
-    "form",
-    "background_image_g3TBqk"
+    "form"
   ]
 }
