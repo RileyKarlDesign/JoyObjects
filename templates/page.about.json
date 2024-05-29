@@ -3,7 +3,8 @@
     "background_image_g3TBqk": {
       "type": "background-image",
       "settings": {
-        "image1": "shopify:\/\/shop_images\/fence.png"
+        "image1": "shopify:\/\/shop_images\/fence.png",
+        "color1": "#a3f127"
       }
     },
     "main": {
