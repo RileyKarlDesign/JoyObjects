@@ -10,10 +10,18 @@
       "disabled": true,
       "settings": {
       }
+    },
+    "background_image_g3TBqk": {
+      "type": "background-image",
+      "settings": {
+        "image1": "shopify:\/\/shop_images\/png-transparent-metal-mesh-fence.png",
+        "color": "#dd3232"
+      }
     }
   },
   "order": [
     "main",
-    "form"
+    "form",
+    "background_image_g3TBqk"
   ]
 }
