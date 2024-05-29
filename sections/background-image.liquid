@@ -1,0 +1,44 @@
+
+
+      <div class=" w-full fixed inset overflow-hidden ">
+
+       
+        
+          {{ section.settings.image1 | image_url: width: 1200 | image_tag: class:' w-full h-full object-cover ' }}
+      
+        
+
+      </div>
+
+   
+
+ 
+
+
+{% schema %}
+
+  {
+    "name": "Background Image",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image1",
+        "label": "Image"
+      },
+      {
+        "type": "color",
+        "id": "color",
+        "label": "color"
+      }
+    
+    
+    ],
+
+    "presets": [
+      {
+        "name": "Background Image",
+        "category": "Content"
+      }
+    ]
+  }
+{% endschema %}
