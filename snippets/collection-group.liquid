@@ -1,10 +1,11 @@
 {% comment %} takes collection  {% endcomment %}
 
 
+
 <div class="md:un-hidden md:grid  hidden grid-cols-4 p-2 gap-2">
 
     <div class=" ">
-            <p class="" >{{collection.title}}</p>
+            <h3 class=" text-md ">{{collection.title}}</h3>
             {% comment %} {% render 'button' with { text:' View All' , link: collection.url } %} {% endcomment %}
     </div>
 
@@ -16,7 +17,7 @@
 
 </div>
 
-<div class="md:hidden un-hidden grid grid-cols-4 p-2 gap-2 bg-red-500">
+<div class="md:hidden un-hidden grid grid-cols-4 p-2 gap-2">
 
     <div class=" grid md:grid-cols-2 md:col-span-4 grid-cols-1 col-span-4 gap-2 ">
             {% for product in collection.products  %}

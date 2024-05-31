@@ -2,6 +2,9 @@
     {% render 'safe-space' %}
     
     {% for collection in collections %}
-     {% render 'collection-group'  with { collection: collection %}
+
+        {% if collection.title != 'All Products' and collection.all_products_count > 0 %}
+            {% render 'collection-group'  with { collection: collection %}
+        {% endif %}
     {% endfor %}
 
