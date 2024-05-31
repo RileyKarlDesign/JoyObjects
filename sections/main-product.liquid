@@ -7,11 +7,9 @@
     <div class='post-wrapper transition-all flex md:flex-col md:h-auto h-[80vh] flex-row gap-2 overflow-y-scroll   '>
         
         {% for image in product.images %}
-
                        
                         {{ image | image_url: width: 700 | image_tag: class:'h-full w-fit ' }}
-                        
-                    
+                          
         {% endfor %}
             
     
@@ -20,9 +18,8 @@
 
     {% comment %} imfo  {% endcomment %}
 
-     <div class='  h-fit md:sticky top-1 p-4'>
+     <div class='  h-fit md:sticky top-1 p-4   md:pt-[20vh] pt-2'>
 
-        {% render 'safe-space' %}
         {% comment %} {% render 'indent-paragraph' with { title:'Title', description: product.title } %}
         {% render 'indent-paragraph' with { title:'Infomation', description: product.description } %} {% endcomment %}
         <h1> {{ product.title }} </h1>
