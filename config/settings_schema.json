@@ -10,8 +10,8 @@
       },
       {
         "type": "color",
-        "id": "background-color",
-        "label": "Bavkground Color"
+        "id": "background", 
+        "label": "Background Color"
       }
     ]
   }

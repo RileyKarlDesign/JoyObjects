@@ -27,15 +27,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-    
+    {%- if settings.favicon != blank -%}
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+    {%- endif -%}
 
 
     
 </head>
-<body style='background:{{ theme.settings.background-color }} ' id="{{ page_title | handle }}" class=" text-grey-900 template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
+<body style=' background:{{ settings.background }}' id="{{ page_title | handle }}" class=" text-grey-900 template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
  
-  
-  
     {% comment %}  styles for body wrap are in css due tw error {% endcomment %}
    
     {% section 'live-cart' %}

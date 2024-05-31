@@ -195,7 +195,7 @@ document.addEventListener('liquid-ajax-cart:request-end', event => {
 document.addEventListener('DOMContentLoaded',function () {
 
   let cart = document.querySelector('.my-cart');
-  let bodyWrap = document.querySelectorAll('.body-wrap')
+  let bodyWrap = document.querySelectorAll('.js-main')
   let cartBtns = document.querySelectorAll('.cart-btn');
   let cartState = false ;
 
@@ -241,14 +241,16 @@ document.addEventListener('resize', ()=> {
           cartState = false;
           closeCart();
           console.log(cart)
-          document.body.style.background = '';
+          bodyWrap.style.opacity = '1 ';
+          bodyWrap.style.pointerEvents = 'auto ';
           
         } else { 
         
           cartState = true;
           openCart();
           console.log(cart)
-          document.body.style.background = '#f4f4f4';
+          bodyWrap.style.opacity = '0.5 ';
+          bodyWrap.style.pointerEvents = 'none ';
         }
   
       });
