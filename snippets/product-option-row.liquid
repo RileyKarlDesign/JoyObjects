@@ -67,14 +67,12 @@
 
 
                 {% assign radio_id = 'option-' | append: option_name | append: '-' | append: value | handleize %}
-                {{ optionTwoArray }}
+           
 
               {% unless optionTwoArray contains value %}
   
                     <div class="product-option ">
-
-                      here 
-
+                      
                           <input
                             class="variant-radio"
                             {% if forloop.index == 1 and variant.inventory_quantity > 0 %}
