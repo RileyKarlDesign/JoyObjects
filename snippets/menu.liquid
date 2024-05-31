@@ -4,20 +4,20 @@
             <h3 class=''>—</h3>
                      
                 {%- for link in linklists.main-menu.links -%}
-                    <h3>  <a class="{%- if request.path == link.url -%}text-green-600 hover:text-green-600{%- endif -%}" href="{{ link.url }}">{{ link.title }}</a></h3>
+                    <h3>  <a class=" hover:opacity-50  {%- if request.path == link.url -%}text-green-600 hover:opacity-100 {%- endif -%}" href="{{ link.url }}">{{ link.title }}</a></h3>
                 {%- endfor -%}
 
-            <h3 class=''>—</h3>
+            <h3 class=''>—</h3> 
 
             {%- for link in linklists.secondary-menu.links -%}
-                <h3>  <a class="{%- if request.path == link.url -%}text-green-600 hover:text-green-600{%- endif -%}" href="{{ link.url }}">{{ link.title }}</a></h3>
+                <h3>  <a class=" hover:opacity-50 {%- if request.path == link.url -%}text-green-600 hover:opacity-100 {%- endif -%}" href="{{ link.url }}">{{ link.title }}</a></h3>
             {%- endfor -%}
 
         
               <h3 class=''>—</h3>
 
               {%- for link in linklists.tertiary-menu.links -%}
-                <h3>  <a class="{%- if request.path == link.url -%}text-green-600 hover:text-green-600{%- endif -%}" href="{{ link.url }}">{{ link.title }}</a></h3>
+                <h3>  <a class=" hover:opacity-50  {%- if request.path == link.url -%}text-green-600 hover:opacity-100 {%- endif -%}" href="{{ link.url }}">{{ link.title }}</a></h3>
             {%- endfor -%}
 
           </div>
