@@ -11,7 +11,8 @@
       {
         "type": "color",
         "id": "background", 
-        "label": "Background Color"
+        "label": "Bavkground Color",
+        "default": "#ffffff"
       }
     ]
   }
