@@ -7,7 +7,13 @@
         "id": "favicon",
         "label": "Favicon",
         "info": "Included because settings can't be empty"
+      },
+      {
+        "type": "color",
+        "id": "background-color", 
+        "label": "Bavkground Color"
       }
+
     ]
   }
 ]
