@@ -65,10 +65,8 @@
 
           {% if  value == variant.option2 %}
 
-
                 {% assign radio_id = 'option-' | append: option_name | append: '-' | append: value | handleize %}
            
-
               {% unless optionTwoArray contains value %}
   
                     <div class="product-option ">
@@ -91,10 +89,9 @@
                             {{ value }}
                           </label>
 
-                    </div>
+                    </div> 
 
               {% endunless %}
-
 
               {% comment %}  
               
