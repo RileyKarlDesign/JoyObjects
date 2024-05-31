@@ -1,130 +1,94 @@
-<!-- option  -->
+<!-- option -->
 
-
-
-<div class="product-option-row product-option-row-option grid  pt-1 pb-1 grid-cols-2 border-t-2 border-c2" >
-
+<div class="product-option-row product-option-row-option grid  pt-1 pb-1 grid-cols-2 border-t-2 border-c2">
   <label class="grey" for="{% if type == 'select' %}select-{{ option.name}}{% endif %}">
-      {{ option.name }}
+    {{ option.name }}
   </label>
 
-
   <div class="option-values">
-
     {% comment %}  option 1  {% endcomment %}
 
     {% assign e = '' %}
-    {%- assign optionTwoArray =  "" %}
+    {%- assign optionTwoArray = '' %}
 
-      {% for variant in product.variants %}
-        {% for value in option.values %}
-          
+    {% for variant in product.variants %}
+      {% for value in option.values %}
+        {% if value == variant.option1 %}
+          {% if e != value %}
+            {% assign radio_id = 'option-' | append: option_name | append: '-' | append: value | handleize %}
 
-          {% if  value == variant.option1 %}
+            <div class="product-option ">
+              <input
+                class="variant-radio"
+                {% if forloop.index == 1 and variant.inventory_quantity > 0 %}
+                  checked="checked"
+                {% endif %}
+                {% if variant.inventory_quantity <= 0 %}
+                  disabled
+                {% endif %}
+                id="{{ radio_id }}"
+                type="radio"
+                name="{{ option_name }}"
+                value="{{ value }}"
+                {% if value == selected %}
+                  checked
+                {% endif %}
+              >
 
-            {% if e != value %}
+              <label for="{{ radio_id }}">
+                {{ value }}
+              </label>
+            </div>
 
-                {% assign radio_id = 'option-' | append: option_name | append: '-' | append: value | handleize %}
-                  
-                <div class="product-option ">
-
-                
-
-                      <input
-                        class="variant-radio"
-                        {% if forloop.index == 1 and variant.inventory_quantity > 0 %}
-                        checked="checked"
-                        {% endif %}
-                        {% if variant.inventory_quantity <= 0 %}
-                        disabled
-                        {% endif %}
-                        id="{{ radio_id }}"
-                        type="radio"
-                        name="{{ option_name }}"
-                        value="{{ value }}"
-                        {% if value == selected %}checked{% endif %}>
-
-                      <label for="{{ radio_id }}">
-                        {{ value }}
-                      </label>
-
-                </div>
-
-              {%  assign e = value %}
-
-            {% endif %}
-
+            {% assign e = value %}
           {% endif %}
+        {% endif %}
 
-           {% comment %}  
-              
-             option2 & option1 is deprecated and needs to be replaced with option[1]
-            
-              {% endcomment %}
+        {% comment %}
 
+          option2 & option1 is deprecated and needs to be replaced with option[1]
+        {% endcomment %}
 
-          {% if  value == variant.option2 %}
+        {% if value == variant.option2 %}
+          {% assign radio_id = 'option-' | append: option_name | append: '-' | append: value | handleize %}
 
-                {% assign radio_id = 'option-' | append: option_name | append: '-' | append: value | handleize %}
-           
-              {% unless optionTwoArray contains value %}
-  
-                    <div class="product-option ">
+          {% unless optionTwoArray contains value %}
+            <div class="product-option ">
+              <input
+                class="variant-radio"
+                {% if forloop.index == 1 and variant.inventory_quantity > 0 %}
+                  checked="checked"
+                {% endif %}
+                {% if variant.inventory_quantity <= 0 %}
+                  disabled
+                {% endif %}
+                id="{{ radio_id }}"
+                type="radio"
+                name="{{ option_name }}"
+                value="{{ value }}"
+                {% if value == selected %}
+                  checked
+                {% endif %}
+              >
 
-                          <input
-                            class="variant-radio"
-                            {% if forloop.index == 1 and variant.inventory_quantity > 0 %}
-                            checked="checked"
-                            {% endif %}
-                            {% if variant.inventory_quantity <= 0 %}
-                            disabled
-                            {% endif %}
-                            id="{{ radio_id }}"
-                            type="radio"
-                            name="{{ option_name }}"
-                            value="{{ value }}"
-                            {% if value == selected %}checked{% endif %}>
+              <label for="{{ radio_id }}">
+                {{ value }}
+              </label>
+            </div>
+          {% endunless %}
 
-                          <label for="{{ radio_id }}">
-                            {{ value }}
-                          </label>
+          {% comment %}
 
-                    </div> 
+            builds a referance array as the second element in object.values isnt
+            consistant. eg s/blue s/black - this alows support for a second
+            variant option but not a third - yet
+          {% endcomment %}
 
-              {% endunless %}
-
-              {% comment %}  
-              
-              builds a referance array as the second element in object.values isnt 
-              consistant. eg s/blue s/black - this alows support for a second 
-              variant option but not a third - yet  
-            
-              {% endcomment %}
-
-              {%- assign optionTwoArray = optionTwoArray | append: value %} 
-              {%- assign optionTwoArray = optionTwoArray | append: ',' %} 
-              {%  assign e = value %}
-              
-
-           
-
-          {% endif %}
-
-
-
-        {% endfor %}
-
-        
-
-
+          {%- assign optionTwoArray = optionTwoArray | append: value %}
+          {%- assign optionTwoArray = optionTwoArray | append: ',' %}
+          {% assign e = value %}
+        {% endif %}
       {% endfor %}
-
-      
-
-        
-
-
-      
-    
+    {% endfor %}
   </div>
 </div>
