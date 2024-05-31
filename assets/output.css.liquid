@@ -1070,12 +1070,12 @@ video {
   width: 2rem;
 }
 
-.w-\[30\%\] {
-  width: 30%;
-}
-
 .w-\[80\%\] {
   width: 80%;
+}
+
+.w-\[90\%\] {
+  width: 90%;
 }
 
 .w-auto {
@@ -1904,6 +1904,10 @@ video {
   padding-top: 1.25rem;
 }
 
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
 .pt-60 {
   padding-top: 15rem;
 }
@@ -1918,10 +1922,6 @@ video {
 
 .pt-\[40px\] {
   padding-top: 40px;
-}
-
-.pt-6 {
-  padding-top: 1.5rem;
 }
 
 .text-center {
@@ -2330,7 +2330,7 @@ video {
 }
 
 h1{
-  font-family: 'joy', Arial, Helvetica, sans-serif, serif !important;
+  font-family: 'joy', serif !important;
   text-transform: uppercase;
   line-height: 5.2rem;
   font-size: 2.8rem;
@@ -2339,8 +2339,6 @@ h1{
 .heading-sans{
   font-family: 'altB', Arial, Helvetica, sans-serif, serif !important;
   text-transform: uppercase;
-  line-height: 5.2rem;
-  font-size: 2.8rem;
 }
 
 h2{
@@ -2355,6 +2353,13 @@ h3{
   font-size: 1.2rem !important;
   font-family: 'altB', Times, serFif !important;
   text-transform: uppercase;
+}
+
+.text-serif{
+  font-family: 'joy',serif !important;
+  text-transform: uppercase;
+  line-height: 5vw !important;
+  font-size:2.8vw !important;
 }
 
 p{
@@ -2566,11 +2571,6 @@ html.js-ajax-cart-processing .my-cart__items:before {
   background-color: rgb(41 37 36 / var(--tw-bg-opacity));
 }
 
-.hover\:text-green-600:hover {
-  --tw-text-opacity: 1;
-  color: rgb(22 163 74 / var(--tw-text-opacity));
-}
-
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -2669,6 +2669,10 @@ html.js-ajax-cart-processing .my-cart__items:before {
 
   .md\:w-40 {
     width: 10rem;
+  }
+
+  .md\:w-\[30\%\] {
+    width: 30%;
   }
 
   .md\:w-\[350px\] {
