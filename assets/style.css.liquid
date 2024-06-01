@@ -289,3 +289,32 @@ html.js-ajax-cart-processing .my-cart__items:before {
 .swiper-slide{
   width: 407px !important;
 }
+
+/* accordion */
+
+.accordian{
+  display: grid;
+
+ grid-template-rows: 40px 0fr;
+ overflow: hidden;
+ transition: grid-template-rows 200ms;
+}
+
+.accordian-title{
+      
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  
+}
+.accordian-content{
+   min-height: 0;
+   align-items: start;
+   
+}
+
+.accordian-open {
+
+   grid-template-rows: 40px 1fr !important;
+}
+

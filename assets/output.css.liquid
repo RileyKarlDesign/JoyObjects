@@ -1070,6 +1070,10 @@ video {
   width: 2rem;
 }
 
+.w-80 {
+  width: 20rem;
+}
+
 .w-\[80\%\] {
   width: 80%;
 }
@@ -1097,10 +1101,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-80 {
-  width: 20rem;
 }
 
 .flex-shrink {
@@ -2149,6 +2149,10 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-opacity-30 {
+  --tw-text-opacity: 0.3;
+}
+
 .text-opacity-45 {
   --tw-text-opacity: 0.45;
 }
@@ -2163,10 +2167,6 @@ video {
 
 .text-opacity-90 {
   --tw-text-opacity: 0.9;
-}
-
-.text-opacity-30 {
-  --tw-text-opacity: 0.3;
 }
 
 .underline {
@@ -2571,6 +2571,31 @@ html.js-ajax-cart-processing .my-cart__items:before {
   width: 407px !important;
 }
 
+/* accordion */
+
+.accordian{
+  display: grid;
+  grid-template-rows: 40px 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 200ms;
+}
+
+.accordian-title{
+  display: flex;
+  align-items: center;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.accordian-content{
+  min-height: 0;
+  align-items: start;
+}
+
+.accordian-open {
+  grid-template-rows: 40px 1fr !important;
+}
+
 .hover\:bg-black:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -2730,3 +2755,4 @@ html.js-ajax-cart-processing .my-cart__items:before {
     line-height: 1;
   }
 }
+
