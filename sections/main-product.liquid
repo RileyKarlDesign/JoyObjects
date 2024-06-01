@@ -20,14 +20,13 @@
 
      <div class='  h-fit md:sticky top-1 p-4   md:pt-[20vh] pt-2'>
 
-        {% comment %} {% render 'indent-paragraph' with { title:'Title', description: product.title } %}
-        {% render 'indent-paragraph' with { title:'Infomation', description: product.description } %} {% endcomment %}
-
-        <div class="w-80% bg-red-500">
+        <div class="md:w-full w-[80%] h-fit bg-red-500">
             <h1> {{ product.title }} </h1>
+            <h1> {{ product.metafields.custom.color }} </h1>
             <p> {{ product.description }} </p>
-        </div>
-        <p >
+
+    
+        <p>
             {% render 'info-line' with { title: 'Width', value: product.metafields.custom.width  }%}
             {% render 'info-line' with { title: 'Height', value: product.metafields.custom.height  }%}
             {% render 'info-line' with { title: 'Legnth', value: product.metafields.custom.length }%}
@@ -37,22 +36,19 @@
             {% render 'add-to-cart-form' with current_variant: current_variant  %}
         </ajax-cart-product-form>
 
-        
-        {%  if product.metafields.custom.materals != '' %}
-            {% render 'accordian' with { title: 'Materials', content: product.metafields.custom.Materals } %}
-        {% endif %}
+        </div>
 
-        {%  if product.metafields.custom.dimentions != '' %}
-            {% render 'accordian' with { title: 'Dimentions', content: product.metafields.custom.Dimentions} %}
+        {%  if product.metafields.custom.shipping != '' %}
+            {% render 'accordian' with { title: 'Shipping', content: product.metafields.custom.shipping } %}
         {% endif %}
 
         {%  if product.metafields.custom.shipping != '' %}
-            {% render 'accordian' with { title: 'Shipping', content: product.metafields.custom.Shipping } %}
+            {% render 'accordian' with { title: 'Dimnetions', content: product.metafields.custom.dimnetions } %}
         {% endif %}
-
-
        
         {% render 'atc-stick' %} 
+
+
      </div>
     
 
