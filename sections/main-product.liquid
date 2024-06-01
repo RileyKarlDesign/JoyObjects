@@ -26,7 +26,6 @@
             <p class='pb-4'> {{ product.description }} </p>
             <h1> {{ product.custom.dimentions_ }} </h1>
     
-        
         <ajax-cart-product-form> 
             {% render 'add-to-cart-form' with current_variant: current_variant  %}
         </ajax-cart-product-form>
@@ -34,13 +33,13 @@
         </div>
 
         <div class="flex flex-col gap-1 md:w-[80%] w-full pt-4 ">
-            <div class="pb-4">
+            <div class="pb-4 flex-col flex gap-1">
     
                 {%  if product.metafields.custom.shipping != '' %}
                     {% render 'accordian' with { title: 'Shipping', content: product.metafields.custom.shipping } %}
                 {% endif %}
-                {%  if product.metafields.custom.shipping != '' %}
-                    {% render 'accordian' with { title: 'Dimnetions', content: product.metafields.custom.dimnetions } %}
+                {%  if product.metafields.custom.size != '' %}
+                    {% render 'accordian' with { title: 'Dimnetions', content: product.metafields.custom.size } %}
                 {% endif %}
                 
             </div>
