@@ -34,13 +34,16 @@
         </div>
 
         <div class="flex flex-col gap-1 md:w-[80%] w-full pt-4 ">
-
-            {%  if product.metafields.custom.shipping != '' %}
-                {% render 'accordian' with { title: 'Shipping', content: product.metafields.custom.shipping } %}
-            {% endif %}
-            {%  if product.metafields.custom.shipping != '' %}
-                {% render 'accordian' with { title: 'Dimnetions', content: product.metafields.custom.dimnetions } %}
-            {% endif %}
+            <div class="pb-4">
+    
+                {%  if product.metafields.custom.shipping != '' %}
+                    {% render 'accordian' with { title: 'Shipping', content: product.metafields.custom.shipping } %}
+                {% endif %}
+                {%  if product.metafields.custom.shipping != '' %}
+                    {% render 'accordian' with { title: 'Dimnetions', content: product.metafields.custom.dimnetions } %}
+                {% endif %}
+                
+            </div>
 
              {% render 'atc-stick' %} 
 
