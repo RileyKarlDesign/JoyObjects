@@ -1611,6 +1611,10 @@ video {
   --tw-bg-opacity: 0.1;
 }
 
+.bg-opacity-15 {
+  --tw-bg-opacity: 0.15;
+}
+
 .bg-opacity-20 {
   --tw-bg-opacity: 0.2;
 }
@@ -1653,10 +1657,6 @@ video {
 
 .bg-opacity-90 {
   --tw-bg-opacity: 0.9;
-}
-
-.bg-opacity-15 {
-  --tw-bg-opacity: 0.15;
 }
 
 .bg-gradient-to-tr {
@@ -2579,7 +2579,7 @@ html.js-ajax-cart-processing .my-cart__items:before {
 
 .accordian{
   display: grid;
-  grid-template-rows: 40px 0fr;
+  grid-template-rows: 20px 0fr;
   overflow: hidden;
   transition: grid-template-rows 200ms;
 }
@@ -2594,10 +2594,16 @@ html.js-ajax-cart-processing .my-cart__items:before {
 .accordian-content{
   min-height: 0;
   align-items: start;
+  opacity: 0;
+  transition: all ease 0.3;
 }
 
 .accordian-open {
-  grid-template-rows: 40px 1fr !important;
+  grid-template-rows: 20px 1fr !important;
+}
+
+.accordian-open .accordian-content{
+  opacity: 1;
 }
 
 .hover\:bg-black:hover {

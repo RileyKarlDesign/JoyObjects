@@ -18,13 +18,14 @@
 
     {% comment %} imfo  {% endcomment %}
 
-     <div class='  h-fit md:sticky top-1 p-4   md:pt-[20vh] pt-2'>
+     <div class='  h-fit md:sticky top-1 p-4 flex flex-col items-center items-center   md:pt-[20vh] pt-2'>
 
-        <div class="md:w-full w-[80%] h-fit bg-red-500">
+        <div class=" md:w-[80%] w-full  h-fit ">
             <h1> {{ product.title }} </h1>
-            <h1> {{ product.metafields.custom.color }} </h1>
+            <h1> {{ product.metafields.custom.range }} </h1>
             <p> {{ product.description }} </p>
-
+           
+            {{  product.metafields.custom.dimnetions  }}
     
         <p>
             {% render 'info-line' with { title: 'Width', value: product.metafields.custom.width  }%}
