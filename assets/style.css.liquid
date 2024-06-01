@@ -50,7 +50,7 @@ h2{
 }
 
 
-h3{ 
+h3, button { 
   line-height: 1.2rem !important;
   font-size: 1.2rem !important;
   font-family: 'altB', Times, serFif !important; 
@@ -295,19 +295,16 @@ html.js-ajax-cart-processing .my-cart__items:before {
 /* accordion */
 
 .accordian{
-    display: grid;
+  display: grid;
   grid-template-rows: 20px 0fr;
   overflow: hidden;
   transition: grid-template-rows 200ms;
 }
 
 .accordian-title{
-      
   display: flex;
-  align-items: center;
-  height: fit-content;
-  
 }
+
 .accordian-content{
    min-height: 0;
    align-items: start;
@@ -316,13 +313,12 @@ html.js-ajax-cart-processing .my-cart__items:before {
    
 }
 
-.accordian-open {
-
-   grid-template-rows: 20px 1fr !important;
+.accordian-open{
+   grid-template-rows: 30px 1fr !important;
 }
 
 .accordian-open .accordian-content{
-
   opacity: 1;
+  padding-bottom: 30px;
 }
 
