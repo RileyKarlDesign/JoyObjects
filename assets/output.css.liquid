@@ -2539,8 +2539,12 @@ input[type=number] {
 }
 
 ajax-cart-product-form[processing]:before {
-  content: 'Loading';
-  display: block;
+  content: 'Updating';
+  padding: 20px;
+  background-color: red;
+  border-radius: 20px;
+  position: absolute;
+  top: 20px;
 }
 
 /* Make the "Add to cart" button look visually disabled while loading */
@@ -2730,10 +2734,6 @@ html.js-ajax-cart-processing .my-cart__items:before {
 
   .md\:w-auto {
     width: auto;
-  }
-
-  .md\:w-full {
-    width: 100%;
   }
 
   .md\:grid-cols-2 {
