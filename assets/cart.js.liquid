@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let winHeight = window.innerHeight;
   document.documentElement.style.setProperty("--winHeight", winHeight + "px");
 
-  document.addEventListener("resize", () => {
+  window.addEventListener("resize", () => {
     winHeight = window.innerHeight;
     document.documentElement.style.setProperty("--winHeight", winHeight + "px");
   });
