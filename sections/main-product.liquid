@@ -22,8 +22,11 @@
 
         {% comment %} {% render 'indent-paragraph' with { title:'Title', description: product.title } %}
         {% render 'indent-paragraph' with { title:'Infomation', description: product.description } %} {% endcomment %}
-        <h1> {{ product.title }} </h1>
-        <p> {{ product.description }} </p>
+
+        <div class="w-80% bg-red-500">
+            <h1> {{ product.title }} </h1>
+            <p> {{ product.description }} </p>
+        </div>
         <p >
             {% render 'info-line' with { title: 'Width', value: product.metafields.custom.width  }%}
             {% render 'info-line' with { title: 'Height', value: product.metafields.custom.height  }%}
