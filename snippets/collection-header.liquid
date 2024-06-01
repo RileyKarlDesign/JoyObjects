@@ -13,16 +13,8 @@
                 <div class=" md:w-1/2 w-full   ">
                     {{ collection.image  |  image_url: width: 700 | image_tag :  alt: collection.title, class: ' object-cover object-center  aspect-square md:w-auto w-full ' }}
                 </div>
-
-            {% else %}
-
-                {% render 'safe-space' %}
-
+          
             {% endif %}
-
-    {% else %}
-    
-         {% render 'safe-space' %}
 
     {% endif %}
 
