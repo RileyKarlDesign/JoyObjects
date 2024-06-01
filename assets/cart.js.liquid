@@ -1,41 +1,36 @@
-document.addEventListener('DOMContentLoaded',function () {
-
+document.addEventListener("DOMContentLoaded", function () {
   let addToCartFormSelector = "#add-to-cart-form",
-     productOptionsSelector = addToCartFormSelector + " [name*=option]";
-  
+    productOptionsSelector = addToCartFormSelector + " [name*=option]";
+
   let productForm = {
-
     onProductOptionChanged: function (event) {
+      console.log("change 1.0");
 
-      console.log('change 1.0');
-   
       let $form = document.querySelector(addToCartFormSelector);
       let selectedVariant = productForm.getActiveVariant($form);
-      
-      var formChangeEvent = new CustomEvent('form:change', { detail: selectedVariant });
-        $form.dispatchEvent(formChangeEvent);
 
-
+      var formChangeEvent = new CustomEvent("form:change", {
+        detail: selectedVariant,
+      });
+      $form.dispatchEvent(formChangeEvent);
     },
 
     getActiveVariant: function ($form, newForm) {
       let formEl = document.querySelector("#add-to-cart-form"),
-      variants = JSON.parse(decodeURIComponent(formEl.dataset.variants));
-    
+        variants = JSON.parse(decodeURIComponent(formEl.dataset.variants));
+
       // formInlineData = $form.serializeArray(); // removed j query
-     
-      formInlineData = new URLSearchParams(
+
+      (formInlineData = new URLSearchParams(
         Array.from(new FormData(formEl))
-      ).toString(),
-
-      formOptions = {
-        option1: null,
-        option2: null,
-        option3: null,
-      },
-
-      selectedVariant = null,
-      selectedVariantMax = null;
+      ).toString()),
+        (formOptions = {
+          option1: null,
+          option2: null,
+          option3: null,
+        }),
+        (selectedVariant = null),
+        (selectedVariantMax = null);
 
       // Initialize an empty array to store objects
       let objectsArray = [];
@@ -75,51 +70,43 @@ document.addEventListener('DOMContentLoaded',function () {
     },
 
     validate: function (event) {
-
-      console.log('validate 2.13')
-     
+      console.log("validate 2.13");
 
       let $form = this;
-       
-        selectedVariant = productForm.getActiveVariant($form),
-        hasVariant = selectedVariant !== null,
-        canAddToCart = hasVariant && selectedVariant.inventory_quantity > 0,
-        $id = document.querySelector(".js-variant-id"),
-        $quantity = document.querySelector(".js-quantity-total"),
-        $addToCartButton = document.querySelector("#add-to-cart-button"),
-        $maxQuantity = selectedVariant.inventory_quantity;
 
-    
+      (selectedVariant = productForm.getActiveVariant($form)),
+        (hasVariant = selectedVariant !== null),
+        (canAddToCart = hasVariant && selectedVariant.inventory_quantity > 0),
+        ($id = document.querySelector(".js-variant-id")),
+        ($quantity = document.querySelector(".js-quantity-total")),
+        ($addToCartButton = document.querySelector("#add-to-cart-button")),
+        ($maxQuantity = selectedVariant.inventory_quantity);
+
       if (canAddToCart) {
         $id.value = selectedVariant.id;
         $addToCartButton.disabled = false;
         $quantity.dataset.max = $maxQuantity;
       } else {
-        $id.value = 'null'; 
-        $addToCartButton.disabled = true; 
+        $id.value = "null";
+        $addToCartButton.disabled = true;
       }
     },
 
     init: function () {
- 
-      // $(document).on( "change", productOptionsSelector, productForm.onProductOptionChanged ); 
-      // $(document).on('form:change', addToCartFormSelector, productForm.validate)    
+      // $(document).on( "change", productOptionsSelector, productForm.onProductOptionChanged );
+      // $(document).on('form:change', addToCartFormSelector, productForm.validate)
 
-      console.log('init 1.2')
-      document.addEventListener('change', productForm.onProductOptionChanged )
-      document.addEventListener('change', function(event) {
-       productForm.validate( event);
-    });
-
-    }
-
-}
+      console.log("init 1.2");
+      document.addEventListener("change", productForm.onProductOptionChanged);
+      document.addEventListener("change", function (event) {
+        productForm.validate(event);
+      });
+    },
+  };
 
   productForm.init();
 
-  // Quanity
-
-  
+  // QuanityF
 
   let plus = document.querySelector(".js-quantity-add");
   let minus = document.querySelector(".js-quantity-minus");
@@ -128,7 +115,8 @@ document.addEventListener('DOMContentLoaded',function () {
   let currentCount = 1;
 
   let add = () => {
-
+    console.log("add");
+   
     let max = quantity.dataset.max;
     if (currentCount < max) {
       currentCount += 1;
@@ -138,6 +126,9 @@ document.addEventListener('DOMContentLoaded',function () {
       quantityHidden.value = currentCount;
       console.log(quantityHidden);
     }
+    console.log(max);
+    console.log(currentCount);
+
   };
 
   let reduce = () => {
@@ -150,6 +141,9 @@ document.addEventListener('DOMContentLoaded',function () {
       quantity.innerHTML = currentCount;
       quantityHidden.value = currentCount;
     }
+
+    console.log(max);
+    console.log(currentCount);
   };
 
   if (plus) {
@@ -180,84 +174,55 @@ document.addEventListener('DOMContentLoaded',function () {
   });
 });
 
-document.addEventListener('liquid-ajax-cart:request-end', event => {
-  const {requestState} = event.detail;
+document.addEventListener("liquid-ajax-cart:request-end", (event) => {
+  const { requestState } = event.detail;
 
   // If the "add to cart" request is successful
-  if (requestState.requestType === 'add' && requestState.responseData?.ok) {
-
+  if (requestState.requestType === "add" && requestState.responseData?.ok) {
     // Add the CSS class to the "body" tag
-    document.body.classList.add('js-show-ajax-cart');
+    document.body.classList.add("js-show-ajax-cart");
   }
 });
 
-
-document.addEventListener('DOMContentLoaded',function () {
-
-  let cart = document.querySelector('.my-cart');
-  let bodyWrap = document.querySelectorAll('.js-main')
-  let cartBtns = document.querySelectorAll('.cart-btn');
-  let cartState = false ;
+document.addEventListener("DOMContentLoaded", function () {
+  let cart = document.querySelector(".my-cart");
+  let bodyWrap = document.querySelector(".js-main");
+  let cartBtns = document.querySelectorAll(".cart-btn");
+  let cartState = false;
 
   let winHeight = window.innerHeight;
-  document.documentElement.style.setProperty('--winHeight', winHeight + 'px');
+  document.documentElement.style.setProperty("--winHeight", winHeight + "px");
 
-document.addEventListener('resize', ()=> {
-  winHeight = window.innerHeight;
-  document.documentElement.style.setProperty('--winHeight', winHeight + 'px');
-})
-
-
-
-
+  document.addEventListener("resize", () => {
+    winHeight = window.innerHeight;
+    document.documentElement.style.setProperty("--winHeight", winHeight + "px");
+  });
   
 
-   console.log(cartBtns)
 
-     let closeCart= ()=> {
-      
-      cart.classList.remove('cart-open')
-      document.body.classList.remove('dim')
-      
-    };
+  let closeCart = () => {
+    cart.classList.remove("cart-open");
+    bodyWrap.style.opacity = "1 ";
+    cartState = false;
+  };
 
-    let openCart= ()=> {
+  let openCart = () => {
+    cart.classList.add("cart-open");
+    bodyWrap.style.opacity = "0.5 ";
+    cartState = true;
+  };
+
+  cartBtns.forEach((i) => {
+    i.addEventListener("mousedown", () => {
+      if (cartState) {
+        closeCart();     
+      } else {
+        openCart();
   
-      cart.classList.add('cart-open')
-      document.body.classList.add('dim')
-
-    };
-
-
-
-    cartBtns.forEach( (i) => {
-      i.addEventListener('mousedown', ()=> {  
-
-        
-        
-        if(cartState){
-   
-
-          cartState = false;
-          closeCart();
-          console.log(cart)
-          bodyWrap.style.opacity = '1 ';
-          bodyWrap.style.pointerEvents = 'auto ';
           
-        } else { 
-        
-          cartState = true;
-          openCart();
-          console.log(cart)
-          bodyWrap.style.opacity = '0.5 ';
-          bodyWrap.style.pointerEvents = 'none ';
-        }
-  
-      });
-  
-    })
-
-    
-    })
+      }
+    });
+  });
+});
 
 // btn

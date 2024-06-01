@@ -10,7 +10,7 @@
             </div> 
 
 
-              <div class="  overflow-scroll h-full pb-10  " data-ajax-cart-section >
+              <div class="  overflow-scroll h-full pb-10 pt-10  " data-ajax-cart-section >
                 <div class="my-cart__items " data-ajax-cart-section-scroll >
             
                   <!-- Loop through cart items -->
@@ -22,12 +22,12 @@
 
               </div>
 
-          <div class=' cart-footer flex gap-2 justify-center align-middle absolute bottom-2  w-full '> 
+          <div class=' cart-footer flex gap-2 justify-center align-middle absolute bottom-4  w-full '> 
 
 
         {% form 'cart', cart, id: 'my-ajax-cart-form' %}
-          <button class=' caption flex w-full h-el  pl-4 pr-4 justify-center items-center bg-c3 bg-opacity-50 rounded-lg  backdrop-blur-lg '  type="submit" name="checkout">
-            Checkout — {{ cart.total_price | money_with_currency }}
+          <button class=' caption flex w-full h-el  pl-4 pr-4 justify-center items-center bg-c3 text-white text-opacity-70 rounded-lg  backdrop-blur-lg '  type="submit" name="checkout">
+          <h3> Checkout — {{ cart.total_price | money_with_currency }} </h3>
           </button> 
         {% endform %}
 

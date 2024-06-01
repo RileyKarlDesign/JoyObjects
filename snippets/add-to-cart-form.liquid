@@ -92,27 +92,29 @@ current_variant
       {% endif %}
   
   </div>
-
-  <div class="QUANITY flex gap-4 ">
+   <!-- quantity -------------- -->
+   <div class=" flex ">
 
     <label for="quanity" class="product-option-row-title">
-      <p> Quanity: </p>    
+      Quanity:
     </label>
 
-    <div class="js-quantity flex gap-2 ">
-      <p class="js-quantity-minus  quantity-btn">
+    <div class="js-quantity flex ">
+
+      <p class="js-quantity-minus  quantity-btn pb-1 hover:bg-stone-800 hover:text-white text-bold h-5 w-5 bg-stone-500 bg-opacity-10 flex justify-center items-center text-center rounded-full backdrop-blur-md ">
         -
       </p>
-
+ 
       <p
-        type="number"
-        class="js-quantity-total"
+        type="number "
+        class="js-quantity-total w-14 text-center  "
+
         data-current="1"
         data-max="{{ current_variant.inventory_quantity }} ">
         1
       </p>
 
-      <p class="js-quantity-add quantity-btn ">
+      <p class="js-quantity-add quantity-btn pb-1 hover:bg-stone-800 hover:text-white text-bold h-5 w-5 bg-stone-500 bg-opacity-10 flex justify-center items-center text-center rounded-full backdrop-blur-md  ">
         +
       </p>
 
@@ -122,6 +124,13 @@ current_variant
 
   </div>
 
+  <!-- hidden -------------- -->
+
+  <input
+  type="hidden"
+    class="js-hidden-quantity"
+    name="quantity"
+    value="1">
 
 
 

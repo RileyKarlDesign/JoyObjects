@@ -34,6 +34,21 @@
             {% render 'add-to-cart-form' with current_variant: current_variant  %}
         </ajax-cart-product-form>
 
+        
+        {%  if product.metafields.custom.materals != '' %}
+            {% render 'accordian' with { title: 'Materials', content: product.metafields.custom.Materals } %}
+        {% endif %}
+
+        {%  if product.metafields.custom.dimentions != '' %}
+            {% render 'accordian' with { title: 'Dimentions', content: product.metafields.custom.Dimentionss } %}
+        {% endif %}
+
+        {%  if product.metafields.custom.shipping != '' %}
+            {% render 'accordian' with { title: 'Shipping', content: product.metafields.custom.Materals } %}
+        {% endif %}
+
+
+       
         {% render 'atc-stick' %} 
      </div>
     

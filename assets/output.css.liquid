@@ -2161,6 +2161,10 @@ video {
   --tw-text-opacity: 0.9;
 }
 
+.text-opacity-30 {
+  --tw-text-opacity: 0.3;
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -2492,6 +2496,7 @@ input[type=number] {
   height: calc( var(--winHeight) - 14px);
   transition: ease all 0.3s ;
   overflow: hidden;
+  opacity: 0;
 }
 
 .cart-open{
@@ -2500,6 +2505,7 @@ input[type=number] {
   overflow: scroll;
   transition: right 0.3s;
   right: 7px;
+  opacity: 1;
 }
 
 @media only screen and (max-width: 768px) {
