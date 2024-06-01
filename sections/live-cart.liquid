@@ -26,7 +26,7 @@
 
 
         {% form 'cart', cart, id: 'my-ajax-cart-form' %}
-          <button class=' caption flex w-full h-el  pl-4 pr-4 justify-center items-center bg-c3 text-white text-opacity-70 rounded-lg  backdrop-blur-lg '  type="submit" name="checkout">
+          <button class=' flex w-full h-el  pl-4 pr-4 justify-center items-center bg-c3 text-white text-opacity-70 rounded-lg  backdrop-blur-lg '  type="submit" name="checkout">
           <h3> Checkout — {{ cart.total_price | money_with_currency }} </h3>
           </button> 
         {% endform %}
