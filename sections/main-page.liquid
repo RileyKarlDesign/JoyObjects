@@ -1,6 +1,6 @@
 {% render 'safe-space' %}
 
-<div class='p-2 flex gap-2'>
+<div class='p-2 md:flex  gap-2 '>
 
     <div class=" w-full ">
         {%- for link in linklists.about-menu.links -%}
@@ -11,7 +11,7 @@
 
    <div class=" w-full ">
        <div class="flex w-full ">
-           <h2 > {{ page.title }} </h2>
+           <h2 class='pb-4' > {{ page.title }} </h2>
        </div>
        <div class=" w-full ">
              {{ page.content  }}

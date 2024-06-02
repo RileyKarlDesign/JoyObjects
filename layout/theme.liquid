@@ -27,11 +27,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
+
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
 
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.css">
     
 </head>
 
@@ -47,6 +48,9 @@
                     {{ content_for_layout }}
           
               {% section 'footer' %}
+
+
+    {% render 'cookies' %}
         
   </div> 
 
@@ -66,15 +70,8 @@
     <script src="{{ 'ani.js' | asset_url }}" defer></script>
     <script src="{{ 'cart.js' | asset_url }}" defer></script>
     <script src="{{ 'gallery.js' | asset_url }}" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-  
- 
-    <script>
-
-  
-     
-     </script>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer ></script>
+    <script src="{{ 'cookieconsent-config.js' | asset_url }}" type="module" defer></script>
+    
 </body>
 </html>
