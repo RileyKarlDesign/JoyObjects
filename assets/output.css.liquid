@@ -2380,7 +2380,7 @@ h2{
   text-transform: uppercase;
 }
 
-h3, button {
+h3, button ,input {
   line-height: 1.2rem !important;
   font-size: 1.2rem !important;
   font-family: 'altB', Times, serFif !important;
@@ -2590,7 +2590,6 @@ html.js-ajax-cart-processing .my-cart__items {
 
 html.js-ajax-cart-processing .my-cart__items:before {
   content: 'LOADUNG';
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2655,6 +2654,15 @@ html.js-ajax-cart-processing .my-cart__items:before {
 
 .hover\:opacity-50:hover {
   opacity: 0.5;
+}
+
+.hover\:opacity-5:hover {
+  opacity: 0.05;
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 .group:hover .group-hover\:opacity-0 {

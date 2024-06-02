@@ -12,14 +12,32 @@
             </div> 
 
 
+            {% if cart.items == '' %}
+
+              <div class="overflow-scroll h-full pb-10 pt-10  " data-ajax-cart-section >
+                <div class="my-cart__items " data-ajax-cart-section-scroll >
+                  
+              
+
+                    {% for line_item in cart.items %}
+                      {% render 'cart-card' with { product: line_item , index: forloop.index } %}
+                    {% endfor %}
+
+                 </div> 
+
+              </div>
+
+            {% endif %}
+
               <div class="  overflow-scroll h-full pb-10 pt-10  " data-ajax-cart-section >
                 <div class="my-cart__items " data-ajax-cart-section-scroll >
-            
-                  <!-- Loop through cart items -->
-                  {% for line_item in cart.items %}
+                  
+              
 
-                    {% render 'cart-card' with { product: line_item , index: forloop.index } %}
-                  {% endfor %}
+                    {% for line_item in cart.items %}
+                      {% render 'cart-card' with { product: line_item , index: forloop.index } %}
+                    {% endfor %}
+
                  </div> 
 
               </div>
