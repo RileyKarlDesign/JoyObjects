@@ -8,6 +8,14 @@
         "label": "Favicon",
         "info": "Included because settings can't be empty"
       },
+
+      {
+        "type": "image_picker",
+        "id": "aboutimage",
+        "label": "About Page Background Image",
+        "info": "Included because settings can't be empty"
+      },
+
       {
         "type": "color",
         "id": "background",
