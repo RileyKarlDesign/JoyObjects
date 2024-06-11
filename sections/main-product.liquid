@@ -1,20 +1,12 @@
 
-
-
-
 <div class='grid md:grid-cols-2 grid-cols-1   gap-2  md:p-2  p-0 '>
-
-    <div class='post-wrapper transition-all flex md:flex-col md:h-auto h-[80vh] flex-row gap-2 overflow-y-scroll   '>
-        
-        {% for image in product.images %}
-                       
-                  {{ image | image_url: width: 700 | image_tag: class:'h-full w-fit ' }}
-                          
+    <div class='post-wrapper transition-all flex md:flex-col md:h-auto h-[80vh] flex-row gap-2 overflow-y-scroll'>       
+       
+        {% for image in product.images %}      
+                  {{ image | image_url: width: 700 | image_tag: class:'h-full w-fit ' }}         
         {% endfor %}
-            
-    
+        
     </div>     
-
 
     {% comment %} imfo  {% endcomment %}
 

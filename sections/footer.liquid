@@ -1,19 +1,43 @@
-<div class=" opacity-50  hover:opacity-100 transition-all p-2 overflow-hidden">
+<div class="  flex flex-col justify-end items-end  bg-gray-200 transition-all p-2 overflow-hidden h-fit ">
+        <div class="flex w-full justify-between h-[50vh] gap-0">
+                {% render 'newsletter' %}
+                <div class=' h-fit  grid grid-cols-1 w-[350px] gap-2 '>
+                               <div class="w-fit h-fit">
+                                       <div class='w-full text-md menu-link font-sans   items-end gap-2' >
+                                                {% for link in linklists.footer.links %}
+                                                <h3 class=''><a href="{{ link.url }}">{{ link.title }}</a></h3>
+                                                {% endfor %}
+                                        </div>
+                               </div>
 
-        <div class=' '>
-                                        
-                       <div class='w-full text-md menu-link font-sans flex  items-end gap-2' >
-                                {% for link in linklists.footer.links %} 
-                                <h3 class=''><a href="{{ link.url }}">{{ link.title }}</a></h3>
-                                {% endfor %}
-                        </div> 
+                               <h2>  — </h2> 
 
-        <div class=' ' >
-                 {{  shop.brand.logo | image_url: width: 700 | image_tag }} 
+                               <div class="bottom h-fit">
+                                <h2> <a href=""> Instagram </a></h2>
+                                <h2> Twitter</h2>
+                
+                                </div>
+
+                                <h2>  — </h2> 
+                
+                                <div class="bottom h-fit">
+                                        <h2>Joy Objects AB, Krukmakargatan <br> 44, 117 26 Stockholm, Sweden</h2>
+                                </div>
+                
                 </div>
-
         </div>
 
+        {% comment %} <div class='  flex items-center justify-center ' >
+                {{  shop.brand.logo | image_url: width: 700 | image_tag: class:'w-1/2 ' }} 
+        </div> {% endcomment %}
 
-        {% render 'newsletter' %}
+
+
+        <div class=" md:flex-row md:flex w-[350px] justify-between ">
+        
+                <div class="w-fit   ">
+                        <h2 >©JOY Objects 2024</h2>
+                </div>
+        </div>
+        
 </div>
