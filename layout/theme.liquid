@@ -38,12 +38,10 @@
 
 <body style=' background:black; ' id="{{ page_title | handle }}" class=" relative text-grey-900 template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
  
-<div class=" mobile-round h-4  flex justify-between fixed top-0 left-0 right-0 z-50" >
+<div class=" mobile-round  h-4  flex justify-between fixed top-0 left-0 right-0 z-50" >
 
-   <img src='/assets/left.png' alt='left'>
-   <img src='/assets/right.png' alt='left'>
-
-
+   <img src="{{ '/left.png' | asset_url }}" alt="Example Image">
+   <img src="{{ '/right.png' | asset_url }}" alt="Example Image">
 </div> 
 
 {% comment %}  styles for body wrap are in css due tw error {% endcomment %}
