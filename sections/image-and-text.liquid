@@ -15,9 +15,11 @@
               {{ section.settings.body}}
             </h3>
 
-            {% if  section.settings.featured-product %}
-            {% render 'button' with { text: 'View Product' , link: section.settings.featured-product.url } %}
+            {% if section.settings.product_1  != ''  %}
+              {% render 'button' with {text: section.settings.img_text_1 , link: section.settings.product_1.url  %}
             {% endif %}
+              
+        </div>
           </div>
       </div>
 
@@ -57,9 +59,9 @@
         "label": "Body Text"
       },
       {
-       "type": "product",
-       "id" : "featured-product",
-       "label": "Product"
+        "type": "product",
+        "id": "product_1",
+        "label": "Product"
       },
       {
         "type": "color",
