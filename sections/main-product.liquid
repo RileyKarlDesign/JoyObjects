@@ -27,7 +27,7 @@
   <!-- If we need scrollbar -->
 </div>
 
-<div class="grid grid-cols-2 relative h-fit">
+<div class="grid grid-cols-2 relative h-fit pb-40">
     <div class="post-wrapper hidden transition-all md:flex md:flex-col md:h-auto h-[80vh] flex-row gap-2 overflow-y-scroll">
         {% for image in product.images %}
         {{ image | image_url: width: 800 | image_tag: class: 'h-fit w-fit ' }}
