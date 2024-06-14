@@ -985,6 +985,10 @@ video {
   height: 2rem;
 }
 
+.h-\[50vh\] {
+  height: 50vh;
+}
+
 .h-\[80vh\] {
   height: 80vh;
 }
@@ -1008,10 +1012,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[50vh\] {
-  height: 50vh;
 }
 
 .min-h-screen {
@@ -2275,6 +2275,10 @@ video {
   opacity: 0.7;
 }
 
+.opacity-75 {
+  opacity: 0.75;
+}
+
 .opacity-80 {
   opacity: 0.8;
 }
@@ -2393,6 +2397,16 @@ video {
 
 :root {
   --winHeight: 100vh;
+}
+
+.mobile-round{
+  opacity: 100;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .mobile-round{
+    opacity: 0;
+  }
 }
 
 h1{
@@ -2701,10 +2715,6 @@ html.js-ajax-cart-processing .my-cart__items:before {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.hover\:opacity-100:hover {
-  opacity: 1;
-}
-
 .hover\:opacity-50:hover {
   opacity: 0.5;
 }
@@ -2851,10 +2861,6 @@ html.js-ajax-cart-processing .my-cart__items:before {
 
   .md\:pt-\[20vh\] {
     padding-top: 20vh;
-  }
-
-  .md\:pt-\[10vh\] {
-    padding-top: 10vh;
   }
 
   .md\:text-5xl {

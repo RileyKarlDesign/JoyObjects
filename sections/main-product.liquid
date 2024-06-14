@@ -11,8 +11,8 @@
     {% comment %} imfo  {% endcomment %}
 
      <div class='  h-fit md:sticky top-1 p-4 flex flex-col items-center   md:pt-[20vh] pt-2'>
-
-        <div class=" md:w-[80%] w-full  h-fit ">
+-
+        <div class=" md:w-[80%] w-full  +fit ">
             <h1> {{ product.title }} </h1>
             <h1> {{ product.metafields.custom.range }} </h1>
             <p class='pb-4'> {{ product.description }} </p>
@@ -25,7 +25,10 @@
         </div>
 
         <div class="flex flex-col gap-1 md:w-[80%] w-full pt-4 ">
-            <div class="pb-4 flex-col flex gap-1">
+          
+        {% render 'atc-stick' %} 
+
+        <div class="pt-4 flex-col flex gap-1">
     
                 {%  if product.metafields.custom.shipping != '' %}
                     {% render 'accordian' with { title: 'Shipping', content: product.metafields.custom.shipping } %}
@@ -36,7 +39,7 @@
                 
             </div>
 
-             {% render 'atc-stick' %} 
+          
 
         </div>
        

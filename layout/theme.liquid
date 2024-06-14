@@ -36,17 +36,26 @@
     
 </head>
 
-<body style=' background:white; ' id="{{ page_title | handle }}" class=" text-grey-900 template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
+<body style=' background:black; ' id="{{ page_title | handle }}" class=" relative text-grey-900 template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
  
-    {% comment %}  styles for body wrap are in css due tw error {% endcomment %}
+<div class=" mobile-round h-4  flex justify-between fixed top-0 left-0 right-0 z-50" >
+
+   <img src='/assets/left.png' alt='left'>
+   <img src='/assets/right.png' alt='left'>
+
+
+</div> 
+
+{% comment %}  styles for body wrap are in css due tw error {% endcomment %}
    
     {% section 'live-cart' %}
 
-    <div class ='js-main ' style='background:{{ settings.background }};' >
 
+
+    <div class ='js-main ' style='background:{{ settings.background }};' >
+   
               {% render 'header' %}
                     {{ content_for_layout }}
-          
               {% section 'footer' %}
 
 
