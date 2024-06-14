@@ -4,34 +4,9 @@
       "type": "main-product",
       "settings": {
       }
-    },
-    "slideshow_QCVdgN": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_AAbMQg": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/joy_posts2.jpg"
-          }
-        },
-        "slide_imtyeC": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/4_85d585d4-d760-415e-bccf-dbece9d2d98d.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "slide_AAbMQg",
-        "slide_imtyeC"
-      ],
-      "settings": {
-        "title": "Slideshow"
-      }
     }
   },
   "order": [
-    "main",
-    "slideshow_QCVdgN"
+    "main"
   ]
 }
