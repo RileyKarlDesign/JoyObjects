@@ -1,17 +1,53 @@
 
-<div class='grid md:grid-cols-2 grid-cols-1   gap-2  md:p-2  p-0 '>
-    <div class='post-wrapper transition-all flex md:flex-col md:h-auto h-[80vh] flex-row gap-2 overflow-y-scroll'>       
+<div class="product-swiper md:hidden  w-full overflow-hidden">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper w-full ">
+    <!-- Slides -->
+
+    {% for image in product.images %}
+
+        <div class='swiper-slide flex justify-center '>
+            <div class="object-contain"> 
+            <div class='  aspect-main  '>
+                {{ image | image_url: width: 700 | image_tag }}      
+            </div>      
+                <p class='caption pl-2 pt-1 text-center  '> {{ forloop.index }} / {{ forloop.length }}  </p>            
+            </div>
+        </div>
+
+
+    {% endfor %}
+
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    {% comment %} <div class='bg-red-500'>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div> {% endcomment %}
+    <!-- If we need scrollbar -->
+  
+</div>
+
+
+<div class='grid md:grid-cols-2 grid-cols-1 overflow-hidden  relative gap-2  md:p-2  p-0 '>
+    <div class='post-wrapper hidden transition-all md:flex md:flex-col md:h-auto h-[80vh] flex-row gap-2 overflow-y-scroll'>       
        
         {% for image in product.images %}      
                   {{ image | image_url: width: 700 | image_tag: class:'h-full w-fit ' }}         
         {% endfor %}
         
-    </div>     
+    </div>    
+    
+    {% comment %} swiper {% endcomment %}
+
 
     {% comment %} imfo  {% endcomment %}
 
-     <div class='  h-fit md:sticky top-1 p-4 flex flex-col items-center   md:pt-[20vh] pt-2'>
--
+     <div class='  h-fit md:sticky top-1 p-4 flex flex-col items-center  md:pt-[20vh] pt-2'>
+
         <div class=" md:w-[80%] w-full  +fit ">
             <h1> {{ product.title }} </h1>
             <h1> {{ product.metafields.custom.range }} </h1>
