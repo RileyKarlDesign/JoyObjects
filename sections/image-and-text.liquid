@@ -11,29 +11,25 @@
               {{ section.settings.title}}
             </h1>
           </div>
-          
-            <div class="">
-              <h3 class='w-[80%]' >
-                {{ section.settings.body}}
-              </h3>
+            <h3 class='w-[80%]' >
+              {{ section.settings.body}}
+            </h3>
+           
               {% if section.settings.product_1  != ''  %}
-                {% render 'button' with {text: 'View Product' , link: section.settings.product_1.url  %}
+                <div class="pt-4">{% render 'button' with {text: 'View Product' , link: section.settings.product_1.url  %}</div>
               {% endif %}
               
-            </div>
+      
 
-
-        </div>
           </div>
       </div>
 
-        <div class='w-full h-full overflow-hidden'>
-            <div class='object fit'> 
-              {{ section.settings.image| img_url: '2048x' | img_tag }}
-            </div>
-        </div>
-
-
+      <div class='w-full h-full overflow-hidden'>
+        <div class='object fit'> 
+          {{ section.settings.image| img_url: '2048x' | img_tag }}
+          </div>
+      </div>
+    </div>
 
 
 
@@ -64,9 +60,9 @@
         "label": "Body Text"
       },
       {
-        "type": "product",
-        "id": "product_1",
-        "label": "Product"
+       "type": "product",
+       "id" : "featured-product",
+       "label": "Product"
       },
       {
         "type": "color",
