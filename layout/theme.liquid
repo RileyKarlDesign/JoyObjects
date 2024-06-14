@@ -26,8 +26,8 @@
     {% comment %}  swiper {% endcomment %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
-
+ 
+ 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
@@ -42,7 +42,7 @@
 
    <img src="{{ '/left.png' | asset_url }}" alt="Example Image">
    <img src="{{ '/right.png' | asset_url }}" alt="Example Image">
-   
+
 </div> 
 
 {% comment %}  styles for body wrap are in css due tw error {% endcomment %}

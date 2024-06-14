@@ -11,24 +11,29 @@
               {{ section.settings.title}}
             </h1>
           </div>
-            <h3 class='w-[80%]' >
-              {{ section.settings.body}}
-            </h3>
-
-            {% if section.settings.product_1  != ''  %}
-              {% render 'button' with {text: section.settings.img_text_1 , link: section.settings.product_1.url  %}
-            {% endif %}
+          
+            <div class="">
+              <h3 class='w-[80%]' >
+                {{ section.settings.body}}
+              </h3>
+              {% if section.settings.product_1  != ''  %}
+                {% render 'button' with {text: 'View Product' , link: section.settings.product_1.url  %}
+              {% endif %}
               
+            </div>
+
+
         </div>
           </div>
       </div>
 
-      <div class='w-full h-full overflow-hidden'>
-        <div class='object fit'> 
-          {{ section.settings.image| img_url: '2048x' | img_tag }}
-          </div>
-      </div>
-    </div>
+        <div class='w-full h-full overflow-hidden'>
+            <div class='object fit'> 
+              {{ section.settings.image| img_url: '2048x' | img_tag }}
+            </div>
+        </div>
+
+
 
 
 
