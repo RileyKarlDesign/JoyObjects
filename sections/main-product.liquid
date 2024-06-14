@@ -1,5 +1,5 @@
 
-<div class="product-swiper md:hidden  w-full overflow-hidden">
+<div class="product-swiper md:hidden  pb-4 w-full overflow-hidden">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper w-full ">
     <!-- Slides -->
@@ -32,11 +32,11 @@
 </div>
 
 
-<div class='grid md:grid-cols-2 grid-cols-1 overflow-hidden  relative gap-2  md:p-2  p-0 '>
+<div class='grid md:grid-cols-2 grid-cols-1 overflow-hidden   gap-2  md:p-2  p-0 '>
     <div class='post-wrapper hidden transition-all md:flex md:flex-col md:h-auto h-[80vh] flex-row gap-2 overflow-y-scroll'>       
        
         {% for image in product.images %}      
-                  {{ image | image_url: width: 700 | image_tag: class:'h-full w-fit ' }}         
+                  {{ image | image_url: width: 800 | image_tag: class:'h-fit w-fit ' }}         
         {% endfor %}
         
     </div>    
@@ -46,46 +46,46 @@
 
     {% comment %} imfo  {% endcomment %}
 
-     <div class='  h-fit md:sticky top-1 p-4 flex flex-col items-center  md:pt-[20vh] pt-2'>
+     <div class='bg-red-500 h-full sticky top-1 p-4 flex flex-col items-center md:pt-[20vh] pt-2'>
 
-        <div class=" md:w-[80%] w-full  +fit ">
-            <h1> {{ product.title }} </h1>
-            <h1> {{ product.metafields.custom.range }} </h1>
-            <p class='pb-4'> {{ product.description }} </p>
-            <h1> {{ product.custom.dimentions_ }} </h1>
-    
-        <ajax-cart-product-form> 
-            {% render 'add-to-cart-form' with current_variant: current_variant  %}
-        </ajax-cart-product-form>
-
-        </div>
-
-        <div class="flex flex-col gap-1 md:w-[80%] w-full pt-4 ">
-          
-        {% render 'atc-stick' %} 
-
-        <div class="pt-4 flex-col flex gap-1">
-    
-                {%  if product.metafields.custom.shipping != '' %}
-                    {% render 'accordian' with { title: 'Shipping', content: product.metafields.custom.shipping } %}
-                {% endif %}
-                {%  if product.metafields.custom.size != '' %}
-                    {% render 'accordian' with { title: 'Dimnetions', content: product.metafields.custom.size } %}
-                {% endif %}
+            <div class=" md:w-[400px] w-full sticky top-0 ">
+                <h1> {{ product.title }} </h1>
+                <h1> {{ product.metafields.custom.range }} </h1>
+                <p class='pb-4'> {{ product.description }} </p>
+                <h1> {{ product.custom.dimentions_ }} </h1>
                 
+                    <ajax-cart-product-form> 
+                        {% render 'add-to-cart-form' with current_variant: current_variant  %}
+                    </ajax-cart-product-form>
+
+
+                <div class="flex flex-col gap-1 w-full pt-4 ">
+                        
+                    {% render 'atc-stick' %} 
+
+                    <div class="pt-4 flex-col flex gap-1">
+                
+                            {%  if product.metafields.custom.shipping != '' %}
+                                {% render 'accordian' with { title: 'Shipping', content: product.metafields.custom.shipping } %}
+                            {% endif %}
+                            {%  if product.metafields.custom.size != '' %}
+                                {% render 'accordian' with { title: 'Dimnetions', content: product.metafields.custom.size } %}
+                            {% endif %}
+                            
+                        </div>
+
+            
+
+                    </div>
+
+                </div>
+
+
+
             </div>
-
-          
-
-        </div>
-       
-  
-
-
-     </div>
     
 
-</div>      
+    </div>      
 
 
  
