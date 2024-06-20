@@ -45,6 +45,7 @@ h1{
 	text-transform: uppercase;
 	line-height: 5.2rem;
 	font-size: 2.8rem; 
+  letter-spacing: -3px;
 } 
 
 .heading-sans{
@@ -72,9 +73,9 @@ h3, button ,input {
  .text-serif{
   font-family: 'joy',serif !important; 
 	text-transform: uppercase;
-	line-height: 4.8vw !important;
-	font-size:2.2vw !important; 
-
+	line-height: 55px !important;
+	font-size:30px !important; 
+ letter-spacing: -3px;
  }
 
  p{
@@ -213,14 +214,13 @@ input[type=number] {
 .my-cart{
   position: fixed;
   right: -1000px;
-  top: 7px;
+  top: 5px;
   cursor: pointer;
-  width: calc( 400px  );
-  height: calc( var(--winHeight) - 14px);
+  width: calc( 450px  );
+  height: calc( var(--winHeight) - 10px);
   transition: ease all 0.3s ;
   overflow: hidden;
   opacity: 0;
-  
 
 }
 
@@ -228,11 +228,9 @@ input[type=number] {
  
 .cart-open{
 
- width: calc( 400px  );
-  height: calc( var(--winHeight) - 14px);
   overflow: scroll;
   transition: right 0.3s;
-  right: 7px;
+  right: 5px;
   opacity: 1;
 
  
