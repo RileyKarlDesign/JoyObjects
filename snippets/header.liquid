@@ -2,12 +2,12 @@
   <div class=" z-20 md:fixed  absolute  left-0 right-0 pointer-events-none flex justify-center items-center ">
     {% if template contains 'product' %}
 
-      <div class=" md:z-50  z-20 md:w-40 w-50 md:mt-0 mt-10 aspect-square w-full md:pt-0 pt-[20vw]  md:visible invisible   ">
+      <div class=" md:z-50  z-20 md:w-[40vw] w-50 md:mt-0 mt-10 aspect-square w-full md:pt-0 pt-[20vw]  md:visible invisible   ">
         <a class=" pointer-events-auto" href="/"> {{ shop.brand.logo | image_url: width: 700 | image_tag }} </a>
       </div>
 
     {% else %}
-      <div class=" md:z-50  z-20 md:w-40 w-50 md:mt-0 mt-10 aspect-square w-full md:pt-0 pt-[20vw]    ">
+      <div class=" md:z-50  z-20 lg:w-[28vw] md:w-[25vw]  w-50 md:mt-0 mt-10 aspect-square w-full md:pt-0 pt-[20vw]    ">
         <a class=" pointer-events-auto" href="/"> {{ shop.brand.logo | image_url: width: 700 | image_tag }} </a>
       </div>
     {% endif %}

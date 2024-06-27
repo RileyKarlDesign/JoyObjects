@@ -2,27 +2,27 @@
 
 
 
-
-<div class="  h-fit flex  gap-2  p-4  overflow-hidden md:pt-4 pt-[50px]">
-
-
-    {% if collection.title != 'Products' %}
-
-            {% if collection.image  %}
-
-                <div class=" md:w-1/2 w-full   ">
-                    {{ collection.image  |  image_url: width: 700 | image_tag :  alt: collection.title, class: ' object-cover object-center  aspect-square md:w-auto w-full ' }}
-                </div>
-          
-            {% endif %}
-   
-    {% endif %} 
-
-</div>
- 
+{% if collection.title != 'Products' %}
+        <div class="  h-fit flex  gap-2  p-4  overflow-hidden md:pt-4 pt-[50px]">
 
 
-<div class="w-full p-4 z-40 pb-2 h-fit grid  pt-0 sm:grid-cols-2  grid-cols-1 gap-2  ">
-    <h2> {{ collection.title }} </h2>
+        
+
+                    {% if collection.image  %}
+
+                        <div class=" md:w-1/2 w-full   ">
+                            {{ collection.image  |  image_url: width: 700 | image_tag :  alt: collection.title, class: ' object-cover object-center  aspect-square md:w-auto w-full ' }}
+                        </div>
+                
+                    {% endif %}
+        
+
+
+        </div>
+{% endif %} 
+
+
+<div class="w-full p-4 z-40 pb-2 h-fit grid  pt-0 sm:grid-cols-2  grid-cols-1 gap-2   ">
+    <h2> {{ collection.title }} </h2> 
       {{ collection.description }} 
 </div>

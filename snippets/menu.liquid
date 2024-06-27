@@ -3,11 +3,11 @@
         <div class="menu-top  md:w-[350px] sm:w-full w-full  ">
             <h3 class=' select-none '>—</h3>
                      
-                {%- for link in linklists.main-menu.links -%}
+                {% comment %} {%- for link in linklists.main-menu.links -%}
                     <h3 class=' select-none ' >  <a class=" hover:opacity-50 {%- if request.path == link.url -%}f opacity-50 hover:opacity-50 {%- endif -%}" href="{{ link.url }}">{{ link.title }}</a></h3>
-                {%- endfor -%}
+                {%- endfor -%} {% endcomment %}
 
-            <h3 class=' select-none '>—</h3> 
+        
 
             {%- for link in linklists.secondary-menu.links -%}
                 <h3 class=' select-none ' >  <a class=" hover:opacity-50 {%- if request.path == link.url -%}f opacity-50 hover:opacity-50 {%- endif -%}" href="{{ link.url }}">{{ link.title }}</a></h3>
