@@ -2,13 +2,13 @@
 
 
 
-<div class="my-cart bg-green-400 rounded-md  z-[2000]  backdrop-blur-lg relative md:w-[370px] sm:w-full w-full " >
+<div class="my-cart bg-white rounded-sm  z-[2000]  backdrop-blur-lg relative md:w-[370px] sm:w-full w-full " >
   
-            <div class=' absolute top-0 right-0 left-0 flex p-4  w-full z-50 justify-between items-end '>
-              <h2>Cart ( <span data-ajax-cart-bind="item_count" class="header__cart-quantity">
+            <div class=' select-none absolute top-0 right-0 left-0 flex p-4 md:p-3  w-full z-50 justify-between items-end '>
+              <h3 >Cart ( <span data-ajax-cart-bind="item_count" class="header__cart-quantity">
                 {{ cart.item_count }} 
-                </span> )</h2>
-              <h2 class='cart-btn'>Close</h2>
+                </span> )</h3>
+              <h3 class='cart-btn'>Close</h3>
             </div> 
 
 
@@ -26,9 +26,9 @@
 
 
         {% form 'cart', cart, id: 'my-ajax-cart-form' %}
-          <button class=' flex w-full h-el  pl-4 pr-4 justify-center items-center bg-black bg-opacity-5  text-black rounded-sm  backdrop-blur-lg '  type="submit" name="checkout">
-          <h3> Checkout </h3>
-          </button> 
+            <button class=' flex w-full h-el pl-4 pr-4 justify-center items-center bg-black bg-opacity-5  text-black rounded-sm  backdrop-blur-lg '  type="submit" name="checkout">
+                <h3> Checkout </h3>
+            </button> 
         {% endform %}
 
         </div>

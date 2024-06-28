@@ -1,4 +1,4 @@
-<div class="product-swiper md:hidden  pb-4 w-full overflow-hidden">
+<div class="product-swiper md:hidden  pb-4 w-full overflow-hidden  ">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper w-full ">
     <!-- Slides -->
@@ -27,52 +27,56 @@
   <!-- If we need scrollbar -->
 </div>
 
-<div class="grid grid-cols-2 relative h-fit pb-40">
+<div class="grid grid-cols-2 relative h-fit pb-40 ">
 
-<div class="w-full pt-4 h-fit flex md:w-[400px] md:col-span-1 col-span-2 p-4 sticky top-0">
-  <div class="  w-full ">
-      <h3 class="text-serif">{{ product.title }}</h3>
-      <h3 class="text-serif">{{ product.metafields.custom.range }}</h3>
-      <p class="pb-4">{{ product.description }}</p>
+      <div class="col-span-2 h-[100vh]  overflow-hidden snap-start" >
 
-      <ajax-cart-product-form>
-          {% render 'add-to-cart-form' with current_variant: current_variant %}
-      </ajax-cart-product-form>
-      <div class="flex flex-col gap-1 w-full pt-4 ">
-          {% render 'atc-stick' %}
-
-          <div class="pt-4 flex-col flex gap-1">
-                  {% if product.metafields.custom.shipping != '' %}
-                      {% render 'accordian' with { title: 'Shipping', content: product.metafields.custom.shipping } %}
-                  {% endif %}
-                  {% if product.metafields.custom.size != '' %}
-                      {% render 'accordian' with { title: 'Dimnetions', content: product.metafields.custom.size } %}
-                  {% endif %}
-          </div>
-      </div>
-  </div>
-
-</div>
-
-    <div class="post-wrapper hidden transition-all md:flex md:flex-col md:h-auto h-[80vh] flex-row gap-2 overflow-y-scroll">
         {% for image in product.images %}
-        {{ image | image_url: width: 800 | image_tag: class: 'h-fit w-fit ' }}
+
+          {% if forloop.index == 2 %}
+
+            {{ image | image_url: width: 800 | image_tag: class: 'h-fit w-full  object-center' }}
+          
+          {% endif %}
+
         {% endfor %}
-    </div>
+
+      </div>
+
+      <div class="w-full pt-4 h-fit flex md:w-[400px] md:col-span-1 col-span-2 p-4 sticky top-0 snap-start ">
+        <div class="  w-full ">
+            <h3 class="text-serif">{{ product.title }}</h3>
+            <h3 class="text-serif">{{ product.metafields.custom.range }}</h3>
+            <p class="pb-4">{{ product.description }}</p>
+
+            <ajax-cart-product-form>
+                {% render 'add-to-cart-form' with current_variant: current_variant %}
+            </ajax-cart-product-form>
+            <div class="flex flex-col gap-1 w-full pt-4 ">
+                {% render 'atc-stick' %}
+
+                <div class="pt-4 flex-col flex gap-1">
+                        {% if product.metafields.custom.shipping != '' %}
+                            {% render 'accordian' with { title: 'Shipping', content: product.metafields.custom.shipping } %}
+                        {% endif %}
+                        {% if product.metafields.custom.size != '' %}
+                            {% render 'accordian' with { title: 'Dimnetions', content: product.metafields.custom.size } %}
+                        {% endif %}
+                </div>
+            </div>
+        </div>
+      </div>
+
+            {% for image in product.images %}
+
+                {{ image | image_url: width: 800 | image_tag: class: 'h-fit w-fit  ' }}
+
+            {% endfor %}
+
+      </div>
    
 </div>
 
-<div class="  ">
- 
-
-
-
-        <div class="top sticky top-1  h-fit bg-yellow-400">
- 
-                
-        </div>
-
-</div>
 
 
 
