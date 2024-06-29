@@ -5,14 +5,35 @@ console.log('ani 1.O')
 
 document.addEventListener("DOMContentLoaded", (event) => {
   
-    // Fade in 
-
-    // gsap.from(".js-main", { opacity: 0, duration: 1 });
-
-    //  Section stagger fade in 
-    gsap.from(".js-section", {stagger: 1, opacity: 0, duration: 1 });
+// Fade in 
 
 
-  });
+gsap.to( '.js-main', { opacity: 1,  duration: .8 });
+
+// image-ani 
+
+ 
+
+   function setOpacity(entries, observer) {
+     entries.forEach(entry => {
+       if (entry.isIntersecting) {
+         
+         gsap.to( entry.target, { opacity: 1,  duration: .8, pixi: { blurX: 0, blurY: 0 }, });
+         observer.unobserve(entry.target);
+       }
+     });
+   }
+
+   const images = document.querySelectorAll('.js-fade');
+
+   const observer = new IntersectionObserver(setOpacity, {
+     root: null, // use the viewport as the root
+     threshold: 0.2 // when 10% of the target is visible
+   });
+
+   images.forEach(image => {
+     observer.observe(image);
+   });
 
 
+});
