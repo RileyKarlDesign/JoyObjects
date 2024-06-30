@@ -10,30 +10,76 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 gsap.to( '.js-main', { opacity: 1,  duration: .8 });
 
+// link dealy
+
+let links = document.querySelectorAll("a");
+
+ for (let i = 0; i < links.length; i++) {
+
+  console.log( links[i] );
+  links[i].addEventListener("click", (e) => {
+    e.preventDefault();
+    gsap.to('.js-main', { opacity:0, duration: .8, });   
+    console.log(e);
+    setTimeout(() => {
+      window.location.href = e.target.href;
+    },300) 
+  })
+
+ }
+
 // image-ani 
 
- 
+      const images = document.querySelectorAll('.js-fade');
 
-   function setOpacity(entries, observer) {
-     entries.forEach(entry => {
-       if (entry.isIntersecting) {
-         
-         gsap.to( entry.target, { opacity: 1,  duration: .8, pixi: { blurX: 0, blurY: 0 }, });
-         observer.unobserve(entry.target);
-       }
-     });
-   }
+      function setOpacity(entries, observer) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            
+            gsap.to( entry.target, { opacity: 1,  duration: .8, filter: "blur(0px)", ease: "power1.inOut" });
+            observer.unobserve(entry.target);
+          }
+        });
+      }
 
-   const images = document.querySelectorAll('.js-fade');
+      const observer = new IntersectionObserver(setOpacity, {
+        root: null, // use the viewport as the root
+        threshold: 0.2 // when 10% of the target is visible
+      });
 
-   const observer = new IntersectionObserver(setOpacity, {
-     root: null, // use the viewport as the root
-     threshold: 0.2 // when 10% of the target is visible
-   });
+      images.forEach(image => {
+        observer.observe(image);
+      });
 
-   images.forEach(image => {
-     observer.observe(image);
-   });
+
+
+// Hr animation
+
+
+  let rules = document.querySelectorAll(".js-hr");
+
+  let grow = (entries, observer) => {
+
+    entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              gsap.to( entry.target, { width: "100%", opacity:.1 , duration: 1, ease: "power1.inOut"});
+
+              observer.unobserve(entry.target);
+
+            }
+
+          });
+
+  }
+
+  const observerTwo = new IntersectionObserver(grow, {
+        root: null, // use the viewport as the root
+        threshold: 0.2 // when 10% of the target is visible
+  });
+
+  rules.forEach(rule => { observerTwo.observe(rule); });
 
 
 });

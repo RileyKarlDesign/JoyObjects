@@ -9,7 +9,7 @@ needs to be tidyed
 {% if collection.title != 'All Products' %}
   {% render 'collection-header' with { collection: collection } %}
 {% else %}
-  <div class="p-4 pt-4 pb-1  grid-cols-1  ">
+  <div class="p-4 pt-4 pb-1  grid-cols-1 flex md:flex-col flex-col-reverse  ">
     {%- for filter in collection.filters -%}
       {% for filter_value in filter.active_values %} 
         <h3>
@@ -17,6 +17,9 @@ needs to be tidyed
         </h3>
       {%- endfor -%}
     {%- endfor -%}
+
+    {% render 'safe-space' %}
+
   </div>
 {% endif %} 
 
@@ -215,7 +218,7 @@ needs to be tidyed
     {%- endfor -%}
   </div>
 </form>
-{% render 'safe-space' %}
+
 
 <div class=" p-4 ">
   {% if collection.all_products_count > 0 %}

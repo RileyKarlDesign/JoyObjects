@@ -1,16 +1,16 @@
 <div class=" group flex flex-col  relative pb-8  ">
 <a href="{{ product.url }}" >
-<div class=" relative overflow-hidden"> 
+<div class=" pointer-events-none  relative overflow-hidden"> 
     {% if product.featured_image %}
-        <div  class=' group-hover:opacity-0  h-fit rounded-sm  bg-opacity-50 overflow-hidden '>
+        <div  class=' pointer-events-none group-hover:opacity-0  h-fit rounded-sm  bg-opacity-50 overflow-hidden '>
             {{ product.featured_image | image_url: width: 700 | image_tag: class:'w-full js-fade' }}
         </div>
  
-            <div class="  absolute inset-0 opacity-0 group-hover:opacity-100 ">{{ product.images[1] | image_url: width: 400 | image_tag: class:' js-fade' }}</div>
+            <div class=" pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 ">{{ product.images[1] | image_url: width: 400 | image_tag: class:' js-fade' }}</div>
        
     {% endif %}
 </div>
-<div class=' pt-1 '>
+<div class=' pt-1 pointer-events-none '>
     <p> {{ product.title }} </p>
     <p> {{ product.metafields.custom.range }} </p>
 

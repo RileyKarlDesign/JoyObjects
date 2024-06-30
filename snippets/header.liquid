@@ -3,12 +3,12 @@
     {% if template contains 'product' %}
 
       <div class=" md:z-50  z-20 xl:w-[27vh] lg:w-[28vw] md:w-[30vw] w-50 md:mt-0 mt-10 aspect-square w-full md:pt-0 pt-[20vw]  md:visible invisible   ">
-        <a class=" pointer-events-auto" href="/"> {{ shop.brand.logo | image_url: width: 700 | image_tag }} </a>
+        <a class=" pointer-events-auto" href="/"> {{ shop.brand.logo | image_url: width: 700 | image_tag: class:'pointer-events-none' }} </a>
       </div>
 
     {% else %}
       <div class=" flex items-center justify-center md:items-start xl:w-[27vh] lg:w-[28vw] md:w-[30vw] z-20   w-50 md:mt-0  aspect-square w-full md:pt-0     ">
-        <a class=" pointer-events-auto" href="/"> {{ shop.brand.logo | image_url: width: 700 | image_tag }} </a>
+        <a class=" pointer-events-auto" href="/"> {{ shop.brand.logo | image_url: width: 700 | image_tag: class:'pointer-events-none'  }} </a>
       </div>
     {% endif %}
   </div>

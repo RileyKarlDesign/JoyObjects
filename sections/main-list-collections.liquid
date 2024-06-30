@@ -1,7 +1,8 @@
-    <div class="p-4">
-        <h3> All Products </h3>
+    <div class="flex  md:flex-col flex-col-reverse p-4 pb-0 md:pb-4">
+        <h3>All Products</h3>
+        {% render 'safe-space' %}
     </div>
-    {% render 'safe-space' %}
+    
     {% for collection in collections %}
 
         {% if collection.title != 'All Products' and collection.all_products_count > 0 %}
