@@ -25,8 +25,9 @@
       </div>
       <div class='w-full h-full overflow-hidden'>
         <div class='object fit'> 
+
     
-          {{ section.settings.image | image_url: width: 1204 | image_tag: class:'w-full js-fade' alt:'{{section.settings.alt}}' }}
+          {{ section.settings.image | image_url: width: 1204 | image_tag: class:'w-full js-fade', alt:'{{section.settings.alt}}' }}
           </div>
       </div>
     </div>
