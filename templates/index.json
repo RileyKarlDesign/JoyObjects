@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "hero_image_nkgzDg": {
@@ -13,6 +22,7 @@
         "title": "Looking for joy within our objects",
         "body": "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SUSPENDISSE IACULIS EGET LACUS VOLUTPAT SAGITTIS. PHASELLUS TEMPOR VIVERRA LACUS IN CONSECTETUR. PELLENTESQUE HABITANT MORBI TRISTIQUE SENECTUS ET NETUS ET MALESUADA FAMES AC TURPIS EGESTAS. MAECENAS EGET NIBH CURSUS, VENENATIS LIBERO NON, MATTIS MASSA. PELLENTESQUE IN QUAM RISUS.",
         "product_1": "chair",
+        "cta": "Custom Button Text",
         "color": "rgba(0,0,0,0)"
       }
     },
@@ -30,6 +40,7 @@
         "title": "Surrounding ourselves with joy",
         "body": "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SUSPENDISSE IACULIS EGET LACUS VOLUTPAT SAGITTIS. PHASELLUS TEMPOR VIVERRA LACUS IN CONSECTETUR. PELLENTESQUE HABITANT MORBI TRISTIQUE SENECTUS ET NETUS ET MALESUADA FAMES AC TURPIS EGESTAS. MAECENAS EGET NIBH CURSUS, VENENATIS LIBERO NON, MATTIS MASSA. PELLENTESQUE IN QUAM RISUS.",
         "product_1": "",
+        "cta": "",
         "color": "rgba(0,0,0,0)"
       }
     }
