@@ -1009,6 +1009,10 @@ video {
   height: 50vh;
 }
 
+.h-\[80vh\] {
+  height: 80vh;
+}
+
 .h-auto {
   height: auto;
 }
@@ -2482,19 +2486,19 @@ video {
 @font-face {
   font-family: altB;
 
-  src: url(./AlteHaasGroteskBold.woff)
+  src: url(./AlteHaasGroteskBold.woff);
 }
 
 @font-face {
   font-family: altR;
 
-  src: url(./AlteHaasGroteskRegular.woff)
+  src: url(./AlteHaasGroteskRegular.woff);
 }
 
 @font-face {
   font-family: joy;
 
-  src: url(./joy.woff)
+  src: url(./joy.woff);
 }
 
 :root {
@@ -2579,10 +2583,16 @@ input{
 
 #mc-embedded-subscribe {
   clear: both;
-  width: auto;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
   display: block;
   margin: 0em 0 1em 0% !important;
-  background: ;
+  border: none !important;
+}
+
+#mc_embed_signup input {
+  border: 0px solid #ABB0B2 !important;
+  border-radius: 3px;
 }
 
 .text-serif{
@@ -2594,7 +2604,7 @@ input{
 }
 
 p{
-  line-height: 1.1rem !important;
+  line-height: 0.8rem !important;
   font-size:0.9rem !important;
   font-family: 'altB', Times, serif !important;
   text-transform: uppercase;
@@ -2858,7 +2868,7 @@ html.js-ajax-cart-processing .my-cart__items:before {
 
 .js-fade{
   opacity: 0;
-  filter: blur(10px)
+  filter: blur(10px);
 }
 
 .js-main{
@@ -3017,6 +3027,10 @@ html.js-ajax-cart-processing .my-cart__items:before {
 
   .md\:p-3 {
     padding: 0.75rem;
+  }
+
+  .md\:pb-4 {
+    padding-bottom: 1rem;
   }
 
   .md\:pt-0 {
