@@ -19,7 +19,13 @@
       {
         "type": "color",
         "id": "background",
-        "label": "Bavkground Color",
+        "label": "Background Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "footer-background",
+        "label": "Footer Background Color",
         "default": "#ffffff"
       }
     ]
