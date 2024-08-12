@@ -16,11 +16,10 @@ let links = document.querySelectorAll("a");
 
  for (let i = 0; i < links.length; i++) {
 
-  console.log( links[i] );
+  
   links[i].addEventListener("click", (e) => {
     e.preventDefault();
     gsap.to('.js-main', { opacity:0, duration: .8, });   
-    console.log(e);
     setTimeout(() => {
       window.location.href = e.target.href;
     },300) 
@@ -111,7 +110,7 @@ console.log(prodGallery);
         threshold: 0.2 // when 10% of the target is visible
       }); 
 
-      
+       
         observerThree.observe(prodGallery);
       
 
