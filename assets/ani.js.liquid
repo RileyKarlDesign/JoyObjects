@@ -99,7 +99,7 @@ let prodGallery = document.querySelector('.js-product-gallery');
    function shrink(entries, observer) {
 
         entries.forEach(entry => {
-          prodInfo.style.background = "green";
+          prodInfo.style.background = "red";
 
         });
       }
@@ -107,6 +107,9 @@ let prodGallery = document.querySelector('.js-product-gallery');
       const observerThree = new IntersectionObserver(shrink, {
         root: null, // use the viewport as the root
         threshold: 1 // when 10% of the target is visible
+        rootMargin: "0px",
+        threshold: 1.0,
+        
       }); 
 
        
