@@ -15,17 +15,6 @@
         "image1": "shopify:\/\/shop_images\/joy_posts4.jpg"
       }
     },
-    "image_and_text_8zGy87": {
-      "type": "image-and-text",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/3.jpg",
-        "title": "Looking for joy within our objects",
-        "body": "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SUSPENDISSE IACULIS EGET LACUS VOLUTPAT SAGITTIS. PHASELLUS TEMPOR VIVERRA LACUS IN CONSECTETUR. PELLENTESQUE HABITANT MORBI TRISTIQUE SENECTUS ET NETUS ET MALESUADA FAMES AC TURPIS EGESTAS. MAECENAS EGET NIBH CURSUS, VENENATIS LIBERO NON, MATTIS MASSA. PELLENTESQUE IN QUAM RISUS.",
-        "product_1": "chair",
-        "cta": "-> Custom Button Text",
-        "color": "#e4e014"
-      }
-    },
     "centerd_image_and_text_NMAVaf": {
       "type": "centerd-image-and-text",
       "settings": {
@@ -40,15 +29,26 @@
         "title": "Surrounding ourselves with joy",
         "body": "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SUSPENDISSE IACULIS EGET LACUS VOLUTPAT SAGITTIS. PHASELLUS TEMPOR VIVERRA LACUS IN CONSECTETUR. PELLENTESQUE HABITANT MORBI TRISTIQUE SENECTUS ET NETUS ET MALESUADA FAMES AC TURPIS EGESTAS. MAECENAS EGET NIBH CURSUS, VENENATIS LIBERO NON, MATTIS MASSA. PELLENTESQUE IN QUAM RISUS.",
         "product_1": "",
-        "cta": "",
+        "cta": "View Shelf",
         "color": "rgba(0,0,0,0)"
+      }
+    },
+    "image_and_text_8zGy87": {
+      "type": "image-and-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/3.jpg",
+        "title": "Looking for joy within our objects",
+        "body": "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SUSPENDISSE IACULIS EGET LACUS VOLUTPAT SAGITTIS. PHASELLUS TEMPOR VIVERRA LACUS IN CONSECTETUR. PELLENTESQUE HABITANT MORBI TRISTIQUE SENECTUS ET NETUS ET MALESUADA FAMES AC TURPIS EGESTAS. MAECENAS EGET NIBH CURSUS, VENENATIS LIBERO NON, MATTIS MASSA. PELLENTESQUE IN QUAM RISUS.",
+        "product_1": "chair",
+        "cta": "-> Custom Button Text",
+        "color": "#f5f5f5"
       }
     }
   },
   "order": [
     "hero_image_nkgzDg",
-    "image_and_text_8zGy87",
     "centerd_image_and_text_NMAVaf",
-    "image_and_text_yiMTt9"
+    "image_and_text_yiMTt9",
+    "image_and_text_8zGy87"
   ]
 }
