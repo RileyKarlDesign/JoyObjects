@@ -92,16 +92,15 @@ let prodGallery = document.querySelector('.js-product-gallery');
 
 
 
-// prodInfo.style.background = "blue";
-// prodTitle.style.background = "green";
-// prodGallery.style.background = "green";
+prodInfo.style.background = "blue";
+prodTitle.style.background = "green";
+prodGallery.style.background = "green";
 
    function shrink(entries, observer) {
 
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-           alert("hi")
-          }
+          console.log(entry)
+
         });
       }
 

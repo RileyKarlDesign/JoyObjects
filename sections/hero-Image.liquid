@@ -1,40 +1,23 @@
-
-  
-
-  
-
-    
-
-          <div class='md:h-[20vh] w-full aspect-square  overflow-hidden'>
-            
-        
-            {{ section.settings.image1 | image_url: width: 1200 | image_tag: class:'w-full object-centerd' }}
-        
-          </div>
-
-      
-
-   
-
- 
+<div class="md:h-[60vh] w-full aspect-square  overflow-hidden">
+  {{ section.settings.image1 | image_url: width: 1200 | image_tag: class: 'w-full object-centerd' }}
+</div>
 
 {% schema %}
+{
+  "name": "Hero Image",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image1",
+      "label": "Image"
+    }
+  ],
 
-  {
-    "name": "Hero Image",
-    "settings": [
-      {
-        "type": "image_picker",
-        "id": "image1",
-        "label": "Image"
-      }
-    ],
-
-    "presets": [
-      {
-        "name": " Hero Image",
-        "category": "Content"
-      }
-    ]
-  }
+  "presets": [
+    {
+      "name": " Hero Image",
+      "category": "Content"
+    }
+  ]
+}
 {% endschema %}
