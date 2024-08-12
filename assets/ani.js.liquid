@@ -88,7 +88,7 @@ let links = document.querySelectorAll("a");
 
 let prodInfo = document.querySelector('.js-product-info');
 let prodTitle = document.querySelector('.js-product-title');
-let  = document.querySelector('.js-product-gallery');
+let prodGallery = document.querySelector('.js-product-gallery');
 
 
 console.log(prodGallery); 
@@ -98,8 +98,6 @@ console.log(prodGallery);
 // prodGallery.style.background = "green";
 
    function shrink(entries, observer) {
-    
-     alert('hello')
 
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -108,10 +106,10 @@ console.log(prodGallery);
         });
       }
 
-      const observer = new IntersectionObserver(shrink, {
+      const observerThree = new IntersectionObserver(shrink, {
         root: null, // use the viewport as the root
         threshold: 0.2 // when 10% of the target is visible
-      });
+      }); 
 
       prodInfo.forEach(image => {
         observer.observe(image);
