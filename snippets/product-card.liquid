@@ -1,6 +1,6 @@
-<div class=" group flex flex-col  relative pb-8  ">
+<div class="  group flex flex-col  relative pb-8  ">
 <a href="{{ product.url }}" >
-<div class=" pointer-events-none  relative overflow-hidden"> 
+<div class="js-product-card pointer-events-none  relative overflow-hidden"> 
     {% if product.featured_image %}
         <div  class=' pointer-events-none group-hover:opacity-0  h-fit rounded-sm  bg-opacity-50 overflow-hidden '>
             {{ product.featured_image | image_url: width: 700 | image_tag: class:'w-full js-fade' }}

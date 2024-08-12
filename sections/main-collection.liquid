@@ -223,6 +223,7 @@ needs to be tidyed
 <div class=" p-4 ">
   {% if collection.all_products_count > 0 %}
     {% if collection.title == 'Products' %}
+      
       <div class="grid grid-flow-dense md:grid-cols-3 sm:grid-cols-2  grid-cols-1  gap-2  pb-4  ">
         {% for product in collection.products %}
           {% render 'product-card'  with {product: product} %}
