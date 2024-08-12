@@ -42,7 +42,13 @@
         </div>
       </div>
 
-      <div class="post-wrapper hidden transition-all md:flex md:flex-col md:h-auto flex-row  p-4 pb-0  w-full  "> 
+      <div class="post-wrapper hidden transition-all md:flex md:flex-col md:h-auto flex-row  pb-0 p-4  w-full  "> 
+
+            <div class="h-screen  flex items-end ">
+
+              {{ product.images.first | image_url: width: 800 | image_tag: class: 'h-fit w-fit js-fade ' }}
+
+            </div>
 
             {% for image in product.images %}
 
