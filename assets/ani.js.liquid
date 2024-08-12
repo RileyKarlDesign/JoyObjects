@@ -90,7 +90,7 @@ let prodTitle = document.querySelector('.js-product-title');
 let prodGallery = document.querySelector('.js-product-gallery');
 
 
-console.log(prodGallery); 
+
 
 // prodInfo.style.background = "blue";
 // prodTitle.style.background = "green";
@@ -100,14 +100,14 @@ console.log(prodGallery);
 
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-           
+           alert("hi")
           }
         });
       }
 
       const observerThree = new IntersectionObserver(shrink, {
         root: null, // use the viewport as the root
-        threshold: 0.2 // when 10% of the target is visible
+        threshold: 0.9 // when 10% of the target is visible
       }); 
 
        
