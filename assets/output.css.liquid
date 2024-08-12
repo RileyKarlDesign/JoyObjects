@@ -1013,10 +1013,6 @@ video {
   height: 50vh;
 }
 
-.h-\[80vh\] {
-  height: 80vh;
-}
-
 .h-auto {
   height: auto;
 }
@@ -1152,6 +1148,10 @@ video {
 }
 
 .flex-shrink {
+  flex-shrink: 1;
+}
+
+.shrink {
   flex-shrink: 1;
 }
 
@@ -2602,13 +2602,13 @@ input{
 .text-serif{
   font-family: 'joy',serif !important;
   text-transform: uppercase;
-  line-height: 80px !important;
+  line-height: 92px!important;
   font-size:45px !important;
   letter-spacing: -3px;
 }
 
 p{
-  line-height: 0.8rem !important;
+  line-height: 0.9rem !important;
   font-size:0.9rem !important;
   font-family: 'altB', Times, serif !important;
   text-transform: uppercase;
@@ -2879,6 +2879,18 @@ html.js-ajax-cart-processing .my-cart__items:before {
   opacity: 0 ;
 }
 
+.even\:col-span-2:nth-child(even) {
+  grid-column: span 2 / span 2;
+}
+
+.even\:border-4:nth-child(even) {
+  border-width: 4px;
+}
+
+.first-of-type\:col-start-2:first-of-type {
+  grid-column-start: 2;
+}
+
 .hover\:bg-stone-800:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(41 37 36 / var(--tw-bg-opacity));
@@ -2973,16 +2985,12 @@ html.js-ajax-cart-processing .my-cart__items:before {
     height: 200px;
   }
 
-  .md\:h-auto {
-    height: auto;
+  .md\:h-\[20vh\] {
+    height: 20vh;
   }
 
   .md\:h-screen {
     height: 100vh;
-  }
-
-  .md\:h-\[50vh\] {
-    height: 50vh;
   }
 
   .md\:w-1\/2 {

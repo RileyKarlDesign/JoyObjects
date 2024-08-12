@@ -19,6 +19,7 @@ module.exports = {
         c2: "#cccccce8",
         c3: "#232323",
         c4: "#ffd501",
+        test: "#cdb574",
       },
 
       width: {
