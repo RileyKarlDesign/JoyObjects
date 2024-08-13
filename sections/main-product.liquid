@@ -30,7 +30,7 @@
     </div>
   </div>
 
-  <div class="js-product-gallery post-wrapper grid grid-cols-2 p-4 gap-4 w-screen    ">
+  <div class="js-product-gallery post-wrapper grid grid-cols-2 p-4 gap-4 w-screen pt-[20vh]   ">
     {% for image in product.images %}
       <div class="first-of-type:col-start-2 even:col-span-2 ">
         {{ image | image_url: width: 800 | image_tag: class: 'h-fit w-fit js-fade  ' }}
