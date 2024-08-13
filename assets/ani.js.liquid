@@ -92,26 +92,67 @@ let prodGallery = document.querySelector('.js-product-gallery');
 
 
 
-// prodInfo.style.background = "blue";
-// prodTitle.style.background = "green";
-// prodGallery.style.background = "green"; 
 
-   function shrink(entries, observer) {
+  //  function shrink(entries, observer) {
 
-        entries.forEach(entry => {
-          prodInfo.style.background = "yellow";
-          alert(hello)
+  //       entries.forEach(entry => {
+  //         prodInfo.style.background = "blue";
+  //         console.log('entry');
 
-        });
-      }
+  //       });
+  //     }
 
-       const observerTwo = new IntersectionObserver(shrink, {
-        root: null, // use the viewport as the root
-        threshold: 0.2 // when 10% of the target is visible
-  });
+  //      const observerThree = new IntersectionObserver(shrink, {
+  //       root: null, // use the viewport as the root
+  //       threshold: 1 // when 10% of the target is visible
+  // });
 
+  // if(prodGallery){
+  //   observerThree.observe(prodGallery);
+  // }
        
-        observerThree.observe(prodGallery);
+
+
+  //  Scroll event fix for product page 
+
+
+  function scrollDetect() {
+	let scrollY = window.scrollY;
+	window.addEventListener('scroll',throttle(handleScroll,10));
+  
+	function handleScroll(e) {  
+		if(window.scrollY > scrollY) {
+			console.log('scrolling down');
+		} else if (window.scrollY < scrollY){
+			console.log('scrolling up');
+		}
+		if (window.scrollY === 0){
+			console.log('at top'); 
+      prodInfo.style.opacity = "1";
+      prodInfo.classList.remove("js-scrolled-info");
+     
+		} else{  
+      prodInfo.style.opacity = "0.5";
+      prodInfo.classList.add("js-scrolled-info");
+    }    
+		scrollY = window.scrollY;
+   
+	}
+}
+
+// https://www.sitepoint.com/throttle-scroll-events/
+function throttle(fn, wait) {
+	var time = Date.now();
+  	return function(e) {      
+		if ((time + wait - Date.now()) < 0) {
+			fn(e);
+			time = Date.now();
+		}
+	}
+}
+
+scrollDetect() 
+        
       
 
 
