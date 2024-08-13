@@ -99,14 +99,14 @@ let prodGallery = document.querySelector('.js-product-gallery');
    function shrink(entries, observer) {
 
         entries.forEach(entry => {
-          prodInfo.style.background = "red";
+          prodInfo.style.background = "green";
 
         });
       }
 
       const observerThree = new IntersectionObserver(shrink, {
         root: null, // use the viewport as the root
-        threshold: 1.0,
+        threshold: 0.1,
         
       }); 
 
