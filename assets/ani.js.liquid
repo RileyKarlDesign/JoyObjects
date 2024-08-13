@@ -94,21 +94,21 @@ let prodGallery = document.querySelector('.js-product-gallery');
 
 // prodInfo.style.background = "blue";
 // prodTitle.style.background = "green";
-// prodGallery.style.background = "green";
+// prodGallery.style.background = "green"; 
 
    function shrink(entries, observer) {
 
         entries.forEach(entry => {
-          prodInfo.style.background = "green";
+          prodInfo.style.background = "yellow";
+          alert(hello)
 
         });
       }
 
-      const observerThree = new IntersectionObserver(shrink, {
+       const observerTwo = new IntersectionObserver(shrink, {
         root: null, // use the viewport as the root
-        threshold: 0.1,
-        
-      }); 
+        threshold: 0.2 // when 10% of the target is visible
+  });
 
        
         observerThree.observe(prodGallery);
