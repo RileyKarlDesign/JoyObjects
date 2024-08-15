@@ -3,7 +3,7 @@
 </div>
 
 <div class=" relative h-fit pb-40 ">
-  <div class="js-product-info h-fit flex justify-start items-start p-4 fixed top-0 left-0  z-40 snap-start ">
+  <div class="js-product-info h-fit flex justify-start items-start p-4 fixed top-0 left-0  z-20 snap-start ">
     <div class="  ">
       <div class="js-product-title ">
         <h3 class="text-serif-xl ">{{ product.title }}</h3>
@@ -15,24 +15,24 @@
         <ajax-cart-product-form>
           {% render 'add-to-cart-form' with current_variant: current_variant %}
         </ajax-cart-product-form>
-      </div>
-      <div class="flex flex-col gap-1  pt-4 ">
-        {% render 'atc-stick' %}
-        <div class="js-product-description md:w-[350px] pt-4 flex-col flex gap-0">
-          {% if product.metafields.custom.shipping != '' %}
-            {% render 'accordian' with { title: 'Shipping', content: product.metafields.custom.shipping } %}
-          {% endif %}
-          {% if product.metafields.custom.size != '' %}
-            {% render 'accordian' with { title: 'Dimnetions', content: product.metafields.custom.size } %}
-          {% endif %}
+        <div class="flex flex-col gap-1  pt-4 ">
+          {% render 'atc-stick' %}
+          <div class="js-product-description md:w-[350px] pt-4 flex-col flex gap-0">
+            {% if product.metafields.custom.shipping != '' %}
+              {% render 'accordian' with { title: 'Shipping', content: product.metafields.custom.shipping } %}
+            {% endif %}
+            {% if product.metafields.custom.size != '' %}
+              {% render 'accordian' with { title: 'Dimnetions', content: product.metafields.custom.size } %}
+            {% endif %}
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="js-product-gallery post-wrapper grid grid-cols-2 p-4 gap-4 w-screen pt-[20vh]   ">
+  <div class="js-product-gallery post-wrapper grid grid-cols-2 p-20 gap-12 w-screen pt-[20vh]   ">
     {% for image in product.images %}
-      <div class="first-of-type:col-start-2 even:col-span-2 ">
+      <div class="first-of-type:col-start-2 even:col-span-1 ">
         {{ image | image_url: width: 800 | image_tag: class: 'h-fit w-fit js-fade  ' }}
         <p class="caption h-4 ">{{ forloop.index }} / {{ forloop.length }}</p>
       </div>
