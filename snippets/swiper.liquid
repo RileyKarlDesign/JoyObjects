@@ -7,10 +7,9 @@
       <div class="swiper-slide flex justify-center ">
         <div class="object-contain">
           <div class="  aspect-main  ">
-            {{ image | image_url: width: 700 | image_tag: class:'w-full h-fit' }}
+            {{ image | image_url: width: 700 | image_tag: class: 'w-full h-fit' }}
             <p class="caption pl-2 pt-1 text-center  ">{{ forloop.index }} / {{ forloop.length }}</p>
           </div>
-          
         </div>
       </div>
     {% endfor %}
