@@ -39,6 +39,44 @@
     {% comment %}  swiper {% endcomment %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="paper/paper-full.min.js" defer></script>
+
+    <script type="text/paperscript" canvas="myCanvas">
+      var points = 25;
+
+      var length = 35;
+
+      var path = new Path({
+        strokeColor: '#E4141B',
+        strokeWidth: 20,
+        strokeCap: 'round',
+      });
+
+      var start = view.center / [10, 1];
+      for (var i = 0; i < points; i++) path.add(start + new Point(i * length, 0));
+
+      function onMouseMove(event) {
+        path.firstSegment.point = event.point;
+        for (var i = 0; i < points - 1; i++) {
+          var segment = path.segments[i];
+          var nextSegment = segment.next;
+          var vector = segment.point - nextSegment.point;
+          vector.length = length;
+          nextSegment.point = segment.point - vector;
+        }
+        path.smooth({ type: 'continuous' });
+      }
+
+      function onMouseDown(event) {
+        path.fullySelected = true;
+        path.strokeColor = '#e08285';
+      }
+
+      function onMouseUp(event) {
+        path.fullySelected = false;
+        path.strokeColor = '#e4141b';
+      }
+    </script>
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -52,7 +90,7 @@
     id="{{ page_title | handle }}"
     class=" relative text-grey-900 template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}"
   >
-    <canvas id="myCanvas" resize> </canvas>
+    <canvas id="myCanvas" class="bg-red-300" resize> </canvas>
 
     <div class=" mobile-round  h-4  flex justify-between fixed top-0 left-0 right-0 z-50">
       {% comment %}
@@ -90,7 +128,7 @@
       referrerpolicy="no-referrer"
       defer
     ></script>
-    <script src="{{ 'paper.js' | asset_url }}" defer></script>
+    <script src="{{ 'paper.js' | asset_url }}" type="text/paperscript" defer></script>
     <script src="{{ 'shop.js' | asset_url }}" defer></script>
     <script src="{{ 'scroll.js' | asset_url }}" defer></script>
     <script src="{{ 'ani.js' | asset_url }}" defer></script>
