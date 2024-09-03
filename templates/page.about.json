@@ -1,0 +1,43 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "background_image_g3TBqk": {
+      "type": "background-image",
+      "settings": {
+        "image1": "shopify:\/\/shop_images\/fence.png",
+        "color1": "#a3f127"
+      }
+    },
+    "main": {
+      "type": "main-about",
+      "settings": {
+      }
+    },
+    "hero_image_NnwyLA": {
+      "type": "hero-Image",
+      "settings": {
+        "image1": "shopify:\/\/shop_images\/DSC1175_1.jpg"
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "disabled": true,
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "background_image_g3TBqk",
+    "main",
+    "hero_image_NnwyLA",
+    "form"
+  ]
+}

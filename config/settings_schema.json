@@ -1,0 +1,33 @@
+[
+  {
+    "name": "General",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon",
+        "info": "Included because settings can't be empty"
+      },
+
+      {
+        "type": "image_picker",
+        "id": "aboutimage",
+        "label": "About Page Background Image",
+        "info": "Included because settings can't be empty"
+      },
+
+      {
+        "type": "color",
+        "id": "background",
+        "label": "Background Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "footer-background",
+        "label": "Footer Background Color",
+        "default": "#ffffff"
+      }
+    ]
+  }
+]

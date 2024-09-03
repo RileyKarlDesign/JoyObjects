@@ -1,0 +1,12 @@
+    <div class="flex  md:flex-col flex-col-reverse p-4 pb-0 md:pb-4">
+        <h3>All Products</h3>
+        {% render 'safe-space' %}
+    </div>
+    
+    {% for collection in collections %}
+
+        {% if collection.title != 'All Products' and collection.all_products_count > 0 %}
+            {% render 'collection-group'  with { collection: collection %}
+        {% endif %}
+    {% endfor %}
+

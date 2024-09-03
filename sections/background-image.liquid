@@ -1,0 +1,41 @@
+
+  {% style %}
+
+  .js-main{
+
+      background-color: {{ section.settings.color1 }} !important;
+      background-image:url('{{ section.settings.image1.src | img_url: 'master' }}') !important ;
+      background-size: cover !important ;
+  
+    }
+
+{% endstyle %}
+
+
+
+{% schema %}
+
+  {
+    "name": "Background Image",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image1",
+        "label": "Image"
+      },
+      {
+        "type": "color",
+        "id": "color1",
+        "label": "color"
+      }
+    
+    ],
+
+    "presets": [
+      {
+        "name": "Background Image",
+        "category": "Content"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,13 @@
+{% comment %} takes collection  {% endcomment %}
+
+<div class="grid grid-cols-4 p-2 gap-2">
+  <div class="">
+    <h3 class="">{{ collection.title }}</h3>
+  </div>
+
+  <div class=" grid grid-cols-3 col-span-3 gap-2 ">
+    {% for product in collection.products limit: 3 %}
+      {% render 'product-card' with { product: product } %}
+    {% endfor %}
+  </div>
+</div>

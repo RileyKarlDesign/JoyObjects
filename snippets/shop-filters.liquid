@@ -1,0 +1,14 @@
+<div class=' sticky top-[55px] z-50 flex justify-center gap-4 align-center  '>
+    <div class=' flex gap-4 w-fit h-fit p-2 pl-4 pr-4  bg-opacity-50 rounded-base  backdrop-blur-lg'>
+          {% assign cc = collection.title %}
+           {% for link in linklists.side-menu.links %}
+                {% if cc == link.title %}
+                    <h2> <a class='text-stone-400' href='{{ link.url  }}' >   {{ link.title  }} </a></h2>
+                {% endif %}
+                {% if cc != link.title %}
+
+                    <h2> <a class='none-active'  href='{{ link.url }}' >  {{ link.title  }} </a></h2>
+                {% endif %}
+            {% endfor %}
+    </div>
+</div>

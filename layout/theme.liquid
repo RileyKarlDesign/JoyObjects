@@ -1,0 +1,96 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9 ]> <html class="ie9 no-js"> <![endif]-->
+<!-- [if (gt IE 9)|!(IE)]><! -->
+<html class="no-js">
+  <!-- <![endif] -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {% if template == 'index' %}
+      <title>
+        {{ shop.name }}
+        |
+        {{ page_title }}
+      </title>
+    {% elsif template == '404' %}
+      <title>
+        Page Not Found |
+        {{ shop.name }}
+      </title>
+    {% else %}
+      <title>
+        {{ page_title }}
+        |
+        {{ shop.name }}
+      </title>
+    {% endif %}
+    {% if page_description %}
+      <meta name="description" content="{{ page_description }}">
+    {% endif %}
+    <link rel="canonical" href="{{ canonical_url }}">
+    <meta name="viewport" content="width=device-width">
+    {{ content_for_header }}
+    {{ 'style.css' | asset_url | stylesheet_tag }}
+    {{ 'output.css' | asset_url | stylesheet_tag }}
+
+    {% comment %}  swiper {% endcomment %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    {%- if settings.favicon != blank -%}
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+    {%- endif -%}
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.css">
+  </head>
+
+  <body
+    style="background:{{ settings.background }}"
+    id="{{ page_title | handle }}"
+    class=" relative text-grey-900 template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}"
+  >
+    <canvas id="myCanvas" resize></canvas>
+
+    <div class=" mobile-round  h-4  flex justify-between fixed top-0 left-0 right-0 z-50">
+      {% comment %}
+        <img src="{{ '/left.png' | asset_url }}" alt="Example Image">
+        <img src="{{ '/right.png' | asset_url }}" alt="Example Image">
+      {% endcomment %}
+    </div>
+
+    {% comment %}  styles for body wrap are in css due tw error {% endcomment %}
+
+    {% section 'live-cart' %}
+
+    <div class="js-main " style="background:{{ settings.background }};">
+      {% render 'header' %}
+
+      {{ content_for_layout }}
+      {% section 'footer' %}
+
+      {% render 'cookies' %}
+    </div>
+
+    {% comment %} Somewhere in layout/theme.liquid {% endcomment %}
+
+    <script type="application/json" data-ajax-cart-initial-state>
+      {{ cart | json }}
+    </script>
+
+    <script type="module">
+      import '{{ "liquid-ajax-cart-v2.1.0.js" | asset_url }}';
+    </script>
+
+    <script src="{{ 'paper.js' | asset_url }}" defer></script>
+    <script src="{{ 'shop.js' | asset_url }}" defer></script>
+    <script src="{{ 'scroll.js' | asset_url }}" defer></script>
+    <script src="{{ 'ani.js' | asset_url }}" defer></script>
+    <script src="{{ 'cart.js' | asset_url }}" defer></script>
+    <script src="{{ 'gallery.js' | asset_url }}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="{{ 'cookieconsent-config.js' | asset_url }}" type="module" defer></script>
+  </body>
+</html>
