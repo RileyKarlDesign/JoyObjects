@@ -52,6 +52,8 @@
     id="{{ page_title | handle }}"
     class=" relative text-grey-900 template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}"
   >
+    <canvas id="myCanvas" resize></canvas>
+
     <div class=" mobile-round  h-4  flex justify-between fixed top-0 left-0 right-0 z-50">
       {% comment %}
         <img src="{{ '/left.png' | asset_url }}" alt="Example Image">
@@ -82,6 +84,7 @@
       import '{{ "liquid-ajax-cart-v2.1.0.js" | asset_url }}';
     </script>
 
+    <script src="{{ 'paper.js' | asset_url }}" defer></script>
     <script src="{{ 'shop.js' | asset_url }}" defer></script>
     <script src="{{ 'scroll.js' | asset_url }}" defer></script>
     <script src="{{ 'ani.js' | asset_url }}" defer></script>
