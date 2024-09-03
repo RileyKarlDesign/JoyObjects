@@ -1,0 +1,22 @@
+# Ignore node_modules folder
+node_modules/
+
+# Ignore build output
+dist/
+build/
+*.log
+
+# Ignore OS-specific files
+.DS_Store 
+Thumbs.db
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+*.swp
+
+# Ignore environment files
+.env
+
+# Ignore dependency directories
+bower_components/
