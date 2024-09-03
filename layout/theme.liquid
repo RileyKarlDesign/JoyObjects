@@ -52,7 +52,7 @@
     id="{{ page_title | handle }}"
     class=" relative text-grey-900 template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}"
   >
-    <canvas id="myCanvas" resize></canvas>
+    <canvas id="myCanvas" resize> </canvas>
 
     <div class=" mobile-round  h-4  flex justify-between fixed top-0 left-0 right-0 z-50">
       {% comment %}
@@ -83,7 +83,13 @@
     <script type="module">
       import '{{ "liquid-ajax-cart-v2.1.0.js" | asset_url }}';
     </script>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.18/paper-full.min.js"
+      integrity="sha512-qaPSGmKTwpu5ChwJ6AD3w7ecS3yM7pFC1cS3IfnjPM67dhXoymEomk1wqiZEHUFO4dQO1bhjo8LYImVDSDfR1g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
     <script src="{{ 'paper.js' | asset_url }}" defer></script>
     <script src="{{ 'shop.js' | asset_url }}" defer></script>
     <script src="{{ 'scroll.js' | asset_url }}" defer></script>
