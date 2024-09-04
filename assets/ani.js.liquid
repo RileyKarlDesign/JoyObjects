@@ -88,7 +88,7 @@ let links = document.querySelectorAll("a");
 let prodInfo = document.querySelector('.js-product-info');
 let prodTitle = document.querySelector('.js-product-title');
 let prodGallery = document.querySelector('.js-product-gallery');
-
+let bgFade = document.querySelector('.bg-fade')
 
 
 
@@ -126,14 +126,16 @@ let prodGallery = document.querySelector('.js-product-gallery');
 		} else if (window.scrollY < scrollY){
 			console.log('scrolling up');
 		}
-		if (100 >= window.scrollY  ){
+		if (200 >= window.scrollY  ){
 			console.log('at top'); 
    
       prodInfo.classList.remove("js-scrolled-info");
-     
+     bgFade.style.opacity='0'
 		} else{  
      
       prodInfo.classList.add("js-scrolled-info");
+      bgFade.style.opacity='100'
+
     }    
 		scrollY = window.scrollY;
    
