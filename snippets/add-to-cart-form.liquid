@@ -1,6 +1,4 @@
-<!-- 
-current_variant
--->
+<!-- current_variant -->
 
 {% assign has_multiple_variants = false %}
 {% if product.variants.size > 1 %}
@@ -16,151 +14,109 @@ current_variant
 
 {% if has_multiple_variants == false and product.available %}{% endif %}
 
-
-
-<!-- //---------------------- json get -------------------------------->
+<!-- //---------------------- json get ------------------------------ -->
 {% if has_multiple_variants %}
-
- {% render 'get-variants-with-quantity-json' with product: product %} 
+  {% render 'get-variants-with-quantity-json' with product: product %}
 
   {% assign variants_with_quantity_json = product.variants | json %}
   {% unless variants_with_quantity_json contains 'inventory_quantity' %}
     {% for variant in product.variants %}
       {% assign replace_hook_variant_id = '"id":' | append: variant.id %}
-      {% assign replace_id_plus_inventory = replace_hook_variant_id | append: ',' | append: '"inventory_quantity":' | append:
-       variant.inventory_quantity %}
+      {% assign replace_id_plus_inventory = replace_hook_variant_id
+        | append: ','
+        | append: '"inventory_quantity":'
+        | append: variant.inventory_quantity
+      %}
 
-      {% assign variants_with_quantity_json = variants_with_quantity_json | replace: replace_hook_variant_id
-       , replace_id_plus_inventory %}
-
+      {% assign variants_with_quantity_json = variants_with_quantity_json
+        | replace: replace_hook_variant_id, replace_id_plus_inventory
+      %}
     {% endfor %}
-
   {% endunless %}
-
-
-
 {% endif %}
 
-<!-- //---------------------- json get -------------------------------->
-
+<!-- //---------------------- json get ------------------------------ -->
 
 <form
-  class=''
+  class=""
   id="add-to-cart-form"
   action="/cart/add"
   method="post"
   enctype="multipart/form-data"
-  data-variants="{{ variants_with_quantity_json | url_param_escape }}">
-
+  data-variants="{{ variants_with_quantity_json | url_param_escape }}"
+>
   {% if has_multiple_options or has_multiple_variants %}
-
     {% for option in product.options_with_values %}
-
       {% assign option_name = 'option' | append: option.position %}
 
       {% if option.name != 'Color' %}
-        {% render 'product-option-row' option: option, option_name: option_name type: 'radio' %}
+        {% render 'product-option-row', option: option, option_name: option_name, type: 'radio' %}
       {% else %}
-        {% render 'product-option-row' option: option, option_name: option_name type: 'radio' %}
+        {% render 'product-option-row', option: option, option_name: option_name, type: 'radio' %}
       {% endif %}
-
-
     {% endfor %}
-
   {% endif %}
 
   <input
     type=""
     name="id"
-    class='js-variant-id hidden'
-    value={{product.variants.first.id}}>
-  <div class=" PRICE flex gap-2  ">
-    <p class=" ">
-      Price
-    </p>
+    class="js-variant-id hidden"
+    value="{{product.variants.first.id}}"
+  >
+  <div class=" PRICE flex gap-2 border-t-2 border-black  ">
+    <p class=" ">Price</p>
 
-    
-      {% if product.compare_at_price > 0 %}
-
-        <p class="unavailble"> {{ product.compare_at_price | money_with_currency }}</p>
-        <p class="js-price opacity-40 " data-default-price="{{ product.price | money }}">
-          {{ product.price | money_with_currency }}
-        </p>
-      {% else %}
-
-        <p class="js-price opacity-40 " data-default-price="{{ product.price | money }}">{{ product.price | money }}</p>
-      {% endif %}
-  
+    {% if product.compare_at_price > 0 %}
+      <p class="unavailble">{{ product.compare_at_price | money_with_currency }}</p>
+      <p class="js-price  " data-default-price="{{ product.price | money }}">
+        {{ product.price | money_with_currency }}
+      </p>
+    {% else %}
+      <p class="js-price opacity-40 " data-default-price="{{ product.price | money }}">{{ product.price | money }}</p>
+    {% endif %}
   </div>
-   <!-- quantity -------------- -->
-   <div class="  hidden ">
-
-    <label for="quanity" class="product-option-row-title">
-      Quanity:
-    </label>
+  <!-- quantity -------------- -->
+  <div class="  hidden ">
+    <label for="quanity" class="product-option-row-title"> Quanity: </label>
 
     <div class="js-quantity flex ">
-
       <p class="js-quantity-minus  quantity-btn pb-1 hover:bg-stone-800 hover:text-white text-bold h-5 w-5 bg-stone-500 bg-opacity-10 flex justify-center items-center text-center rounded-full backdrop-blur-md ">
         -
       </p>
- 
+
       <p
         type="number "
         class="js-quantity-total w-14 text-center  "
 
         data-current="1"
-        data-max="{{ current_variant.inventory_quantity }} ">
+        data-max="{{ current_variant.inventory_quantity }} "
+      >
         1
       </p>
 
       <p class="js-quantity-add quantity-btn pb-1 hover:bg-stone-800 hover:text-white text-bold h-5 w-5 bg-stone-500 bg-opacity-10 flex justify-center items-center text-center rounded-full backdrop-blur-md  ">
         +
       </p>
-
-
-
     </div>
-
   </div>
 
   <!-- hidden -------------- -->
 
   <input
-  type="hidden"
+    type="hidden"
     class="js-hidden-quantity"
     name="quantity"
-    value="1">
+    value="1"
+  >
 
-
-
-    <p data-ajax-cart-errors="form" class=' text-orange-500 font-bold text-center  2' >
-
-      </p>
-
+  <p data-ajax-cart-errors="form" class=" text-orange-500 font-bold text-center  2"></p>
 
   <!-- hidden -------------- -->
 
   <input
-  type="hidden"
+    type="hidden"
     class="js-hidden-quantity"
     name="quantity"
-    value="1">  
-
-
-
-
-
-
+    value="1"
+  >
 </form>
-
-
-
-
-
-
-
-
-
-
-

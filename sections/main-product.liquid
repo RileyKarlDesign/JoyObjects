@@ -46,7 +46,10 @@
       </div>
 
       <div class="js-product-description md:w-[350px]">
-        <p class=" pb-4">{{ product.description }}</p>
+        <div class="pb-4 pt-2 ">
+          {{ product.description }}
+        </div>
+
         <ajax-cart-product-form>
           {% render 'add-to-cart-form' with current_variant: current_variant %}
         </ajax-cart-product-form>
