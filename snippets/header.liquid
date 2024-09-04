@@ -1,7 +1,7 @@
 <div class="  z-50  w-full">
   <div class=" z-20 md:fixed  absolute  left-0 right-0 pointer-events-none flex justify-center items-center ">
     {% if template contains 'product' %}
-      <div class="  md:z-50  z-20 xl:w-[27vh] lg:w-[22vw] md:w-[20vw]  w-50 md:mt-0 mt-10 aspect-square w-full md:pt-0 pt-[20vw]  md:visible invisible   ">
+      <div class=" hidden  md:z-50  z-20 xl:w-[27vh] lg:w-[22vw] md:w-[20vw]  w-50 md:mt-0 mt-10 aspect-square w-full md:pt-0 pt-[20vw]  md:visible invisible   ">
         <a class=" pointer-events-auto" href="/">
           {{ shop.brand.logo | image_url: width: 700 | image_tag: class: 'pointer-events-none' }}
         </a>

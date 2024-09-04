@@ -5,8 +5,8 @@
 <div class="  mobile-info md:hidden sm:visible  h-fit flex justify-start items-start p-4 ">
   <div class="  ">
     <div class="js-product-title ">
-      <h3 class="text-serif-xl ">{{ product.title }}</h3>
-      <h3 class="text-serif-xl">{{ product.metafields.custom.range }}</h3>
+      <h3 class="display-serif ">{{ product.title }}</h3>
+      <h3 class="display-serif">{{ product.metafields.custom.range }}</h3>
     </div>
 
     <div class="js-product-description md:w-[350px]">
@@ -29,12 +29,14 @@
   </div>
 </div>
 
+<div style="background:'{{product.metafeilds.custom.page_colour}}'" class="bg-fade fixed inset-0 "></div>
+
 <div class=" relative h-fit pb-40 ">
-  <div class="js-product-info h-fit flex justify-start items-start p-4 fixed top-0 left-0  z-20 snap-start ">
+  <div class=" desktop-info js-product-info h-fit md:flex justify-start items-start p-4 fixed top-0 left-0  z-20 snap-start   sm:visible hidden ">
     <div class="  ">
       <div class="js-product-title ">
-        <h3 class="text-serif-xl ">{{ product.title }}</h3>
-        <h3 class="text-serif-xl">{{ product.metafields.custom.range }}</h3>
+        <h3 class="display-serif ">{{ product.title }}</h3>
+        <h3 class="display-serif">{{ product.metafields.custom.range }}</h3>
       </div>
 
       <div class="js-product-description md:w-[350px]">
