@@ -68,12 +68,12 @@
     </div>
   </div>
 
-  <div class="js-product-gallery p-1 post-wrapper flex flex-col gap-12 w-screen pt-[40vh] [&>*:nth-child(odd)]:justify-end pb-[20vw]  ">
+  <div class="js-product-gallery p-1 post-wrapper md:flex sm:hidden flex-col gap-12 w-screen pt-[40vh] [&>*:nth-child(odd)]:justify-end pb-[20vw]   ">
     {% for image in product.images %}
       <div class=" flex w-full gap-2 [&>*:nth-child(odd)]:p-1  ">
-        <div class="  w-1/2  h-[40vw]  ">
-          <div class=" ">
-            {{ image | image_url: width: 800 | image_tag: class: 'h-fit js-fade w-full  ' }}
+        <div class="  w-1/2  h-[40vw] rounded-sm  ">
+          <div class=" rounded-sm ">
+            {{ image | image_url: width: 800 | image_tag: class: 'rounded-sm h-fit js-fade w-full  ' }}
           </div>
 
           <p class="caption h-4 ">{{ forloop.index }} / {{ forloop.length }}</p>
