@@ -1,58 +1,58 @@
 console.log('ani 1.O')
- 
+
 // _______________
 
 
 document.addEventListener("DOMContentLoaded", (event) => {
-  
-// Fade in 
+
+  // Fade in 
 
 
-gsap.to( '.js-main', { opacity: 1,  duration: .8 });
+  gsap.to('.js-main', { opacity: 1, duration: .8 });
 
-// link dealy
+  // link dealy
 
-let links = document.querySelectorAll("a");
+  let links = document.querySelectorAll("a");
 
- for (let i = 0; i < links.length; i++) {
+  for (let i = 0; i < links.length; i++) {
 
-  
-  links[i].addEventListener("click", (e) => {
-    e.preventDefault();
-    gsap.to('.js-main', { opacity:0, duration: .8, });   
-    setTimeout(() => {
-      window.location.href = e.target.href;
-    },300) 
-  })
 
- }
+    links[i].addEventListener("click", (e) => {
+      e.preventDefault();
+      gsap.to('.js-main', { opacity: 0, duration: .8, });
+      setTimeout(() => {
+        window.location.href = e.target.href;
+      }, 300)
+    })
 
-// image-ani 
+  }
 
-      const images = document.querySelectorAll('.js-fade');
+  // image-ani 
 
-      function setOpacity(entries, observer) {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            
-            gsap.to( entry.target, { opacity: 1,  duration: .8, filter: "blur(0px)", ease: "power1.inOut" });
-            observer.unobserve(entry.target);
-          }
-        });
+  const images = document.querySelectorAll('.js-fade');
+
+  function setOpacity(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+
+        gsap.to(entry.target, { opacity: 1, duration: .8, filter: "blur(0px)", ease: "power1.inOut" });
+        observer.unobserve(entry.target);
       }
+    });
+  }
 
-      const observer = new IntersectionObserver(setOpacity, {
-        root: null, // use the viewport as the root
-        threshold: 0.2 // when 10% of the target is visible
-      });
+  const observer = new IntersectionObserver(setOpacity, {
+    root: null, // use the viewport as the root
+    threshold: 0.2 // when 10% of the target is visible
+  });
 
-      images.forEach(image => {
-        observer.observe(image);
-      });
+  images.forEach(image => {
+    observer.observe(image);
+  });
 
 
 
-// Hr animation
+  // Hr animation
 
 
   let rules = document.querySelectorAll(".js-hr");
@@ -61,21 +61,21 @@ let links = document.querySelectorAll("a");
 
     entries.forEach(entry => {
 
-            if (entry.isIntersecting) {
+      if (entry.isIntersecting) {
 
-              gsap.to( entry.target, { width: "100%", opacity:.1 , duration: 1, ease: "power1.inOut"});
+        gsap.to(entry.target, { width: "100%", opacity: .1, duration: 1, ease: "power1.inOut" });
 
-              observer.unobserve(entry.target);
+        observer.unobserve(entry.target);
 
-            }
+      }
 
-          });
+    });
 
   }
 
   const observerTwo = new IntersectionObserver(grow, {
-        root: null, // use the viewport as the root
-        threshold: 0.2 // when 10% of the target is visible
+    root: null, // use the viewport as the root
+    threshold: 0.2 // when 10% of the target is visible
   });
 
   rules.forEach(rule => { observerTwo.observe(rule); });
@@ -85,77 +85,85 @@ let links = document.querySelectorAll("a");
 
   // product info ani 
 
-let prodInfo = document.querySelector('.js-product-info');
-let prodTitle = document.querySelector('.js-product-title');
-let prodGallery = document.querySelector('.js-product-gallery');
-let bgFade = document.querySelector('.bg-fade')
+  let prodInfo = document.querySelector('.js-product-info');
+  let prodTitle = document.querySelector('.js-product-title');
+  let prodGallery = document.querySelector('.js-product-gallery');
+  let bgFade = document.querySelector('.bg-backdrop-color')
+  let Recs = document.querySelector('.recs-wrapper')
 
+  console.log(Recs)
 
+  // Observer for recs
 
+  function shift(entries, observer) {
 
-  //  function shrink(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        prodInfo.classList.add('info-shift-bottom')
+        bgFade.classList.remove('bg-fade-active')
+        console.log('entry');
+        console.log(bgFade);
+      } else {
+        prodInfo.classList.remove('info-shift-bottom')
+        bgFade.classList.remove('bg-fade-active')
+        console.log(bgFade);
+      }
 
-  //       entries.forEach(entry => {
-  //         prodInfo.style.background = "blue";
-  //         console.log('entry');
+    });
+  }
 
-  //       });
-  //     }
+  const observerThree = new IntersectionObserver(shift, {
+    root: null, // use the viewport as the root
+    threshold: 0.02 // when 10% of the target is visible
+  });
 
-  //      const observerThree = new IntersectionObserver(shrink, {
-  //       root: null, // use the viewport as the root
-  //       threshold: 1 // when 10% of the target is visible
-  // });
+  if (Recs) {
+    observerThree.observe(Recs);
+  }
 
-  // if(prodGallery){
-  //   observerThree.observe(prodGallery);
-  // }
-       
 
 
   //  Scroll event fix for product page 
 
 
   function scrollDetect() {
-	let scrollY = window.scrollY;
-	window.addEventListener('scroll',throttle(handleScroll,10));
-  
-	function handleScroll(e) {  
-		if(window.scrollY > scrollY) {
-			// console.log('scrolling down');
-		} else if (window.scrollY < scrollY){
-		// 	console.log('scrolling up');
-	 }
-		if (200 >= window.scrollY  ){
-			// console.log('at top'); 
-   
-      prodInfo.classList.remove("js-scrolled-info");
-     bgFade.style.opacity='0'
-		} else{  
-     
-      prodInfo.classList.add("js-scrolled-info");
-      bgFade.style.opacity='100'
+    let scrollY = window.scrollY;
+    window.addEventListener('scroll', throttle(handleScroll, 10));
 
-    }    
-		scrollY = window.scrollY;
-   
-	}
-}
+    function handleScroll(e) {
+      if (window.scrollY > scrollY) {
+        // console.log('scrolling down');
+      } else if (window.scrollY < scrollY) {
+        // 	console.log('scrolling up');
+      }
+      if (250 >= window.scrollY) {
+        // console.log('at top'); 
+        prodInfo.classList.remove("js-scrolled-info");
+        bgFade.classList.remove('bg-fade-active')
+      } else if (!prodInfo.classList.contains('info-shift-bottom')) {
+        prodInfo.classList.add("js-scrolled-info");
+        bgFade.classList.add('bg-fade-active')
 
-// https://www.sitepoint.com/throttle-scroll-events/
-function throttle(fn, wait) {
-	var time = Date.now();
-  	return function(e) {      
-		if ((time + wait - Date.now()) < 0) {
-			fn(e);
-			time = Date.now();
-		}
-	}
-}
+      }
+      scrollY = window.scrollY;
 
-scrollDetect() 
-        
-      
+    }
+  }
+
+  // https://www.sitepoint.com/throttle-scroll-events/
+  function throttle(fn, wait) {
+    var time = Date.now();
+    return function (e) {
+      if ((time + wait - Date.now()) < 0) {
+        fn(e);
+        time = Date.now();
+      }
+    }
+  }
+
+  scrollDetect()
+
+
 
 
 });

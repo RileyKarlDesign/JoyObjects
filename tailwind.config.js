@@ -1,17 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content:{
-    relative: true, 
+  content: {
+    relative: true,
     files: [
-    "./assets/**/*.{js,ts,jsx,tsx,mdx,liquid}",
-    "./theme/**/*.{js,ts,jsx,tsx,mdx,liquid}", 
-    "./sections/**/*.{js,ts,jsx,tsx,mdx,liquid}",
-    "./snippets/**/*.{js,ts,jsx,tsx,mdx,liquid}",
-    
-   
- 
-  ],},
+      "./assets/**/*.{js,ts,jsx,tsx,mdx,liquid}",
+      "./theme/**/*.{js,ts,jsx,tsx,mdx,liquid}",
+      "./sections/**/*.{js,ts,jsx,tsx,mdx,liquid}",
+      "./snippets/**/*.{js,ts,jsx,tsx,mdx,liquid}",
+      "./templates/**/*.{js,ts,jsx,tsx,mdx,liquid}",
+
+
+
+    ],
+  },
   theme: {
     extend: {
       colors: {
@@ -28,17 +30,17 @@ module.exports = {
 
       fontFamily: {
         'sans': ['altB'],
-        'serif': ['Times', ],
+        'serif': ['Times',],
         'mono': ['ui-monospace'],
 
       },
 
 
-      borderRadius:{
+      borderRadius: {
         'base': '3px'
       },
 
-      height:{
+      height: {
         'el': '40px'
       },
 
