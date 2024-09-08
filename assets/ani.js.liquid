@@ -122,12 +122,12 @@ let bgFade = document.querySelector('.bg-fade')
   
 	function handleScroll(e) {  
 		if(window.scrollY > scrollY) {
-			console.log('scrolling down');
+			// console.log('scrolling down');
 		} else if (window.scrollY < scrollY){
-			console.log('scrolling up');
-		}
+		// 	console.log('scrolling up');
+	 }
 		if (200 >= window.scrollY  ){
-			console.log('at top'); 
+			// console.log('at top'); 
    
       prodInfo.classList.remove("js-scrolled-info");
      bgFade.style.opacity='0'

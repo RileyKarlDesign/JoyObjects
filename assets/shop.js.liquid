@@ -3,7 +3,7 @@
 
 
 function runWhenInit() {
-  console.log("The current cart state is: ", window.liquidAjaxCart.cart);
+  // console.log("The current cart state is: ", window.liquidAjaxCart.cart);
 }
 
 if (window.liquidAjaxCart?.init) {
@@ -75,12 +75,12 @@ menuBtn.addEventListener('mousedown',  handelMenu )
 
  let a = document.querySelectorAll(".accordian-title");
 
- console.log(a);
+//  console.log(a);
 
  a.forEach((i) => {
    i.addEventListener("click", (i) => {
-     console.log(" click ");
-     console.log(i.target.parentNode.classList);
+    //  console.log(" click ");
+    //  console.log(i.target.parentNode.classList);
 
      if (i.target.parentNode.classList.contains("accordian-open")) {
        i.target.parentNode.classList.remove("accordian-open");

@@ -1,0 +1,50 @@
+
+document.addEventListener('DOMContentLoaded',function () {
+
+
+
+  var loadProductRecommendationsIntoSection = function () {
+
+
+    var productRecommendationsSection = document.querySelector('.product-recommendations');
+    if (productRecommendationsSection === null) {
+      console.log('no prods');
+      return;
+    }
+
+
+    var productId = productRecommendationsSection.dataset.productId;
+    var limit = productRecommendationsSection.dataset.limit;
+    
+   console.log('helloooooooo perople ' + productId );
+
+ debugger 
+
+fetch(window.Shopify.routes.root + `recommendations/products.json?product_id=${productId}&limit=4&intent=related`)
+  .then(response => response.json())
+  .then(({ products }) => {
+    if (products.length > 0) {
+      const firstRecommendedProduct = products[0];
+      alert(
+        `The title of the first recommended product is: ${firstRecommendedProduct.title}`
+      );
+    }
+  }
+);
+
+
+  document.addEventListener('shopify:section:load', function (event) {
+    if (event.detail.sectionId === 'product-recommendations') {
+      loadProductRecommendationsIntoSection();
+    }
+  });
+  // Fetching the recommendations on page load
+  loadProductRecommendationsIntoSection();
+
+
+
+})
+
+
+
+
