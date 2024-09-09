@@ -13,14 +13,21 @@
 
       {% if section.settings.prod1 != '' %}
         <div class="pt-4">
-          {% render 'porduct-card' with { product: prod1 } %}
+          {% render 'product-card' with { product: section.settings.prod1 } %}
         </div>
       {% endif %}
-    </div>
-  </div>
-  <div class="w-full h-full overflow-hidden">
-    <div class="object fit">
-      {{ section.settings.image | image_url: width: 1204 | image_tag: class: 'w-full js-fade' }}
+
+      {% if section.settings.prod2 != '' %}
+        <div class="pt-4">
+          {% render 'product-card' with { product: section.settings.prod2} %}
+        </div>
+      {% endif %}
+
+      {% if section.settings.prod3 != '' %}
+        <div class="pt-4">
+          {% render 'product-card' with { product: section.settings.prod3} %}
+        </div>
+      {% endif %}
     </div>
   </div>
 </div>
@@ -33,6 +40,18 @@
       "type": "product",
       "id": "prod1",
       "label": "Product One"
+    },
+
+    {
+      "type": "product",
+      "id": "prod2",
+      "label": "Product Two"
+    },
+
+    {
+      "type": "product",
+      "id": "prod3",
+      "label": "Product Three"
     },
 
     {

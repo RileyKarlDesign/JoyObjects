@@ -1,79 +1,72 @@
-
-  
-
-  
-
-    <div  style='background:{{section.settings.color}}' class=" js-section grid md:h-screen h-fit bg-opacity-50 md:grid-cols-2 grid-cols-1 p-4 gap-2 ">
-      <div class='w-full md:row-start-1  row-start-2  '>
-        <div class='h-full  '>
-          <div class='h-fit pb-4'>
-            <h1 class='font-serif  md:w-[80%] w-full  uppercase    '>
-              {{ section.settings.title}} herer
-            </h1> 
-          </div>
-            <h3 class='w-[80%]' >
-              {{ section.settings.body}}
-            </h3>
-           
-              {% if section.settings.product_1  != ''  %}
-                <div class="pt-4">{% render 'button' with {text: section.settings.cta , link: section.settings.product_1.url  %}</div>
-              {% endif %}
-              
-      
-
-          </div>
+<div
+  style="background:{{section.settings.color}}"
+  class=" js-section grid md:h-screen h-fit bg-opacity-50 md:grid-cols-2 grid-cols-1 p-4 gap-2 "
+>
+  <div class="w-full md:row-start-1  row-start-2  ">
+    <div class="h-full  ">
+      <div class="h-fit pb-4">
+        <h1 class="font-serif  md:w-[80%] w-full  uppercase    ">{{ section.settings.title }} herer</h1>
       </div>
-      <div class='w-full h-full overflow-hidden'>
-        <div class='object fit'>  
-          {{ section.settings.image | image_url: width: 1204 | image_tag: class:'w-full js-fade' }}
-          </div>
-      </div>
+      <h3 class="w-[80%]">
+        {{ section.settings.body }}
+      </h3>
+
+      {% if section.settings.product_1 != '' %}
+        <div class="pt-4">
+          {% render 'button' with {text: section.settings.cta , link: section.settings.product_1.url %}
+        </div>
+      {% endif %}
     </div>
-
+  </div>
+  <div class="w-full h-full overflow-hidden">
+    <div class="object fit">
+      {{ section.settings.image | image_url: width: 1204 | image_tag: class: 'w-full js-fade' }}
+    </div>
+  </div>
+</div>
 
 {% schema %}
+{
+  "name": "Image & Text",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image One"
+    },
 
-  {
-    "name": "Image & Text",
-    "settings": [
-      {
-        "type": "image_picker",
-        "id": "image",
-        "label": "Image One"
-      },
-     
-      {
-        "type": "text",
-        "id": "title",
-        "label": "Title"
-      },
-      {
-        "type": "text",
-        "id": "body",
-        "label": "Body Text"
-      },
-      {
-        "type": "product",
-        "id": "product_1",
-        "label": "Product"
-      },
-      {
-        "type": "text",
-        "id": "cta",
-        "label": "Call To Action"
-      },
-      {
-        "type": "color",
-        "id": "color",
-        "label": "Colour"
-      }
-    ],
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "body",
+      "label": "Body Text"
+    },
+    {
+      "type": "product",
+      "id": "product_1",
+      "label": "Product"
+    },
+    {
+      "type": "text",
+      "id": "cta",
+      "label": "Call To Action"
+    },
+    {
+      "type": "color",
+      "id": "color",
+      "label": "Colour"
+    }
+  ],
 
-    "presets": [
-      {
-        "name": "Image & Text ",
-        "category": "Content"
-      }
-    ]
-  }
+  "presets": [
+    {
+      "name": "Image & Text ",
+      "category": "Content"
+    }
+  ]
+}
 {% endschema %}
