@@ -19,9 +19,7 @@
     </div>
   </div>
   <div class="w-full h-full overflow-hidden">
-    <div class="object fit">
-      {{ section.settings.image | image_url: width: 1204 | image_tag: class: 'w-full h-full  js-fade' }}
-    </div>
+    {{ section.settings.image | image_url: width: 1204 | image_tag: class: ' object-cover  js-fade' }}
   </div>
 </div>
 
