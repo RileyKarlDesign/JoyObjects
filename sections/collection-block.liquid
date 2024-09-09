@@ -7,7 +7,7 @@
       <h1 class="font-serif  md:w-[80%] w-full  uppercase    ">{{ section.settings.title }}</h1>
     </div>
 
-    <div class="grid grid-cols-3 bg-red-500">
+    <div class="grid grid-cols-3 gap-4 bg-red-500">
       {% if section.settings.prod1 != '' %}
         <div class="pt-4">
           {% render 'product-card' with { product: section.settings.prod1 } %}
