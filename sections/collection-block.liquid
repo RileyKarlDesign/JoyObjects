@@ -2,32 +2,29 @@
   style="background:{{section.settings.color}}"
   class=" js-section grid md:h-screen h-fit bg-opacity-50 md:grid-cols-2 grid-cols-1 p-4 gap-2 "
 >
-  <div class="w-full md:row-start-1  bg-red-400 row-start-2  ">
-    <div class="h-full  ">
+  <div class="w-full md:row-start-1   row-start-2  ">
+    <div class="h-full   ">
       <div class="h-fit pb-4">
         <h1 class="font-serif  md:w-[80%] w-full  uppercase    ">{{ section.settings.title }}</h1>
       </div>
-      <h3 class="w-[80%]">
-        {{ section.settings.body }}
-      </h3>
 
-      {% if section.settings.prod1 != '' %}
-        <div class="pt-4">
-          {% render 'product-card' with { product: section.settings.prod1 } %}
-        </div>
-      {% endif %}
-
-      {% if section.settings.prod2 != '' %}
-        <div class="pt-4">
-          {% render 'product-card' with { product: section.settings.prod2} %}
-        </div>
-      {% endif %}
-
-      {% if section.settings.prod3 != '' %}
-        <div class="pt-4">
-          {% render 'product-card' with { product: section.settings.prod3} %}
-        </div>
-      {% endif %}
+      <div class="grid grid-cols-3">
+        {% if section.settings.prod1 != '' %}
+          <div class="pt-4">
+            {% render 'product-card' with { product: section.settings.prod1 } %}
+          </div>
+        {% endif %}
+        {% if section.settings.prod2 != '' %}
+          <div class="pt-4">
+            {% render 'product-card' with { product: section.settings.prod2} %}
+          </div>
+        {% endif %}
+        {% if section.settings.prod3 != '' %}
+          <div class="pt-4">
+            {% render 'product-card' with { product: section.settings.prod3} %}
+          </div>
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>
@@ -60,20 +57,11 @@
       "label": "Title"
     },
     {
-      "type": "text",
-      "id": "body",
-      "label": "Body Text"
-    },
-    {
       "type": "product",
       "id": "product_1",
       "label": "Product"
     },
-    {
-      "type": "text",
-      "id": "cta",
-      "label": "Call To Action"
-    },
+
     {
       "type": "color",
       "id": "color",
