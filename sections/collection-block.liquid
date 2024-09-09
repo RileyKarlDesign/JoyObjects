@@ -5,15 +5,15 @@
   <div class="w-full md:row-start-1  bg-red-400 row-start-2  ">
     <div class="h-full  ">
       <div class="h-fit pb-4">
-        <h1 class="font-serif  md:w-[80%] w-full  uppercase    ">{{ section.settings.title }} herer</h1>
+        <h1 class="font-serif  md:w-[80%] w-full  uppercase    ">{{ section.settings.title }}</h1>
       </div>
       <h3 class="w-[80%]">
         {{ section.settings.body }}
       </h3>
 
-      {% if section.settings.product_1 != '' %}
+      {% if section.settings.prod1 != '' %}
         <div class="pt-4">
-          {% render 'button' with {text: section.settings.cta , link: section.settings.product_1.url %}
+          {% render 'porduct-card' with { product: prod1 } %}
         </div>
       {% endif %}
     </div>
@@ -30,9 +30,9 @@
   "name": "Collection Block",
   "settings": [
     {
-      "type": "image_picker",
-      "id": "image",
-      "label": "Image One"
+      "type": "product",
+      "id": "prod1",
+      "label": "Product One"
     },
 
     {
