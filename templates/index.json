@@ -15,6 +15,17 @@
         "image1": "shopify:\/\/shop_images\/456377441_18015872879569672_5885786691614212816_n.jpg"
       }
     },
+    "collection_block_DU9DeH": {
+      "type": "collection-block",
+      "settings": {
+        "prod1": "chair-one",
+        "title": "",
+        "body": "",
+        "product_1": "",
+        "cta": "",
+        "color": ""
+      }
+    },
     "centerd_image_and_text_NMAVaf": {
       "type": "centerd-image-and-text",
       "settings": {
@@ -47,6 +58,7 @@
   },
   "order": [
     "hero_image_nkgzDg",
+    "collection_block_DU9DeH",
     "centerd_image_and_text_NMAVaf",
     "image_and_text_yiMTt9",
     "image_and_text_8zGy87"
