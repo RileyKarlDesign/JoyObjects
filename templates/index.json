@@ -53,6 +53,16 @@
         "cta": "-> Custom Button Text",
         "color": "#f5f5f5"
       }
+    },
+    "collection_block_8JjH6g": {
+      "type": "collection-block",
+      "settings": {
+        "prod1": "shelf-one-copy",
+        "prod2": "chair",
+        "prod3": "chair",
+        "title": "Cotton Candy & Wine",
+        "color": ""
+      }
     }
   },
   "order": [
@@ -60,6 +70,7 @@
     "centerd_image_and_text_NMAVaf",
     "image_and_text_yiMTt9",
     "collection_block_DU9DeH",
-    "image_and_text_8zGy87"
+    "image_and_text_8zGy87",
+    "collection_block_8JjH6g"
   ]
 }
