@@ -1,7 +1,7 @@
 <!-- option -->
 
 <div class="product-option-row product-option-row-option grid  grid-cols-2 border-t-2 border-black">
-  <label class=" h-5 flex items-center" for="{% if type == 'select' %}select-{{ option.name}}{% endif %}">
+  <label class=" h-2 flex items-center" for="{% if type == 'select' %}select-{{ option.name}}{% endif %}">
     <p>{{ option.name }}</p>
   </label>
 
@@ -52,7 +52,7 @@
           {% assign radio_id = 'option-' | append: option_name | append: '-' | append: value | handleize %}
 
           {% unless optionTwoArray contains value %}
-            <div class="border-t-2 border-black first-of-type:border-t-0  flex  h-5  items-center   ">
+            <div class="border-t-2 border-black first-of-type:border-t-0  flex  h-2  items-center   ">
               <input
                 class="variant-radio"
                 {% if forloop.index == 1 and variant.inventory_quantity > 0 %}

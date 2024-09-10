@@ -27,6 +27,14 @@ module.exports = {
       width: {
         'base': '423.875px',
       },
+      spacing: {
+        '1': '20px',
+        '2': '30px',
+        '3': '40px',
+        '4': '60px',
+        '5': '72px',
+        '6': '90px',
+      },
 
       fontFamily: {
         'sans': ['altB'],
