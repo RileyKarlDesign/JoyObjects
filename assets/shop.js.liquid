@@ -22,22 +22,45 @@ let menuOpen = false
 let menuBtn = document.querySelector('.menu-btn')
 let menu = document.querySelector('.js-menu')
 
-let handelMenu = () => {
-  if(menuOpen){
-    menuBtn.innerHTML='Menu';
+
+console.log('sanity');
+
+window.addEventListener('click', function (e) {
+
+  console.log(e.target);
+
+  if (e.target.contains(menu)) {
     menuOpen = false;
     menu.classList.remove('menu-open')
 
-  }else{
+  }
+})
 
-    menuBtn.innerHTML='Close';
-    menuOpen = true ;
+
+
+
+
+
+
+
+
+
+let handelMenu = () => {
+  if (menuOpen) {
+    menuBtn.innerHTML = 'Menu';
+    menuOpen = false;
+    menu.classList.remove('menu-open')
+
+  } else {
+
+    menuBtn.innerHTML = 'Close';
+    menuOpen = true;
     menu.classList.add('menu-open')
 
   }
 }
 
-menuBtn.addEventListener('mousedown',  handelMenu )
+menuBtn.addEventListener('mousedown', handelMenu)
 
 
 
@@ -45,7 +68,7 @@ menuBtn.addEventListener('mousedown',  handelMenu )
 
 // const swiper = new Swiper('.swiper', {
 //   // Optional parametersF
- 
+
 //   loop: true,
 
 //   // If we need pagination
@@ -71,23 +94,23 @@ menuBtn.addEventListener('mousedown',  handelMenu )
 
 
 
- // accoridan
+// accoridan
 
- let a = document.querySelectorAll(".accordian-title");
+let a = document.querySelectorAll(".accordian-title");
 
 //  console.log(a);
 
- a.forEach((i) => {
-   i.addEventListener("click", (i) => {
+a.forEach((i) => {
+  i.addEventListener("click", (i) => {
     //  console.log(" click ");
     //  console.log(i.target.parentNode.classList);
 
-     if (i.target.parentNode.classList.contains("accordian-open")) {
-       i.target.parentNode.classList.remove("accordian-open");
-     } else {
-       i.target.parentNode.classList.add("accordian-open");
-     }
-   });
- });
+    if (i.target.parentNode.classList.contains("accordian-open")) {
+      i.target.parentNode.classList.remove("accordian-open");
+    } else {
+      i.target.parentNode.classList.add("accordian-open");
+    }
+  });
+});
 
 
