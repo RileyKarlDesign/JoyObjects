@@ -269,6 +269,11 @@ input[type=number] {
   opacity:0;
   pointer-events: none;
   transition: ease all 0.3s;
+  background-color: ;
+}
+
+.menu-backdrop{
+ 
 }
 
 .menu-open{
@@ -294,7 +299,7 @@ input[type=number] {
 .my-cart{
   position: fixed;
   right: -1000px;
-  top: 5px;
+  top: 20px;
   cursor: pointer;
   width: calc( 450px  );
   height: calc( var(--winHeight) - 10px);
@@ -310,7 +315,7 @@ input[type=number] {
 
   overflow: scroll;
   transition: right 0.3s;
-  right: 5px;
+  right: 40px;
   opacity: 1;
 
  
@@ -397,7 +402,7 @@ html.js-ajax-cart-processing .my-cart__items:before {
 
 .accordian{
   display: grid;
-  grid-template-rows: 30px 0fr;
+  grid-template-rows: 30px 0fr; 
   overflow: hidden;
   transition: grid-template-rows 200ms;
 }
@@ -413,11 +418,10 @@ html.js-ajax-cart-processing .my-cart__items:before {
    align-items: start;
    opacity: 0;
    transition: all ease 0.3;
-   
 }
 
 .accordian-open{
-   grid-template-rows: 22px 1fr !important;
+   grid-template-rows: 30px 1fr !important;
 }
 
 .accordian-open .accordian-content{

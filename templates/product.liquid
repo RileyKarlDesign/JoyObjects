@@ -2,15 +2,15 @@
   {% render 'swiper' with { product: product } %}
 </div>
 
-<div class="  mobile-info md:hidden sm:visible  h-fit flex justify-start items-start p-4 ">
-  <div class="  ">
-    <div class="js-product-title2   ">
+<div class="  mobile-info md:hidden sm:visible  h-fit flex justify-start items-start p-2 ">
+  <div class="">
+    <div class="js-product-title   ">
       <h3 class="display-serif w-full">{{ product.title }}</h3>
       <h3 class="display-serif">{{ product.metafields.custom.range }}</h3>
     </div>
 
     <div class="js-product-description md:w-[350px]">
-      <div class="pb-4">
+      <div class="pb-1 ">
         {{ product.description }}
       </div>
 
@@ -46,7 +46,7 @@
       </div>
 
       <div class="js-product-description md:w-[350px]">
-        <div class="pb-4 pt-2 ">
+        <div class="pb-1 pt-1 ">
           {{ product.description }}
         </div>
 
@@ -68,9 +68,9 @@
     </div>
   </div>
 
-  <div class="js-product-gallery p-1 post-wrapper md:flex sm:hidden flex-col gap-12 w-screen pt-[40vh] [&>*:nth-child(odd)]:justify-end pb-[20vw]   ">
+  <div class="js-product-gallery p-[10px] post-wrapper md:flex sm:hidden flex-col gap-12 w-screen pt-[40vh] [&>*:nth-child(odd)]:justify-end pb-[20vw]   ">
     {% for image in product.images %}
-      <div class=" flex w-full gap-2 [&>*:nth-child(odd)]:p-1  ">
+      <div class=" flex w-full gap-[10px] [&>*:nth-child(odd)]:p-[10px] ">
         <div class="  w-1/2  h-[40vw] rounded-sm  ">
           <div class=" rounded-sm ">
             {{ image | image_url: width: 800 | image_tag: class: 'rounded-sm h-fit js-fade w-full  ' }}
