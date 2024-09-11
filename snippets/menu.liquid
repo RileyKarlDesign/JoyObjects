@@ -1,40 +1,35 @@
-<div class="js-menu  fixed top-0 right-0 left-0 bottom-0 z-40 bg-stone-50  bg-opacity-80  backdrop-blur-sm   ">
-  <div class=" pointer-events-none h-full flex justify-end p-[40px]  ">
-    <div class="menu-top pointer-events-auto h-fit bg-white pt-[40px] md:w-[390px] p-1  sm:w-full w-full  ">
-      <h3 class=" select-none ">—</h3>
-      {% comment %}
-        {%- for link in linklists.main-menu.links -%}
-            <h3 class=' select-none ' >  <a class=" hover:opacity-50 {%- if request.path == link.url -%}f opacity-50 hover:opacity-50 {%- endif -%}" href="{{ link.url }}">{{ link.title }}</a></h3>
+<div class="js-menu fixed top-0 right-0 left-0 bottom-0 z-40 transition-all  ">
+  <div class="menu-top absolute top-[40px] right-[40px] pointer-events-auto bg-white h-fit  rounded-lg pt-[35px] md:w-[390px] p-1  sm:w-full w-full  ">
+    <div class="menu-content transition-all  ">
+      <div class="links transition-all">
+        <h3 class=" select-none ">—</h3>
+        {% comment %}
+          {%- for link in linklists.main-menu.links -%}
+              <h3 class=' select-none ' >  <a class=" hover:opacity-50 {%- if request.path == link.url -%}f opacity-50 hover:opacity-50 {%- endif -%}" href="{{ link.url }}">{{ link.title }}</a></h3>
+          {%- endfor -%}
+        {% endcomment %}
+        {%- for link in linklists['secondary-menu'].links -%}
+          <h3 class=" select-none ">
+            <a
+              class=" hover:opacity-50 {%- if request.path == link.url -%} opacity-50 hover:opacity-50 {%- endif -%}"
+              href="{{ link.url }}"
+            >
+              {{- link.title -}}
+            </a>
+          </h3>
         {%- endfor -%}
-      {% endcomment %}
-      {%- for link in linklists['secondary-menu'].links -%}
-        <h3 class=" select-none ">
-          <a
-            class=" hover:opacity-50 {%- if request.path == link.url -%} opacity-50 hover:opacity-50 {%- endif -%}"
-            href="{{ link.url }}"
-          >
-            {{- link.title -}}
-          </a>
-        </h3>
-      {%- endfor -%}
-      <h3 class=" select-none ">—</h3>
-      {%- for link in linklists['tertiary-menu'].links -%}
-        <h3 class=" select-none ">
-          <a
-            class=" hover:opacity-50  {%- if request.path == link.url -%}f opacity-50 hover:opacity-50 {%- endif -%}"
-            href="{{ link.url }}"
-          >
-            {{- link.title -}}
-          </a>
-        </h3>
-      {%- endfor -%}
-    </div>
-    {% comment %}
-      <div class='menu-foot w-full '>
-          {% for link in linklists.footer.links %}
-            <h3 class=''><a href="{{ link.url }}">{{ link.title }}</a></h3>
-          {% endfor %}
+        <h3 class=" select-none ">—</h3>
+        {%- for link in linklists['tertiary-menu'].links -%}
+          <h3 class=" select-none ">
+            <a
+              class=" hover:opacity-50  {%- if request.path == link.url -%}f opacity-50 hover:opacity-50 {%- endif -%}"
+              href="{{ link.url }}"
+            >
+              {{- link.title -}}
+            </a>
+          </h3>
+        {%- endfor -%}
       </div>
-    {% endcomment %}
+    </div>
   </div>
 </div>

@@ -265,21 +265,60 @@ input[type=number] {
 
 /*  Menu   */
 
-.js-menu{
-  opacity:0;
+.js-menu {
+  height: 100%;
+  overflow: hidden;
   pointer-events: none;
-  transition: ease all 0.3s;
-
+  transition: ease all 0.9s;
 }
 
-.menu-backdrop{
+
+.menu-top{ 
+  border: 2px solid red;
+  transition: grid-template-rows 200ms;
+}
+
+
+
+.menu-content{ 
  
+  overflow:hidden;
+  display: grid;
+  grid-template-rows: 0px ; 
+  overflow: hidden;
+   transition: grid-template-rows 200ms;
+   height: 0px;
+}
+.menu-open .menu-content{
+  grid-template-rows: 1fr; 
+  transition: grid-template-rows 200ms ;
+  height: 200px;
+}
+.menu-open .menu-top{
+  border:2px solid greenyellow;
+  transition: grid-template-rows 200ms;
 }
 
 .menu-open{
-  opacity:100%;
-  pointer-events: auto ;
+  background-color: green;
 }
+.links{
+  transition: ease all 0.3s ;
+}
+
+.menu-open .menu-top{
+  /* border:2px solid greenyellow; */
+}
+
+
+/* .accordian-open{
+   grid-template-rows: 30px 1fr !important;
+} */
+
+
+
+
+
 
 /*  Cart  */
 
@@ -407,6 +446,11 @@ html.js-ajax-cart-processing .my-cart__items:before {
   transition: grid-template-rows 200ms;
 }
 
+.accordian-open{
+   grid-template-rows: 30px 1fr !important;
+}
+
+
 .accordian-title{
   display: flex;
   justify-content: center;
@@ -420,9 +464,7 @@ html.js-ajax-cart-processing .my-cart__items:before {
    transition: all ease 0.3;
 }
 
-.accordian-open{
-   grid-template-rows: 30px 1fr !important;
-}
+
 
 .accordian-open .accordian-content{
   opacity: 1;
