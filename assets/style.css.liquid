@@ -269,39 +269,51 @@ input[type=number] {
   height: 100%;
   overflow: hidden;
   pointer-events: none;
-  transition: ease all 0.9s;
+  transition: ease all 1s;
 }
-
 
 .menu-top{ 
-  border: 2px solid red;
   transition: grid-template-rows 200ms;
+  border-radius:0;
+  transition: ease all 0.2s;
+}
+.menu-top .links{
+opacity: 0;
 }
 
-
-
 .menu-content{ 
- 
-  overflow:hidden;
+ overflow:hidden;
   display: grid;
   grid-template-rows: 0px ; 
   overflow: hidden;
-   transition: grid-template-rows 200ms;
-   height: 0px;
+  transition: cubic-bezier(.87,0,1,1) all 0.2s;
+  
+  height: 0px;
 }
 .menu-open .menu-content{
   grid-template-rows: 1fr; 
-  transition: grid-template-rows 200ms ;
+   transition: ease all 0.2s;
   height: 200px;
+  
 }
+
+.menu-open .menu-content .links{
+
+opacity: 100;
+}
+
 .menu-open .menu-top{
-  border:2px solid greenyellow;
-  transition: grid-template-rows 200ms;
+  border-radius:10px;
+  transition: ease all 0.2s;
+  background: #ffffff;
 }
 
 .menu-open{
-  background-color: green;
+ 
+ backdrop-filter: blur(10px);
 }
+
+
 .links{
   transition: ease all 0.3s ;
 }

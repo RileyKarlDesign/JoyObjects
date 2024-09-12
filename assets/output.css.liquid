@@ -1459,8 +1459,8 @@ video {
   gap: 20rem;
 }
 
-.gap-\[10px\] {
-  gap: 10px;
+.gap-\[3px\] {
+  gap: 3px;
 }
 
 .overflow-hidden {
@@ -1976,8 +1976,8 @@ video {
   padding: 2rem;
 }
 
-.p-\[10px\] {
-  padding: 10px;
+.p-\[3px\] {
+  padding: 3px;
 }
 
 .px-8 {
@@ -2870,35 +2870,46 @@ input[type=number] {
   height: 100%;
   overflow: hidden;
   pointer-events: none;
-  transition: ease all 0.9s;
+  transition: ease all 1s;
 }
 
 .menu-top{
-  border: 2px solid red;
   transition: grid-template-rows 200ms;
+  border-radius:0;
+  transition: ease all 0.2s;
+}
+
+.menu-top .links{
+  opacity: 0;
 }
 
 .menu-content{
   display: grid;
   grid-template-rows: 0px ;
   overflow: hidden;
-  transition: grid-template-rows 200ms;
+  transition: cubic-bezier(.87,0,1,1) all 0.2s;
   height: 0px;
 }
 
 .menu-open .menu-content{
   grid-template-rows: 1fr;
-  transition: grid-template-rows 200ms ;
+  transition: ease all 0.2s;
   height: 200px;
 }
 
+.menu-open .menu-content .links{
+  opacity: 100;
+}
+
 .menu-open .menu-top{
-  border:2px solid greenyellow;
-  transition: grid-template-rows 200ms;
+  border-radius:10px;
+  transition: ease all 0.2s;
+  background: #ffffff;
 }
 
 .menu-open{
-  background-color: green;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 .links{
@@ -3330,7 +3341,7 @@ canvas[resize] {
   justify-content: flex-end;
 }
 
-.\[\&\>\*\:nth-child\(odd\)\]\:p-\[10px\]>*:nth-child(odd) {
-  padding: 10px;
+.\[\&\>\*\:nth-child\(odd\)\]\:p-\[3px\]>*:nth-child(odd) {
+  padding: 3px;
 }
 
