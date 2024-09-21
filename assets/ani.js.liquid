@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   function setOpacity(entries, observer) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-
         gsap.to(entry.target, { opacity: 1, duration: .8, filter: "blur(0px)", ease: "power1.inOut" });
         observer.unobserve(entry.target);
       }
@@ -161,7 +160,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
   }
 
-  scrollDetect()
+  if (document.querySelector('.js-product-info')) {
+    scrollDetect()
+  }
+
 
 
 

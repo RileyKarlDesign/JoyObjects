@@ -7,20 +7,20 @@
       <h1 class="display-serif uppercase w-full text-center  ">{{ section.settings.title }}</h1>
     </div>
 
-    <div class="grid grid-cols-3 gap-4 ">
+    <div class="grid grid-cols-3 gap-2 ">
       {% if section.settings.prod1 != '' %}
         <div class="pt-4">
-          {% render 'product-card' with { product: section.settings.prod1 } %}
+          {% render 'product-card' with { product: section.settings.prod1, nofade: false } %}
         </div>
       {% endif %}
       {% if section.settings.prod2 != '' %}
         <div class="pt-4">
-          {% render 'product-card' with { product: section.settings.prod2} %}
+          {% render 'product-card' with { product: section.settings.prod2, nofade: false } %}
         </div>
       {% endif %}
       {% if section.settings.prod3 != '' %}
         <div class="pt-4">
-          {% render 'product-card' with { product: section.settings.prod3} %}
+          {% render 'product-card' with { product: section.settings.prod3, nofade: false } %}
         </div>
       {% endif %}
     </div>

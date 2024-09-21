@@ -7,7 +7,7 @@
 
   <div class=" grid grid-cols-3 col-span-3 gap-2 ">
     {% for product in collection.products limit: 3 %}
-      {% render 'product-card' with { product: product } %}
+      {% render 'product-card' with { product: product,nofade: false} %}
     {% endfor %}
   </div>
 </div>

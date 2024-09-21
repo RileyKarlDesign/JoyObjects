@@ -11,7 +11,7 @@
 
           <div class="recomended-product  col-span-3 grid  grid-cols-2 gap-1 " id="{{ forloop.index }}">
             {%- for product in recommendations.products -%}
-              {% render 'product-card'with {product: product } %}
+              {% render 'product-card'with {product: product, nofade: true } %}
             {%- endfor -%}
           </div>
         </div>

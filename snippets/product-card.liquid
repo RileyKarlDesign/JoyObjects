@@ -3,7 +3,11 @@
     <div class="js-product-card pointer-events-none bg-black bg-opacity-5  relative overflow-hidden">
       {% if product.featured_image %}
         <div class=" pointer-events-none group-hover:opacity-0  h-fit rounded-sm  bg-opacity-50 overflow-hidden ">
-          {{ product.featured_image | image_url: width: 700 | image_tag: class: 'w-full js-fade' }}
+          {% if nofade %}
+            {{ product.featured_image | image_url: width: 700 | image_tag: class: 'w-full no-fade' }}
+          {% else %}
+            {{ product.featured_image | image_url: width: 700 | image_tag: class: 'w-full js-fade' }}
+          {% endif %}
         </div>
 
         <div class=" pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 ">

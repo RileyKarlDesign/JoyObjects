@@ -1,9 +1,6 @@
-
-{% comment %} 
-
-conditional header based on collection type
-needs to be tidyed 
-
+{% comment %}
+  conditional header based on collection type
+  needs to be tidyed
 {% endcomment %}
 
 {% if collection.title != 'All Products' %}
@@ -11,7 +8,7 @@ needs to be tidyed
 {% else %}
   <div class="p-4 pt-4 pb-1  grid-cols-1 flex md:flex-col flex-col-reverse  ">
     {%- for filter in collection.filters -%}
-      {% for filter_value in filter.active_values %} 
+      {% for filter_value in filter.active_values %}
         <h3>
           {{ filter_value.label }}
         </h3>
@@ -19,9 +16,8 @@ needs to be tidyed
     {%- endfor -%}
 
     {% render 'safe-space' %}
-
   </div>
-{% endif %} 
+{% endif %}
 
 <form class="hidden">
   {%- for filter in collection.filters -%}
@@ -219,21 +215,19 @@ needs to be tidyed
   </div>
 </form>
 
-
 <div class=" p-4 ">
   {% if collection.all_products_count > 0 %}
     {% if collection.title == 'Products' %}
-      
       <div class="grid grid-flow-dense md:grid-cols-3 sm:grid-cols-2  grid-cols-1  gap-2  pb-4  ">
         {% for product in collection.products %}
-          {% render 'product-card'  with {product: product} %}
+          {% render 'product-card'  with {product: product,nofade: false } %}
         {% endfor %}
       </div>
 
     {% else %}
       <div class="grid grid-flow-dense md:grid-cols-2 sm:grid-cols-2  xs:grid-cols-2 grid-cols-1 gap-2  pb-4  ">
         {% for product in collection.products %}
-          {% render 'product-card'  with {product: product} %}
+          {% render 'product-card'  with {product: product,nofade: false} %}
         {% endfor %}
       </div>
     {% endif %}
