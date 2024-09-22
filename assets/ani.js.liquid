@@ -89,7 +89,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
   let prodGallery = document.querySelector('.js-product-gallery');
   let bgFade = document.querySelector('.bg-backdrop-color')
   let Recs = document.querySelector('.recs-wrapper')
-
+  let footer = document.querySelector('.js-footer')
+  let footInView = false
   console.log(Recs)
 
   // Observer for recs
@@ -98,26 +99,55 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        prodInfo.classList.add('info-shift-bottom')
-        bgFade.classList.remove('bg-fade-active')
-        console.log('entry');
-        console.log(bgFade);
+
+        if (!footInView) {
+          prodInfo.classList.add('info-shift-bottom')
+          bgFade.classList.remove('bg-fade-active')
+          console.log('entry');
+          console.log(bgFade);
+        }
+
       } else {
-        prodInfo.classList.remove('info-shift-bottom')
-        bgFade.classList.remove('bg-fade-active')
-        console.log(bgFade);
+
+        if (footInView) {
+          prodInfo.classList.remove('info-shift-bottom')
+          bgFade.classList.remove('bg-fade-active')
+          console.log(bgFade);
+        }
+
+
       }
 
     });
   }
+
+  function footerWatch(entries, observer) {
+
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+        footInView = true;
+      } else {
+        footInView = false;
+      }
+
+    });
+  }
+
 
   const observerThree = new IntersectionObserver(shift, {
     root: null, // use the viewport as the root
     threshold: 0.02 // when 10% of the target is visible
   });
 
+  const observerFour = new IntersectionObserver(footerWatch, {
+    root: null, // use the viewport as the root
+    threshold: 0.02 // when 10% of the target is visible
+  });
+
   if (Recs) {
     observerThree.observe(Recs);
+    observerFour.observe(footer)
   }
 
 
