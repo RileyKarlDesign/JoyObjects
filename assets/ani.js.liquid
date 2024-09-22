@@ -100,19 +100,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
 
-        if (!footInView) {
+        if (footInView) {
           prodInfo.classList.add('info-shift-bottom')
           bgFade.classList.remove('bg-fade-active')
-          console.log('entry');
-          console.log(bgFade);
+
+
         }
 
       } else {
 
-        if (footInView) {
+        if (!footInView) {
           prodInfo.classList.remove('info-shift-bottom')
-          bgFade.classList.remove('bg-fade-active')
-          console.log(bgFade);
+
         }
 
 
