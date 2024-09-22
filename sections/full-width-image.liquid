@@ -1,27 +1,19 @@
 <div
   style="background:{{section.settings.color}}"
-  class=" js-section grid md:h-screen h-fit bg-opacity-50 grid-cols-1 gap-2 "
+  class=" js-section  md:h-screen h-fit bg-opacity-50  "
 >
-  <div class="w-full md:row-start-1  row-start-2  ">
-    <div class="h-full  p-4  ">
-      <div class="h-fit pb-2">
-        <h1 class="font-serif  md:w-[80%] w-full  uppercase    ">{{ section.settings.title }}</h1>
-      </div>
-      <h3 class="md:w-[350px]   ">
-        {{ section.settings.body }}
-      </h3>
-
+  <div class=" absolute top-2 w-full md:row-start-1  row-start-2  ">    <div class="h-full  p-4  ">
       {% if section.settings.product_1 != '' %}
         <div class="pt-2">
           {% render 'button' with {text: section.settings.cta , link: section.settings.product_1.url %}
         </div>
       {% endif %}
-    </div>
   </div>
-  <div class="w-full h-full overflow-hidden md:p-[0px] md:pr-4  p-4">
-    {{ section.settings.image | image_url: width: 1204 | image_tag: class: ' object-cover  js-fade' }}
   </div>
-</div>
+  <div class="w-full h-full overflow-hidden md:p-4 md:pr-4  p-4">
+    {{ section.settings.image | image_url: width: 1204 | image_tag: class: ' object-cover w-full h-full js-fade' }}
+  </div>
+
 
 {% schema %}
 {
