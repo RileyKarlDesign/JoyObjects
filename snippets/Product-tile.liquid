@@ -1,0 +1,12 @@
+{% comment %}  takes text and link {% endcomment %}
+
+<a href="{{link}}">
+  <div class=" flex w-fit rounded-md p-[5px] pl-[5px] gap-2 h-fit  pr-4 justify-center items-center bg-black bg-opacity-5 text-opacity-70  backdrop-blur-lg ">
+    <div class=" h-5 w-5 bg-slate-50 rounded-lg overflow-hidden">
+      {{ product.images[1] | image_url: width: 100 | image_tag: class: ' js-fade' }}
+    </div>
+    <h3>
+      {{ text }}
+    </h3>
+  </div>
+</a>
