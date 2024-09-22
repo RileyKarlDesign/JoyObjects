@@ -692,10 +692,6 @@ video {
   right: 2rem;
 }
 
-.right-\[30px\] {
-  right: 30px;
-}
-
 .top-0 {
   top: 0px;
 }
@@ -2901,6 +2897,12 @@ input[type=number] {
   height: 400px;
 }
 
+/* @media (max-width: 200px) {
+  .menu-content{ 
+    height: unset;
+  }
+} */
+
 .menu-open .menu-content .links{
   opacity: 100;
 }
@@ -2944,10 +2946,10 @@ input[type=number] {
 .my-cart{
   position: fixed;
   right: -1000px;
-  top: 20px;
+  top: 30px;
   cursor: pointer;
   width: calc( 450px  );
-  height: calc( var(--winHeight) - 10px);
+  height: calc( var(--winHeight) - 60px);
   transition: ease all 0.3s ;
   overflow: hidden;
   opacity: 0;
@@ -2956,7 +2958,7 @@ input[type=number] {
 .cart-open{
   overflow: scroll;
   transition: right 0.3s;
-  right: 40px;
+  right: 30px;
   opacity: 1;
 }
 
@@ -3200,6 +3202,10 @@ canvas[resize] {
     position: fixed;
   }
 
+  .md\:right-\[30px\] {
+    right: 30px;
+  }
+
   .md\:z-50 {
     z-index: 50;
   }
@@ -3246,6 +3252,11 @@ canvas[resize] {
 
   .md\:h-\[90vh\] {
     height: 90vh;
+  }
+
+  .md\:h-fit {
+    height: -moz-fit-content;
+    height: fit-content;
   }
 
   .md\:h-screen {
@@ -3314,6 +3325,10 @@ canvas[resize] {
 
   .md\:p-\[0\] {
     padding: 0;
+  }
+
+  .md\:p-1 {
+    padding: 20px;
   }
 
   .md\:pb-4 {
