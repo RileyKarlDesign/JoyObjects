@@ -63,6 +63,17 @@
         "title": "Cotton Candy & Wine",
         "color": ""
       }
+    },
+    "full_width_image_mNFUUf": {
+      "type": "full-width-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/451422937_18011592974569672_3261032625051833543_n.jpg",
+        "title": "Deafult Title",
+        "body": "",
+        "product_1": "",
+        "cta": "",
+        "color": ""
+      }
     }
   },
   "order": [
@@ -71,6 +82,7 @@
     "image_and_text_yiMTt9",
     "collection_block_DU9DeH",
     "image_and_text_8zGy87",
-    "collection_block_8JjH6g"
+    "collection_block_8JjH6g",
+    "full_width_image_mNFUUf"
   ]
 }
