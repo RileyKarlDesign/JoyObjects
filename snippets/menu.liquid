@@ -1,8 +1,8 @@
 <div class="js-menu fixed top-0 right-0 left-0 bottom-0 z-40 transition-all   ">
-  <div class="menu-top absolute top-[30px] right-[30px] pointer-events-auto  h-fit  rounded-lg pt-[35px] md:w-[390px] p-1  sm:w-full w-full  ">
+  <div class="menu-top absolute top-[30px]  md:right-[30px] pointer-events-auto  md:h-fit bottom-0  rounded-lg pt-[35px] md:w-[390px] p-1   w-full  ">
     <div class="menu-content transition-all  ">
       <div class="links transition-all flex flex-col ">
-        <h3 class=" select-none p-1 pl-0 ">—</h3>
+        <h3 class=" select-none p-1 pl-0  ">—</h3>
         {% comment %}
           {%- for link in linklists.main-menu.links -%}
               <h3 class=' select-none ' >  <a class=" hover:opacity-50 {%- if request.path == link.url -%}f opacity-50 hover:opacity-50 {%- endif -%}" href="{{ link.url }}">{{ link.title }}</a></h3>
