@@ -100,10 +100,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
 
-        if (footInView) {
+        if (!footInView) {
           prodInfo.classList.add('info-shift-bottom')
           bgFade.classList.remove('bg-fade-active')
-
+          console.log('adding info shift bottomm')
 
         }
 
