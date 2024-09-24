@@ -1,43 +1,40 @@
-<div class="js-footer ">
+<div class="js-footer flex flex-col items-center ">
+  <div class="logo-wrap p-40  w-full">
+    <div class="logo w-full  bg-green-600 border-8 border-yellow-500 h-40"></div>
+  </div>
+
   <div
     class="  flex flex-col justify-end items-end  relative z-10   transition-all p-4 overflow-hidden h-fit  "
     {% comment %} style="background:{{ settings.footer-background }};" {% endcomment %}
   >
     <div class="flex flex-col md:flex-row md:gap-4 w-full justify-between gap-0">
-      {% render 'newsletter' %}
-      <div class="info  ">
-        <div class="flex justify-end pt-4">
-          <div class=" h-fit grid grid-cols-1 w-[350px] gap-1">
-            <div class="w-fit h-fit">
-              <div class="w-full text-md menu-link font-sans   items-end gap-2">
-                {% for link in linklists.footer.links %}
-                  <h3 class="">
-                    <a href="{{ link.url }}">{{ link.title }}</a>
-                  </h3>
-                {% endfor %}
-              </div>
-            </div>
+      <div class=" h-fit grid grid-cols-6   ">
+        <div class="letter col-start-3 ">
+          {% render 'newsletter' %}
+        </div>
 
-            <h3>—</h3>
+        <div class=" main-links w-full text-md menu-link font-sans    items-end gap-2">
+          {% for link in linklists.footer.links %}
+            <h3 class="">
+              <a href="{{ link.url }}">{{ link.title }}</a>
+            </h3>
+          {% endfor %}
+        </div>
 
-            <div class="bottom h-fit">
-              <h3><a href=""> Instagram </a></h3>
-              <h3>Twitter</h3>
-            </div>
+        <div class=" social-links bottom h-fit">
+          <h3><a href=""> Instagram </a></h3>
+          <h3>Twitter</h3>
+        </div>
 
-            <h3>—</h3>
+        <div class=" adress-info bottom h-fit w-full">
+          <h3>
+            Joy Objects AB, Krukmakargatan <br>
+            44, 117 26 Stockholm, Sweden
+          </h3>
 
-            <div class="bottom h-fit w-full">
-              <h3>
-                Joy Objects AB, Krukmakargatan <br>
-                44, 117 26 Stockholm, Sweden
-              </h3>
-
-              <div class="  md:flex-row md:flex w-full  md:w-[350px] justify-between ">
-                <div class="w-fit   ">
-                  <h3>©JOY Objects 2024</h3>
-                </div>
-              </div>
+          <div class=" copyright  md:flex-row md:flex w-full  md:w-[350px] justify-between ">
+            <div class="w-fit   ">
+              <h3>©JOY Objects 2024</h3>
             </div>
           </div>
         </div>
