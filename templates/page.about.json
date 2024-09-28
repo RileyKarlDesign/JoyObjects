@@ -12,19 +12,13 @@
     "background_image_g3TBqk": {
       "type": "background-image",
       "settings": {
-        "image1": "shopify:\/\/shop_images\/fence.png",
+        "image1": "shopify://shop_images/fence_1.png",
         "color1": "#a3f127"
       }
     },
     "main": {
       "type": "main-about",
       "settings": {
-      }
-    },
-    "hero_image_NnwyLA": {
-      "type": "hero-Image",
-      "settings": {
-        "image1": "shopify:\/\/shop_images\/DSC1175_1.jpg"
       }
     },
     "form": {
@@ -37,7 +31,6 @@
   "order": [
     "background_image_g3TBqk",
     "main",
-    "hero_image_NnwyLA",
     "form"
   ]
 }
