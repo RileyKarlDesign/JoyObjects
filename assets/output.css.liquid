@@ -1483,6 +1483,10 @@ video {
   border-radius: 0.25rem;
 }
 
+.rounded-\[4px\] {
+  border-radius: 4px;
+}
+
 .rounded-base {
   border-radius: 3px;
 }
@@ -1505,10 +1509,6 @@ video {
 
 .rounded-xl {
   border-radius: 0.75rem;
-}
-
-.rounded-\[4px\] {
-  border-radius: 4px;
 }
 
 .rounded-l {
@@ -2945,10 +2945,11 @@ input[type=number] {
 }
 
 .menu-open{
-  -webkit-backdrop-filter: blur(45px);
-          backdrop-filter: blur(45px);
-  background-color: #3031336e;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background-color: #cbcbcb6e;
   transition: ease all 0.1s;
+  pointer-events: all !important;
 }
 
 .links{
@@ -3147,12 +3148,11 @@ html.js-ajax-cart-processing .my-cart__items:before {
 }
 
 .js-scrolled-info .js-product-title {
-  scale:0.5;
+  /* scale:0.5;  */
 }
 
 .js-scrolled-info .js-product-description{
-  background-color: red ;
-  display: none;
+  /* display: none; */
 }
 
 .bg-fade-active{

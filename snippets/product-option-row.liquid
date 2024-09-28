@@ -17,7 +17,7 @@
           {% if e != value %}
             {% assign radio_id = 'option-' | append: option_name | append: '-' | append: value | handleize %}
 
-            <div class="product-option border-t-2 border-black first-of-type:border-t-0   flex h-5 items-center ">
+            <div class="product-option border-t-2 border-black first-of-type:border-t-0   flex h-2 items-center ">
               <input
                 class="variant-radio"
                 {% if forloop.index == 1 and variant.inventory_quantity > 0 %}
