@@ -1,7 +1,21 @@
 {% comment %}  takes text and link {% endcomment %}
+{% comment %}
+  {% if style == '' %}
+{% endcomment %}
 
-<div class=" flex w-fit h-el pl-2 pr-2 justify-center items-center bg-black bg-opacity-5 text-opacity-70 rounded-sm  backdrop-blur-lg ">
+{% comment %}
+  <div class=" flex w-fit h-el pl-2 pr-2 justify-center items-center bg-black bg-opacity-5 text-opacity-70 rounded-sm  backdrop-blur-lg ">
+    <h3>
+      <a href="{{link}}"> {{ text }} </a>
+    </h3>
+  </div>
+{% endcomment %}
+
+{% comment %} {% elseif style == 'blank' %} {% endcomment %}
+
+<div class=" flex w-fit h-el  justify-center items-center  rounded-sm  backdrop-blur-lg ">
   <h3>
     <a href="{{link}}"> {{ text }} </a>
   </h3>
 </div>
+{% comment %} {% endif %} {% endcomment %}
