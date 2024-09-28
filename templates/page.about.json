@@ -13,7 +13,7 @@
       "type": "background-image",
       "settings": {
         "image1": "shopify://shop_images/fence_1.png",
-        "color1": "#a3f127"
+        "color1": "#f7f7f7"
       }
     },
     "main": {
