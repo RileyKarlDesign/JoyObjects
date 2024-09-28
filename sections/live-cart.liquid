@@ -10,7 +10,7 @@
     <h3 class="cart-btn md:pr-[10px]">Close</h3>
   </div>
 
-  <div class="  overflow-y-scroll h-full pb-14 md:pt-10 md:p-1 p-4" data-ajax-cart-section>
+  <div class="  overflow-y-scroll h-full pb-14 m md:p-1  md:pt-14 p-4" data-ajax-cart-section>
     <div class="my-cart__items " data-ajax-cart-section-scroll>
       {% for line_item in cart.items %}
         {% render 'cart-card' with { product: line_item , index: forloop.index } %}
