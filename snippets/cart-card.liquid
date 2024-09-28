@@ -51,16 +51,14 @@
             +
           </a>
         </div>
-      </ajax-cart-quantity>
 
-      <!-- "Remove item" button -->
-      <div class=" bg-white bg-opacity-50 w-8 h-8 rounded-full  backdrop-blur-lg  absolute top-1 right-1 flex  justify-center items-center pt-[5px]">
-        <p class="text-[28px] leading-none ">
-          <a class="text-3xl leading-none mt-4 " data-ajax-cart-request-button href="{{ product.url_to_remove }}">
-            ˟
-          </a>
-        </p>
-      </div>
+        <!-- "Remove item" button -->
+        <a class="text-3xl leading-none mt-4 " data-ajax-cart-request-button href="{{ product.url_to_remove }}">
+          <div class=" bg-white bg-opacity-50 w-8 h-8 rounded-full  backdrop-blur-lg  absolute top-1 right-1 flex  justify-center items-center pt-[7px]">
+            <p class="text-[28px] leading-none ">˟</p>
+          </div>
+        </a>
+      </ajax-cart-quantity>
     </div>
   </div>
 </div>

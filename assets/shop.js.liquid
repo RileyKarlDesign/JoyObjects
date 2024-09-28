@@ -95,7 +95,7 @@ menuBtn.addEventListener('mousedown', handelMenu)
 
 // accoridan
 
-let a = document.querySelectorAll(".accordian-title");
+let a = document.querySelectorAll(".accordian");
 
 //  console.log(a);
 
@@ -105,6 +105,9 @@ a.forEach((i) => {
     //  console.log(i.target.parentNode.classList);
     if (i.target.parentNode.classList.contains("accordian-open")) {
       i.target.parentNode.classList.remove("accordian-open");
+      let aSym = i.target.querySelectorAll('.accordian-symbol')
+      aSym.innerHTML('(jdflk')
+
     } else {
       i.target.parentNode.classList.add("accordian-open");
     }

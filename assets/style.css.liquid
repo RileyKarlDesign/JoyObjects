@@ -358,7 +358,7 @@ opacity: 100;
 .my-cart{
   position: fixed;
   right: -1000px;
-  top: 30px;
+  top: 20px;
   cursor: pointer;
   width: calc( 450px  );
   height: calc( var(--winHeight) - 60px);
@@ -374,8 +374,10 @@ opacity: 100;
 
   overflow: scroll;
   transition: right 0.3s;
-  right: 30px;
-  opacity: 1;
+  right: 20px;
+  
+  opacity: 1; 
+
 
  
 }
@@ -436,14 +438,15 @@ html.js-ajax-cart-processing .my-cart__items {
 
 /* Show a loading indicator */
 html.js-ajax-cart-processing .my-cart__items:before {
-  content: 'LOADUNG';
-
+  content: 'LOADING';
+ position: absolute;
+  inset:0px;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  
   padding: 10px 20px;
-  background-color: rgba(251, 255, 13, 0.221);
+  background-color: rgba(251, 255, 0, 0.6);
   margin: 0 auto;
 
   inset: 0;
