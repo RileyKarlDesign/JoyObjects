@@ -1,67 +1,71 @@
 <div class="recs-wrapper">
-  <div class="product-recommendations h-[40vh] bg-green-400" data-product-id="{{ product.id }}" data-limit="2">
+  <div class="product-recommendations h-40 bg-green-50" data-product-id="{{ product.id }}" data-limit="2">
     <div class="product-">
-      {%- if recommendations.products_count > 0 -%}
-        <div class="line"></div>
-        <div class="grid  grid-cols-4 p-4 ">
-          <div class="title ">
-            <div class="anchor-circle"></div>
-            <p>Related Products</p>
-          </div>
+      {% comment %}
+        {%- if recommendations.products_count > 0 -%}
+          <div class="line"></div>
+          <div class="grid  grid-cols-4 p-4 ">
+            <div class="title ">
+              <div class="anchor-circle"></div>
+              <p>Related Products</p>
+            </div>
 
-          <div class="recomended-product  col-span-3 grid  grid-cols-2 gap-1 " id="{{ forloop.index }}">
-            {%- for product in recommendations.products -%}
-              {% render 'product-card'with {product: product, nofade: true } %}
-            {%- endfor -%}
+            <div class="recomended-product  col-span-3 grid  grid-cols-2 gap-1 " id="{{ forloop.index }}">
+              {%- for product in recommendations.products -%}
+                {% render 'product-card'with {product: product, nofade: true } %}
+              {%- endfor -%}
+            </div>
           </div>
-        </div>
-      {% else %}
-        <p>nothing here yet</p>
-      {% endif %}
+        {% else %}
+          <p>nothing here yet</p>
+        {% endif %}
+      {% endcomment %}
     </div>
   </div>
 </div>
 
-<script>
-  let loadProductRecommendationsIntoSection = function () {
-    // Look for an element with class 'product-recommendations'
-    var productRecommendationsSection = document.querySelector('.product-recommendations');
-    if (productRecommendationsSection === null) {
-      return;
-    }
-
-    // Read product id from data attribute
-    var productId = productRecommendationsSection.dataset.productId;
-    // Read limit from data attribute
-    var limit = productRecommendationsSection.dataset.limit;
-    // Build request URL
-    var requestUrl =
-      '/recommendations/products?section_id=product-recommendations&limit=' + limit + '&product_id=' + productId;
-    // Create request and submit it using Ajax
-    var request = new XMLHttpRequest();
-
-    request.open('GET', requestUrl);
-    request.onload = function () {
-      if (request.status >= 200 && request.status < 300) {
-        let container = document.createElement('div');
-
-        container.innerHTML = request.response;
-
-        productRecommendationsSection.parentElement.innerHTML =
-          container.querySelector('.product-recommendations').innerHTML;
+{% comment %}
+  <script>
+    let loadProductRecommendationsIntoSection = function () {
+      // Look for an element with class 'product-recommendations'
+      var productRecommendationsSection = document.querySelector('.product-recommendations');
+      if (productRecommendationsSection === null) {
+        return;
       }
+
+      // Read product id from data attribute
+      var productId = productRecommendationsSection.dataset.productId;
+      // Read limit from data attribute
+      var limit = productRecommendationsSection.dataset.limit;
+      // Build request URL
+      var requestUrl =
+        '/recommendations/products?section_id=product-recommendations&limit=' + limit + '&product_id=' + productId;
+      // Create request and submit it using Ajax
+      var request = new XMLHttpRequest();
+
+      request.open('GET', requestUrl);
+      request.onload = function () {
+        if (request.status >= 200 && request.status < 300) {
+          let container = document.createElement('div');
+
+          container.innerHTML = request.response;
+
+          productRecommendationsSection.parentElement.innerHTML =
+            container.querySelector('.product-recommendations').innerHTML;
+        }
+      };
+      request.send();
     };
-    request.send();
-  };
-  // If your section has theme settings, the theme editor
-  // reloads the section as you edit those settings. When that happens, the
-  // recommendations need to be fetched again.
-  // See https://help.shopify.com/en/themes/development/sections/integration-with-theme-editor
-  document.addEventListener('shopify:section:load', function (event) {
-    if (event.detail.sectionId === 'product-recommendations') {
-      loadProductRecommendationsIntoSection();
-    }
-  });
-  // Fetching the recommendations on page load
-  loadProductRecommendationsIntoSection();
-</script>
+    // If your section has theme settings, the theme editor
+    // reloads the section as you edit those settings. When that happens, the
+    // recommendations need to be fetched again.
+    // See https://help.shopify.com/en/themes/development/sections/integration-with-theme-editor
+    document.addEventListener('shopify:section:load', function (event) {
+      if (event.detail.sectionId === 'product-recommendations') {
+        loadProductRecommendationsIntoSection();
+      }
+    });
+    // Fetching the recommendations on page load
+    loadProductRecommendationsIntoSection();
+  </script>
+{% endcomment %}
