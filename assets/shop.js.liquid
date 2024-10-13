@@ -15,11 +15,10 @@ if (window.liquidAjaxCart?.init) {
 // menu
 
 let menuOpen = false
-
-
 let menuBtn = document.querySelector('.menu-btn')
 let menu = document.querySelector('.js-menu')
-
+let menuTop = document.querySelector('.menu-top')
+menuTop.style.pointerEvents = "none"
 
 console.log('sanity');
 
@@ -30,14 +29,12 @@ window.addEventListener('click', function (e) {
   if (e.target.contains(menu)) {
     menuBtn.innerHTML = 'Menu';
     menuOpen = false;
+    menu.style.pointerEvents = "none"
+    menuTop.style.pointerEvents = "none"
     menu.classList.remove('menu-open')
 
   }
 })
-
-
-
-
 
 
 
@@ -49,12 +46,16 @@ let handelMenu = () => {
     menuBtn.innerHTML = 'Menu';
     menuOpen = false;
     menu.classList.remove('menu-open')
+    menu.style.pointerEvents = "none"
+    menuTop.style.pointerEvents = "none"
 
   } else {
 
     menuBtn.innerHTML = 'Close';
     menuOpen = true;
     menu.classList.add('menu-open')
+    menu.style.pointerEvents = "auto"
+    menuTop.style.pointerEvents = "auto"
 
   }
 }
