@@ -13,7 +13,12 @@
       "type": "background-image",
       "settings": {
         "image1": "shopify://shop_images/fence_1.png",
-        "color1": "#f7f7f7"
+        "color1": "#ffcd00"
+      }
+    },
+    "main": {
+      "type": "main-about",
+      "settings": {
       }
     },
     "full_width_image_BUT8fw": {
@@ -21,11 +26,6 @@
       "settings": {
         "image": "shopify://shop_images/451422937_18011592974569672_3261032625051833543_n.jpg",
         "color": ""
-      }
-    },
-    "main": {
-      "type": "main-about",
-      "settings": {
       }
     },
     "form": {
