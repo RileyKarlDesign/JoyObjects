@@ -1,13 +1,13 @@
 <div
   style="background:{{section.settings.color}}"
-  class=" js-section  pb-20  pt-20 h-fit bg-opacity-50 p-4 gap-2 "
+  class=" js-section  pb-20  pt-20 h-fit bg-opacity-50 md:p-4 p-0 gap-2  "
 >
   <div class="h-full">
     <div class="h-fit pb-2 ">
-      <h1 class="display-serif uppercase w-full text-center  ">{{ section.settings.title }}</h1>
+      <h1 class="display-serif uppercase w-full text-center">{{ section.settings.title }}</h1>
     </div>
 
-    <div class="grid grid-cols-3 gap-2 ">
+    <div class=" md:grid  md:grid-cols-3  md:gap-2  flex gap-2 md:pl-0  pl-2 bg-red-300">
       {% if section.settings.prod1 != '' %}
         <div class="pt-4">
           {% render 'product-card' with { product: section.settings.prod1, nofade: false } %}

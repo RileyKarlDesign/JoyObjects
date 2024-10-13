@@ -2342,8 +2342,8 @@ video {
   font-size: 20px;
 }
 
-.text-\[40px\] {
-  font-size: 40px;
+.text-\[30px\] {
+  font-size: 30px;
 }
 
 .text-lg {
@@ -2364,10 +2364,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[30px\] {
-  font-size: 30px;
 }
 
 .font-bold {
@@ -2710,36 +2706,103 @@ video {
   }
 }
 
+.heading-sans{
+  font-family: 'altB', Arial, Helvetica, sans-serif, serif !important;
+  text-transform: uppercase;
+}
+
 h1{
-  font-family: 'joy', serif !important;
+  font-family: 'joy', serif ;
   text-transform: uppercase;
   line-height: 5.2rem;
   font-size: 2.8rem;
   letter-spacing: -3px;
 }
 
-.heading-sans{
-  font-family: 'altB', Arial, Helvetica, sans-serif, serif !important;
-  text-transform: uppercase;
-}
-
-h2{
-  line-height: 1.2rem !important;
-  font-size: 1.2rem !important;
-  font-family: 'altB', Times, serif !important;
-  text-transform: uppercase;
-}
-
-h3, button, input, a  {
-  line-height: 1rem !important;
-  font-size: 1rem !important;
-  font-family: 'altB', Times, serif !important;
-  text-transform: uppercase;
+h3,  button, input, a , p, span {
+  line-height: 1rem ;
+  font-size: 1rem ;
+  font-family: 'altB', Times, serif ;
+  text-transform: uppercase ;
 }
 
 input{
   outline: none !important;
 }
+
+.text-serif, h2{
+  font-family: 'joy',serif ;
+  text-transform: uppercase;
+  line-height: 4vw ;
+  font-size: 2vw ;
+  letter-spacing: -0.1vw;
+}
+
+.display-serif{
+  font-family: 'joy',serif !important;
+  text-transform: uppercase;
+  line-height: 8vw !important;
+  font-size: 4vw !important;
+  letter-spacing: -0.1vw;
+}
+
+@media (max-width: 767px) {
+  .text-serif{
+    font-size: 1.5rem !important;
+    line-height: 2.5rem !important;
+    color: blue !important;
+  }
+
+  .display-serif{
+    font-size: 2rem !important;
+    line-height: 4rem !important;
+    color: red !important;
+  }
+}
+
+.caption{
+  line-height: 1rem !important;
+  font-size: 12px !important;
+  font-family: 'helvetica', Times, serif !important;
+  text-transform:none;
+}
+
+*{
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/*  custom scroll bar   */
+
+/* width */
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0;
+  position: fixed;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
+
+/* mail */
 
 #mc_embed_signup .mc-field-group input {
   display: block;
@@ -2798,64 +2861,6 @@ input{
   width: fit-content !important;
   display: none !important;
   border-radius: 4px !important;
-}
-
-.text-serif{
-  font-family: 'joy',serif !important;
-  text-transform: uppercase;
-  line-height: 4vw !important;
-  font-size: 2vw !important;
-  letter-spacing: -3px;
-}
-
-.display-serif{
-  font-family: 'joy',serif !important;
-  text-transform: uppercase;
-  line-height: 8vw !important;
-  font-size: 4vw !important;
-  letter-spacing: -0.1vw;
-}
-
-.caption{
-  line-height: 1rem !important;
-  font-size: 12px !important;
-  font-family: 'helvetica', Times, serif !important;
-  text-transform:none;
-}
-
-*{
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
-/*  custom scroll bar   */
-
-/* width */
-
-::-webkit-scrollbar {
-  width: 0px;
-  height: 0;
-  position: fixed;
-}
-
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: red;
-  border-radius: 10px;
 }
 
 /*  swiper  */
@@ -3385,6 +3390,10 @@ canvas[resize] {
     align-items: flex-start;
   }
 
+  .md\:gap-2 {
+    gap: 25px;
+  }
+
   .md\:gap-4 {
     gap: 40px;
   }
@@ -3403,6 +3412,10 @@ canvas[resize] {
 
   .md\:pb-4 {
     padding-bottom: 40px;
+  }
+
+  .md\:pl-0 {
+    padding-left: 0px;
   }
 
   .md\:pl-1 {
