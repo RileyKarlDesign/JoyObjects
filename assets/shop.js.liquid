@@ -12,6 +12,21 @@ if (window.liquidAjaxCart?.init) {
   document.addEventListener("liquid-ajax-cart:init", runWhenInit);
 }
 
+// JS Back 
+
+let backBtn = document.querySelector('.js-back');
+
+let sendback = () => {
+  history.back()
+}
+
+console.log('adding')
+if (backBtn) {
+  backBtn.addEventListener('click', sendback)
+}
+
+
+
 // menu
 
 let menuOpen = false
@@ -32,7 +47,6 @@ window.addEventListener('click', function (e) {
     menu.style.pointerEvents = "none"
     menuTop.style.pointerEvents = "none"
     menu.classList.remove('menu-open')
-
   }
 })
 
