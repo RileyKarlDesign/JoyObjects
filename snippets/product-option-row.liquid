@@ -1,47 +1,43 @@
 <!-- option -->
 
-<div class="product-option-row product-option-row-option grid  grid-cols-2 ">
+<div class="product-option-row product-option-row-option grid  grid-cols-2 border-t-2 border-black">
   <label class=" h-3 flex items-center" for="{% if type == 'select' %}select-{{ option.name}}{% endif %}">
-    here
     <p>{{ option.name }}</p>
   </label>
 
-  <div class="option-values flex gap-1">
+  <div class="option-values">
     {% comment %}  option 1  {% endcomment %}
-
-    {% assign options = 'dan, henery, simon' | split: ', ' %}
-    {%- assign options = options | append: option_name.title -%}
 
     {% assign e = '' %}
     {%- assign optionTwoArray = '' %}
+
     {% for variant in product.variants %}
       {% for value in option.values %}
         {% if value == variant.option1 %}
           {% if e != value %}
             {% assign radio_id = 'option-' | append: option_name | append: '-' | append: value | handleize %}
 
-            <div class="product-option    flex h- items-center ">
-              <div>
-                <input
-                  class="variant-radio"
-                  {% if forloop.index == 1 and variant.inventory_quantity > 0 %}
-                    checked="checked"
-                  {% endif %}
-                  {% if variant.inventory_quantity <= 0 %}
-                    disabled
-                  {% endif %}
-                  type="radio"
-                  id="{{radio_id}}"
-                  name="{{ option_name }}"
-                  value="{{ value }}"
-                  {% if value == selected %}
-                    checked
-                  {% endif %}
-                >
-                <label for="{{radio_id}}">
-                  {{ value }}
-                </label>
-              </div>
+            <div class="product-option border-t-2 border-black first-of-type:border-t-0   flex h- items-center ">
+              <input
+                class="variant-radio"
+                {% if forloop.index == 1 and variant.inventory_quantity > 0 %}
+                  checked="checked"
+                {% endif %}
+                {% if variant.inventory_quantity <= 0 %}
+                  disabled
+                {% endif %}
+                id="{{ radio_id }}"
+                type="radio"
+                name="{{ option_name }}"
+                value="{{ value }}"
+                {% if value == selected %}
+                  checked
+                {% endif %}
+              >
+
+              <label for="{{ radio_id }} ">
+                {{ value }}
+              </label>
             </div>
 
             {% assign e = value %}
@@ -53,37 +49,42 @@
         {% endcomment %}
 
         {% if value == variant.option2 %}
-          {% if options contains value %}
-            {% comment %}  Skiping Vlaues that are already a printed  {% endcomment %}
-          {% else %}
-            {%- assign options = options | append: value -%}
-            {% if optionTwoE != value %}
-              {% assign radio_id = 'option-' | append: option_name | append: '-' | append: value | handleize %}
-              <div class="product-option    flex h- items-center ">
-                <div>
-                  <input
-                    class="variant-radio"
-                    {% if forloop.index == 1 and variant.inventory_quantity > 0 %}
-                      checked="checked"
-                    {% endif %}
-                    {% if variant.inventory_quantity <= 0 %}
-                      disabled
-                    {% endif %}
-                    type="radio"
-                    id="{{radio_id}}"
-                    name="{{ option_name }}"
-                    value="{{ value }}"
-                    {% if value == selected %}
-                      checked
-                    {% endif %}
-                  >
-                  <label for="{{radio_id}}">
-                    {{ value -}}
-                  </label>
-                </div>
-              </div>
-            {% endif %}
-          {% endif %}
+          {% assign radio_id = 'option-' | append: option_name | append: '-' | append: value | handleize %}
+
+          {% unless optionTwoArray contains value %}
+            <div class="border-t-2 border-black first-of-type:border-t-0  flex  h-3  items-center   ">
+              <input
+                class="variant-radio"
+                {% if forloop.index == 1 and variant.inventory_quantity > 0 %}
+                  checked="checked"
+                {% endif %}
+                {% if variant.inventory_quantity <= 0 %}
+                  disabled
+                {% endif %}
+                id="{{ radio_id }}"
+                type="radio"
+                name="{{ option_name }}"
+                value="{{ value }}"
+                {% if value == selected %}
+                  checked
+                {% endif %}
+              >
+
+              <label for="{{ radio_id }}">
+                {{ value }}
+              </label>
+            </div>
+          {% endunless %}
+
+          {% comment %}
+            builds a referance array as the second element in object.values isnt
+            consistant. eg s/blue s/black - this alows support for a second
+            variant option but not a third - yet
+          {% endcomment %}
+
+          {%- assign optionTwoArray = optionTwoArray | append: value %}
+          {%- assign optionTwoArray = optionTwoArray | append: ',' %}
+          {% assign e = value %}
         {% endif %}
       {% endfor %}
     {% endfor %}
