@@ -605,3 +605,30 @@ canvas[resize] {
    
 }
 
+
+
+/* Label and inputs */
+
+
+
+:checked + label {
+   font-weight: bold;
+   background-color: black;
+   color: white; 
+   padding: 0 6px;
+   border-radius: 2px;
+}
+
+input[type=radio]{
+  display: none
+}
+
+ label {
+   cursor: pointer;
+}
+
+:disabled + label {
+   font-weight: bold;
+   opacity: .3;
+   cursor: not-allowed ;
+}
