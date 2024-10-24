@@ -17,7 +17,6 @@
 <!-- //---------------------- json get ------------------------------ -->
 {% if has_multiple_variants %}
   {% render 'get-variants-with-quantity-json' with product: product %}
-
   {% assign variants_with_quantity_json = product.variants | json %}
   {% unless variants_with_quantity_json contains 'inventory_quantity' %}
     {% for variant in product.variants %}
@@ -47,13 +46,9 @@
 >
   {% if has_multiple_options or has_multiple_variants %}
     {% for option in product.options_with_values %}
+      {{ options }}
       {% assign option_name = 'option' | append: option.position %}
-
-      {% if option.name != 'Color' %}
-        {% render 'product-option-row', option: option, option_name: option_name, type: 'radio' %}
-      {% else %}
-        {% render 'product-option-row', option: option, option_name: option_name, type: 'radio' %}
-      {% endif %}
+      {% render 'product-option-row', option: option, option_name: option_name, type: 'radio' %}
     {% endfor %}
   {% endif %}
 
@@ -63,14 +58,16 @@
     class="js-variant-id hidden"
     value="{{product.variants.first.id}}"
   >
-  <div class=" PRICE grid grid-cols-2 gap-0 border-t-2 border-black h-3 items-center ">
+  <div class=" PRICE grid grid-cols-2 gap-0 h-3 items-center ">
     <p class=" w-full ">Price</p>
 
     {% if product.compare_at_price > 0 %}
       <p class="unavailble">{{ product.compare_at_price | money_with_currency }}</p>
+
       <p class="js-price w-full  " data-default-price="{{ product.price | money }}">
         {{ product.price | money_with_currency }}
       </p>
+
     {% else %}
       <p class="js-price w-full " data-default-price="{{ product.price | money }}">{{ product.price | money }}</p>
     {% endif %}
