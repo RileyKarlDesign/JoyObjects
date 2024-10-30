@@ -1,40 +1,43 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "image_and_text_yiMTt9": {
+      "type": "image-and-text",
+      "settings": {
+        "image": "shopify://shop_images/A_55.jpg",
+        "title": "Money & Chartreuse. New colours, awesome dreams. ",
+        "body": "",
+        "product_1": "",
+        "cta": "> SHOP",
+        "color": "rgba(0,0,0,0)"
+      }
+    },
     "hero_image_nkgzDg": {
       "type": "hero-Image",
+      "disabled": true,
       "settings": {
-        "image1": "shopify:\/\/shop_images\/456377441_18015872879569672_5885786691614212816_n.jpg"
+        "image1": "shopify://shop_images/Screenshot_2024-10-30_at_18.15.49.png"
       }
     },
     "centerd_image_and_text_NMAVaf": {
       "type": "centerd-image-and-text",
+      "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/452457549_18012571517569672_5357798286981714569_n.jpg",
+        "image": "shopify://shop_images/452457549_18012571517569672_5357798286981714569_n.jpg",
         "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse iaculis eget lacus volutpat sagittis. Phasellus tempor viverra lacus in consectetur. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas eget nibh cursus, venenatis libero non, mattis massa. Pellentesque in quam risus."
-      }
-    },
-    "image_and_text_yiMTt9": {
-      "type": "image-and-text",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/451956659_18011986580569672_4144991907892158506_n.jpg",
-        "title": "Surrounding ourselves with joy",
-        "body": "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SUSPENDISSE IACULIS EGET LACUS VOLUTPAT SAGITTIS. PHASELLUS TEMPOR VIVERRA LACUS IN CONSECTETUR. PELLENTESQUE HABITANT MORBI TRISTIQUE SENECTUS ET NETUS ET MALESUADA FAMES AC TURPIS EGESTAS. MAECENAS EGET NIBH CURSUS, VENENATIS LIBERO NON, MATTIS MASSA. PELLENTESQUE IN QUAM RISUS.",
-        "product_1": "",
-        "cta": "View Shelf",
-        "color": "rgba(0,0,0,0)"
       }
     },
     "collection_block_DU9DeH": {
       "type": "collection-block",
+      "disabled": true,
       "settings": {
         "prod1": "chair-one",
         "prod2": "chair-one-copy",
@@ -46,14 +49,15 @@
     "full_width_image_mNFUUf": {
       "type": "full-width-image",
       "settings": {
-        "image": "shopify:\/\/shop_images\/451422937_18011592974569672_3261032625051833543_n.jpg",
+        "image": "shopify://shop_images/451422937_18011592974569672_3261032625051833543_n.jpg",
         "color": ""
       }
     },
     "image_and_text_8zGy87": {
       "type": "image-and-text",
+      "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/457879580_18017405717569672_5575977792042420740_n.jpg",
+        "image": "shopify://shop_images/457879580_18017405717569672_5575977792042420740_n.jpg",
         "title": "Looking for joy within our objects",
         "body": "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SUSPENDISSE IACULIS EGET LACUS VOLUTPAT SAGITTIS. PHASELLUS TEMPOR VIVERRA LACUS IN CONSECTETUR. PELLENTESQUE HABITANT MORBI TRISTIQUE SENECTUS ET NETUS ET MALESUADA FAMES AC TURPIS EGESTAS. MAECENAS EGET NIBH CURSUS, VENENATIS LIBERO NON, MATTIS MASSA. PELLENTESQUE IN QUAM RISUS.",
         "product_1": "chair",
@@ -63,6 +67,7 @@
     },
     "collection_block_8JjH6g": {
       "type": "collection-block",
+      "disabled": true,
       "settings": {
         "prod1": "shelf-one-copy",
         "prod2": "chair",
@@ -73,9 +78,9 @@
     }
   },
   "order": [
+    "image_and_text_yiMTt9",
     "hero_image_nkgzDg",
     "centerd_image_and_text_NMAVaf",
-    "image_and_text_yiMTt9",
     "collection_block_DU9DeH",
     "full_width_image_mNFUUf",
     "image_and_text_8zGy87",
