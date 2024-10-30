@@ -16,8 +16,8 @@
         "title": "Money & Chartreuse. New colours, awesome dreams. ",
         "body": "",
         "product_1": "shelf-one-copy",
-        "cta": "> SHOP",
-        "color": "#00ef55"
+        "cta": ">  SHOP",
+        "color": "rgba(0,0,0,0)"
       }
     },
     "hero_image_nkgzDg": {
@@ -78,8 +78,8 @@
     }
   },
   "order": [
-    "image_and_text_yiMTt9",
     "hero_image_nkgzDg",
+    "image_and_text_yiMTt9",
     "centerd_image_and_text_NMAVaf",
     "collection_block_DU9DeH",
     "full_width_image_mNFUUf",
