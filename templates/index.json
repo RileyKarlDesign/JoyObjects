@@ -80,6 +80,17 @@
         "image": "shopify://shop_images/456377441_18015872879569672_5885786691614212816_n.jpg",
         "body": "SHELF LIFE FOREVER"
       }
+    },
+    "image_and_text_9xi7dd": {
+      "type": "image-and-text",
+      "settings": {
+        "image": "shopify://shop_images/240522IB_7678-12_1_copy.jpg",
+        "title": "Tuned beginnings. Alu & Chartreuse: restocked, refined – and longer.",
+        "body": "",
+        "product_1": "shelf-one-copy",
+        "cta": "",
+        "color": ""
+      }
     }
   },
   "order": [
@@ -90,6 +101,7 @@
     "full_width_image_mNFUUf",
     "image_and_text_8zGy87",
     "collection_block_8JjH6g",
-    "centerd_image_and_text_APdgcU"
+    "centerd_image_and_text_APdgcU",
+    "image_and_text_9xi7dd"
   ]
 }
