@@ -94,6 +94,12 @@
         "image": "shopify://shop_images/456377441_18015872879569672_5885786691614212816_n.jpg",
         "body": "SHELF LIFE FOREVER"
       }
+    },
+    "hero_image_ErmiJp": {
+      "type": "hero-Image",
+      "settings": {
+        "image1": "shopify://shop_images/451422937_18011592974569672_3261032625051833543_n.jpg"
+      }
     }
   },
   "order": [
@@ -105,6 +111,7 @@
     "full_width_image_mNFUUf",
     "image_and_text_8zGy87",
     "collection_block_8JjH6g",
-    "centerd_image_and_text_APdgcU"
+    "centerd_image_and_text_APdgcU",
+    "hero_image_ErmiJp"
   ]
 }

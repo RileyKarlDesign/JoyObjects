@@ -37,8 +37,16 @@
     },
     "hero_video_WXHbXa": {
       "type": "hero-video",
+      "disabled": true,
       "settings": {
         "video1": "shopify://files/videos/1090914087-preview.mp4"
+      }
+    },
+    "full_width_image_CkjP7A": {
+      "type": "full-width-image",
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2024-10-30_at_19.38.08.png",
+        "color": ""
       }
     }
   },
@@ -47,6 +55,7 @@
     "main",
     "full_width_image_BUT8fw",
     "form",
-    "hero_video_WXHbXa"
+    "hero_video_WXHbXa",
+    "full_width_image_CkjP7A"
   ]
 }
