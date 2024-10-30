@@ -45,6 +45,17 @@
         "color": "rgba(0,0,0,0)"
       }
     },
+    "image_and_text_XXG7RY": {
+      "type": "image-and-text",
+      "settings": {
+        "image": "shopify://shop_images/456377441_18015872879569672_5885786691614212816_n.jpg",
+        "title": "SHELF CONSTANZA",
+        "body": "LOREM IPSUM",
+        "product_1": "",
+        "cta": "PELLE FISKAR",
+        "color": ""
+      }
+    },
     "full_width_image_mNFUUf": {
       "type": "full-width-image",
       "settings": {
@@ -81,6 +92,7 @@
     "image_and_text_yiMTt9",
     "centerd_image_and_text_NMAVaf",
     "collection_block_DU9DeH",
+    "image_and_text_XXG7RY",
     "full_width_image_mNFUUf",
     "image_and_text_8zGy87",
     "collection_block_8JjH6g"
