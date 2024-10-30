@@ -13,11 +13,12 @@
       "type": "background-image",
       "settings": {
         "image1": "shopify://shop_images/fence_2dbb378d-151b-45c7-b819-cd41ea25c254.png",
-        "color1": "#ffcd00"
+        "color1": "#fff100"
       }
     },
     "main": {
       "type": "main-about",
+      "disabled": true,
       "settings": {
       }
     },
@@ -33,12 +34,19 @@
       "disabled": true,
       "settings": {
       }
+    },
+    "hero_video_WXHbXa": {
+      "type": "hero-video",
+      "settings": {
+        "video1": "shopify://files/videos/SNSxJOY PROJECTION CLEAN.mp4"
+      }
     }
   },
   "order": [
     "background_image_g3TBqk",
     "main",
     "full_width_image_BUT8fw",
-    "form"
+    "form",
+    "hero_video_WXHbXa"
   ]
 }
