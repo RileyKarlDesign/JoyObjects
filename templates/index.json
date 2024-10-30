@@ -45,17 +45,6 @@
         "color": "rgba(0,0,0,0)"
       }
     },
-    "image_and_text_XXG7RY": {
-      "type": "image-and-text",
-      "settings": {
-        "image": "shopify://shop_images/456377441_18015872879569672_5885786691614212816_n.jpg",
-        "title": "SHELF CONSTANZA",
-        "body": "LOREM IPSUM",
-        "product_1": "",
-        "cta": "PELLE FISKAR",
-        "color": ""
-      }
-    },
     "full_width_image_mNFUUf": {
       "type": "full-width-image",
       "settings": {
@@ -65,9 +54,8 @@
     },
     "image_and_text_8zGy87": {
       "type": "image-and-text",
-      "disabled": true,
       "settings": {
-        "image": "shopify://shop_images/457879580_18017405717569672_5575977792042420740_n.jpg",
+        "image": "shopify://shop_images/Screenshot_2024-10-30_at_18.15.49.png",
         "title": "Looking for joy within our objects",
         "body": "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SUSPENDISSE IACULIS EGET LACUS VOLUTPAT SAGITTIS. PHASELLUS TEMPOR VIVERRA LACUS IN CONSECTETUR. PELLENTESQUE HABITANT MORBI TRISTIQUE SENECTUS ET NETUS ET MALESUADA FAMES AC TURPIS EGESTAS. MAECENAS EGET NIBH CURSUS, VENENATIS LIBERO NON, MATTIS MASSA. PELLENTESQUE IN QUAM RISUS.",
         "product_1": "chair",
@@ -85,6 +73,13 @@
         "title": "Cotton Candy & Wine",
         "color": ""
       }
+    },
+    "centerd_image_and_text_APdgcU": {
+      "type": "centerd-image-and-text",
+      "settings": {
+        "image": "shopify://shop_images/456377441_18015872879569672_5885786691614212816_n.jpg",
+        "body": "SHELF LIFE FOREVER"
+      }
     }
   },
   "order": [
@@ -92,9 +87,9 @@
     "image_and_text_yiMTt9",
     "centerd_image_and_text_NMAVaf",
     "collection_block_DU9DeH",
-    "image_and_text_XXG7RY",
     "full_width_image_mNFUUf",
     "image_and_text_8zGy87",
-    "collection_block_8JjH6g"
+    "collection_block_8JjH6g",
+    "centerd_image_and_text_APdgcU"
   ]
 }
