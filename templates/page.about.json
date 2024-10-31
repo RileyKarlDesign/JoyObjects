@@ -12,8 +12,7 @@
     "background_image_g3TBqk": {
       "type": "background-image",
       "settings": {
-        "image1": "shopify://shop_images/fence_2dbb378d-151b-45c7-b819-cd41ea25c254.png",
-        "color1": "#fff100"
+        "color1": "rgba(0,0,0,0)"
       }
     },
     "main": {
@@ -60,6 +59,7 @@
     "centerd_image_and_text_bbDiV6": {
       "type": "centerd-image-and-text",
       "settings": {
+        "image": "shopify://shop_images/joy_posts2.jpg",
         "body": "JOY makes products for the home: Furniture, objects and ornaments. JOY merges simple construction with playful aesthetics, bringing laid-back style to the age of standards. JOY was founded in 2021 as an open space for Stockholm based designer Fredrik Paulsen. The idea is simple: slick, forward looking style meets small scale production at a reasonable price. All JOY objects are designed and manufactured in Sweden. And hey: everything packs flat.Contemporary design is boring. JOY isn’t. JOY is fun. JOY is groovy. JOY is here."
       }
     },
