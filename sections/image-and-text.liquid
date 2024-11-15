@@ -1,9 +1,9 @@
 <div
   style="background:{{section.settings.color}}"
-  class=" js-section grid md:h-screen h-fit bg-opacity-50 md:grid-cols-2 grid-cols-1 md:gap-2 border-2  "
+  class=" js-section grid md:h-fit h-fit bg-opacity-50 md:grid-cols-2 grid-cols-1 md:gap-2  p-2 md:p-2 lg:p-4 pb-0 "
 >
-  <div class="w-full md:row-start-1  row-start-2  ">
-    <div class="h-full md:p-4 md:pt-2 p-2   pt-0 ">
+  <div class="w-full md:row-start-1 row-start-2 ">
+    <div class="h-full pt-0 ">
       <div class="h-fit pb-2">
         <h1 class="  md:w-[80%] w-full  uppercase ">{{ section.settings.title }}</h1>
       </div>
@@ -18,8 +18,7 @@
       {% endif %}
     </div>
   </div>
-
-  <div class="w-full h-full overflow-hidden md:p-[0px] md:pr-4 p-2 ">
+  <div class="w-full h-full overflow-hidden   ">
     {{ section.settings.image | image_url: width: 1204 | image_tag: class: ' object-cover  js-fade' }}
   </div>
 </div>
