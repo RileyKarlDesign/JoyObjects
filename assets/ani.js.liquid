@@ -95,45 +95,45 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   // Observer for recs
 
-  function shift(entries, observer) {
+  // function shift(entries, observer) {
 
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
+  //   entries.forEach(entry => {
+  //     if (entry.isIntersecting) {
 
-        if (!footInView) {
-          prodInfo.classList.add('info-shift-bottom')
-          bgFade.classList.remove('bg-fade-active')
-          console.log('adding info shift bottomm')
+  //       if (!footInView) {
+  //         prodInfo.classList.add('info-shift-bottom')
+  //         bgFade.classList.remove('bg-fade-active')
+  //         console.log('adding info shift bottomm')
 
-        }
+  //       }
 
-      } else {
+  //     } else {
 
-        if (!footInView) {
-          prodInfo.classList.remove('info-shift-bottom')
+  //       if (!footInView) {
+  //         prodInfo.classList.remove('info-shift-bottom')
 
-        }
+  //       }
 
 
-      }
+  //     }
 
-    });
-  }
+  //   });
+  // }
 
-  function footerWatch(entries, observer) {
+  // function footerWatch(entries, observer) {
 
-    entries.forEach(entry => {
+  //   entries.forEach(entry => {
 
-      if (entry.isIntersecting) {
-        footInView = true;
-        console.log(' ther is a foot in view ')
-      } else {
-        footInView = false;
-        console.log('no foot in sight ')
-      }
+  //     if (entry.isIntersecting) {
+  //       footInView = true;
+  //       console.log(' ther is a foot in view ')
+  //     } else {
+  //       footInView = false;
+  //       console.log('no foot in sight ')
+  //     }
 
-    });
-  }
+  //   });
+  // }
 
 
   const observerThree = new IntersectionObserver(shift, {

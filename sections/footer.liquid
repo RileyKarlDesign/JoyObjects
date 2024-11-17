@@ -1,9 +1,13 @@
 <div class="js-footer flex flex-col items-center ">
-  <div class="logo-wrap md:p-4 p-2 w-full">
-    <div class="logo w-full ">
-      {% render 'footer-logo' %}
+  {% comment %}
+    <div class="logo-wrap md:p-4 p-2 w-full">
+      {% comment %}
+        <div class="logo w-full ">
+          {% render 'footer-logo' %}
+        </div>
+      {% endcomment %}
     </div>
-  </div>
+  {% endcomment %}
 
   <div
     class="  flex flex-col justify-end items-end  relative z-10   w-full transition-all md:p-4 p-2 overflow-hidden h-fit  "
@@ -13,8 +17,8 @@
       <div class="adress  ">
         <div class=" adress-info bottom h-fit w-full">
           <h3>
-            Joy Objects AB, Krukmakargatan <br>
-            44, 117 26 Stockholm, Sweden
+            JOY OBJECTS AB, STOCKHOLM SWEDEN <br>
+            @JOY OBJECTS 2024
           </h3>
 
           <div class=" copyright  md:flex-row md:flex w-full  md:w-[350px] justify-between ">

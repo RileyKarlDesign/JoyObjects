@@ -38,11 +38,10 @@ document.addEventListener("DOMContentLoaded", function () {
     getActiveVariant: function (elForm, newForm) {
 
       let formEl = document.querySelector("#add-to-cart-form");
+
       let variants = JSON.parse(decodeURIComponent(formEl.dataset.variants));
 
       // formInlineData = elForm.serializeArray(); // removed j query
-
-
 
       (formInlineData = new URLSearchParams(
         Array.from(new FormData(formEl))
@@ -159,8 +158,6 @@ document.addEventListener("DOMContentLoaded", function () {
     },
 
     updateMultiOptions: function (event) {
-
-
 
       console.log('selected' + selectedVariant)
 
@@ -318,6 +315,7 @@ document.addEventListener("DOMContentLoaded", function () {
         productForm.validate(event);
         productForm.updateMultiOptions();
       });
+
       productForm.setFirstOptions();
       productForm.updateMultiOptions();
     },
