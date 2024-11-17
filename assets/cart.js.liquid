@@ -1,25 +1,48 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+  function runWhenInit() {
+    // console.log("The current cart state is: ", window.liquidAjaxCart.cart);
+  }
+
+  if (window.liquidAjaxCart?.init) {
+    // if Liquid Ajax Cart is already initialized
+    runWhenInit();
+  } else {
+    // wait for Liquid Ajax Cart to be initialized
+    document.addEventListener("liquid-ajax-cart:init", runWhenInit);
+  }
+
   let addToCartFormSelector = "#add-to-cart-form",
     productOptionsSelector = addToCartFormSelector + " [name*=option]";
 
   let productForm = {
+
+
+
     onProductOptionChanged: function (event) {
-   
+
       let elForm = document.querySelector(addToCartFormSelector);
       let selectedVariant = productForm.getActiveVariant(elForm);
-      console.log('form change');
-      console.log( selectedVariant );
-      var formChangeEvent = new CustomEvent( "form:change", {
+
+
+
+
+      var formChangeEvent = new CustomEvent("form:change", {
         detail: selectedVariant,
       });
       elForm.dispatchEvent(formChangeEvent);
     },
 
+
+
     getActiveVariant: function (elForm, newForm) {
+
       let formEl = document.querySelector("#add-to-cart-form");
       let variants = JSON.parse(decodeURIComponent(formEl.dataset.variants));
-      
+
       // formInlineData = elForm.serializeArray(); // removed j query
+
+
 
       (formInlineData = new URLSearchParams(
         Array.from(new FormData(formEl))
@@ -34,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Initialize an empty array to store objects
       let objectsArray = [];
-     
+
       let keyValuePairs = formInlineData.split("&");
       // Iterate over the key-value pairs and create objects
       keyValuePairs.forEach((pair) => {
@@ -46,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         objectsArray.push(obj);
       });
 
-      console.log(objectsArray)
+
 
       objectsArray.forEach(function (item, index) {
         if (item.name.indexOf("option") !== -1) {
@@ -56,55 +79,247 @@ document.addEventListener("DOMContentLoaded", function () {
 
       let decodedFormOptions = decodeURIComponent(formOptions);
 
+
+      console.log(`option1: ${decodeURIComponent(formOptions.option1)}`)
+      console.log(`option2: ${decodeURIComponent(formOptions.option2)}`)
+
+
+
+
+
+
       variants.forEach(function (variant) {
 
-      
-        if (
-          variant.option1 === decodeURIComponent(formOptions.option1) &&
-          variant.option2 === decodeURIComponent(formOptions.option2)
-          // variant.option3 === decodeURIComponent(formOptions.option3)
-        ) {
-          console.log('matched variant')
-          selectedVariant = variant;
-          selectedVariantMax = variant.inventory_quantity;
-          console.log(selectedVariant)
-          console.log(selectedVariantMax)
-          return ; // Exiting the loop early since the variant is found
+
+
+
+        // if variant 2 exsists then match both otherwise match 1
+
+        if (variant.option1 != null && variant.option2 != null) {
+
+
+          let op1 = (decodeURIComponent(formOptions.option1).split('+'))
+          let op2 = (decodeURIComponent(formOptions.option2).split('+'))
+
+
+          console.log(`%c ${op1}`, 'background: red; color: #000000')
+          console.log(`%c ${op2[2]}`, 'background: #222; color: #red')
+
+
+
+          // console.log(variant.options[0] + '==' + op1[0])
+          // console.log(variant.options[1] + '==' + op1[2])
+
+
+
+          if (
+            variant.options[0] === op1[0] &&
+            variant.options[1] === op2[2]
+            // variant.option3 === decodeURIComponent(formOptions.option3)
+          ) {
+            console.log('matched variant')
+            selectedVariant = variant;
+            selectedVariantMax = variant.inventory_quantity;
+
+            console.log('Selected Variant: ' + { selectedVariant })
+            console.log(selectedVariantMax)
+
+            return; // Exiting the loop early since the variant is found
+          } else {
+
+            console.log('no match')
+          }
+
+        }
+        else if (variant.option1 != null) {
+
+          if (
+            variant.option1 === decodeURIComponent(formOptions.option1)
+
+          ) {
+            console.log('matched variant')
+            selectedVariant = variant;
+            selectedVariantMax = variant.inventory_quantity;
+            console.log('Selected Variant: ' + { selectedVariant })
+            console.log(selectedVariantMax)
+            return; // Exiting the loop early since the variant is found
+          }
+
         }
 
 
+
+
+
+
       });
-       
+
 
       return selectedVariant;
     },
 
+    updateMultiOptions: function (event) {
+
+
+
+      console.log('selected' + selectedVariant)
+
+      let form = document.querySelector("#add-to-cart-form");
+      let options = document.querySelectorAll('.variant-radio')
+
+      // get option one radios
+
+      let optionOne = document.querySelectorAll('.js-option-one ');
+
+
+
+
+      // set option one
+
+      let optionOneValue
+
+
+      let optionOneSelected = Array.from(optionOne).find(e => e.checked);
+      if (optionOneSelected) {
+        optionOneValue = optionOneSelected.value;
+      }
+
+      // form.style.border = 'red 1px solid';
+
+      // apply option one as a data attr to the inupt
+
+      options.forEach((option) => {
+
+        if (option.dataset.variant) {
+          let optionDets = option.dataset.variant;
+          let splitVar = optionDets.split(/(\s+)/);
+
+          option.setAttribute('data-option-one', splitVar[0])
+
+        }
+
+        if (option.dataset.inventory) {
+          if (option.dataset.optionOne == optionOneValue) {
+            if (option.dataset.inventory == 0) {
+
+              option.disabled = true;
+              option.hidden = false;
+
+            } else {
+
+              option.disabled = false;
+              option.hidden = false;
+            }
+          } else {
+
+
+            option.disabled = true;
+            option.hidden = true;
+            option.checked = false
+
+          }
+        }
+
+
+
+      });
+
+      // set first to be checked
+
+
+
+
+
+
+    },
+
+
+    setFirstOptions: function () {
+
+      // Select all option ones
+
+      let optionOne = document.querySelectorAll('.js-option-one ');
+
+      let optionTwo = document.querySelectorAll('.js-option-two ');
+
+      console.log(optionTwo)
+
+      for (let i = 0; i < optionOne.length; i++) {
+        console.log('in loop');
+        if (!optionOne[i].disabled) {
+          console.log('checking ')
+          optionOne[i].checked = true;
+          console.log(optionOne[i])
+          break
+        }
+
+      }
+
+      for (let i = 0; i < optionTwo.length; i++) {
+        console.log('in loop 2');
+        if (!optionOne[i].disabled && !optionOne[i].hidden) {
+          console.log('checking 2 ')
+          optionTwo[i].checked = true;
+          console.log(optionTwo[i])
+          return
+        }
+
+      }
+
+
+
+    },
+
     validate: function (event) {
-      
+
+
+      console.log('validation')
+
       let elForm = this;
+
       (selectedVariant = productForm.getActiveVariant(elForm)),
         (hasVariant = selectedVariant !== null),
         (canAddToCart = hasVariant && selectedVariant.inventory_quantity > 0),
+
         ($id = document.querySelector(".js-variant-id")),
         ($quantity = document.querySelector(".js-quantity-total")),
-        ($addToCartButton = document.querySelector("#add-to-cart-button")),
-        ($maxQuantity = selectedVariant.inventory_quantity);
+        ($addToCartButton = document.querySelector("#add-to-cart-button"));
+      if (selectedVariant) {
+        $maxQuantity = selectedVariant.inventory_quantity;
+      }
+
 
       if (canAddToCart) {
+
         $id.value = selectedVariant.id;
+        // $id.setAttribute('value', selectedVariant.id);
         $addToCartButton.disabled = false;
         $quantity.dataset.max = $maxQuantity;
+        $addToCartButton.innerHTML = "Add To Cart";
+        $addToCartButton.style.opacity = 1;
+        $addToCartButton.style.pointerEvents = 'auto';
       } else {
         $id.value = "null";
         $addToCartButton.disabled = true;
+        $addToCartButton.innerHTML = "Not In Stock";
+        // $addToCartButton.style.display = 'none';
+        $addToCartButton.style.opacity = .5;
+        $addToCartButton.style.pointerEvents = 'none';
+
       }
     },
 
     init: function () {
+
+      productForm.validate(event)
+
       document.addEventListener("change", productForm.onProductOptionChanged);
       document.addEventListener("change", function (event) {
-      productForm.validate(event);
+        productForm.validate(event);
+        productForm.updateMultiOptions();
       });
+      productForm.setFirstOptions();
+      productForm.updateMultiOptions();
     },
   };
 
@@ -119,8 +334,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentCount = 1;
 
   let add = () => {
-
-   
     let max = quantity.dataset.max;
     if (currentCount < max) {
       currentCount += 1;
@@ -128,10 +341,8 @@ document.addEventListener("DOMContentLoaded", function () {
       quantity.innerHTML = currentCount;
       quantity.innerHTML = currentCount;
       quantityHidden.value = currentCount;
-    
+
     }
-
-
   };
 
   let reduce = () => {
@@ -162,7 +373,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
- 
+
 });
 
 
@@ -172,49 +383,12 @@ document.addEventListener("liquid-ajax-cart:request-end", (event) => {
   // If the "add to cart" request is successful
   if (requestState.requestType === "add" && requestState.responseData?.ok) {
     // Add the CSS class to the "body" tag
-    document.body.classList.add("js-show-ajax-cart");
+
   }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  let cart = document.querySelector(".my-cart");
-  let bodyWrap = document.querySelector(".js-main");
-  let cartBtns = document.querySelectorAll(".cart-btn");
-  let cartState = false;
 
-  let winHeight = window.innerHeight;
-  document.documentElement.style.setProperty("--winHeight", winHeight + "px");
-
-  window.addEventListener("resize", () => {
-    winHeight = window.innerHeight;
-    document.documentElement.style.setProperty("--winHeight", winHeight + "px");
-  });
-  
-
-
-  let closeCart = () => {
-    cart.classList.remove("cart-open");
-    bodyWrap.style.opacity = "1 ";
-    cartState = false;
-  };
-
-  let openCart = () => {
-    cart.classList.add("cart-open");
-    bodyWrap.style.opacity = "0.5 ";
-    cartState = true;
-  };
-
-  cartBtns.forEach((i) => {
-    i.addEventListener("mousedown", () => {
-      if (cartState) {
-        closeCart();     
-      } else {
-        openCart();
-  
-          
-      }
-    });
-  });
 });
 
 // btn

@@ -2,35 +2,37 @@
   {% render 'swiper' with { product: product } %}
 </div>
 
-<div class="  mobile-info md:hidden sm:visible  h-fit flex justify-start items-start p-2 pt-0 ">
-  <div class="">
-    <div class="js-product-title pb-2   ">
-      <h3 class="display-serif w-full">{{ product.title }}</h3>
-      <h3 class="display-serif">{{ product.metafields.custom.range }}</h3>
-    </div>
-
-    <div class="js-product-description md:w-[350px]">
-      <div class="pb-1 ">
-        {{ product.description }}
+{% comment %}
+  <div class="  mobile-info md:hidden sm:visible  h-fit flex justify-start items-start p-2 pt-0 ">
+    <div class="">
+      <div class="js-product-title pb-2   ">
+        <h3 class="display-serif w-full">{{ product.title }}</h3>
+        <h3 class="display-serif">{{ product.metafields.custom.range }}</h3>
       </div>
 
-      <ajax-cart-product-form>
-        {% render 'add-to-cart-form' with current_variant: current_variant %}
-      </ajax-cart-product-form>
-      <div class="flex flex-col gap-1  ">
-        <div class="js-product-description md:w-[350px] flex-col flex gap-0">
-          {% if product.metafields.custom.shipping != '' %}
-            {% render 'accordian' with { title: 'Shipping', content: product.metafields.custom.shipping } %}
-          {% endif %}
-          {% if product.metafields.custom.size != '' %}
-            {% render 'accordian' with { title: 'Dimnetions', content: product.metafields.custom.size } %}
-          {% endif %}
+      <div class="js-product-description md:w-[350px]">
+        <div class="pb-1 ">
+          {{ product.description }}
         </div>
-        {% render 'atc-stick' %}
+
+        <ajax-cart-product-form>
+          {% render 'add-to-cart-form' with current_variant: current_variant %}
+        </ajax-cart-product-form>
+        <div class="flex flex-col gap-1  ">
+          <div class="js-product-description md:w-[350px] flex-col flex gap-0">
+            {% if product.metafields.custom.shipping != '' %}
+              {% render 'accordian' with { title: 'Shipping', content: product.metafields.custom.shipping } %}
+            {% endif %}
+            {% if product.metafields.custom.size != '' %}
+              {% render 'accordian' with { title: 'Dimnetions', content: product.metafields.custom.size } %}
+            {% endif %}
+          </div>
+          {% render 'atc-stick' %}
+        </div>
       </div>
     </div>
   </div>
-</div>
+{% endcomment %}
 
 <div class=" relative h-fit  ">
   <div
@@ -38,7 +40,7 @@
     class="bg-backdrop-color opacity-0 transition-all duration-300 md:flex hidden fixed inset-0  "
   ></div>
 
-  <div class=" desktop-info js-product-info h-fit md:flex justify-start items-start md:p-4 p-2 fixed top-0 left-0  z-20 snap-start   sm:visible hidden ">
+  <div class=" desktop-info js-product-info h-fit md:flex justify-start items-start md:p-4 p-2 block sm:fixed   top-0 left-0  z-20 snap-start     ">
     <div class="  ">
       <div class="js-back mb-2 hover:opacity-30 cursor-pointer">
         <p class="pointer-events-none">Back</p>

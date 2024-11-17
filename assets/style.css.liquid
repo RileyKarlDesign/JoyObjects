@@ -609,18 +609,38 @@ canvas[resize] {
 
 /* Label and inputs */
 
+/* label{
+  background-color: rgba(128, 128, 128, 0.115) !important;
+} */
+
 
 
 :checked + label {
-   font-weight: bold;
-   background-color: black;
-   color: white; 
-   padding: 0 6px;
+   background-color: rgba(80, 61, 42, 0.09) !important;
    border-radius: 2px;
 }
 
-input[type=radio]{
-  display: none
+    input[type=radio]{
+      display: none;
+    } 
+
+   label:has(input[hidden]) {
+      display: none;
+    }
+
+    label:has(input[disabled]) {
+      opacity: 0.3;
+    }
+
+
+    label:has(input:checked){
+    background-color: rgb(80, 61, 42);
+    color:white;
+    border-radius: 2px;
+    }
+
+input[type=radio]:hidden + label {
+  /* display: none; */
 }
 
  label {
@@ -628,7 +648,18 @@ input[type=radio]{
 }
 
 :disabled + label {
-   font-weight: bold;
+
    opacity: .3;
    cursor: not-allowed ;
+}
+
+.subheader-title {
+  width: 200px;
+  min-width: 200px;
+} 
+
+@media (max-width: 768px) {
+  .subheader-title {
+  width: 120px;
+}
 }
