@@ -21,7 +21,7 @@
         "image": "shopify://shop_images/A_55.jpg",
         "title": "Money & Chartreuse. New colours, awesome dreams. ",
         "body": "",
-        "product_1": "shelf-one-copy",
+        "page_1": "",
         "cta": ">  SHOP",
         "color": "rgba(0,0,0,0)"
       }
@@ -32,7 +32,7 @@
         "image": "shopify://shop_images/Alu_bank_d181deb0-7dbc-4f95-9d2a-dbc8b5f2a854.jpg",
         "title": "Tuned beginnings. Alu & Chartreuse. restocked, refined – and longer.",
         "body": "",
-        "product_1": "shelf-one-copy",
+        "page_1": "",
         "cta": "> SHOP",
         "color": ""
       }
@@ -66,12 +66,11 @@
     },
     "image_and_text_8zGy87": {
       "type": "image-and-text",
-      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/Screenshot_2024-10-30_at_18.15.49.png",
         "title": "Looking for joy within our objects",
         "body": "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SUSPENDISSE IACULIS EGET LACUS VOLUTPAT SAGITTIS. PHASELLUS TEMPOR VIVERRA LACUS IN CONSECTETUR. PELLENTESQUE HABITANT MORBI TRISTIQUE SENECTUS ET NETUS ET MALESUADA FAMES AC TURPIS EGESTAS. MAECENAS EGET NIBH CURSUS, VENENATIS LIBERO NON, MATTIS MASSA. PELLENTESQUE IN QUAM RISUS.",
-        "product_1": "chair",
+        "page_1": "ali",
         "cta": "-> Custom Button Text",
         "color": "#f5f5f5"
       }
@@ -100,6 +99,13 @@
       "settings": {
         "image1": "shopify://shop_images/451422937_18011592974569672_3261032625051833543_n.jpg"
       }
+    },
+    "centerd_image_and_text_cbPkFh": {
+      "type": "centerd-image-and-text",
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2024-10-30_at_18.15.49.png",
+        "body": ""
+      }
     }
   },
   "order": [
@@ -110,6 +116,7 @@
     "collection_block_DU9DeH",
     "full_width_image_mNFUUf",
     "image_and_text_8zGy87",
+    "centerd_image_and_text_cbPkFh",
     "collection_block_8JjH6g",
     "centerd_image_and_text_APdgcU",
     "hero_image_ErmiJp"
