@@ -8,24 +8,24 @@ document.addEventListener("DOMContentLoaded", (event) => {
   // Fade in 
 
 
-  // gsap.to('.js-main', { opacity: 1, duration: .8 });
+  gsap.to('.js-main', { opacity: 1, duration: .3 });
 
   // link dealy
 
-  // let links = document.querySelectorAll("a");
+  let links = document.querySelectorAll(".ani-link");
 
-  // for (let i = 0; i < links.length; i++) {
+  for (let i = 0; i < links.length; i++) {
 
 
-  //   links[i].addEventListener("click", (e) => {
-  //     e.preventDefault();
-  //     gsap.to('.js-main', { opacity: 0, duration: .8, });
-  //     setTimeout(() => {
-  //       window.location.href = e.target.href;
-  //     }, 300)
-  //   })
+    links[i].addEventListener("click", (e) => {
+      e.preventDefault();
+      gsap.to('.js-main', { opacity: 0, duration: .8, });
+      setTimeout(() => {
+        window.location.href = e.target.href;
+      }, 300)
+    })
 
-  // }
+  }
 
   // image-ani 
 
