@@ -218,10 +218,6 @@
 </form>
 
 <div class=" md:p-4 p-2 ">
-  {% if collection.title != 'All Products' and collection.all_products_count > 0 %}
-    {% render 'collection-group'  with { collection: collection %}
-  {% endif %}
-
   {% if collection.all_products_count > 0 %}
     {% if collection.title == 'Products' %}
       <div class="grid grid-flow-dense md:grid-cols-3 sm:grid-cols-2  grid-cols-1  gap-2  pb-4  ">

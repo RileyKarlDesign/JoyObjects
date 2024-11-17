@@ -11,7 +11,7 @@
         {%- for link in linklists['secondary-menu'].links -%}
           <h3 class=" select-none ">
             <a
-              class=" hover:opacity-50 {%- if request.path == link.url -%} opacity-50 hover:opacity-50 {%- endif -%}"
+              class="  ani-link hover:opacity-50 {%- if request.path == link.url -%} opacity-50 hover:opacity-50 {%- endif -%}"
               href="{{ link.url }}"
             >
               {{- link.title -}}
@@ -22,7 +22,7 @@
         {%- for link in linklists['tertiary-menu'].links -%}
           <h3 class=" select-none ">
             <a
-              class=" hover:opacity-50  {%- if request.path == link.url -%}f opacity-50 hover:opacity-50 {%- endif -%}"
+              class=" ani-link hover:opacity-50  {%- if request.path == link.url -%}f opacity-50 hover:opacity-50 {%- endif -%}"
               href="{{ link.url }}"
             >
               {{- link.title -}}

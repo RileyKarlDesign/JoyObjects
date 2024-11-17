@@ -22,9 +22,19 @@ document.addEventListener("DOMContentLoaded", function () {
     onProductOptionChanged: function (event) {
 
       let elForm = document.querySelector(addToCartFormSelector);
+      let optionTwo = document.querySelectorAll('.js-option-two ');
+      let optionOne = document.querySelectorAll('.js-option-one');
+
+      console.log(event)
+
+
       let selectedVariant = productForm.getActiveVariant(elForm);
 
 
+      if (event.srcElement.classList.contains('js-option-one')) {
+        console.log('Option 1 Chnage');
+        productForm.setFirstOptions();
+      }
 
 
       var formChangeEvent = new CustomEvent("form:change", {
@@ -33,12 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
       elForm.dispatchEvent(formChangeEvent);
     },
 
-
-
     getActiveVariant: function (elForm, newForm) {
 
       let formEl = document.querySelector("#add-to-cart-form");
-
       let variants = JSON.parse(decodeURIComponent(formEl.dataset.variants));
 
       // formInlineData = elForm.serializeArray(); // removed j query
@@ -101,8 +108,9 @@ document.addEventListener("DOMContentLoaded", function () {
           let op2 = (decodeURIComponent(formOptions.option2).split('+'))
 
 
-          console.log(`%c ${op1}`, 'background: red; color: #000000')
-          console.log(`%c ${op2[2]}`, 'background: #222; color: #red')
+          console.log(`%c ${op1}`, 'background: red; color: #ffd7d7')
+
+          console.log(`%c ${op2[2]}`, 'background: #222; color: white')
 
 
 
@@ -120,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
             selectedVariant = variant;
             selectedVariantMax = variant.inventory_quantity;
 
-            console.log('Selected Variant: ' + { selectedVariant })
+            console.log('Selected Variant: ' + { variant })
             console.log(selectedVariantMax)
 
             return; // Exiting the loop early since the variant is found
@@ -168,13 +176,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       let optionOne = document.querySelectorAll('.js-option-one ');
 
-
-
-
       // set option one
 
       let optionOneValue
-
 
       let optionOneSelected = Array.from(optionOne).find(e => e.checked);
       if (optionOneSelected) {
@@ -223,7 +227,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // set first to be checked
 
-
+      // productForm.setFirstOptions();
 
 
 
@@ -236,30 +240,37 @@ document.addEventListener("DOMContentLoaded", function () {
       // Select all option ones
 
       let optionOne = document.querySelectorAll('.js-option-one ');
-
       let optionTwo = document.querySelectorAll('.js-option-two ');
 
       console.log(optionTwo)
 
-      for (let i = 0; i < optionOne.length; i++) {
-        console.log('in loop');
-        if (!optionOne[i].disabled) {
-          console.log('checking ')
-          optionOne[i].checked = true;
-          console.log(optionOne[i])
-          break
-        }
+      // for (let i = 0; i < optionOne.length; i++) {
+      //   console.log('in loop');
+      //   if (!optionOne[i].disabled) {
+      //     console.log('checking ')
+      //     optionOne[i].checked = true;
+      //     console.log(optionOne[i])
+      //     break
+      //   }
 
-      }
+      // }
 
       for (let i = 0; i < optionTwo.length; i++) {
+
         console.log('in loop 2');
-        if (!optionOne[i].disabled && !optionOne[i].hidden) {
-          console.log('checking 2 ')
-          optionTwo[i].checked = true;
-          console.log(optionTwo[i])
-          return
-        }
+        console.log(optionTwo[i].dataset.variant);
+        console.log(optionTwo[i].dataset.inventory);
+
+        optionTwo.forEach(e => {
+          e.checked = false;
+        })
+
+        // if (!optionTwo[i].disabled > 0 && !optionTwo[i].hidden) {
+        //   console.log('checking 2 ')
+        //   optionTwo[i].checked = true;
+        //   console.log(optionTwo[i])
+        //   return
+        // }
 
       }
 
@@ -268,7 +279,6 @@ document.addEventListener("DOMContentLoaded", function () {
     },
 
     validate: function (event) {
-
 
       console.log('validation')
 
@@ -312,8 +322,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
       document.addEventListener("change", productForm.onProductOptionChanged);
       document.addEventListener("change", function (event) {
+
         productForm.validate(event);
         productForm.updateMultiOptions();
+
       });
 
       productForm.setFirstOptions();
