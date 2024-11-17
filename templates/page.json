@@ -19,10 +19,18 @@
         "image": "shopify://shop_images/1_a722ef69-bc8c-4547-92b7-8e6bdbea7f45.jpg",
         "body": "HOUSE MUSIC"
       }
+    },
+    "full_width_image_JMUWcy": {
+      "type": "full-width-image",
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2024-10-30_at_18.10.29.png",
+        "color": ""
+      }
     }
   },
   "order": [
     "main",
-    "centerd_image_and_text_CPF93j"
+    "centerd_image_and_text_CPF93j",
+    "full_width_image_JMUWcy"
   ]
 }
