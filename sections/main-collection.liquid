@@ -3,21 +3,23 @@
   needs to be tidyed
 {% endcomment %}
 
-{% if collection.title != 'All Products' %}
-  {% render 'collection-header' with { collection: collection } %}
-{% else %}
-  <div class="md:p-4 p-2 pt-4 pb-1  grid-cols-1 flex md:flex-col flex-col-reverse  ">
-    {%- for filter in collection.filters -%}
-      {% for filter_value in filter.active_values %}
-        <h3>
-          {{ filter_value.label }}
-        </h3>
-      {%- endfor -%}
+{% comment %}
+  {% if collection.title != 'All Products' %}
+    {% render 'collection-header' with { collection: collection } %}
+  {% else %}
+{% endcomment %}
+<div class="md:p-4 p-2 pt-4 pb-1  grid-cols-1 flex md:flex-col flex-col-reverse  ">
+  {%- for filter in collection.filters -%}
+    {% for filter_value in filter.active_values %}
+      <h3>
+        {{ filter_value.label }}
+      </h3>
     {%- endfor -%}
+  {%- endfor -%}
 
-    {% render 'safe-space' %}
-  </div>
-{% endif %}
+  {% render 'safe-space' %}
+</div>
+{% comment %} {% endif %} {% endcomment %}
 
 <form class="hidden">
   {%- for filter in collection.filters -%}
@@ -216,6 +218,10 @@
 </form>
 
 <div class=" md:p-4 p-2 ">
+  {% if collection.title != 'All Products' and collection.all_products_count > 0 %}
+    {% render 'collection-group'  with { collection: collection %}
+  {% endif %}
+
   {% if collection.all_products_count > 0 %}
     {% if collection.title == 'Products' %}
       <div class="grid grid-flow-dense md:grid-cols-3 sm:grid-cols-2  grid-cols-1  gap-2  pb-4  ">
