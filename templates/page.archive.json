@@ -9,10 +9,6 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {}
-    },
     "two_images_rNx6CJ": {
       "type": "two-images",
       "settings": {
@@ -21,8 +17,5 @@
       }
     }
   },
-  "order": [
-    "main",
-    "two_images_rNx6CJ"
-  ]
+  "order": ["main", "two_images_rNx6CJ"]
 }
