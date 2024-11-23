@@ -11,9 +11,9 @@
         {{ section.settings.body }}
       </h3>
 
-      {% if section.settings.page_1 != '' %}
+      {% if section.settings.link != '' %}
         <div class="pt-2">
-          {% render 'button' with {text: section.settings.cta , link: section.settings.product_1.url, style:'blank' %}
+          {% render 'button' with {text: section.settings.cta , link: section.settings.link style:'blank' %}
         </div>
       {% endif %}
     </div>
@@ -44,8 +44,8 @@
       "label": "Body Text"
     },
     {
-      "type": "page",
-      "id": "page_1",
+      "type": "text",
+      "id": "link",
       "label": "Page Link"
     },
     {
