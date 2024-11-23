@@ -1,0 +1,27 @@
+<div class=" js-section flex flex-col justify-center gap-10 pt-10 pb-40 items-center  ">
+  <div class=" md:w-[80%]  w-[90%]  ">
+    <h1 class=" heading-sans  md:text-5xl text-3xl text-center leading-none  ">
+      {{ section.settings.body }}
+    </h1>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Centerd Text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "body",
+      "label": "Body Text"
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Centerd Text ",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}
