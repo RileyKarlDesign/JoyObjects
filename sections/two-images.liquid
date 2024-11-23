@@ -1,0 +1,38 @@
+<div
+  style="background:{{section.settings.color}}"
+  class=" js-section grid md:h-fit h-fit bg-opacity-50 md:grid-cols-2 grid-cols-1 md:gap-2  p-2 md:p-2 lg:p-4 pb-0 "
+>
+  <div class="w-full h-full overflow-hidden  pb-2 ">
+    {{ section.settings.image | image_url: width: 1204 | image_tag: class: ' object-cover  js-fade' }}
+  </div>
+
+  <div class="w-full h-full overflow-hidden  pb-2 ">
+    {{ section.settings.imageTwo | image_url: width: 1204 | image_tag: class: ' object-cover  js-fade' }}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image & Text",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image One"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "imageTwo",
+      "label": "Image Two"
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Image & Text ",
+      "category": "Content"
+    }
+  ]
+}k
+{% endschema %}
