@@ -234,43 +234,72 @@ document.addEventListener("DOMContentLoaded", function () {
 
     },
 
+    setInitalOption: function () {
 
-    setFirstOptions: function () {
+      let optionOne = document.querySelectorAll('.js-option-one ');
+
+      console.log('setting intal..')
+    
+
+      let opVal = optionOne[0].value;
+
+      for (let i = 0; i < optionOne.length; i++) {
+        console.log('in loop');
+        if (optionOne[i]) {
+          console.log('checking 1')
+          optionOne[i].checked = true;
+          console.log(optionOne[i])
+          break
+        }
+
+      }
+
+      productForm.setFirstOptions(opVal)
+
+    },
+
+
+    setFirstOptions: function (op) {
 
       // Select all option ones
 
-      let optionOne = document.querySelectorAll('.js-option-one ');
+      let optionOne = document.querySelectorAll('.js-option-one')
       let optionTwo = document.querySelectorAll('.js-option-two ');
+
+      let op1
+
+
+
 
       console.log(optionTwo)
 
-      // for (let i = 0; i < optionOne.length; i++) {
-      //   console.log('in loop');
-      //   if (!optionOne[i].disabled) {
-      //     console.log('checking ')
-      //     optionOne[i].checked = true;
-      //     console.log(optionOne[i])
-      //     break
-      //   }
+      optionTwo.forEach(e => {
+        e.checked = false;
+      })
 
-      // }
+
+      optionOne.forEach(e => {
+
+      })
+
+
+      console.log('e ==' + op)
 
       for (let i = 0; i < optionTwo.length; i++) {
 
         console.log('in loop 2');
-        console.log(optionTwo[i].dataset.variant);
+        console.log(optionTwo[i].dataset.optionOne);
         console.log(optionTwo[i].dataset.inventory);
+        console.log(`looking fr ----` + op)
 
-        optionTwo.forEach(e => {
-          e.checked = false;
-        })
+        if (!optionTwo[i].disabled && optionTwo[i].dataset.optionOne == op && optionTwo[i].dataset.inventory >0) {
+          console.log('checking 2 ')
+          optionTwo[i].checked = true;
+          console.log(`checked option 2 ----` + optionTwo[i].value)
+          return
+        }
 
-        // if (!optionTwo[i].disabled > 0 && !optionTwo[i].hidden) {
-        //   console.log('checking 2 ')
-        //   optionTwo[i].checked = true;
-        //   console.log(optionTwo[i])
-        //   return
-        // }
+        
 
       }
 
@@ -319,17 +348,19 @@ document.addEventListener("DOMContentLoaded", function () {
     init: function () {
 
       productForm.validate(event)
-
       document.addEventListener("change", productForm.onProductOptionChanged);
       document.addEventListener("change", function (event) {
 
-        productForm.validate(event);
         productForm.updateMultiOptions();
+        productForm.validate(event);
+
 
       });
 
-      productForm.setFirstOptions();
       productForm.updateMultiOptions();
+      // productForm.setFirstOptions();
+      productForm.setInitalOption();
+
     },
   };
 

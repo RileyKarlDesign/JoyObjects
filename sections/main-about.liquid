@@ -1,11 +1,13 @@
-<div class="about ">
-  {% render 'safe-space' %}
+<div class="about  ">
+  <div class="block md:hidden bg-red-400">
+    {% render 'safe-space' %}
+  </div>
 
-  <div class="md:p-4 p-2 flex flex-col md:flex-row gap-2  ">
+  {% comment %} <div class="md:p-4 p-2 flex flex-col md:flex-row gap-2  ">
     <div class=" w-full ">
       <div class=" w-full  text-center p-8">
         {{ page.content }}
       </div>
     </div>
   </div>
-</div>
+</div> {% endcomment %} 
