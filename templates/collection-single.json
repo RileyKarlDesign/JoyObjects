@@ -1,13 +1,9 @@
 {
   "sections": {
-  
     "main": {
       "type": "single-collection",
-      "settings": {
-      }
+      "settings": {}
     }
   },
-  "order": [
-    "main"
-  ]
+  "order": ["main"]
 }
