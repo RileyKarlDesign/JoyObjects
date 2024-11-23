@@ -15,7 +15,16 @@
         "image": "shopify://shop_images/JOY_PRODUKTBILD_3nd_Hylla_closeup_639e2e4b-6eeb-446e-a206-0e66cf065d29.jpg",
         "imageTwo": "shopify://shop_images/JOY_PRODUKTBILD_3nd_Hylla.jpg"
       }
+    },
+    "centerd_text_QAqQgP": {
+      "type": "centerd-text",
+      "settings": {
+        "body": "This the the centered text for testing"
+      }
     }
   },
-  "order": ["two_images_rNx6CJ"]
+  "order": [
+    "centerd_text_QAqQgP",
+    "two_images_rNx6CJ"
+  ]
 }
