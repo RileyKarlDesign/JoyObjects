@@ -13,24 +13,16 @@
       "type": "main-page",
       "settings": {}
     },
-    "centerd_image_and_text_CPF93j": {
-      "type": "centerd-image-and-text",
+    "two_images_rNx6CJ": {
+      "type": "two-images",
       "settings": {
-        "image": "shopify://shop_images/1_a722ef69-bc8c-4547-92b7-8e6bdbea7f45.jpg",
-        "body": "HOUSE MUSIC"
-      }
-    },
-    "full_width_image_JMUWcy": {
-      "type": "full-width-image",
-      "settings": {
-        "image": "shopify://shop_images/Screenshot_2024-10-30_at_18.10.29.png",
-        "color": ""
+        "image": "shopify://shop_images/JOY_PRODUKTBILD_3nd_Hylla_closeup_639e2e4b-6eeb-446e-a206-0e66cf065d29.jpg",
+        "imageTwo": "shopify://shop_images/JOY_PRODUKTBILD_3nd_Hylla.jpg"
       }
     }
   },
   "order": [
     "main",
-    "centerd_image_and_text_CPF93j",
-    "full_width_image_JMUWcy"
+    "two_images_rNx6CJ"
   ]
 }
