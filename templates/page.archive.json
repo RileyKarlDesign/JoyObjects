@@ -9,6 +9,10 @@
  */
 {
   "sections": {
+    "safespace_tP9iGH": {
+      "type": "safespace",
+      "settings": {}
+    },
     "centerd_text_QAqQgP": {
       "type": "centerd-text",
       "settings": {
@@ -22,14 +26,18 @@
         "imageTwo": "shopify://shop_images/JOY_PRODUKTBILD_3nd_Hylla.jpg"
       }
     },
-    "safespace_tP9iGH": {
-      "type": "safespace",
-      "settings": {}
+    "full_width_image_Jzr8GH": {
+      "type": "full-width-image",
+      "settings": {
+        "image": "shopify://shop_images/4.jpg",
+        "color": ""
+      }
     }
   },
   "order": [
     "safespace_tP9iGH",
     "centerd_text_QAqQgP",
-    "two_images_rNx6CJ"
+    "two_images_rNx6CJ",
+    "full_width_image_Jzr8GH"
   ]
 }
