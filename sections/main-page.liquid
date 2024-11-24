@@ -1,25 +1,11 @@
-{% render 'safe-space' %}
+<div class="md:p-4 p-2 pt-4 pb-1  grid-cols-1 flex items-center  sm:items-start  flex-col-reverse  ">
+  <h3>{{ page.title }}</h3>
 
-<div class="p-4 md:flex  gap-2 ">
-  <div class=" w-full ">
-    {%- for link in linklists['about-menu'].links -%}
-      <h3 class=" select-none ">
-        <a
-          class=" hover:opacity-50 {%- if request.path == link.url -%}f opacity-50 hover:opacity-50 {%- endif -%}"
-          href="{{ link.url }}"
-        >
-          {{- link.title -}}
-        </a>
-      </h3>
-    {%- endfor -%}
-  </div>
+  {% render 'safe-space' %}
+</div>
 
-  <div class="  w-full ">
-    <div class="flex  ">
-      <h2 class="pb-1">{{ page.title }}</h2>
-    </div>
-    <div class=" w-2/3 ">
-      {{ page.content }}
-    </div>
+<div class="p-4 md:flex items-center justify-center  gap-2 ">
+  <div class="  text-center">
+    {{ page.content }}
   </div>
 </div>
