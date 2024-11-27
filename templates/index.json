@@ -62,7 +62,7 @@
         "image": "shopify://shop_images/extra1.jpg",
         "title": "LOREM IPSUM",
         "body": "TEST COPY ABOUT SMURFS",
-        "custom-link": "/about",
+        "custom-link": "pages/about",
         "cta": "> LEARN MORE",
         "color": ""
       }
