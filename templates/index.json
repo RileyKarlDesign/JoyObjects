@@ -42,7 +42,6 @@
     "two_images_eBwYyK": {
       "type": "two-images",
       "settings": {
-        "image": "shopify://shop_images/2_058fc9d1-c751-40e8-9ae2-3489c1108864.jpg",
         "imageTwo": "shopify://shop_images/1_a722ef69-bc8c-4547-92b7-8e6bdbea7f45.jpg"
       }
     },
