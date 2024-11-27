@@ -32,13 +32,6 @@
         "color": ""
       }
     },
-    "centerd_image_and_text_bi8zzG": {
-      "type": "centerd-image-and-text",
-      "settings": {
-        "image": "shopify://shop_images/Screenshot_2024-11-17_at_20.25.21.png",
-        "body": "MAYBE THIS IS NICE WITH TWO LINES OF TEXT"
-      }
-    },
     "two_images_eBwYyK": {
       "type": "two-images",
       "settings": {
@@ -62,16 +55,27 @@
         "image": "shopify://shop_images/456377441_18015872879569672_5885786691614212816_n.jpg",
         "color": ""
       }
+    },
+    "image_and_text_ARGdNy": {
+      "type": "image-and-text",
+      "settings": {
+        "image": "shopify://shop_images/extra1.jpg",
+        "title": "LOREM IPSUM",
+        "body": "TEST COPY ABOUT SMURFS",
+        "custom-link": "ABOUT",
+        "cta": "LEARN MORE",
+        "color": ""
+      }
     }
   },
   "order": [
     "hero_image_nkgzDg",
     "centerd_image_and_text_xYYUfD",
     "collection_block_QAB4Qb",
-    "centerd_image_and_text_bi8zzG",
     "two_images_eBwYyK",
     "centerd_text_eVGbiX",
     "safespace_8mxikV",
-    "full_width_image_pTzVJ8"
+    "full_width_image_pTzVJ8",
+    "image_and_text_ARGdNy"
   ]
 }
