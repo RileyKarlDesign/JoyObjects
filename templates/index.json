@@ -22,10 +22,6 @@
         "body": "ONE LINE OF COPY"
       }
     },
-    "safespace_8mxikV": {
-      "type": "safespace",
-      "settings": {}
-    },
     "collection_block_QAB4Qb": {
       "type": "collection-block",
       "settings": {
@@ -56,6 +52,10 @@
         "body": "BIG CAPTION OVER OR UNDER A FULL SCREEN IMAGE"
       }
     },
+    "safespace_8mxikV": {
+      "type": "safespace",
+      "settings": {}
+    },
     "full_width_image_pTzVJ8": {
       "type": "full-width-image",
       "settings": {
@@ -67,11 +67,11 @@
   "order": [
     "hero_image_nkgzDg",
     "centerd_image_and_text_xYYUfD",
-    "safespace_8mxikV",
     "collection_block_QAB4Qb",
     "centerd_image_and_text_bi8zzG",
     "two_images_eBwYyK",
     "centerd_text_eVGbiX",
+    "safespace_8mxikV",
     "full_width_image_pTzVJ8"
   ]
 }
