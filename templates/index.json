@@ -15,129 +15,63 @@
         "image1": "shopify://shop_images/Stool_One_-_Lake.jpg"
       }
     },
-    "image_and_text_yiMTt9": {
-      "type": "image-and-text",
-      "settings": {
-        "image": "shopify://shop_images/A_55.jpg",
-        "title": "Money & Chartreuse. New colours, awesome dreams. ",
-        "body": "",
-        "custom-link": "",
-        "cta": ">  SHOP",
-        "color": "rgba(0,0,0,0)"
-      }
-    },
-    "image_and_text_9xi7dd": {
-      "type": "image-and-text",
-      "settings": {
-        "image": "shopify://shop_images/Alu_bank_d181deb0-7dbc-4f95-9d2a-dbc8b5f2a854.jpg",
-        "title": "Tuned beginnings. Alu & Chartreuse. restocked, refined – and longer.",
-        "body": "",
-        "custom-link": "",
-        "cta": "> SHOP",
-        "color": ""
-      }
-    },
-    "centerd_image_and_text_NMAVaf": {
-      "type": "centerd-image-and-text",
-      "settings": {
-        "image": "shopify://shop_images/452457549_18012571517569672_5357798286981714569_n.jpg",
-        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse iaculis eget lacus volutpat sagittis. Phasellus tempor viverra lacus in consectetur. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas eget nibh cursus, venenatis libero non, mattis massa. Pellentesque in quam risus."
-      }
-    },
-    "collection_block_DU9DeH": {
-      "type": "collection-block",
-      "disabled": true,
-      "settings": {
-        "prod1": "chair-one",
-        "prod2": "chair-one-copy",
-        "prod3": "chair-one",
-        "title": "Cotton Candy & Wine",
-        "color": "rgba(0,0,0,0)"
-      }
-    },
-    "full_width_image_mNFUUf": {
-      "type": "full-width-image",
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/451422937_18011592974569672_3261032625051833543_n.jpg",
-        "color": ""
-      }
-    },
-    "image_and_text_8zGy87": {
-      "type": "image-and-text",
-      "settings": {
-        "image": "shopify://shop_images/Screenshot_2024-10-30_at_18.15.49.png",
-        "title": "Looking for joy within our objects",
-        "body": "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SUSPENDISSE IACULIS EGET LACUS VOLUTPAT SAGITTIS. PHASELLUS TEMPOR VIVERRA LACUS IN CONSECTETUR. PELLENTESQUE HABITANT MORBI TRISTIQUE SENECTUS ET NETUS ET MALESUADA FAMES AC TURPIS EGESTAS. MAECENAS EGET NIBH CURSUS, VENENATIS LIBERO NON, MATTIS MASSA. PELLENTESQUE IN QUAM RISUS.",
-        "custom-link": "",
-        "cta": "-> Custom Button Text",
-        "color": "#f5f5f5"
-      }
-    },
-    "centerd_image_and_text_cbPkFh": {
-      "type": "centerd-image-and-text",
-      "settings": {
-        "image": "shopify://shop_images/Screenshot_2024-10-30_at_18.15.49.png",
-        "body": ""
-      }
-    },
-    "collection_block_8JjH6g": {
-      "type": "collection-block",
-      "disabled": true,
-      "settings": {
-        "prod1": "shelf-one-copy",
-        "prod2": "chair",
-        "prod3": "chair",
-        "title": "Cotton Candy & Wine",
-        "color": ""
-      }
-    },
-    "centerd_image_and_text_APdgcU": {
-      "type": "centerd-image-and-text",
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/456377441_18015872879569672_5885786691614212816_n.jpg",
-        "body": "SHELF LIFE FOREVER"
-      }
-    },
-    "hero_image_ErmiJp": {
-      "type": "hero-Image",
-      "settings": {
-        "image1": "shopify://shop_images/451422937_18011592974569672_3261032625051833543_n.jpg"
-      }
-    },
-    "image_and_text_ECGhi3": {
-      "type": "image-and-text",
-      "settings": {
-        "image": "shopify://shop_images/extra1.jpg",
-        "title": "PURPLE HAZE",
-        "body": "GET THE NEW LOREM ISPUM",
-        "custom-link": "",
-        "cta": "",
-        "color": ""
-      }
-    },
     "centerd_image_and_text_xYYUfD": {
       "type": "centerd-image-and-text",
       "settings": {
         "image": "shopify://shop_images/Screenshot_2024-11-17_at_20.25.21.png",
-        "body": "TEST COPY"
+        "body": "ONE LINE OF COPY"
+      }
+    },
+    "safespace_8mxikV": {
+      "type": "safespace",
+      "settings": {}
+    },
+    "collection_block_QAB4Qb": {
+      "type": "collection-block",
+      "settings": {
+        "prod1": "chair-one-copy",
+        "prod2": "bench-one",
+        "prod3": "bench-one-l",
+        "title": "",
+        "color": ""
+      }
+    },
+    "centerd_image_and_text_bi8zzG": {
+      "type": "centerd-image-and-text",
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2024-11-17_at_20.25.21.png",
+        "body": "MAYBE THIS IS NICE WITH TWO LINES OF TEXT"
+      }
+    },
+    "two_images_eBwYyK": {
+      "type": "two-images",
+      "settings": {
+        "image": "shopify://shop_images/2_058fc9d1-c751-40e8-9ae2-3489c1108864.jpg",
+        "imageTwo": "shopify://shop_images/1_a722ef69-bc8c-4547-92b7-8e6bdbea7f45.jpg"
+      }
+    },
+    "centerd_text_eVGbiX": {
+      "type": "centerd-text",
+      "settings": {
+        "body": "BIG CAPTION OVER OR UNDER A FULL SCREEN IMAGE"
+      }
+    },
+    "full_width_image_wpeJgd": {
+      "type": "full-width-image",
+      "settings": {
+        "image": "shopify://shop_images/456377441_18015872879569672_5885786691614212816_n.jpg",
+        "color": ""
       }
     }
   },
   "order": [
     "hero_image_nkgzDg",
-    "image_and_text_yiMTt9",
-    "image_and_text_9xi7dd",
-    "centerd_image_and_text_NMAVaf",
-    "collection_block_DU9DeH",
-    "full_width_image_mNFUUf",
-    "image_and_text_8zGy87",
-    "centerd_image_and_text_cbPkFh",
-    "collection_block_8JjH6g",
-    "centerd_image_and_text_APdgcU",
-    "hero_image_ErmiJp",
-    "image_and_text_ECGhi3",
-    "centerd_image_and_text_xYYUfD"
+    "centerd_image_and_text_xYYUfD",
+    "safespace_8mxikV",
+    "collection_block_QAB4Qb",
+    "centerd_image_and_text_bi8zzG",
+    "two_images_eBwYyK",
+    "centerd_text_eVGbiX",
+    "full_width_image_wpeJgd"
   ]
 }
