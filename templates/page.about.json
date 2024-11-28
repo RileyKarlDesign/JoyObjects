@@ -11,50 +11,19 @@
   "sections": {
     "background_image_g3TBqk": {
       "type": "background-image",
+      "disabled": true,
       "settings": {
         "color1": "rgba(0,0,0,0)"
       }
     },
     "main": {
       "type": "main-about",
-      "settings": {
-      }
-    },
-    "full_width_image_BUT8fw": {
-      "type": "full-width-image",
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/451422937_18011592974569672_3261032625051833543_n.jpg",
-        "color": ""
-      }
-    },
-    "hero_image_DLbzHE": {
-      "type": "hero-Image",
-      "disabled": true,
-      "settings": {
-        "image1": "shopify://shop_images/Screenshot_2024-10-30_at_19.38.08.png"
-      }
+      "settings": {}
     },
     "form": {
       "type": "contact-form",
       "disabled": true,
-      "settings": {
-      }
-    },
-    "hero_video_WXHbXa": {
-      "type": "hero-video",
-      "disabled": true,
-      "settings": {
-        "video1": "shopify://files/videos/1090914087-preview.mp4"
-      }
-    },
-    "full_width_image_CkjP7A": {
-      "type": "full-width-image",
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/Screenshot_2024-10-30_at_19.38.08.png",
-        "color": ""
-      }
+      "settings": {}
     },
     "centerd_image_and_text_bbDiV6": {
       "type": "centerd-image-and-text",
@@ -63,40 +32,36 @@
         "body": "JOY makes products for the home: Furniture, objects and ornaments. JOY merges simple construction with playful aesthetics, bringing laid-back style to the age of standards. JOY was founded in 2021 as an open space for Stockholm based designer Fredrik Paulsen. The idea is simple: slick, forward looking style meets small scale production at a reasonable price. All JOY objects are designed and manufactured in Sweden. And hey: everything packs flat.Contemporary design is boring. JOY isn’t. JOY is fun. JOY is groovy. JOY is here."
       }
     },
-    "product_detail_z7cdKD": {
+    "product_detail_LAc3bq": {
       "type": "product-detail",
       "blocks": {
-        "slide_XNGVBH": {
+        "slide_tt4N3i": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/240522IB_7678-12_1_copy.jpg"
           }
-        },
-        "slide_RVGiyc": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Alu_bank.jpg"
-          }
         }
       },
       "block_order": [
-        "slide_XNGVBH",
-        "slide_RVGiyc"
+        "slide_tt4N3i"
       ],
       "settings": {
         "title": "Slideshow"
+      }
+    },
+    "centerd_text_6rAxwQ": {
+      "type": "centerd-text",
+      "settings": {
+        "body": "info@joyobjects.com"
       }
     }
   },
   "order": [
     "background_image_g3TBqk",
     "main",
-    "full_width_image_BUT8fw",
-    "hero_image_DLbzHE",
     "form",
-    "hero_video_WXHbXa",
-    "full_width_image_CkjP7A",
     "centerd_image_and_text_bbDiV6",
-    "product_detail_z7cdKD"
+    "product_detail_LAc3bq",
+    "centerd_text_6rAxwQ"
   ]
 }
