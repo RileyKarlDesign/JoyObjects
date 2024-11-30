@@ -1,11 +1,9 @@
 <div class="md:p-4 p-2 pt-4 pb-1  grid-cols-1 flex items-center  sm:items-start   flex-col-reverse  ">
   <h3>{{ page.title }}</h3>
-
-  {% render 'safe-space' %}
 </div>
-
+{% render 'safe-space' %}
 <div class="p-4 md:flex items-center justify-center  gap-2 ">
-  <div class="  text-center">
+  <div class=" text-center">
     {{ page.content }}
   </div>
 </div>
