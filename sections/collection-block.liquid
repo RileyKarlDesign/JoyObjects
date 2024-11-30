@@ -1,11 +1,13 @@
 <div
   style="background:{{section.settings.color}}"
-  class=" js-section  pb-20  pt-20 h-fit bg-opacity-50 md:p-4 p-0 gap-2  "
+  class=" js-section  pb-20   h-fit bg-opacity-50 md:p-4 md:pt-0 p-0 gap-2  "
 >
   <div class="h-full">
-    <div class="h-fit  ">
-      <h1 class=" uppercase w-full text-center">{{ section.settings.title }}</h1>
-    </div>
+    {% if section.settings.title != '' %}
+      <div class="h-fit pt-20 ">
+        <h1 class=" uppercase w-full text-center">{{ section.settings.title }}</h1>
+      </div>
+    {% endif %}
 
     <div class="  md:overflow-hidden overflow-scroll">
       <div class=" md:grid  md:grid-cols-3  md:gap-2  flex gap-2 h-fit  md:pl-0  pl-2 md:w-full w-fit ">
@@ -66,8 +68,7 @@
 
   "presets": [
     {
-      "name": " Collection Block ",
-      "category": "Content"
+      "name": " Collection Block "
     }
   ]
 }
