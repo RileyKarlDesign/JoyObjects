@@ -1970,6 +1970,11 @@ video {
      object-fit: cover;
 }
 
+.object-fill {
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
 .object-center {
   -o-object-position: center;
      object-position: center;
@@ -3083,13 +3088,11 @@ input[type=number] {
   }
 }
 
-ajax-cart-product-form[processing]:before {
-  content: 'Updating';
-  padding: 20px;
-  background-color: red;
-  border-radius: 20px;
-  position: absolute;
-  top: 20px;
+ajax-cart-product-form[processing]  {
+}
+
+html.js-ajax-cart-processing #add-to-cart-button {
+  opacity: .7;
 }
 
 /* Make the "Add to cart" button look visually disabled while loading */
@@ -3370,10 +3373,6 @@ label {
   .sm\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-
-  .sm\:items-start {
-    align-items: flex-start;
-  }
 }
 
 @media (min-width: 768px) {
@@ -3462,16 +3461,20 @@ label {
     width: 20vw;
   }
 
-  .md\:w-\[30\%\] {
-    width: 30%;
-  }
-
   .md\:w-\[350px\] {
     width: 350px;
   }
 
   .md\:w-\[386px\] {
     width: 386px;
+  }
+
+  .md\:w-\[40\%\] {
+    width: 40%;
+  }
+
+  .md\:w-\[50\%\] {
+    width: 50%;
   }
 
   .md\:w-\[80\%\] {
@@ -3484,14 +3487,6 @@ label {
 
   .md\:w-full {
     width: 100%;
-  }
-
-  .md\:w-\[40\%\] {
-    width: 40%;
-  }
-
-  .md\:w-\[50\%\] {
-    width: 50%;
   }
 
   .md\:grid-cols-2 {

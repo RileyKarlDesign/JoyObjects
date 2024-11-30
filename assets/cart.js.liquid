@@ -362,6 +362,7 @@ document.addEventListener("DOMContentLoaded", function () {
       productForm.updateMultiOptions();
       // productForm.setFirstOptions();
       productForm.setInitalOption();
+      productForm.validate(event);
 
     },
   };
@@ -420,30 +421,17 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-document.addEventListener("liquid-ajax-cart:request-end", (event) => {
-  const { requestState } = event.detail;
-
-  // If the "add to cart" request is successful
-  if (requestState.requestType === "add" && requestState.responseData?.ok) {
-    // Add the CSS class to the "body" tag
-
-  }
-});
 
 
+// cart 
 
-document.addEventListener("DOMContentLoaded", function () {
-  let cart = document.querySelector(".my-cart");
+ let cart = document.querySelector(".my-cart");
   let bodyWrap = document.querySelector(".js-main");
   let cartBtns = document.querySelectorAll(".cart-btn");
   let cartState = false;
   let winHeight = window.innerHeight;
   document.documentElement.style.setProperty("--winHeight", winHeight + "px");
 
-  window.addEventListener("resize", () => {
-    winHeight = window.innerHeight;
-    document.documentElement.style.setProperty("--winHeight", winHeight + "px");
-  });
 
   let closeCart = () => {
     cart.classList.remove("cart-open");
@@ -455,18 +443,56 @@ document.addEventListener("DOMContentLoaded", function () {
     bodyWrap.style.opacity = "0.5 ";
     cartState = true;
   };
-  cartBtns.forEach((i) => {
-    i.addEventListener("mousedown", () => {
-      if (cartState) {
-        closeCart();
-      } else {
-        openCart();
 
 
-      }
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+ 
+    window.addEventListener("resize", () => {
+      winHeight = window.innerHeight;
+      document.documentElement.style.setProperty("--winHeight", winHeight + "px");
+  });
+
+    cartBtns.forEach((i) => {
+      i.addEventListener("mousedown", () => {
+        if (cartState) {
+          closeCart();
+        } else {
+          openCart();
+
+
+        }
     });
   });
 
 });
+
+document.addEventListener("liquid-ajax-cart:processing", (event) => {
+
+  let cartbtn = document.querySelector("#add-to-cart-button")
+
+  // If the "add to cart" request is successful
+
+    // Add the CSS class to the "body" tag
+   
+    cartbtn.style.opacity = "0.5 ";
+   
+  
+});
+
+
+document.addEventListener("liquid-ajax-cart:request-end", (event) => {
+
+    if (requestState.requestType === "add" && requestState.responseData?.ok) {
+    // Add the CSS class to the "body" tag
+      openCart();
+  }
+
+  
+});
+
 
 // btn
