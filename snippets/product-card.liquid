@@ -18,8 +18,12 @@
       <p>{{ product.metafields.custom.range }}</p>
 
       <div class="flex gap-2">
-        <p class="opacity-50 ">{{ product.price | money }}</p>
-        <p class="opacity-50 animate-blink ">{{ product.compare_at_price | money_with_currency }}</p>
+        {% if product.available %}
+          <p class="opacity-50 ">{{ product.price | money }}</p>
+          <p class="opacity-50 animate-blink ">{{ product.compare_at_price | money_with_currency }}</p>
+        {% else %}
+          <p class="opacity-50">Sold Out</p>
+        {% endif %}
       </div>
     </div>
   </a>

@@ -61,14 +61,15 @@
         </ajax-cart-product-form>
         <div class="flex flex-col gap-1  ">
           <div class="js-product-description md:w-[350px]  flex-col flex gap-0">
+            {% if product.metafields.custom.size != '' %}
+              {% render 'accordian' with { title: 'Details', content: product.metafields.custom.size } %}
+            {% endif %}
             {% if product.metafields.custom.shipping != '' %}
               {% render 'accordian' with { title: 'Shipping', content: product.metafields.custom.shipping } %}
             {% endif %}
-            {% if product.metafields.custom.size != '' %}
-              {% render 'accordian' with { title: 'Dimnetions', content: product.metafields.custom.size } %}
-            {% endif %}
           </div>
-          {% render 'atc-stick' %}
+
+          {% render 'atc-stick' with { product: product } %}
         </div>
       </div>
     </div>

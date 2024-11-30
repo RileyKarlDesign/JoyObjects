@@ -1,11 +1,22 @@
-<div class="   w-full">
-  <button
-    form="add-to-cart-form"
-    class=" flex w-full h-el pl-4 pr-4 justify-center items-center bg-black  bg-opacity-5 hover:bg-opacity-80 hover:text-white text-opacity-70 rounded-sm  backdrop-blur-lg "
-    type="submit"
-    name="add"
-    id="add-to-cart-button"
-  >
-    Add to cart
-  </button>
-</div>
+{% if product.available %}
+  <div class="   w-full">
+    <button
+      form="add-to-cart-form"
+      class=" flex w-full h-el pl-4 pr-4 justify-center items-center bg-black  bg-opacity-5 hover:bg-opacity-80 hover:text-white text-opacity-70 rounded-sm  backdrop-blur-lg "
+      type="submit"
+      name="add"
+      id="add-to-cart-button"
+    >
+      Add to cart
+    </button>
+  </div>
+
+{% else %}
+  <div class="   w-full">
+    <button
+      class=" opacity-[.7] flex w-full h-el pl-4 pr-4 justify-center items-center bg-black  bg-opacity-5  text-opacity-70 rounded-sm  backdrop-blur-lg "
+    >
+      Sold Out
+    </button>
+  </div>
+{% endif %}
