@@ -47,6 +47,7 @@
     },
     "safespace_8mxikV": {
       "type": "safespace",
+      "disabled": true,
       "settings": {}
     },
     "full_width_image_pTzVJ8": {
