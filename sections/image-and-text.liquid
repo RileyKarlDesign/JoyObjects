@@ -13,7 +13,7 @@
 
       {% if section.settings.link != '' %}
         <div class="pt-2">
-          {% render 'button' with {% text:section.settings.cta , link:section.settings.link style:'blank' %}
+          {% render 'button' with {% text:section.settings.cta , link:section.settings.custom-link style:'blank' %}
         </div>
       {% endif %}
     </div>
@@ -62,8 +62,7 @@
 
   "presets": [
     {
-      "name": "Image & Text ",
-      "category": "Content"
+      "name": "Image & Text "
     }
   ]
 }
