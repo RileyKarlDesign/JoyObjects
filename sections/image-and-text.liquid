@@ -14,6 +14,7 @@
       {% if section.settings.link != '' %}
         <div class="pt-2">
           {% render 'button' with {% text:section.settings.cta , link:section.settings.custom-link style:'blank' %}
+          <p>link {{ secttion.settings.custom-link }}</p>
         </div>
       {% endif %}
     </div>
