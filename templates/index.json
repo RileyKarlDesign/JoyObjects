@@ -46,18 +46,9 @@
         "image1": "shopify://shop_images/LANDSCAPE.jpg"
       }
     },
-    "collection_block_pkVXDB": {
-      "type": "collection-block",
-      "settings": {
-        "prod1": "products-19",
-        "prod2": "products-19",
-        "prod3": "products-19",
-        "title": "",
-        "color": ""
-      }
-    },
     "image_and_text_RCCMWw": {
       "type": "image-and-text",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/A_21.jpg",
         "title": "Erik e kingen",
@@ -74,7 +65,6 @@
     "two_images_eBwYyK",
     "centerd_text_eVGbiX",
     "hero_image_DcPMVY",
-    "collection_block_pkVXDB",
     "image_and_text_RCCMWw"
   ]
 }
