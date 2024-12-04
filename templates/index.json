@@ -9,21 +9,16 @@
  */
 {
   "sections": {
-    "hero_image_nkgzDg": {
-      "type": "hero-Image",
-      "settings": {
-        "image1": "shopify://shop_images/Stool_One_-_Lake.jpg"
-      }
-    },
     "centerd_image_and_text_xYYUfD": {
       "type": "centerd-image-and-text",
       "settings": {
-        "image": "shopify://shop_images/Screenshot_2024-11-17_at_20.25.21.png",
+        "image": "shopify://shop_images/A_54.jpg",
         "body": "ONE LINE OF COPY"
       }
     },
     "collection_block_QAB4Qb": {
       "type": "collection-block",
+      "disabled": true,
       "settings": {
         "prod1": "chair-one-copy",
         "prod2": "bench-one",
@@ -34,33 +29,26 @@
     },
     "two_images_eBwYyK": {
       "type": "two-images",
-      "settings": {
-        "image": "shopify://shop_images/Screenshot_2024-10-30_at_18.15.49.png",
-        "imageTwo": "shopify://shop_images/1_a722ef69-bc8c-4547-92b7-8e6bdbea7f45.jpg"
-      }
+      "disabled": true,
+      "settings": {}
     },
     "centerd_text_eVGbiX": {
       "type": "centerd-text",
+      "disabled": true,
       "settings": {
         "body": "BIG CAPTION OVER OR UNDER A FULL SCREEN IMAGE"
       }
     },
-    "safespace_8mxikV": {
-      "type": "safespace",
-      "disabled": true,
-      "settings": {}
-    },
     "full_width_image_pTzVJ8": {
       "type": "full-width-image",
       "settings": {
-        "image": "shopify://shop_images/456377441_18015872879569672_5885786691614212816_n.jpg",
+        "image": "shopify://shop_images/LANDSCAPE.jpg",
         "color": ""
       }
     },
     "image_and_text_ARGdNy": {
       "type": "image-and-text",
       "settings": {
-        "image": "shopify://shop_images/extra1.jpg",
         "title": "LOREM IPSUM",
         "body": "TEST COPY ABOUT SMURFS",
         "linktext": "",
@@ -70,12 +58,10 @@
     }
   },
   "order": [
-    "hero_image_nkgzDg",
     "centerd_image_and_text_xYYUfD",
     "collection_block_QAB4Qb",
     "two_images_eBwYyK",
     "centerd_text_eVGbiX",
-    "safespace_8mxikV",
     "full_width_image_pTzVJ8",
     "image_and_text_ARGdNy"
   ]
