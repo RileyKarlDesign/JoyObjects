@@ -9,35 +9,36 @@
  */
 {
   "sections": {
-    "safespace_tP9iGH": {
-      "type": "safespace",
-      "settings": {}
-    },
-    "centerd_text_QAqQgP": {
-      "type": "centerd-text",
-      "settings": {
-        "body": "This the the centered text for testing"
-      }
-    },
-    "two_images_rNx6CJ": {
+    "two_images_8VxHGM": {
       "type": "two-images",
       "settings": {
-        "image": "shopify://shop_images/JOY_PRODUKTBILD_3nd_Hylla_closeup_639e2e4b-6eeb-446e-a206-0e66cf065d29.jpg",
-        "imageTwo": "shopify://shop_images/JOY_PRODUKTBILD_3nd_Hylla.jpg"
+        "image": "shopify://shop_images/PORTRAIT_1a530476-b036-44c6-ac67-87dfa4c5fed5.jpg",
+        "imageTwo": "shopify://shop_images/PORTRAIT_1a530476-b036-44c6-ac67-87dfa4c5fed5.jpg"
       }
     },
-    "full_width_image_Jzr8GH": {
-      "type": "full-width-image",
+    "hero_image_HcmAp4": {
+      "type": "hero-Image",
       "settings": {
-        "image": "shopify://shop_images/4.jpg",
-        "color": ""
+        "image1": "shopify://shop_images/LANDSCAPE7.jpg"
+      }
+    },
+    "centerd_text_rynPWW": {
+      "type": "centerd-text",
+      "settings": {
+        "body": "CHAIR ONE LAUNCH AT ISSUES GALLERY IN STOCKHOLM 2021"
+      }
+    },
+    "hero_image_iYLxE8": {
+      "type": "hero-Image",
+      "settings": {
+        "image1": "shopify://shop_images/LANDSCAPE6.jpg"
       }
     }
   },
   "order": [
-    "safespace_tP9iGH",
-    "centerd_text_QAqQgP",
-    "two_images_rNx6CJ",
-    "full_width_image_Jzr8GH"
+    "two_images_8VxHGM",
+    "hero_image_HcmAp4",
+    "centerd_text_rynPWW",
+    "hero_image_iYLxE8"
   ]
 }
