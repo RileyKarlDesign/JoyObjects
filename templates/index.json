@@ -46,14 +46,10 @@
         "color": ""
       }
     },
-    "image_and_text_ARGdNy": {
-      "type": "image-and-text",
+    "hero_image_DcPMVY": {
+      "type": "hero-Image",
       "settings": {
-        "title": "LOREM IPSUM",
-        "body": "TEST COPY ABOUT SMURFS",
-        "linktext": "",
-        "cta": "> LEARN MORE",
-        "color": ""
+        "image1": "shopify://shop_images/LANDSCAPE.jpg"
       }
     }
   },
@@ -63,6 +59,6 @@
     "two_images_eBwYyK",
     "centerd_text_eVGbiX",
     "full_width_image_pTzVJ8",
-    "image_and_text_ARGdNy"
+    "hero_image_DcPMVY"
   ]
 }
