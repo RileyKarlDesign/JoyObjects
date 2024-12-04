@@ -9,6 +9,12 @@
  */
 {
   "sections": {
+    "hero_image_JEqinr": {
+      "type": "hero-Image",
+      "settings": {
+        "image1": "shopify://shop_images/LANDSCAPE5.jpg"
+      }
+    },
     "hero_image_yWb3yK": {
       "type": "hero-Image",
       "settings": {
@@ -58,10 +64,11 @@
         "image1": "shopify://shop_images/LANDSCAPE6.jpg"
       }
     },
-    "hero_image_JEqinr": {
-      "type": "hero-Image",
+    "two_images_bYgm4e": {
+      "type": "two-images",
       "settings": {
-        "image1": "shopify://shop_images/LANDSCAPE5.jpg"
+        "image": "shopify://shop_images/joy_akilles_6W7A3216.jpg",
+        "imageTwo": "shopify://shop_images/joy_akilles_6W7A3215.jpg"
       }
     }
   },
@@ -70,6 +77,7 @@
     "hero_image_yWb3yK",
     "hero_image_zr3hG8",
     "centerd_text_H7pPtg",
+    "two_images_bYgm4e",
     "hero_image_EhVQKm",
     "two_images_8VxHGM",
     "hero_image_HcmAp4",
