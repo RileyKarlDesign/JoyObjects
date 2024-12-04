@@ -9,6 +9,30 @@
  */
 {
   "sections": {
+    "hero_image_yWb3yK": {
+      "type": "hero-Image",
+      "settings": {
+        "image1": "shopify://shop_images/LANDSCPAE_FOR_WEB4.jpg"
+      }
+    },
+    "hero_image_zr3hG8": {
+      "type": "hero-Image",
+      "settings": {
+        "image1": "shopify://shop_images/LANDSCPAE_FOR_WEB9.jpg"
+      }
+    },
+    "centerd_text_H7pPtg": {
+      "type": "centerd-text",
+      "settings": {
+        "body": "FKA TWIGS - CHAIR ONE"
+      }
+    },
+    "hero_image_EhVQKm": {
+      "type": "hero-Image",
+      "settings": {
+        "image1": "shopify://shop_images/LANDSCPAE_FOR_WEB8.jpg"
+      }
+    },
     "two_images_8VxHGM": {
       "type": "two-images",
       "settings": {
@@ -34,21 +58,18 @@
         "image1": "shopify://shop_images/LANDSCAPE6.jpg"
       }
     },
-    "hero_image_EhVQKm": {
+    "hero_image_JEqinr": {
       "type": "hero-Image",
       "settings": {
-        "image1": "shopify://shop_images/LANDSCPAE_FOR_WEB8.jpg"
-      }
-    },
-    "hero_image_zr3hG8": {
-      "type": "hero-Image",
-      "settings": {
-        "image1": "shopify://shop_images/LANDSCPAE_FOR_WEB9.jpg"
+        "image1": "shopify://shop_images/LANDSCAPE5.jpg"
       }
     }
   },
   "order": [
+    "hero_image_JEqinr",
+    "hero_image_yWb3yK",
     "hero_image_zr3hG8",
+    "centerd_text_H7pPtg",
     "hero_image_EhVQKm",
     "two_images_8VxHGM",
     "hero_image_HcmAp4",
