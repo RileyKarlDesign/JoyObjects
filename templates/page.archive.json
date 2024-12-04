@@ -13,7 +13,7 @@
       "type": "two-images",
       "settings": {
         "image": "shopify://shop_images/PORTRAIT_1a530476-b036-44c6-ac67-87dfa4c5fed5.jpg",
-        "imageTwo": "shopify://shop_images/PORTRAIT_1a530476-b036-44c6-ac67-87dfa4c5fed5.jpg"
+        "imageTwo": "shopify://shop_images/PORTRAIT2_8304d5ff-dfd1-4b45-9a30-fd906aab5b72.jpg"
       }
     },
     "hero_image_HcmAp4": {
@@ -33,9 +33,23 @@
       "settings": {
         "image1": "shopify://shop_images/LANDSCAPE6.jpg"
       }
+    },
+    "hero_image_EhVQKm": {
+      "type": "hero-Image",
+      "settings": {
+        "image1": "shopify://shop_images/LANDSCPAE_FOR_WEB8.jpg"
+      }
+    },
+    "hero_image_zr3hG8": {
+      "type": "hero-Image",
+      "settings": {
+        "image1": "shopify://shop_images/LANDSCPAE_FOR_WEB9.jpg"
+      }
     }
   },
   "order": [
+    "hero_image_zr3hG8",
+    "hero_image_EhVQKm",
     "two_images_8VxHGM",
     "hero_image_HcmAp4",
     "centerd_text_rynPWW",
