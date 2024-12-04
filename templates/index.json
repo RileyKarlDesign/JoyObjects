@@ -9,6 +9,12 @@
  */
 {
   "sections": {
+    "hero_image_JGpxAt": {
+      "type": "hero-Image",
+      "settings": {
+        "image1": "shopify://shop_images/LANDSCPAE_FOR_WEB.jpg"
+      }
+    },
     "centerd_image_and_text_xYYUfD": {
       "type": "centerd-image-and-text",
       "settings": {
@@ -45,13 +51,25 @@
       "settings": {
         "image1": "shopify://shop_images/LANDSCAPE.jpg"
       }
+    },
+    "collection_block_pkVXDB": {
+      "type": "collection-block",
+      "settings": {
+        "prod1": "products-19",
+        "prod2": "products-19",
+        "prod3": "products-19",
+        "title": "",
+        "color": ""
+      }
     }
   },
   "order": [
+    "hero_image_JGpxAt",
     "centerd_image_and_text_xYYUfD",
     "collection_block_QAB4Qb",
     "two_images_eBwYyK",
     "centerd_text_eVGbiX",
-    "hero_image_DcPMVY"
+    "hero_image_DcPMVY",
+    "collection_block_pkVXDB"
   ]
 }
