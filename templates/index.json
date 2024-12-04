@@ -61,6 +61,17 @@
         "title": "",
         "color": ""
       }
+    },
+    "image_and_text_RCCMWw": {
+      "type": "image-and-text",
+      "settings": {
+        "image": "shopify://shop_images/A_21.jpg",
+        "title": "ALI IS HERE",
+        "body": "Now purple is here",
+        "linktext": "",
+        "cta": "",
+        "color": ""
+      }
     }
   },
   "order": [
@@ -70,6 +81,7 @@
     "two_images_eBwYyK",
     "centerd_text_eVGbiX",
     "hero_image_DcPMVY",
-    "collection_block_pkVXDB"
+    "collection_block_pkVXDB",
+    "image_and_text_RCCMWw"
   ]
 }
