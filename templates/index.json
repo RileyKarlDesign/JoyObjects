@@ -39,15 +39,9 @@
         "body": "BIG CAPTION OVER OR UNDER A FULL SCREEN IMAGE"
       }
     },
-    "full_width_image_pTzVJ8": {
-      "type": "full-width-image",
-      "settings": {
-        "image": "shopify://shop_images/LANDSCAPE.jpg",
-        "color": ""
-      }
-    },
     "hero_image_DcPMVY": {
       "type": "hero-Image",
+      "disabled": true,
       "settings": {
         "image1": "shopify://shop_images/LANDSCAPE.jpg"
       }
@@ -58,7 +52,6 @@
     "collection_block_QAB4Qb",
     "two_images_eBwYyK",
     "centerd_text_eVGbiX",
-    "full_width_image_pTzVJ8",
     "hero_image_DcPMVY"
   ]
 }
