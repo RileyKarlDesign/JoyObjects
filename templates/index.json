@@ -9,12 +9,6 @@
  */
 {
   "sections": {
-    "hero_image_JGpxAt": {
-      "type": "hero-Image",
-      "settings": {
-        "image1": "shopify://shop_images/LANDSCPAE_FOR_WEB.jpg"
-      }
-    },
     "centerd_image_and_text_xYYUfD": {
       "type": "centerd-image-and-text",
       "settings": {
@@ -75,7 +69,6 @@
     }
   },
   "order": [
-    "hero_image_JGpxAt",
     "centerd_image_and_text_xYYUfD",
     "collection_block_QAB4Qb",
     "two_images_eBwYyK",
