@@ -20,33 +20,11 @@
       "type": "main-about",
       "settings": {}
     },
-    "form": {
-      "type": "contact-form",
-      "disabled": true,
-      "settings": {}
-    },
     "centerd_image_and_text_bbDiV6": {
       "type": "centerd-image-and-text",
       "settings": {
-        "image": "shopify://shop_images/joy_posts2.jpg",
+        "image": "shopify://shop_images/5.jpg",
         "body": "JOY makes products for the home: Furniture, objects and ornaments. JOY merges simple construction with playful aesthetics, bringing laid-back style to the age of standards. JOY was founded in 2021 as an open space for Stockholm based designer Fredrik Paulsen. The idea is simple: slick, forward looking style meets small scale production at a reasonable price. All JOY objects are designed and manufactured in Sweden. And hey: everything packs flat.Contemporary design is boring. JOY isn’t. JOY is fun. JOY is groovy. JOY is here."
-      }
-    },
-    "product_detail_LAc3bq": {
-      "type": "product-detail",
-      "blocks": {
-        "slide_tt4N3i": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/240522IB_7678-12_1_copy.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "slide_tt4N3i"
-      ],
-      "settings": {
-        "title": "Slideshow"
       }
     },
     "centerd_text_6rAxwQ": {
@@ -54,14 +32,32 @@
       "settings": {
         "body": "info@joyobjects.com"
       }
+    },
+    "form": {
+      "type": "contact-form",
+      "disabled": true,
+      "settings": {}
+    },
+    "hero_image_Jk6DGb": {
+      "type": "hero-Image",
+      "settings": {
+        "image1": "shopify://shop_images/IDA_BLOM_SHELF_ONE4.jpg"
+      }
+    },
+    "centerd_text_bxHDdM": {
+      "type": "centerd-text",
+      "settings": {
+        "body": "Our goal is to create affordable design objects with amazing trajectories in terms of value. Sky's certainly not the limit, but digging where we stand, JOY always makes reasonable and sustainable production choices from a holistic perspective. Our approach can be summarized in three points.    Made in Sweden    All production takes place in Sweden to minimize transportation and ensure fair working conditions.    Packs flat    All our furniture is delivered in pieces, in flat packages. And all parts are interchangeable.    Aluminium is forever    Light and durable, aluminium can be recycled indefinitely without losing strength or quality. We use the best and most sustainable aluminium out there, Hydro Circal and Hydro Restore. They are both linked to environmental product declarations (EPD:s) making it possible to compare our products environmental impact throughout the profile's life cycle. For example, our machined and anodized aluminium profile has got a total carbon dioxide footprint of 3.58 CO2-eq/kilo.In a partnership with Hydro Eco Design we have also optimized the dimensions of all used profiles in order to use a minimum of material for each object. "
+      }
     }
   },
   "order": [
     "background_image_g3TBqk",
     "main",
-    "form",
     "centerd_image_and_text_bbDiV6",
-    "product_detail_LAc3bq",
-    "centerd_text_6rAxwQ"
+    "centerd_text_6rAxwQ",
+    "form",
+    "hero_image_Jk6DGb",
+    "centerd_text_bxHDdM"
   ]
 }
