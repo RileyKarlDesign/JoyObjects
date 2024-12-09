@@ -44,10 +44,44 @@
         "image1": "shopify://shop_images/IDA_BLOM_SHELF_ONE4.jpg"
       }
     },
-    "centerd_text_bxHDdM": {
+    "centerd_text_YPgMYt": {
       "type": "centerd-text",
+      "disabled": true,
       "settings": {
-        "body": "Our goal is to create affordable design objects with amazing trajectories in terms of value. Sky's certainly not the limit, but digging where we stand, JOY always makes reasonable and sustainable production choices from a holistic perspective. Our approach can be summarized in three points.    Made in Sweden    All production takes place in Sweden to minimize transportation and ensure fair working conditions.    Packs flat    All our furniture is delivered in pieces, in flat packages. And all parts are interchangeable.    Aluminium is forever    Light and durable, aluminium can be recycled indefinitely without losing strength or quality. We use the best and most sustainable aluminium out there, Hydro Circal and Hydro Restore. They are both linked to environmental product declarations (EPD:s) making it possible to compare our products environmental impact throughout the profile's life cycle. For example, our machined and anodized aluminium profile has got a total carbon dioxide footprint of 3.58 CO2-eq/kilo.In a partnership with Hydro Eco Design we have also optimized the dimensions of all used profiles in order to use a minimum of material for each object. "
+        "body": "Our goal is to create affordable design objects with amazing trajectories in terms of value. Sky's certainly not the limit, but digging where we stand, JOY always makes reasonable and sustainable production choices from a holistic perspective."
+      }
+    },
+    "image_and_text_BTXcAf": {
+      "type": "image-and-text",
+      "settings": {
+        "image": "shopify://shop_images/IMG_2233.jpg",
+        "title": "Made in Sweden",
+        "body": "All production takes place in Sweden to minimize transportation and ensure fair working conditions.",
+        "linktext": "",
+        "cta": "",
+        "color": ""
+      }
+    },
+    "image_and_text_QWyPNL": {
+      "type": "image-and-text",
+      "settings": {
+        "image": "shopify://shop_images/IMG_2347.jpg",
+        "title": "Packs flat",
+        "body": "All our furniture is delivered in pieces, in flat packages. And all parts are interchangeable.",
+        "linktext": "",
+        "cta": "",
+        "color": ""
+      }
+    },
+    "image_and_text_77bEzb": {
+      "type": "image-and-text",
+      "settings": {
+        "image": "shopify://shop_images/IMG_2374.jpg",
+        "title": "Aluminium is forever",
+        "body": "Light and durable, aluminium can be recycled indefinitely without losing strength or quality. We use the best and most sustainable aluminium out there, Hydro Circal and Hydro Restore. They are both linked to environmental product declarations (EPD:s) making it possible to compare our products environmental impact throughout the profile's life cycle. For example, our machined and anodized aluminium profile has got a total carbon dioxide footprint of 3.58 CO2-eq/kilo.In a partnership with Hydro Eco Design we have also optimized the dimensions of all used profiles in order to use a minimum of material for each object.",
+        "linktext": "",
+        "cta": "",
+        "color": ""
       }
     }
   },
@@ -58,6 +92,9 @@
     "centerd_text_6rAxwQ",
     "form",
     "hero_image_Jk6DGb",
-    "centerd_text_bxHDdM"
+    "centerd_text_YPgMYt",
+    "image_and_text_BTXcAf",
+    "image_and_text_QWyPNL",
+    "image_and_text_77bEzb"
   ]
 }

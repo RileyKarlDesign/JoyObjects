@@ -57,10 +57,6 @@
         "cta": "",
         "color": ""
       }
-    },
-    "safespace_h9Rxig": {
-      "type": "safespace",
-      "settings": {}
     }
   },
   "order": [
@@ -69,7 +65,6 @@
     "two_images_eBwYyK",
     "centerd_text_eVGbiX",
     "hero_image_DcPMVY",
-    "image_and_text_RCCMWw",
-    "safespace_h9Rxig"
+    "image_and_text_RCCMWw"
   ]
 }
