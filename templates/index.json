@@ -48,7 +48,6 @@
     },
     "image_and_text_RCCMWw": {
       "type": "image-and-text",
-      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/A_21.jpg",
         "title": "Erik e kingen",
