@@ -42,13 +42,6 @@
         "body": "JOY objects are crafted by hand and delivered unassembled in flat-packs. Please enJOY the time it takes to study the instructions and put together your new object – building something yourself is generally a very rewarding experience. When finished, individual products may present wee differences. We do not consider these flaws, but rather the charming details that make JOY objects unique."
       }
     },
-    "title_and_body_JQA6KG": {
-      "type": "title-and-body",
-      "settings": {
-        "title": "",
-        "body": ""
-      }
-    },
     "title_and_body_7K4Jnx": {
       "type": "title-and-body",
       "settings": {
@@ -62,6 +55,10 @@
         "title": "Privacy & age restrictions",
         "body": "We may contact you by email, post or telephone, primarily as customer service following up on any issues with an order or to answer any questions you may have.We will not pass on your e-mail address or contact details to any other company without your consent.Under 18? Then you have to let your parent or guardian know about our privacy policy before you register to use this site or any of this site’s services. Parental or guardian consent is required for customers under the age of 18."
       }
+    },
+    "safespace_rdmJff": {
+      "type": "safespace",
+      "settings": {}
     }
   },
   "order": [
@@ -70,8 +67,8 @@
     "title_and_body_DwEhkc",
     "title_and_body_aihfyb",
     "title_and_body_NxQzEa",
-    "title_and_body_JQA6KG",
     "title_and_body_7K4Jnx",
-    "title_and_body_jzh3jg"
+    "title_and_body_jzh3jg",
+    "safespace_rdmJff"
   ]
 }
