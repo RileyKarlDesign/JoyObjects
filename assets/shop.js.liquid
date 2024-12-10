@@ -117,11 +117,11 @@ let a = document.querySelectorAll(".accordian");
 a.forEach((i) => {
   i.addEventListener("click", (i) => {
     //  console.log(" click ");
-    //  console.log(i.target.parentNode.classList);
+     console.log(i.target.parentNode.classList);
     if (i.target.parentNode.classList.contains("accordian-open")) {
       i.target.parentNode.classList.remove("accordian-open");
 
-      aSym.innerHTML('(jdflk')
+      // aSym.innerHTML('(jdflk')
 
     } else {
       i.target.parentNode.classList.add("accordian-open");
