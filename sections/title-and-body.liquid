@@ -1,0 +1,38 @@
+<div
+  class=" js-section grid md:h-fit h-fit bg-opacity-50 md:grid-cols-2 grid-cols-1 md:gap-2  p-2 md:p-2 lg:p-4 pb-0 "
+>
+  <div class="w-full md:row-start-1 row-start-2 ">
+    <div class=" pt-0 h-fit">
+      <div class="h-fit pb-2">
+        <h2 class="  md:w-[80%] w-full  uppercase ">{{ section.settings.title }}</h2>
+      </div>
+      <p class="md:w-[350px] pt-2  ">
+        {{ section.settings.body }}
+      </p>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Title & Body",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "body",
+      "label": "Body Text"
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Title & Body "
+    }
+  ]
+}
+{% endschema %}
