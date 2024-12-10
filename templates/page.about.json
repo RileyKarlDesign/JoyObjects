@@ -26,13 +26,6 @@
         "body": "info@joyobjects.com"
       }
     },
-    "title_and_body_D8V3cB": {
-      "type": "title-and-body",
-      "settings": {
-        "title": "Title Text here",
-        "body": "Body copy skjdfbkjsdfkjssdfs s ksdfs d sdfs s df s s. sdf s fsd fs f sf sd fs f sdf s f s fs fsdfsdf sdf sdfsdf sdf sdfsdf sdfsf sdf"
-      }
-    },
     "background_image_g3TBqk": {
       "type": "background-image",
       "disabled": true,
@@ -96,7 +89,6 @@
     "main",
     "centerd_image_and_text_bbDiV6",
     "centerd_text_6rAxwQ",
-    "title_and_body_D8V3cB",
     "background_image_g3TBqk",
     "form",
     "hero_image_Jk6DGb",
