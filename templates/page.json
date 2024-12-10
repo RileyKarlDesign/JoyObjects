@@ -27,11 +27,51 @@
         "title": "Payments & shipping",
         "body": "We accept Visa, MasterCard and regular account payments. Prices do not include delivery charges. JOY retains the right to adjust incorrect prices. Prices shown on the site are in Euros. Your shipping cost will be calculated at checkout.Once your purchase is confirmed we aim to ship the order within 7 working days."
       }
+    },
+    "title_and_body_aihfyb": {
+      "type": "title-and-body",
+      "settings": {
+        "title": "Import charges & taxes",
+        "body": "If your order is to be delivered outside of the European Union, it may attract import duty and local sales taxes which customers will need to pay on receipt of the shipment. Any additional charges for customs clearance must be borne by you. These rules vary by country and your local government determines duty and customs charges, so you should contact your local customs office for further information.Customers outside the European Union are exempt from VAT. 20% of the total amount will be deducted when you select your country at the checkout."
+      }
+    },
+    "title_and_body_NxQzEa": {
+      "type": "title-and-body",
+      "settings": {
+        "title": "Product description",
+        "body": "JOY objects are crafted by hand and delivered unassembled in flat-packs. Please enJOY the time it takes to study the instructions and put together your new object – building something yourself is generally a very rewarding experience. When finished, individual products may present wee differences. We do not consider these flaws, but rather the charming details that make JOY objects unique."
+      }
+    },
+    "title_and_body_JQA6KG": {
+      "type": "title-and-body",
+      "settings": {
+        "title": "",
+        "body": ""
+      }
+    },
+    "title_and_body_7K4Jnx": {
+      "type": "title-and-body",
+      "settings": {
+        "title": "Damages and issues",
+        "body": "JOY objects are made to order, and all sales on JOYobjects.com are final. If you have any questions about an item, please do not hesitate to contact us via info@joyobjects.com before your purchase, and we will gladly address the matter. Please inspect your order when you receive it and contact us immediately if the item is defective or damaged, or if you receive the wrong item. We will evaluate the issue and make it right. If solving the issue includes returning a product, we will provide you with instructions over email."
+      }
+    },
+    "title_and_body_jzh3jg": {
+      "type": "title-and-body",
+      "settings": {
+        "title": "Privacy & age restrictions",
+        "body": "We may contact you by email, post or telephone, primarily as customer service following up on any issues with an order or to answer any questions you may have.We will not pass on your e-mail address or contact details to any other company without your consent.Under 18? Then you have to let your parent or guardian know about our privacy policy before you register to use this site or any of this site’s services. Parental or guardian consent is required for customers under the age of 18."
+      }
     }
   },
   "order": [
     "main",
     "centerd_image_and_text_CPF93j",
-    "title_and_body_DwEhkc"
+    "title_and_body_DwEhkc",
+    "title_and_body_aihfyb",
+    "title_and_body_NxQzEa",
+    "title_and_body_JQA6KG",
+    "title_and_body_7K4Jnx",
+    "title_and_body_jzh3jg"
   ]
 }
