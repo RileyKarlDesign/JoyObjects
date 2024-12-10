@@ -60,6 +60,7 @@
     },
     "about_block_iJcX9g": {
       "type": "about-block",
+      "disabled": true,
       "settings": {
         "title": "kjhkjh",
         "body": "mjkjkj"
