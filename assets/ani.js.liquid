@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   let Recs = document.querySelector('.recs-wrapper')
   let footer = document.querySelector('.js-footer')
   let footInView = false
-  console.log(Recs)
+  // console.log(Recs)
 
   // Observer for recs
 
@@ -140,15 +140,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
   //   threshold: 0.04 // when 10% of the target is visible
   // });
 
-  const observerFour = new IntersectionObserver(footerWatch, {
-    root: null, // use the viewport as the root
-    threshold: 0.02 // when 10% of the target is visible
-  });
+  // const observerFour = new IntersectionObserver(footerWatch, {
+  //   root: null, // use the viewport as the root
+  //   threshold: 0.02 // when 10% of the target is visible
+  // });
 
-  if (Recs) {
-    observerThree.observe(Recs);
-    observerFour.observe(footer)
-  }
+  // if (Recs) {
+  //   observerThree.observe(Recs);
+  //   observerFour.observe(footer)
+  // }
 
 
 
