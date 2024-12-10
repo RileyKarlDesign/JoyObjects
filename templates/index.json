@@ -53,8 +53,8 @@
         "image": "shopify://shop_images/A_21.jpg",
         "title": "Erik e kingen",
         "body": "Bor i London, blastar fett",
-        "linktext": "",
-        "cta": "",
+        "linktext": "/pages/about",
+        "cta": "/pages/about",
         "color": ""
       }
     }
