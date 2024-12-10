@@ -9,13 +9,6 @@
  */
 {
   "sections": {
-    "background_image_g3TBqk": {
-      "type": "background-image",
-      "disabled": true,
-      "settings": {
-        "color1": "rgba(0,0,0,0)"
-      }
-    },
     "main": {
       "type": "main-about",
       "settings": {}
@@ -31,6 +24,20 @@
       "type": "centerd-text",
       "settings": {
         "body": "info@joyobjects.com"
+      }
+    },
+    "title_and_body_D8V3cB": {
+      "type": "title-and-body",
+      "settings": {
+        "title": "Title Text here",
+        "body": "Body copy skjdfbkjsdfkjssdfs s ksdfs d sdfs s df s s. sdf s fsd fs f sf sd fs f sdf s f s fs fsdfsdf sdf sdfsdf sdf sdfsdf sdfsf sdf"
+      }
+    },
+    "background_image_g3TBqk": {
+      "type": "background-image",
+      "disabled": true,
+      "settings": {
+        "color1": "rgba(0,0,0,0)"
       }
     },
     "form": {
@@ -86,10 +93,11 @@
     }
   },
   "order": [
-    "background_image_g3TBqk",
     "main",
     "centerd_image_and_text_bbDiV6",
     "centerd_text_6rAxwQ",
+    "title_and_body_D8V3cB",
+    "background_image_g3TBqk",
     "form",
     "hero_image_Jk6DGb",
     "centerd_text_YPgMYt",
