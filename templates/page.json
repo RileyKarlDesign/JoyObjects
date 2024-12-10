@@ -18,14 +18,14 @@
       "type": "centerd-image-and-text",
       "settings": {
         "image": "shopify://shop_images/IMG_1834_copy.jpg",
-        "body": "We accept Visa, MasterCard and regular account payments. Prices do not include delivery charges. JOY retains the right to adjust incorrect prices. Prices shown on the site are in Euros. Your shipping cost will be calculated at checkout.Once your purchase is confirmed we aim to ship the order within 7 working days.Customers outside the European Union are exempt from VAT. 20% of the total amount will be deducted when you select your country at the checkout. As our products are made to order, we are not able to offer returns, refunds or exchanges unless a product is defective or damaged upon delivery. If you have any questions, please feel free to contact us at info@joyobjects.com"
+        "body": ""
       }
     },
     "title_and_body_DwEhkc": {
       "type": "title-and-body",
       "settings": {
-        "title": "Title & Body",
-        "body": "Body copy skjdfbkjsdfkjssdfs s ksdfs d sdfs s df s s. sdf s fsd fs f sf sd fs f sdf s f s fs fsdfsdf sdf sdfsdf sdf sdfsdf sdfsf sdf"
+        "title": "Payments & shipping",
+        "body": "We accept Visa, MasterCard and regular account payments. Prices do not include delivery charges. JOY retains the right to adjust incorrect prices. Prices shown on the site are in Euros. Your shipping cost will be calculated at checkout.Once your purchase is confirmed we aim to ship the order within 7 working days."
       }
     }
   },
