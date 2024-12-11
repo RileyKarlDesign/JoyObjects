@@ -16,76 +16,28 @@
         "body": "house music"
       }
     },
-    "collection_block_QAB4Qb": {
-      "type": "collection-block",
+    "centerd_image_and_text_6jRaiE": {
+      "type": "centerd-image-and-text",
       "disabled": true,
       "settings": {
-        "prod1": "chair-one-copy",
-        "prod2": "bench-one",
-        "prod3": "bench-one-l",
-        "title": "",
-        "color": ""
+        "body": "Jimi & Prince got it right: You really just need one colour. Carried by the awesome flair of Ali Boulala, HAZE & RAIN now takes its rightful place in the royal pantheon of chairs."
       }
     },
-    "two_images_eBwYyK": {
-      "type": "two-images",
-      "disabled": true,
-      "settings": {}
-    },
-    "centerd_text_eVGbiX": {
-      "type": "centerd-text",
-      "disabled": true,
-      "settings": {
-        "body": "BIG CAPTION OVER OR UNDER A FULL SCREEN IMAGE"
-      }
-    },
-    "hero_image_DcPMVY": {
-      "type": "hero-Image",
-      "disabled": true,
-      "settings": {
-        "image1": "shopify://shop_images/LANDSCAPE.jpg"
-      }
-    },
-    "image_and_text_RCCMWw": {
+    "image_and_text_gUGwar": {
       "type": "image-and-text",
       "disabled": true,
       "settings": {
-        "image": "shopify://shop_images/A_21.jpg",
-        "title": "Erik e kingen",
-        "body": "Bor i London, blastar fett",
-        "linktext": "/pages/about",
-        "cta": "/pages/about",
-        "color": ""
-      }
-    },
-    "about_block_iJcX9g": {
-      "type": "about-block",
-      "disabled": true,
-      "settings": {
-        "title": "kjhkjh",
-        "body": "mjkjkj"
-      }
-    },
-    "image_and_text_V3tYtz": {
-      "type": "image-and-text",
-      "settings": {
-        "image": "shopify://shop_images/Souvenir-Market-Joy-Objects_241209_001.jpg",
-        "title": "SIT DOWN",
-        "body": "FOREVER",
-        "linktext": "products/products-20?_pos=1&_fid=8e4ad6010&_ss=c",
-        "cta": "SHOP",
+        "title": "HAZE & RAIN",
+        "body": "A legend of skateboarding and sensational style, Mr Boulala has spent most of his 40s making music and playing the Les Paul. Purple has always been his vibe, as evident in his pro-model decks and shoes from the skate days. On that note JOY teamed up with Ali to introduce the first ever official monochrome Chair One: HAZE & RAIN.",
+        "linktext": "",
+        "cta": "> SHOP",
         "color": ""
       }
     }
   },
   "order": [
     "centerd_image_and_text_xYYUfD",
-    "collection_block_QAB4Qb",
-    "two_images_eBwYyK",
-    "centerd_text_eVGbiX",
-    "hero_image_DcPMVY",
-    "image_and_text_RCCMWw",
-    "about_block_iJcX9g",
-    "image_and_text_V3tYtz"
+    "centerd_image_and_text_6jRaiE",
+    "image_and_text_gUGwar"
   ]
 }
