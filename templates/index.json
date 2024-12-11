@@ -65,6 +65,17 @@
         "title": "kjhkjh",
         "body": "mjkjkj"
       }
+    },
+    "image_and_text_V3tYtz": {
+      "type": "image-and-text",
+      "settings": {
+        "image": "shopify://shop_images/Souvenir-Market-Joy-Objects_241209_001.jpg",
+        "title": "",
+        "body": "",
+        "linktext": "products/products-20?_pos=1&_fid=8e4ad6010&_ss=c",
+        "cta": "SHOP",
+        "color": ""
+      }
     }
   },
   "order": [
@@ -74,6 +85,7 @@
     "centerd_text_eVGbiX",
     "hero_image_DcPMVY",
     "image_and_text_RCCMWw",
-    "about_block_iJcX9g"
+    "about_block_iJcX9g",
+    "image_and_text_V3tYtz"
   ]
 }
