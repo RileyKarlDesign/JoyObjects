@@ -41,12 +41,19 @@
       "settings": {
         "image": "shopify://shop_images/PRODUCT_TEMPLATE_FOR_WEB-2120.jpg"
       }
+    },
+    "hero_image_NB4XYa": {
+      "type": "hero-Image",
+      "settings": {
+        "image1": "shopify://shop_images/PRODUCT_TEMPLATE_FOR_WEB-2120_copy.jpg"
+      }
     }
   },
   "order": [
     "centerd_image_and_text_xYYUfD",
     "centerd_image_and_text_6jRaiE",
     "image_and_text_gUGwar",
-    "two_images_taCtnW"
+    "two_images_taCtnW",
+    "hero_image_NB4XYa"
   ]
 }
