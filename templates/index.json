@@ -47,9 +47,14 @@
       "settings": {
         "image1": "shopify://shop_images/Wide.jpg"
       }
+    },
+    "safespace_JgbrAT": {
+      "type": "safespace",
+      "settings": {}
     }
   },
   "order": [
+    "safespace_JgbrAT",
     "centerd_image_and_text_xYYUfD",
     "centerd_image_and_text_6jRaiE",
     "image_and_text_gUGwar",
