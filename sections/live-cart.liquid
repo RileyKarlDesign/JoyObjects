@@ -1,4 +1,4 @@
-<div class="my-cart bg-white  rounded-[4px]  z-[2000]  backdrop-blur-lg relative md:w-[386px] sm:w-full w-full ">
+<div class="my-cart bg-white  rounded-[4px]  z-[2000]  backdrop-blur-lg relative md:w-[320px] sm:w-full w-full ">
   <div class=" header  select-none absolute top-0 right-0 left-0 flex md:p-1 p md:pt-[20px] pt-1 p-2  w-full z-50 justify-between items-end ">
     <h3>
       Cart (
@@ -10,8 +10,8 @@
     <h3 class="cart-btn md:pr-[10px]">Close</h3>
   </div>
 
-  <div class="  overflow-y-scroll h-full pb-14   md:pt-14 pt-14  md:p-1 p-1" data-ajax-cart-section>
-    <div class="my-cart__items " data-ajax-cart-section-scroll>
+  <div class="  overflow-y-scroll h-full pb-50   md:pt-14 pt-14  md:p-1 p-1" data-ajax-cart-section>
+    <div class="my-cart__items  mb-40" data-ajax-cart-section-scroll>
       {% for line_item in cart.items %}
         {% render 'cart-card' with { product: line_item , index: forloop.index } %}
       {% endfor %}
