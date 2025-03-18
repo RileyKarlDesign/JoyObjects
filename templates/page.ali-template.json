@@ -16,16 +16,8 @@
     },
     "centerd_text_gDV3fB": {
       "type": "centerd-text",
-      "disabled": true,
       "settings": {
         "body": "ADRESS OCH ANNAN BRA INFO"
-      }
-    },
-    "centerd_text_rdRzhB": {
-      "type": "centerd-text",
-      "disabled": true,
-      "settings": {
-        "body": ""
       }
     },
     "centerd_image_and_text_D9t9Fb": {
@@ -45,13 +37,27 @@
         "cta": "Fredrik Paulsen",
         "color": ""
       }
+    },
+    "full_width_image_8PBnDx": {
+      "type": "full-width-image",
+      "disabled": true,
+      "settings": {
+        "color": ""
+      }
+    },
+    "centerd_text_rdRzhB": {
+      "type": "centerd-text",
+      "settings": {
+        "body": ""
+      }
     }
   },
   "order": [
     "main",
     "centerd_text_gDV3fB",
-    "centerd_text_rdRzhB",
     "centerd_image_and_text_D9t9Fb",
-    "image_and_text_nq46gM"
+    "image_and_text_nq46gM",
+    "full_width_image_8PBnDx",
+    "centerd_text_rdRzhB"
   ]
 }
