@@ -30,7 +30,14 @@
     "centerd_text_rdRzhB": {
       "type": "centerd-text",
       "settings": {
-        "body": "<a>fredrik paulsen</a>"
+        "body": ""
+      }
+    },
+    "centerd_image_and_text_D9t9Fb": {
+      "type": "centerd-image-and-text",
+      "settings": {
+        "image": "shopify://shop_images/IMG_2374.jpg",
+        "body": "lszfjlksfj"
       }
     }
   },
@@ -38,6 +45,7 @@
     "main",
     "full_width_image_JMUWcy",
     "centerd_text_gDV3fB",
-    "centerd_text_rdRzhB"
+    "centerd_text_rdRzhB",
+    "centerd_image_and_text_D9t9Fb"
   ]
 }
