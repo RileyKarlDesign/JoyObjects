@@ -39,6 +39,16 @@
         "image": "shopify://shop_images/IMG_2374.jpg",
         "body": "lszfjlksfj"
       }
+    },
+    "image_and_text_nq46gM": {
+      "type": "image-and-text",
+      "settings": {
+        "title": "JHDFJHJH",
+        "body": "lajlkjadf",
+        "linktext": "www.fredrikpaulsen.se",
+        "cta": "Fredrik Paulsen",
+        "color": ""
+      }
     }
   },
   "order": [
@@ -46,6 +56,7 @@
     "full_width_image_JMUWcy",
     "centerd_text_gDV3fB",
     "centerd_text_rdRzhB",
-    "centerd_image_and_text_D9t9Fb"
+    "centerd_image_and_text_D9t9Fb",
+    "image_and_text_nq46gM"
   ]
 }
