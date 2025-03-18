@@ -14,21 +14,16 @@
       "disabled": true,
       "settings": {}
     },
-    "full_width_image_JMUWcy": {
-      "type": "full-width-image",
-      "settings": {
-        "image": "shopify://shop_images/Screenshot_2024-10-18_at_2.33.45_PM.png",
-        "color": ""
-      }
-    },
     "centerd_text_gDV3fB": {
       "type": "centerd-text",
+      "disabled": true,
       "settings": {
         "body": "ADRESS OCH ANNAN BRA INFO"
       }
     },
     "centerd_text_rdRzhB": {
       "type": "centerd-text",
+      "disabled": true,
       "settings": {
         "body": ""
       }
@@ -36,12 +31,13 @@
     "centerd_image_and_text_D9t9Fb": {
       "type": "centerd-image-and-text",
       "settings": {
-        "image": "shopify://shop_images/IMG_2374.jpg",
+        "image": "shopify://shop_images/IT1536841.jpg",
         "body": "lszfjlksfj"
       }
     },
     "image_and_text_nq46gM": {
       "type": "image-and-text",
+      "disabled": true,
       "settings": {
         "title": "JHDFJHJH",
         "body": "lajlkjadf",
@@ -53,7 +49,6 @@
   },
   "order": [
     "main",
-    "full_width_image_JMUWcy",
     "centerd_text_gDV3fB",
     "centerd_text_rdRzhB",
     "centerd_image_and_text_D9t9Fb",
