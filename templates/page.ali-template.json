@@ -50,6 +50,10 @@
       "settings": {
         "body": ""
       }
+    },
+    "safespace_NPrYXX": {
+      "type": "safespace",
+      "settings": {}
     }
   },
   "order": [
@@ -58,6 +62,7 @@
     "centerd_image_and_text_D9t9Fb",
     "image_and_text_nq46gM",
     "full_width_image_8PBnDx",
-    "centerd_text_rdRzhB"
+    "centerd_text_rdRzhB",
+    "safespace_NPrYXX"
   ]
 }
