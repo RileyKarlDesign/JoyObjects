@@ -61,6 +61,12 @@
       "settings": {
         "image1": "shopify://shop_images/IDA_BLOM_SHELF_ONE4_bab0d673-a3f6-4dc2-9bc4-6f321c800a33.jpg"
       }
+    },
+    "hero_image_DPgfNC": {
+      "type": "hero-Image",
+      "settings": {
+        "image1": "shopify://shop_images/IDA_BLOM_SHELF_ONE5.jpg"
+      }
     }
   },
   "order": [
@@ -70,6 +76,7 @@
     "image_and_text_gUGwar",
     "two_images_taCtnW",
     "hero_image_NB4XYa",
-    "hero_image_nVt3h4"
+    "hero_image_nVt3h4",
+    "hero_image_DPgfNC"
   ]
 }
