@@ -11,6 +11,7 @@
   "sections": {
     "safespace_JgbrAT": {
       "type": "safespace",
+      "disabled": true,
       "settings": {}
     },
     "centerd_image_and_text_xYYUfD": {
