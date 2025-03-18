@@ -14,28 +14,11 @@
       "disabled": true,
       "settings": {}
     },
-    "centerd_text_gDV3fB": {
-      "type": "centerd-text",
-      "settings": {
-        "body": "ADRESS OCH ANNAN BRA INFO"
-      }
-    },
     "centerd_image_and_text_D9t9Fb": {
       "type": "centerd-image-and-text",
       "settings": {
         "image": "shopify://shop_images/A_93.jpg",
-        "body": "FOR CUSTOM AND CADS CALL INFO@JOYOBJECTS.COM"
-      }
-    },
-    "image_and_text_nq46gM": {
-      "type": "image-and-text",
-      "disabled": true,
-      "settings": {
-        "title": "JHDFJHJH",
-        "body": "lajlkjadf",
-        "linktext": "www.fredrikpaulsen.se",
-        "cta": "Fredrik Paulsen",
-        "color": ""
+        "body": "FOR CUSTOM AND CADS CALL  INFO@JOYOBJECTS.COM"
       }
     },
     "full_width_image_8PBnDx": {
@@ -58,9 +41,7 @@
   },
   "order": [
     "main",
-    "centerd_text_gDV3fB",
     "centerd_image_and_text_D9t9Fb",
-    "image_and_text_nq46gM",
     "full_width_image_8PBnDx",
     "centerd_text_rdRzhB",
     "safespace_NPrYXX"
