@@ -17,14 +17,13 @@
     "full_width_image_JMUWcy": {
       "type": "full-width-image",
       "settings": {
-        "image": "shopify://shop_images/Screenshot_2024-10-30_at_18.10.29.png",
+        "image": "shopify://shop_images/Screenshot_2024-10-18_at_2.33.45_PM.png",
         "color": ""
       }
     },
     "centerd_image_and_text_Kxxjqh": {
       "type": "centerd-image-and-text",
       "settings": {
-        "image": "shopify://shop_images/extra1.jpg",
         "body": "New body Text"
       }
     }
