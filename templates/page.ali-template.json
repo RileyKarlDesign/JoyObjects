@@ -24,13 +24,21 @@
     "centerd_image_and_text_Kxxjqh": {
       "type": "centerd-image-and-text",
       "settings": {
-        "body": "New body Text"
+        "image": "shopify://shop_images/A_30.jpg",
+        "body": "https://fredrikpaulsen.com/"
+      }
+    },
+    "centerd_text_gDV3fB": {
+      "type": "centerd-text",
+      "settings": {
+        "body": "ADRESS OCH ANNAN BRA INFO"
       }
     }
   },
   "order": [
     "main",
     "full_width_image_JMUWcy",
-    "centerd_image_and_text_Kxxjqh"
+    "centerd_image_and_text_Kxxjqh",
+    "centerd_text_gDV3fB"
   ]
 }
