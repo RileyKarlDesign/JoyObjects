@@ -65,12 +65,14 @@
     },
     "hero_image_DPgfNC": {
       "type": "hero-Image",
+      "disabled": true,
       "settings": {
         "image1": "shopify://shop_images/IDA_BLOM_SHELF_ONE3.jpg"
       }
     },
     "image_and_text_84WRbC": {
       "type": "image-and-text",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/A_31.jpg",
         "title": "JOY STORAGE ONE (HI)",
