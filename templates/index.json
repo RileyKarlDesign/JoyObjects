@@ -22,6 +22,17 @@
         "imageTwo": "shopify://shop_images/JOYINSTAPOSTTEMPLATE-22.jpg"
       }
     },
+    "image_and_text_84WRbC": {
+      "type": "image-and-text",
+      "settings": {
+        "image": "shopify://shop_images/JOYINSTAPOSTTEMPLATE-23.jpg",
+        "title": "JOY STORAGE ONE (HI)",
+        "body": "ALL UNDER ONE ROOF. Raving, laughing, enJOYing. Storage One (HI) is back in ALU & CHARTREUSE, ready for massive hi-fi stacks.",
+        "linktext": "https://joyobjects.com/collections/all-products?filter.p.product_type=Storage",
+        "cta": "Get sorted!",
+        "color": ""
+      }
+    },
     "hero_image_BkwkpT": {
       "type": "hero-Image",
       "name": " Hero Image",
@@ -42,17 +53,6 @@
         "image1": "shopify://shop_images/IDA_BLOM_SHELF_ONE3.jpg"
       }
     },
-    "image_and_text_84WRbC": {
-      "type": "image-and-text",
-      "settings": {
-        "image": "shopify://shop_images/JOYINSTAPOSTTEMPLATE-23.jpg",
-        "title": "JOY STORAGE ONE (HI)",
-        "body": "ALL UNDER ONE ROOF. Raving, laughing, enJOYing. Storage One (HI) is back in ALU & CHARTREUSE, ready for massive hi-fi stacks.",
-        "linktext": "https://joyobjects.com/collections/all-products?filter.p.product_type=Storage",
-        "cta": "Get sorted!",
-        "color": ""
-      }
-    },
     "hero_image_6UrwfG": {
       "type": "hero-Image",
       "name": " Hero Image",
@@ -62,10 +62,10 @@
   "order": [
     "safespace_JgbrAT",
     "two_images_pYdDGA",
+    "image_and_text_84WRbC",
     "hero_image_BkwkpT",
     "hero_image_nVt3h4",
     "hero_image_DPgfNC",
-    "image_and_text_84WRbC",
     "hero_image_6UrwfG"
   ]
 }
