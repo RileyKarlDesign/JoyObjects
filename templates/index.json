@@ -37,6 +37,7 @@
     },
     "hero_image_DPgfNC": {
       "type": "hero-Image",
+      "disabled": true,
       "settings": {
         "image1": "shopify://shop_images/IDA_BLOM_SHELF_ONE3.jpg"
       }
@@ -44,7 +45,7 @@
     "image_and_text_84WRbC": {
       "type": "image-and-text",
       "settings": {
-        "image": "shopify://shop_images/A_31.jpg",
+        "image": "shopify://shop_images/JOYINSTAPOSTTEMPLATE-23.jpg",
         "title": "JOY STORAGE ONE (HI)",
         "body": "ALL UNDER ONE ROOF. Raving, laughing, enJOYing. Storage One (HI) is back in ALU & CHARTREUSE, ready for massive hi-fi stacks.",
         "linktext": "https://joyobjects.com/collections/all-products?filter.p.product_type=Storage",
