@@ -14,8 +14,22 @@
       "disabled": true,
       "settings": {}
     },
+    "hero_image_BkwkpT": {
+      "type": "hero-Image",
+      "name": " Hero Image",
+      "settings": {
+        "image1": "shopify://shop_images/JOY_INSTA_POST_TEMPLATE-27.jpg"
+      }
+    },
+    "hero_image_nVt3h4": {
+      "type": "hero-Image",
+      "settings": {
+        "image1": "shopify://shop_images/JOY_INSTA_POST_TEMPLATE-23.jpg"
+      }
+    },
     "two_images_pYdDGA": {
       "type": "two-images",
+      "disabled": true,
       "name": "Two Images",
       "settings": {
         "image": "shopify://shop_images/JOY_INSTA_POST_TEMPLATE-25.jpg",
@@ -33,19 +47,6 @@
         "color": ""
       }
     },
-    "hero_image_BkwkpT": {
-      "type": "hero-Image",
-      "name": " Hero Image",
-      "settings": {
-        "image1": "shopify://shop_images/JOYINSTAPOSTTEMPLATE-23.jpg"
-      }
-    },
-    "hero_image_nVt3h4": {
-      "type": "hero-Image",
-      "settings": {
-        "image1": "shopify://shop_images/JOYINSTAPOSTTEMPLATE-2.jpg"
-      }
-    },
     "hero_image_DPgfNC": {
       "type": "hero-Image",
       "disabled": true,
@@ -61,10 +62,10 @@
   },
   "order": [
     "safespace_JgbrAT",
-    "two_images_pYdDGA",
-    "image_and_text_84WRbC",
     "hero_image_BkwkpT",
     "hero_image_nVt3h4",
+    "two_images_pYdDGA",
+    "image_and_text_84WRbC",
     "hero_image_DPgfNC",
     "hero_image_6UrwfG"
   ]
