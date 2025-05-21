@@ -14,8 +14,15 @@
       "disabled": true,
       "settings": {}
     },
+    "hero_image_nVt3h4": {
+      "type": "hero-Image",
+      "settings": {
+        "image1": "shopify://shop_images/JOY_INSTA_POST_TEMPLATE-27.jpg"
+      }
+    },
     "two_images_pYdDGA": {
       "type": "two-images",
+      "disabled": true,
       "name": "Two Images",
       "settings": {
         "image": "shopify://shop_images/JOY_INSTA_POST_TEMPLATE-25.jpg",
@@ -26,7 +33,7 @@
       "type": "hero-Image",
       "name": " Hero Image",
       "settings": {
-        "image1": "shopify://shop_images/JOYINSTAPOSTTEMPLATE-23.jpg"
+        "image1": "shopify://shop_images/JOY_INSTA_POST_TEMPLATE-23.jpg"
       }
     },
     "image_and_text_84WRbC": {
@@ -38,12 +45,6 @@
         "linktext": "https://joyobjects.com/products/chair-one-alu-t2?_pos=7&_fid=6b68586f5&_ss=c",
         "cta": "SHOP",
         "color": ""
-      }
-    },
-    "hero_image_nVt3h4": {
-      "type": "hero-Image",
-      "settings": {
-        "image1": "shopify://shop_images/JOYINSTAPOSTTEMPLATE-2.jpg"
       }
     },
     "hero_image_DPgfNC": {
@@ -61,9 +62,9 @@
   },
   "order": [
     "safespace_JgbrAT",
+    "hero_image_nVt3h4",
     "two_images_pYdDGA",
     "hero_image_BkwkpT",
-    "hero_image_nVt3h4",
     "image_and_text_84WRbC",
     "hero_image_DPgfNC",
     "hero_image_6UrwfG"
