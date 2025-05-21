@@ -17,7 +17,7 @@
     "hero_image_nVt3h4": {
       "type": "hero-Image",
       "settings": {
-        "image1": "shopify://shop_images/IDA_BLOM_SHELF_ONE4_bab0d673-a3f6-4dc2-9bc4-6f321c800a33.jpg"
+        "image1": "shopify://shop_images/JOYINSTAPOSTTEMPLATE-2.jpg"
       }
     },
     "hero_image_DPgfNC": {
@@ -41,8 +41,14 @@
       "type": "two-images",
       "name": "Two Images",
       "settings": {
-        "image": "shopify://shop_images/JOY_INSTA_POST_TEMPLATE-25.jpg"
+        "image": "shopify://shop_images/JOY_INSTA_POST_TEMPLATE-25.jpg",
+        "imageTwo": "shopify://shop_images/JOYINSTAPOSTTEMPLATE-22.jpg"
       }
+    },
+    "hero_image_6UrwfG": {
+      "type": "hero-Image",
+      "name": " Hero Image",
+      "settings": {}
     }
   },
   "order": [
@@ -50,6 +56,7 @@
     "hero_image_nVt3h4",
     "hero_image_DPgfNC",
     "image_and_text_84WRbC",
-    "two_images_pYdDGA"
+    "two_images_pYdDGA",
+    "hero_image_6UrwfG"
   ]
 }
