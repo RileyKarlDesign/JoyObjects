@@ -59,6 +59,11 @@
       "disabled": true,
       "name": " Hero Image",
       "settings": {}
+    },
+    "safespace_7yJUU6": {
+      "type": "safespace",
+      "name": "Safe Space",
+      "settings": {}
     }
   },
   "order": [
@@ -68,6 +73,7 @@
     "hero_image_BkwkpT",
     "image_and_text_84WRbC",
     "hero_image_DPgfNC",
-    "hero_image_6UrwfG"
+    "hero_image_6UrwfG",
+    "safespace_7yJUU6"
   ]
 }
