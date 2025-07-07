@@ -76,8 +76,13 @@
       "name": "Two Images",
       "settings": {
         "image": "shopify://shop_images/Arketyp1.jpg",
-        "imageTwo": "shopify://shop_images/Arketyp2.jpg"
+        "imageTwo": "shopify://shop_images/ARK3.jpg"
       }
+    },
+    "two_images_NLRdBr": {
+      "type": "two-images",
+      "name": "Two Images",
+      "settings": {}
     }
   },
   "order": [
@@ -91,6 +96,7 @@
     "hero_image_HcmAp4",
     "centerd_text_rynPWW",
     "hero_image_iYLxE8",
-    "two_images_mANi9x"
+    "two_images_mANi9x",
+    "two_images_NLRdBr"
   ]
 }
