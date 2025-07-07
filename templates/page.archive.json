@@ -75,7 +75,7 @@
       "type": "two-images",
       "name": "Two Images",
       "settings": {
-        "image": "shopify://shop_images/Arketyp1.jpg",
+        "image": "shopify://shop_images/ARK1.jpg",
         "imageTwo": "shopify://shop_images/ARK3.jpg"
       }
     },
