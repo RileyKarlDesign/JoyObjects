@@ -83,6 +83,13 @@
       "type": "two-images",
       "name": "Two Images",
       "settings": {}
+    },
+    "centerd_text_iHF4FB": {
+      "type": "centerd-text",
+      "name": "Centerd Text ",
+      "settings": {
+        "body": "ARKETYP RECORD STORE"
+      }
     }
   },
   "order": [
@@ -97,6 +104,7 @@
     "centerd_text_rynPWW",
     "hero_image_iYLxE8",
     "two_images_mANi9x",
-    "two_images_NLRdBr"
+    "two_images_NLRdBr",
+    "centerd_text_iHF4FB"
   ]
 }
